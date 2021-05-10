@@ -52,5 +52,3 @@ INSERT INTO MiniORM.dbo.EmployeesProjects (ProjectId, EmployeeId) VALUES
 (1, 3),
 (2, 2),
 (2, 3)
-
-
