@@ -72,7 +72,7 @@ namespace PetClinic.App
             PrintAndExportEntityToFile(proceduresExport, exportDirectory + "ProceduresExport.xml");
         }
 		
-		private static void BonusTask(PetClinicContext context)
+	private static void BonusTask(PetClinicContext context)
         {
             string bonusOutput = DataProcessor.Bonus.UpdateVetProfession(context, "+359284566778", "Primary Care");
             Console.WriteLine(bonusOutput);
