@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 14.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "DataAggregationLabAndCreations", "DataAggregationLabAndCreations\DataAggregationLabAndCreations.ssmssqlproj", "{AE814985-14FD-4042-8819-A42CB343DA1A}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "01_12QueriesFromGringottsDB", "01_12QueriesFromGringottsDB\01_12QueriesFromGringottsDB.ssmssqlproj", "{7FFD1A7D-192D-4FF8-8D21-7DE35AF248E3}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "13_19QueriesFromSoftUniDB", "13_19QueriesFromSoftUniDB\13_19QueriesFromSoftUniDB.ssmssqlproj", "{8808CEFF-CA59-42DE-8654-1888CEC38C6C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE814985-14FD-4042-8819-A42CB343DA1A}.Default|Default.ActiveCfg = Default
+		{EB4F500E-D54C-4B13-BE5A-3ACF5769EF7C}.Default|Default.ActiveCfg = Default
+		{7FFD1A7D-192D-4FF8-8D21-7DE35AF248E3}.Default|Default.ActiveCfg = Default
+		{8808CEFF-CA59-42DE-8654-1888CEC38C6C}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
