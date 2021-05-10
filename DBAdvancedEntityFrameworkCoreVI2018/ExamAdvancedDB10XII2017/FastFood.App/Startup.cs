@@ -8,12 +8,12 @@ namespace FastFood.App
 {
 	public class Startup
 	{
-		public static void Main(string[] args)
-		{
-			FastFoodDbContext context = new FastFoodDbContext();
+	public static void Main(string[] args)
+	{
+	   FastFoodDbContext context = new FastFoodDbContext();
 
-			ResetDatabase(context);
-			Console.WriteLine("Database Reset.");
+	   ResetDatabase(context);
+	   Console.WriteLine("Database Reset.");
 
             Mapper.Initialize(cfg => cfg.AddProfile<FastFoodProfile>());
 
@@ -58,7 +58,7 @@ namespace FastFood.App
         }
 
         private static void ExportEntities(FastFoodDbContext context)
-		{
+	{
             const string exportDirectory = "./Results/";
             //const string exportDirectory = @"Results\";
             //const string exportDirectory = @"FastFood.App\Results\";
