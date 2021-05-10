@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 14.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "01CreateADatabaseLab", "01CreateADatabaseLab\01CreateADatabaseLab.ssmssqlproj", "{65637724-CBCE-4ABB-A7BB-565F00E2B0DC}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "01_12MinionsDatabaseExercises", "01_12MinionsDatabaseExercises\01_12MinionsDatabaseExercises.ssmssqlproj", "{A5F94895-141F-4DFA-9091-DD4C00511DB0}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "13MoviesDatabaseExercieses", "13MoviesDatabaseExercieses\13MoviesDatabaseExercieses.ssmssqlproj", "{921EF795-180F-4404-9623-BD9C37E3C4AC}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "14CarRentalDatabaseExercises", "14CarRentalDatabaseExercises\14CarRentalDatabaseExercises.ssmssqlproj", "{C8B83C8F-B3C7-4C82-B36A-5CC3501C60A5}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "15I23I24HotelDatabaseExercises", "15I23I24HotelDatabaseExercises\15I23I24HotelDatabaseExercises.ssmssqlproj", "{C7A55A37-4B0D-4491-B01A-2CDC7435FE7A}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "16_22SoftUniDtabaseExercises", "16_22SoftUniDtabaseExercises\16_22SoftUniDtabaseExercises.ssmssqlproj", "{0B8EBB15-BBB4-40CC-998C-35BAA84E945E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{65637724-CBCE-4ABB-A7BB-565F00E2B0DC}.Default|Default.ActiveCfg = Default
+		{0C774AAA-F2CF-401D-9772-B3916DCF0011}.Default|Default.ActiveCfg = Default
+		{A5F94895-141F-4DFA-9091-DD4C00511DB0}.Default|Default.ActiveCfg = Default
+		{921EF795-180F-4404-9623-BD9C37E3C4AC}.Default|Default.ActiveCfg = Default
+		{C8B83C8F-B3C7-4C82-B36A-5CC3501C60A5}.Default|Default.ActiveCfg = Default
+		{C7A55A37-4B0D-4491-B01A-2CDC7435FE7A}.Default|Default.ActiveCfg = Default
+		{0B8EBB15-BBB4-40CC-998C-35BAA84E945E}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
