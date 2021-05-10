@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 14.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "01_04RelationshipsMaking", "01_04RelationshipsMaking\01_04RelationshipsMaking.ssmssqlproj", "{823173DA-55F6-44BD-BFA2-4EC0A8D3A72C}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "05CreateOnlineStoreDatabase", "05CreateOnlineStoreDatabase\05CreateOnlineStoreDatabase.ssmssqlproj", "{557D74F6-A911-42E6-AC3D-7433519A921A}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "06CreateUniversityDatabase", "06CreateUniversityDatabase\06CreateUniversityDatabase.ssmssqlproj", "{0F9B52E8-2DCA-4024-9C29-363E06274B02}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "07CreateEIRDiagramOfSoftUniDatabase", "07CreateEIRDiagramOfSoftUniDatabase\07CreateEIRDiagramOfSoftUniDatabase.ssmssqlproj", "{18A7167F-915C-40E8-98AA-70A90B92521A}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "08_09EIRDiagramAndQueryOfGeographyDatabase", "08_09EIRDiagramAndQueryOfGeographyDatabase\08_09EIRDiagramAndQueryOfGeographyDatabase.ssmssqlproj", "{527DB319-E490-4917-BB05-1C1B2710734E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{823173DA-55F6-44BD-BFA2-4EC0A8D3A72C}.Default|Default.ActiveCfg = Default
+		{557D74F6-A911-42E6-AC3D-7433519A921A}.Default|Default.ActiveCfg = Default
+		{0F9B52E8-2DCA-4024-9C29-363E06274B02}.Default|Default.ActiveCfg = Default
+		{18A7167F-915C-40E8-98AA-70A90B92521A}.Default|Default.ActiveCfg = Default
+		{527DB319-E490-4917-BB05-1C1B2710734E}.Default|Default.ActiveCfg = Default
+		{1A0C8599-F358-479A-A63A-A036B9182276}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

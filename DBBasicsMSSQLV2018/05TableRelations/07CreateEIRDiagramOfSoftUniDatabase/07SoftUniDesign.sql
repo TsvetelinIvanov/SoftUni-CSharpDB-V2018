@@ -1,0 +1,3 @@
+--If right click on "Database Diagrams" then select "New Database Diagram" throws error:
+--New query:
+--EXEC sp_changedbowner 'sa'
