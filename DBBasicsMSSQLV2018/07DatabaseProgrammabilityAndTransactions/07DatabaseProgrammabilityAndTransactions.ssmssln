@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 14.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "01_08QueriesForSoftUniDB_SIFunctionsProcedures", "01_08QueriesForSoftUniDB_SIFunctionsProcedures\01_08QueriesForSoftUniDB_SIFunctionsProcedures.ssmssqlproj", "{8077CDAB-66A0-4775-8A10-A41D805EE198}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "09_12QueriesForBankDB_SIFunctionsAndProcedures", "09_12QueriesForBankDB_SIFunctionsAndProcedures\09_12QueriesForBankDB_SIFunctionsAndProcedures.ssmssqlproj", "{AA152BC4-263E-44D8-B2F2-0061FF39B107}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "13QueriesForDiabloDB_SIFunctionsAndProcedures", "13QueriesForDiabloDB_SIFunctionsAndProcedures\13QueriesForDiabloDB_SIFunctionsAndProcedures.ssmssqlproj", "{5FB23FE8-AFF1-495F-80F9-0016C76E56CC}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "14_18QueriesForBankDB_SIITriggersTransactions", "14_18QueriesForBankDB_SIITriggersTransactions\14_18QueriesForBankDB_SIITriggersTransactions.ssmssqlproj", "{29D4E09D-2117-4743-8F22-8000CA9706AD}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "19_20QueriesForDiabloDB_SIITriggersTransaction", "19_20QueriesForDiabloDB_SIITriggersTransaction\19_20QueriesForDiabloDB_SIITriggersTransaction.ssmssqlproj", "{6C1087B1-DDE3-4953-9456-62A65BB1D6F5}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "21_22QueriesForSoftUniDB_SIITriggerTransaction", "21_22QueriesForSoftUniDB_SIITriggerTransaction\21_22QueriesForSoftUniDB_SIITriggerTransaction.ssmssqlproj", "{6560F5E4-F9CE-4A32-AA91-12AEF970E86E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8077CDAB-66A0-4775-8A10-A41D805EE198}.Default|Default.ActiveCfg = Default
+		{AA152BC4-263E-44D8-B2F2-0061FF39B107}.Default|Default.ActiveCfg = Default
+		{5FB23FE8-AFF1-495F-80F9-0016C76E56CC}.Default|Default.ActiveCfg = Default
+		{29D4E09D-2117-4743-8F22-8000CA9706AD}.Default|Default.ActiveCfg = Default
+		{6C1087B1-DDE3-4953-9456-62A65BB1D6F5}.Default|Default.ActiveCfg = Default
+		{6560F5E4-F9CE-4A32-AA91-12AEF970E86E}.Default|Default.ActiveCfg = Default
+		{BE57A270-B8EC-46C1-AA64-8AD2A9965161}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
