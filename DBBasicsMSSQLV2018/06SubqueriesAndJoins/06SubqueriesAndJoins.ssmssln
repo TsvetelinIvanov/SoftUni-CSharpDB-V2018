@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 14.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "01_11QueriesFromSoftUni", "01_11QueriesFromSoftUni\01_11QueriesFromSoftUni.ssmssqlproj", "{3CFAC5BC-FA72-4C62-9ABF-FBBE7A48D9D9}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "12_18QueriesFromGeography", "12_18QueriesFromGeography\12_18QueriesFromGeography.ssmssqlproj", "{84BE30AD-3D65-4CD0-ACA2-19A16EAB9C2F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CFAC5BC-FA72-4C62-9ABF-FBBE7A48D9D9}.Default|Default.ActiveCfg = Default
+		{84BE30AD-3D65-4CD0-ACA2-19A16EAB9C2F}.Default|Default.ActiveCfg = Default
+		{B19E9E0E-FBCD-460E-ACC3-ABE1116C4A21}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
