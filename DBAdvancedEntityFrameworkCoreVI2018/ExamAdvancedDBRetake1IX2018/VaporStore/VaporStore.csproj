@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="obj\Debug\netcoreapp2.0\VaporStore.AssemblyInfo.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="obj\project.assets.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="7.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="bin\Debug\netcoreapp2.0\" />
+    <Folder Include="ImportResults\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="obj\Debug\netcoreapp2.0\VaporStore.AssemblyInfoInputs.cache" />
+    <None Include="obj\Debug\netcoreapp2.0\VaporStore.assets.cache" />
+    <None Include="obj\Debug\netcoreapp2.0\VaporStore.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\netcoreapp2.0\VaporStore.csprojAssemblyReference.cache" />
+    <None Include="obj\VaporStore.csproj.nuget.cache" />
+    <None Include="obj\VaporStore.csproj.nuget.g.props" />
+    <None Include="obj\VaporStore.csproj.nuget.g.targets" />
+  </ItemGroup>
+
+</Project>
