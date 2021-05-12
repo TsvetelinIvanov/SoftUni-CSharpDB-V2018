@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# SQL Server Management Studio Solution File, Format Version 14.00
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "01DDL", "01DDL\01DDL.ssmssqlproj", "{08527027-3A5A-47B3-AA84-172376E40F63}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "02_04DML", "02_04DML\02_04DML.ssmssqlproj", "{0478CF72-A311-4654-8BF5-171746A65663}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "20Bonus", "20Bonus\20Bonus.ssmssqlproj", "{10AEB50F-B851-4B8D-85AD-DB575EABD9D1}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "00.TripService", "00.TripService\00.TripService.ssmssqlproj", "{D8CF76C7-3778-4DE4-A11E-B0A69B984C42}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "05_17Querying", "05_17Querying\05_17Querying.ssmssqlproj", "{45F2C0D4-4D51-4FCE-879E-C0D922638D88}"
+EndProject
+Project("{4F2E2C19-372F-40D8-9FA7-9D2138C6997A}") = "18_19Programmability", "18_19Programmability\18_19Programmability.ssmssqlproj", "{17EFFB03-E194-40EB-A465-9B1D8CAF7292}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Default|Default = Default|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08527027-3A5A-47B3-AA84-172376E40F63}.Default|Default.ActiveCfg = Default
+		{0478CF72-A311-4654-8BF5-171746A65663}.Default|Default.ActiveCfg = Default
+		{10AEB50F-B851-4B8D-85AD-DB575EABD9D1}.Default|Default.ActiveCfg = Default
+		{D8CF76C7-3778-4DE4-A11E-B0A69B984C42}.Default|Default.ActiveCfg = Default
+		{668A44DB-5D22-423A-90FC-6E8D5C26D67F}.Default|Default.ActiveCfg = Default
+		{45F2C0D4-4D51-4FCE-879E-C0D922638D88}.Default|Default.ActiveCfg = Default
+		{17EFFB03-E194-40EB-A465-9B1D8CAF7292}.Default|Default.ActiveCfg = Default
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
