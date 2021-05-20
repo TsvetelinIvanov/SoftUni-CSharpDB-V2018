@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<students name="Students">
+ <student>
+  <name>Ivan Ivanov</name>
+  <gender>Male</gender>
+  <birthDate>1999/12/23</birthDate>
+  <phoneNumber>088812345678</phoneNumber>
+  <email>ivan@abv.bg</email>
+  <university>Softuare University</university>
+  <facultyNumber>8000100017</facultyNumber>
+  <exams>
+   <exam>
+    <name>Programming Basics</name>
+    <dateTaken>2017/01/11</dateTaken>
+    <grade>6.00</grade>
+   </exam>
+   <exam>
+    <name>Programming Fundamentals</name>
+    <dateTaken>2017/03/11</dateTaken>
+    <grade>6.00</grade>
+   </exam>
+  </exams>
+ </student>
+ <student>
+  <name>Petar Petrov</name>
+  <gender>Male</gender>
+  <birthDate>1997/01/29</birthDate>
+  <phoneNumber>088812345670</phoneNumber>
+  <email>pe6o@abv.bg</email>
+  <university>Softuare University</university>
+  <facultyNumber>8000100018</facultyNumber>
+  <exams>
+   <exam>
+    <name>Programming Basics</name>
+    <dateTaken>2017/01/11</dateTaken>
+    <grade>5.50</grade>
+   </exam>
+   <exam>
+    <name>Programming Fundamentals</name>
+    <dateTaken>2017/03/11</dateTaken>
+    <grade>5.90</grade>
+   </exam>
+  </exams>
+ </student>
+ <student>
+  <name>Georgi Georgiev</name>
+  <gender>Male</gender>
+  <birthDate>1987/05/06</birthDate>
+  <phoneNumber>088812345600</phoneNumber>
+  <email>go6o@abv.bg</email>
+  <university>Softuare University</university>
+  <facultyNumber>8000100019</facultyNumber>
+  <exams>
+   <exam>
+    <name>Programming Basics</name>
+    <dateTaken>2017/01/11</dateTaken>
+    <grade>5.70</grade>
+   </exam>
+   <exam>
+    <name>Programming Fundamentals</name>
+    <dateTaken>2017/03/11</dateTaken>
+    <grade>5.70</grade>
+   </exam>
+  </exams>
+ </student>
+ <student>
+  <name>Plamen Plamenov</name>
+  <gender>Male</gender>
+  <birthDate>1989/06/06</birthDate>
+  <phoneNumber>088812345601</phoneNumber>
+  <email>plamen@abv.bg</email>
+  <university>Softuare University</university>
+  <facultyNumber>8000100020</facultyNumber>
+  <exams>
+   <exam>
+    <name>Programming Basics</name>
+    <dateTaken>2017/01/11</dateTaken>
+    <grade>5.60</grade>
+   </exam>
+   <exam>
+    <name>Programming Fundamentals</name>
+    <dateTaken>2017/03/11</dateTaken>
+    <grade>5.60</grade>
+   </exam>
+  </exams>
+ </student>
+ <student>
+  <name>Sashka Aleksandrova</name>
+  <gender>Female</gender>
+  <birthDate>1998/09/06</birthDate>
+  <phoneNumber>088812347600</phoneNumber>
+  <email>sa6ka@abv.bg</email>
+  <university>Softuare University</university>
+  <facultyNumber>8000100021</facultyNumber>
+  <exams>
+   <exam>
+    <name>Programming Basics</name>
+    <dateTaken>2017/01/11</dateTaken>
+    <grade>5.50</grade>
+   </exam>
+   <exam>
+    <name>Programming Fundamentals</name>
+    <dateTaken>2017/03/11</dateTaken>
+    <grade>5.70</grade>
+   </exam>
+  </exams>
+ </student>
+ <student>
+  <name>Ginka Ginkina</name>
+  <gender>Female</gender>
+  <birthDate>1999/08/06</birthDate>
+  <phoneNumber>088812347611</phoneNumber>
+  <email>ginka@abv.bg</email>
+  <university>Softuare University</university>
+  <facultyNumber>8000100022</facultyNumber>
+  <exams>
+   <exam>
+    <name>Programming Basics</name>
+    <dateTaken>2017/01/11</dateTaken>
+    <grade>5.90</grade>
+   </exam>
+   <exam>
+    <name>Programming Fundamentals</name>
+    <dateTaken>2017/03/11</dateTaken>
+    <grade>6.00</grade>
+   </exam>
+  </exams>
+ </student>
+ <student>
+  <name>Plamena Plamenova</name>
+  <gender>Female</gender>
+  <birthDate>1990/09/06</birthDate>
+  <phoneNumber>088812341111</phoneNumber>
+  <email>plami@abv.bg</email>
+  <university>Softuare University</university>
+  <facultyNumber>8000100023</facultyNumber>
+  <exams>
+   <exam>
+    <name>Programming Basics</name>
+    <dateTaken>2017/01/11</dateTaken>
+    <grade>5.70</grade>
+   </exam>
+   <exam>
+    <name>Programming Fundamentals</name>
+    <dateTaken>2017/03/11</dateTaken>
+    <grade>5.70</grade>
+   </exam>
+  </exams>
+ </student> 
+</students>
