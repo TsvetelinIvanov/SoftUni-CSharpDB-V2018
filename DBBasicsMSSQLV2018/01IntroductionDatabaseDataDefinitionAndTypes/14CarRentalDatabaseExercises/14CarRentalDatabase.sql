@@ -1,5 +1,5 @@
 CREATE DATABASE CarRental
---It must be paste in Judge without this above
+--It must be pasted in Judge without this above
 
 CREATE TABLE Categories
 (
