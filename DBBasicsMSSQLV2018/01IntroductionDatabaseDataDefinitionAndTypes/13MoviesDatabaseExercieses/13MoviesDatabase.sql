@@ -38,7 +38,7 @@ Notes NTEXT
 
 INSERT INTO Categories(Id, CategoryName) VALUES
 (1, 'Film'),
-(2, 'Serial'),
+(2, 'Series'),
 (3, 'Documentary'),
 (4, 'Reality'),
 (5, 'Concert')
