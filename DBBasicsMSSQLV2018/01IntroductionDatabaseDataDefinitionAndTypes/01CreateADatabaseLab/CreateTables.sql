@@ -18,5 +18,3 @@ AccountTypeId INT FOREIGN KEY REFERENCES AccountTypes(Id),
 ClientId INT FOREIGN KEY REFERENCES Clients,
 Balance	DECIMAL(15, 2) NOT NULL DEFAULT(0)
 )
-
-
