@@ -1,11 +1,12 @@
 -- Create the database [Geography] if it does not exist
 IF NOT EXISTS (SELECT name FROM master.dbo.sysdatabases WHERE name = 'Geography')
-  CREATE DATABASE Geography
+CREATE DATABASE Geography
+
 GO
 
 USE Geography
-GO
 
+GO
 
 -- Drop all existing Geography tables, so that we can create them
 IF OBJECT_ID('Monasteries') IS NOT NULL
@@ -27,76 +28,90 @@ IF OBJECT_ID('Continents') IS NOT NULL
 IF OBJECT_ID('Currencies') IS NOT NULL
   DROP TABLE Currencies
 
-
 -- Create tables
-CREATE TABLE Continents(
-	ContinentCode char(2) NOT NULL,
-	ContinentName nvarchar(50) NOT NULL,
-  CONSTRAINT PK_Continents PRIMARY KEY CLUSTERED (ContinentCode)
+CREATE TABLE Continents
+(
+ContinentCode char(2) NOT NULL,
+ContinentName nvarchar(50) NOT NULL,
+CONSTRAINT PK_Continents PRIMARY KEY CLUSTERED (ContinentCode)
 )
+
 GO
 
-CREATE TABLE Countries(
-	CountryCode char(2) NOT NULL,
-	IsoCode char(3) NOT NULL,
-	CountryName varchar(45) NOT NULL,
-	CurrencyCode char(3),
-	ContinentCode char(2) NOT NULL,
-	Population int NOT NULL,
-	AreaInSqKm int NOT NULL,
-	Capital varchar(30) NOT NULL,
-  CONSTRAINT PK_Countries PRIMARY KEY CLUSTERED (CountryCode)
- )
-GO
-
-CREATE TABLE Currencies(
-	CurrencyCode char(3) NOT NULL,
-	Description nvarchar(200) NOT NULL,
-  CONSTRAINT PK_Currencies PRIMARY KEY CLUSTERED (CurrencyCode)
+CREATE TABLE Countries
+(
+CountryCode char(2) NOT NULL,
+IsoCode char(3) NOT NULL,
+CountryName varchar(45) NOT NULL,
+CurrencyCode char(3),
+ContinentCode char(2) NOT NULL,
+Population int NOT NULL,
+AreaInSqKm int NOT NULL,
+Capital varchar(30) NOT NULL,
+CONSTRAINT PK_Countries PRIMARY KEY CLUSTERED (CountryCode)
 )
+
 GO
 
-CREATE TABLE Mountains(
-	Id int IDENTITY NOT NULL,
-	MountainRange nvarchar(50) NOT NULL,
-  CONSTRAINT PK_Mountains PRIMARY KEY CLUSTERED (Id)
+CREATE TABLE Currencies
+(
+CurrencyCode char(3) NOT NULL,
+Description nvarchar(200) NOT NULL,
+CONSTRAINT PK_Currencies PRIMARY KEY CLUSTERED (CurrencyCode)
 )
+
 GO
 
-CREATE TABLE MountainsCountries(
-	MountainId int NOT NULL,
-	CountryCode char(2) NOT NULL,
-  CONSTRAINT PK_MountainsContinents PRIMARY KEY CLUSTERED (MountainId, CountryCode)
+CREATE TABLE Mountains
+(
+Id int IDENTITY NOT NULL,
+MountainRange nvarchar(50) NOT NULL,
+CONSTRAINT PK_Mountains PRIMARY KEY CLUSTERED (Id)
 )
+
 GO
 
-CREATE TABLE Peaks(
-	Id int IDENTITY NOT NULL,
-	PeakName nvarchar(50) NOT NULL,
-	Elevation int NOT NULL,
-	MountainId int NOT NULL,
-  CONSTRAINT PK_Peaks PRIMARY KEY CLUSTERED (Id)
+CREATE TABLE MountainsCountries
+(
+MountainId int NOT NULL,
+CountryCode char(2) NOT NULL,
+CONSTRAINT PK_MountainsContinents PRIMARY KEY CLUSTERED (MountainId, CountryCode)
 )
+
 GO
 
-CREATE TABLE Rivers(
-	Id int IDENTITY NOT NULL,
-	RiverName nvarchar(50) NOT NULL,
-	Length int NOT NULL,
-	DrainageArea int NOT NULL,
-	AverageDischarge int NOT NULL,
-	Outflow nvarchar(50) NOT NULL,
-  CONSTRAINT PK_Rivers PRIMARY KEY CLUSTERED (Id)
+CREATE TABLE Peaks
+(
+Id int IDENTITY NOT NULL,
+PeakName nvarchar(50) NOT NULL,
+Elevation int NOT NULL,
+MountainId int NOT NULL,
+CONSTRAINT PK_Peaks PRIMARY KEY CLUSTERED (Id)
 )
+
 GO
 
-CREATE TABLE CountriesRivers(
-	RiverId int NOT NULL,
-	CountryCode char(2) NOT NULL,
-  CONSTRAINT PK_CountriesRivers PRIMARY KEY CLUSTERED (CountryCode, RiverId)
+CREATE TABLE Rivers
+(
+Id int IDENTITY NOT NULL,
+RiverName nvarchar(50) NOT NULL,
+Length int NOT NULL,
+DrainageArea int NOT NULL,
+AverageDischarge int NOT NULL,
+Outflow nvarchar(50) NOT NULL,
+CONSTRAINT PK_Rivers PRIMARY KEY CLUSTERED (Id)
 )
+
 GO
 
+CREATE TABLE CountriesRivers
+(
+RiverId int NOT NULL,
+CountryCode char(2) NOT NULL,
+CONSTRAINT PK_CountriesRivers PRIMARY KEY CLUSTERED (CountryCode, RiverId)
+)
+
+GO
 
 -- Insert table data
 INSERT Continents (ContinentCode, ContinentName) VALUES
@@ -547,12 +562,13 @@ INSERT Mountains (Id, MountainRange) VALUES
 (18, N'Saint Elias Mountains'),
 (19, N'Sentinel Range'),
 (20, N'Southern Highlands'),
-(21, N'The Sudirman Range'),
+(21, N'TheÂ Sudirman Range'),
 (22, N'Trans-Mexican Volcanic Belt'),
 (23, N'Rhodope Mountains'),
 (24, N'Vitosha'),
 (25, N'Strandza'),
 (26, N'Monte Rosa')
+
 SET IDENTITY_INSERT Mountains OFF
 
 INSERT MountainsCountries (MountainId, CountryCode) VALUES
@@ -636,9 +652,10 @@ INSERT Peaks (Id, PeakName, Elevation, MountainId) VALUES
 (107, N'Orlovets', 2685, 17),
 (108, N'Vezhen', 2198, 4),
 (109, N'Kom', 2016, 4)
-SET IDENTITY_INSERT Peaks OFF
 
-SET IDENTITY_INSERT Rivers ON 
+SET IDENTITY_INSERT Peaks OFF
+SET IDENTITY_INSERT Rivers ON
+
 INSERT Rivers (Id, RiverName, Length, DrainageArea, AverageDischarge, Outflow) VALUES
 (1, N'Nile', 6650, 3254555, 5100, N'Mediterranean'),
 (2, N'Amazon', 6400, 7050000, 219000, N'Atlantic Ocean'),
@@ -670,6 +687,7 @@ INSERT Rivers (Id, RiverName, Length, DrainageArea, AverageDischarge, Outflow) V
 (28, N'Lower Tunguska', 2989, 473000, 3600, N'Yenisei'),
 (29, N'Brahmaputra', 2948, 1730000, 19200, N'Ganges'),
 (30, N'Danube', 2888, 817000, 7130, N'Black Sea')
+
 SET IDENTITY_INSERT Rivers OFF
 
 INSERT CountriesRivers (RiverId, CountryCode) VALUES
@@ -783,28 +801,35 @@ GO
 -- Add integrity constraints
 ALTER TABLE Countries WITH CHECK ADD CONSTRAINT FK_Countries_Continents
 FOREIGN KEY(ContinentCode) REFERENCES Continents (ContinentCode)
+
 GO
 
 ALTER TABLE Countries WITH CHECK ADD CONSTRAINT FK_Countries_Currencies
 FOREIGN KEY(CurrencyCode) REFERENCES Currencies (CurrencyCode)
+
 GO
 
 ALTER TABLE CountriesRivers WITH CHECK ADD CONSTRAINT FK_CountriesRivers_Countries
 FOREIGN KEY(CountryCode) REFERENCES Countries (CountryCode)
+
 GO
 
 ALTER TABLE CountriesRivers WITH CHECK ADD CONSTRAINT FK_CountriesRivers_Rivers
 FOREIGN KEY(RiverId) REFERENCES Rivers (Id)
+
 GO
 
 ALTER TABLE MountainsCountries WITH CHECK ADD CONSTRAINT FK_MountainsCountries_Countries
 FOREIGN KEY(CountryCode) REFERENCES Countries (CountryCode)
+
 GO
 
 ALTER TABLE MountainsCountries WITH CHECK ADD CONSTRAINT FK_MountainsCountries_Mountains
 FOREIGN KEY(MountainId) REFERENCES Mountains (Id)
+
 GO
 
 ALTER TABLE Peaks WITH CHECK ADD CONSTRAINT FK_Peaks_Mountains
 FOREIGN KEY(MountainId) REFERENCES Mountains (Id)
+
 GO
