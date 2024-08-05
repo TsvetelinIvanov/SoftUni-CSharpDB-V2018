@@ -4,9 +4,11 @@ GO
 /****** Object:  Database [Diablo]    Script Date: 7/10/2015 8:03:42 PM ******/
 CREATE DATABASE [Diablo]
 COLLATE SQL_Latin1_General_CP1_CI_AS;
+
 GO
 
 USE [Diablo]
+
 GO
 
 CREATE TABLE [dbo].[Characters]
@@ -14,7 +16,7 @@ CREATE TABLE [dbo].[Characters]
 [Id] [int] IDENTITY(1,1) NOT NULL,
 [Name] [nvarchar](50) NOT NULL,
 [StatisticId] [int] NULL,
- CONSTRAINT [PK_Characters] PRIMARY KEY CLUSTERED 
+CONSTRAINT [PK_Characters] PRIMARY KEY CLUSTERED 
 (
 [Id] ASC
 ) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
@@ -24,9 +26,11 @@ GO
 
 /****** Object:  Table [dbo].[Games]    Script Date: 7/10/2015 8:03:42 PM ******/
 SET ANSI_NULLS ON
+
 GO
 	
 SET QUOTED_IDENTIFIER ON
+
 GO
 
 CREATE TABLE [dbo].[Games]
@@ -53,6 +57,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 
 GO
+
 CREATE TABLE [dbo].[GameTypeForbiddenItems]
 (
 [ItemId] [int] NOT NULL,
@@ -249,6 +254,7 @@ INSERT [dbo].[Characters] ([Id], [Name], [StatisticId]) VALUES (9, N'Druid', 10)
 INSERT [dbo].[Characters] ([Id], [Name], [StatisticId]) VALUES (10, N'Necromancer', 11)
 INSERT [dbo].[Characters] ([Id], [Name], [StatisticId]) VALUES (11, N'Paladin', 12)
 INSERT [dbo].[Characters] ([Id], [Name], [StatisticId]) VALUES (12, N'Sorceress', 13)
+
 SET IDENTITY_INSERT [dbo].[Characters] OFF
 SET IDENTITY_INSERT [dbo].[Games] ON 
 
