@@ -22,4 +22,3 @@ INSERT INTO People([Name], Height, [Weight], Gender, Birthdate) VALUES
 ('Maria Yankova', 1.60, 60, 'f', '01-08-1991'),
 ('Plamena Berova', 1.74, 69, 'f', '01-08-1987'),
 ('Heinrich Bergman', 1.78, 68, 'm', '01-08-1965')
-
