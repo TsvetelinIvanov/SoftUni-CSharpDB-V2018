@@ -1,5 +1,6 @@
 USE [master]
 GO
+
 /****** Object:  Database [Diablo]    Script Date: 7/10/2015 8:03:42 PM ******/
 CREATE DATABASE [Diablo]
 COLLATE SQL_Latin1_General_CP1_CI_AS;
@@ -8,178 +9,232 @@ GO
 USE [Diablo]
 GO
 
-CREATE TABLE [dbo].[Characters](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [nvarchar](50) NOT NULL,
-	[StatisticId] [int] NULL,
+CREATE TABLE [dbo].[Characters]
+(
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[Name] [nvarchar](50) NOT NULL,
+[StatisticId] [int] NULL,
  CONSTRAINT [PK_Characters] PRIMARY KEY CLUSTERED 
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
+
 /****** Object:  Table [dbo].[Games]    Script Date: 7/10/2015 8:03:42 PM ******/
 SET ANSI_NULLS ON
 GO
+	
 SET QUOTED_IDENTIFIER ON
 GO
-CREATE TABLE [dbo].[Games](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [nvarchar](50) NOT NULL,
-	[Start] [datetime] NOT NULL,
-	[Duration] [int] NULL,
-	[GameTypeId] [int] NOT NULL,
-	[IsFinished] [bit] NOT NULL,
- CONSTRAINT [PK_Games] PRIMARY KEY CLUSTERED 
+
+CREATE TABLE [dbo].[Games]
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[Name] [nvarchar](50) NOT NULL,
+[Start] [datetime] NOT NULL,
+[Duration] [int] NULL,
+[GameTypeId] [int] NOT NULL,
+[IsFinished] [bit] NOT NULL,
+CONSTRAINT [PK_Games] PRIMARY KEY CLUSTERED 
+(
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
+
 /****** Object:  Table [dbo].[GameTypeForbiddenItems]    Script Date: 7/10/2015 8:03:42 PM ******/
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[GameTypeForbiddenItems](
-	[ItemId] [int] NOT NULL,
-	[GameTypeId] [int] NOT NULL,
- CONSTRAINT [PK_GameTypeForbiddenItems] PRIMARY KEY CLUSTERED 
+CREATE TABLE [dbo].[GameTypeForbiddenItems]
 (
-	[ItemId] ASC,
-	[GameTypeId] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[ItemId] [int] NOT NULL,
+[GameTypeId] [int] NOT NULL,
+CONSTRAINT [PK_GameTypeForbiddenItems] PRIMARY KEY CLUSTERED 
+(
+[ItemId] ASC,
+[GameTypeId] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
+
 /****** Object:  Table [dbo].[GameTypes]    Script Date: 7/10/2015 8:03:42 PM ******/
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[GameTypes](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [nvarchar](50) NOT NULL,
-	[BonusStatsId] [int] NULL,
- CONSTRAINT [PK_GameTypes] PRIMARY KEY CLUSTERED 
+
+CREATE TABLE [dbo].[GameTypes]
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[Name] [nvarchar](50) NOT NULL,
+[BonusStatsId] [int] NULL,
+CONSTRAINT [PK_GameTypes] PRIMARY KEY CLUSTERED 
+(
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
+
 /****** Object:  Table [dbo].[Items]    Script Date: 7/10/2015 8:03:42 PM ******/
+
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[Items](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [nvarchar](50) NULL,
-	[ItemTypeId] [int] NOT NULL,
-	[StatisticId] [int] NOT NULL,
-	[Price] [money] NOT NULL,
-	[MinLevel] [int] NOT NULL,
- CONSTRAINT [PK_Items] PRIMARY KEY CLUSTERED 
+
+CREATE TABLE [dbo].[Items]
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[Name] [nvarchar](50) NULL,
+[ItemTypeId] [int] NOT NULL,
+[StatisticId] [int] NOT NULL,
+[Price] [money] NOT NULL,
+[MinLevel] [int] NOT NULL,
+CONSTRAINT [PK_Items] PRIMARY KEY CLUSTERED 
+(
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
+
 /****** Object:  Table [dbo].[ItemTypes]    Script Date: 7/10/2015 8:03:42 PM ******/
 SET ANSI_NULLS ON
+	
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[ItemTypes](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [nvarchar](50) NOT NULL,
- CONSTRAINT [PK_ItemTypes] PRIMARY KEY CLUSTERED 
+
+CREATE TABLE [dbo].[ItemTypes]
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[Name] [nvarchar](50) NOT NULL,
+CONSTRAINT [PK_ItemTypes] PRIMARY KEY CLUSTERED 
+(
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
+
 /****** Object:  Table [dbo].[Statistics]    Script Date: 7/10/2015 8:03:42 PM ******/
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[Statistics](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Strength] [int] NOT NULL,
-	[Defence] [int] NOT NULL,
-	[Mind] [int] NOT NULL,
-	[Speed] [int] NOT NULL,
-	[Luck] [int] NOT NULL,
- CONSTRAINT [PK_Statistics] PRIMARY KEY CLUSTERED 
+
+CREATE TABLE [dbo].[Statistics]
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[Strength] [int] NOT NULL,
+[Defence] [int] NOT NULL,
+[Mind] [int] NOT NULL,
+[Speed] [int] NOT NULL,
+[Luck] [int] NOT NULL,
+CONSTRAINT [PK_Statistics] PRIMARY KEY CLUSTERED 
+(
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
+
 /****** Object:  Table [dbo].[UserGameItems]    Script Date: 7/10/2015 8:03:42 PM ******/
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[UserGameItems](
-	[ItemId] [int] NOT NULL,
-	[UserGameId] [int] NOT NULL,
- CONSTRAINT [PK_UserGameItems] PRIMARY KEY CLUSTERED 
+
+CREATE TABLE [dbo].[UserGameItems]
 (
-	[ItemId] ASC,
-	[UserGameId] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[ItemId] [int] NOT NULL,
+[UserGameId] [int] NOT NULL,
+CONSTRAINT [PK_UserGameItems] PRIMARY KEY CLUSTERED 
+(
+[ItemId] ASC,
+[UserGameId] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
+
 /****** Object:  Table [dbo].[Users]    Script Date: 7/10/2015 8:03:42 PM ******/
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[Users](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Username] [nvarchar](50) NOT NULL,
-	[FirstName] [nvarchar](50) NULL,
-	[LastName] [nvarchar](50) NULL,
-	[Email] [nvarchar](50) NULL,
-	[RegistrationDate] [datetime] NOT NULL,
-	[IsDeleted] [bit] NOT NULL,
-	[IpAddress] [nvarchar](15) NOT NULL,
- CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED 
+
+CREATE TABLE [dbo].[Users]
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[Username] [nvarchar](50) NOT NULL,
+[FirstName] [nvarchar](50) NULL,
+[LastName] [nvarchar](50) NULL,
+[Email] [nvarchar](50) NULL,
+[RegistrationDate] [datetime] NOT NULL,
+[IsDeleted] [bit] NOT NULL,
+[IpAddress] [nvarchar](15) NOT NULL,
+CONSTRAINT [PK_Users] PRIMARY KEY CLUSTERED 
+(
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
+
 /****** Object:  Table [dbo].[UsersGames]    Script Date: 7/10/2015 8:03:42 PM ******/
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[UsersGames](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[GameId] [int] NOT NULL,
-	[UserId] [int] NOT NULL,
-	[CharacterId] [int] NOT NULL,
-	[Level] [int] NOT NULL,
-	[JoinedOn] [datetime] NOT NULL,
-	[Cash] [money] NOT NULL,
- CONSTRAINT [PK_UsersGames_1] PRIMARY KEY CLUSTERED 
+
+CREATE TABLE [dbo].[UsersGames]
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[GameId] [int] NOT NULL,
+[UserId] [int] NOT NULL,
+[CharacterId] [int] NOT NULL,
+[Level] [int] NOT NULL,
+[JoinedOn] [datetime] NOT NULL,
+[Cash] [money] NOT NULL,
+CONSTRAINT [PK_UsersGames_1] PRIMARY KEY CLUSTERED 
+(
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
+
 SET IDENTITY_INSERT [dbo].[Characters] ON 
 
 INSERT [dbo].[Characters] ([Id], [Name], [StatisticId]) VALUES (1, N'Barbarian', 1)
@@ -235,7 +290,7 @@ INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinish
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (36, N'Japhette orchid', CAST(0x00009F96011567A0 AS DateTime), 1, 1, 0)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (37, N'Kangaroo paw yellow', CAST(0x00009E1F011D5EB0 AS DateTime), 3, 5, 0)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (38, N'Lace fern', CAST(0x0000A45F01323E70 AS DateTime), 7, 4, 0)
-INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (39, N'Lily of the Nile – Alba', CAST(0x0000A1F401377660 AS DateTime), 9, 4, 0)
+INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (39, N'Lily of the Nile Â– Alba', CAST(0x0000A1F401377660 AS DateTime), 9, 4, 0)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (40, N'Lumex', CAST(0x0000A082011FD780 AS DateTime), 2, 5, 0)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (41, N'Larkspur pink', CAST(0x0000A2E500E9BBF0 AS DateTime), 2, 3, 0)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (42, N'Lily of the valley', CAST(0x0000A40E007CB1E0 AS DateTime), 7, 4, 1)
@@ -296,7 +351,9 @@ INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinish
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (97, N'Sword fern', CAST(0x00009D2C00000000 AS DateTime), 5, 4, 0)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (98, N'Star of Bethlehem', CAST(0x0000A4E5011567A0 AS DateTime), 8, 2, 0)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (99, N'Sage perennial', CAST(0x0000A51800BB0AD0 AS DateTime), NULL, 4, 1)
+
 GO
+
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (100, N'Saponaria', CAST(0x0000A1CF00000000 AS DateTime), 7, 4, 0)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (101, N'Snapdragon apple blossom', CAST(0x00009F3D011567A0 AS DateTime), 4, 2, 1)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (102, N'Saxicola', CAST(0x00009DAD00000000 AS DateTime), 8, 2, 1)
@@ -397,7 +454,9 @@ INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinish
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (197, N'Punta Cana', CAST(0x0000A30B00000000 AS DateTime), 2, 5, 0)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (198, N'Antalya', CAST(0x0000A3C1014AF690 AS DateTime), 2, 1, 0)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (199, N'Mecca', CAST(0x0000A4D600000000 AS DateTime), 7, 3, 1)
+
 GO
+
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (200, N'Macau', CAST(0x00009F9600F3E580 AS DateTime), 1, 1, 1)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (201, N'Johannesburg', CAST(0x0000A46100000000 AS DateTime), 2, 2, 0)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (202, N'Pattaya', CAST(0x0000A47C00000000 AS DateTime), 2, 1, 0)
@@ -440,7 +499,9 @@ INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinish
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (239, N'Lake Mead', CAST(0x0000A48500000000 AS DateTime), 7, 3, 1)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (240, N'Lotte World', CAST(0x0000A0CB00000000 AS DateTime), 6, 4, 1)
 INSERT [dbo].[Games] ([Id], [Name], [Start], [Duration], [GameTypeId], [IsFinished]) VALUES (241, N'Victoria Peak', CAST(0x0000A2A600000000 AS DateTime), 1, 1, 1)
+
 SET IDENTITY_INSERT [dbo].[Games] OFF
+
 INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (1, 1)
 INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (7, 1)
 INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (9, 1)
@@ -541,7 +602,9 @@ INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (430, 3)
 INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (432, 5)
 INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (438, 5)
 INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (439, 1)
+
 GO
+
 INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (440, 3)
 INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (448, 1)
 INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (451, 4)
@@ -568,6 +631,7 @@ INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (556, 1)
 INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (564, 2)
 INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (566, 3)
 INSERT [dbo].[GameTypeForbiddenItems] ([ItemId], [GameTypeId]) VALUES (569, 4)
+
 SET IDENTITY_INSERT [dbo].[GameTypes] ON 
 
 INSERT [dbo].[GameTypes] ([Id], [Name], [BonusStatsId]) VALUES (1, N'Expert', 116)
@@ -575,6 +639,7 @@ INSERT [dbo].[GameTypes] ([Id], [Name], [BonusStatsId]) VALUES (2, N'Beginner', 
 INSERT [dbo].[GameTypes] ([Id], [Name], [BonusStatsId]) VALUES (3, N'Kinky', 118)
 INSERT [dbo].[GameTypes] ([Id], [Name], [BonusStatsId]) VALUES (4, N'Intermediate', 119)
 INSERT [dbo].[GameTypes] ([Id], [Name], [BonusStatsId]) VALUES (5, N'Funny', 120)
+
 SET IDENTITY_INSERT [dbo].[GameTypes] OFF
 SET IDENTITY_INSERT [dbo].[Items] ON 
 
@@ -677,7 +742,9 @@ INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLe
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (97, N'Cindercoat', 22, 38, 326.0000, 78)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (98, N'Cloak of Deception', 5, 47, 597.0000, 55)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (99, N'Cloaks', 22, 63, 249.0000, 60)
+
 GO
+
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (100, N'Cluckeye', 12, 21, 587.0000, 20)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (101, N'Convention of the Elements', 6, 66, 103.0000, 38)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (102, N'Cord of the Sherma', 15, 53, 739.0000, 27)
@@ -778,7 +845,9 @@ INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLe
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (197, N'Golden Gorget of Leoric', 7, 77, 772.0000, 3)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (198, N'Golden Scourge', 3, 56, 477.0000, 22)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (199, N'Goldskin (Diablo III)', 13, 19, 449.0000, 62)
+
 GO
+
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (200, N'Goldwrap (Diablo III)', 11, 89, 207.0000, 68)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (201, N'Greater Rift Keystone', 3, 50, 396.0000, 43)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (202, N'Griswolds Masterpiece', 21, 82, 342.0000, 7)
@@ -879,7 +948,9 @@ INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLe
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (297, N'Mad Monarchs Scepter', 24, 54, 370.0000, 7)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (298, N'Madawcs Sorrow', 3, 46, 520.0000, 8)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (299, N'Madstone', 13, 39, 795.0000, 52)
+
 GO
+
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (300, N'Magefist (Diablo III)', 6, 102, 70.0000, 41)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (301, N'Maghdas Tormented Soul', 17, 8, 783.0000, 56)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (302, N'Maloths Focus', 18, 38, 743.0000, 49)
@@ -980,7 +1051,9 @@ INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLe
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (397, N'Sever', 26, 34, 782.0000, 14)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (398, N'Shard of Entsteig Plate', 13, 110, 237.0000, 47)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (399, N'Shard of Hate', 27, 57, 546.0000, 45)
+
 GO
+
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (400, N'Shattered Core', 3, 70, 180.0000, 28)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (401, N'Shens Delight', 11, 6, 162.0000, 13)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (402, N'Shi Mizus Haori', 26, 73, 528.0000, 5)
@@ -1081,14 +1154,16 @@ INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLe
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (497, N'The Minds Eye', 26, 103, 501.0000, 45)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (498, N'The Mortal Drama', 19, 39, 184.0000, 48)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (499, N'The Murlocket', 3, 72, 207.0000, 34)
+
 GO
+
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (500, N'The Ninth Cirri Satchel', 25, 36, 172.0000, 12)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (501, N'The Oculus (Diablo III)', 16, 77, 34.0000, 32)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (502, N'The Paddle', 12, 2, 290.0000, 71)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (503, N'The Ravens Wing', 2, 55, 79.0000, 70)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (504, N'The Short Mans Finger', 4, 82, 771.0000, 60)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (505, N'The Smoldering Core', 9, 37, 215.0000, 36)
-INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (506, N'The Spider Queen’s Grasp', 11, 50, 326.0000, 48)
+INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (506, N'The Spider QueenÂ’s Grasp', 11, 50, 326.0000, 48)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (507, N'The Star of Azkaranth', 13, 10, 549.0000, 57)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (508, N'The Sultan of Blinding Sand', 14, 50, 460.0000, 64)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (509, N'The Swami', 14, 78, 211.0000, 17)
@@ -1160,6 +1235,7 @@ INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLe
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (575, N'Xephirian Amulet', 26, 2, 339.0000, 57)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (576, N'Zeis Stone of Vengeance', 6, 108, 371.0000, 28)
 INSERT [dbo].[Items] ([Id], [Name], [ItemTypeId], [StatisticId], [Price], [MinLevel]) VALUES (577, N'Ziggurat Tooth', 16, 47, 788.0000, 56)
+
 SET IDENTITY_INSERT [dbo].[Items] OFF
 SET IDENTITY_INSERT [dbo].[ItemTypes] ON 
 
@@ -1191,6 +1267,7 @@ INSERT [dbo].[ItemTypes] ([Id], [Name]) VALUES (25, N'Shield')
 INSERT [dbo].[ItemTypes] ([Id], [Name]) VALUES (26, N'Mojos')
 INSERT [dbo].[ItemTypes] ([Id], [Name]) VALUES (27, N'Orbs')
 INSERT [dbo].[ItemTypes] ([Id], [Name]) VALUES (28, N'Quivers')
+
 SET IDENTITY_INSERT [dbo].[ItemTypes] OFF
 SET IDENTITY_INSERT [dbo].[Statistics] ON 
 
@@ -1293,7 +1370,9 @@ INSERT [dbo].[Statistics] ([Id], [Strength], [Defence], [Mind], [Speed], [Luck])
 INSERT [dbo].[Statistics] ([Id], [Strength], [Defence], [Mind], [Speed], [Luck]) VALUES (98, 7, 7, 7, 9, 13)
 INSERT [dbo].[Statistics] ([Id], [Strength], [Defence], [Mind], [Speed], [Luck]) VALUES (99, 7, 14, 8, 17, 13)
 INSERT [dbo].[Statistics] ([Id], [Strength], [Defence], [Mind], [Speed], [Luck]) VALUES (100, 14, 13, 16, 6, 11)
+
 GO
+
 INSERT [dbo].[Statistics] ([Id], [Strength], [Defence], [Mind], [Speed], [Luck]) VALUES (101, 5, 10, 2, 14, 8)
 INSERT [dbo].[Statistics] ([Id], [Strength], [Defence], [Mind], [Speed], [Luck]) VALUES (102, 2, 10, 13, 15, 11)
 INSERT [dbo].[Statistics] ([Id], [Strength], [Defence], [Mind], [Speed], [Luck]) VALUES (103, 3, 1, 10, 17, 10)
@@ -1415,7 +1494,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (24, 20)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (24, 36)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (24, 128)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (24, 223)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (25, 230)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (25, 252)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (26, 38)
@@ -1516,7 +1597,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (46, 111)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (46, 122)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (46, 243)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (46, 323)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (47, 82)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (47, 120)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (47, 176)
@@ -1617,7 +1700,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (67, 275)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (68, 9)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (68, 91)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (68, 195)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (68, 262)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (70, 41)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (70, 53)
@@ -1718,7 +1803,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (92, 287)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (93, 58)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (93, 157)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (93, 320)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (94, 38)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (94, 134)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (94, 241)
@@ -1819,7 +1906,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (117, 88)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (117, 131)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (118, 38)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (118, 48)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (118, 165)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (118, 172)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (118, 190)
@@ -1920,7 +2009,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (141, 84)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (141, 148)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (141, 213)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (141, 298)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (142, 65)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (142, 257)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (143, 6)
@@ -2021,7 +2112,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (162, 70)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (162, 71)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (162, 75)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (162, 256)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (163, 1)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (163, 153)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (163, 231)
@@ -2122,7 +2215,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (188, 214)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (188, 246)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (188, 313)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (189, 59)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (189, 146)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (189, 232)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (189, 309)
@@ -2223,7 +2318,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (213, 41)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (213, 77)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (213, 94)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (213, 131)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (213, 246)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (213, 322)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (214, 81)
@@ -2323,8 +2420,10 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (238, 321)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (239, 36)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (239, 78)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (239, 140)
-INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (240, 132)
+INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (240, 132
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (240, 175)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (240, 187)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (240, 195)
@@ -2425,7 +2524,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (262, 231)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (263, 10)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (263, 253)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (263, 313)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (264, 8)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (265, 40)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (265, 150)
@@ -2526,7 +2627,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (290, 101)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (290, 102)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (290, 197)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (291, 29)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (291, 47)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (291, 94)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (291, 306)
@@ -2627,7 +2730,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (315, 10)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (316, 70)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (316, 260)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (316, 318)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (317, 222)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (317, 223)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (317, 234)
@@ -2728,7 +2833,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (344, 64)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (344, 169)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (344, 245)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (345, 44)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (345, 60)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (345, 89)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (345, 301)
@@ -2829,7 +2936,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (367, 214)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (367, 217)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (367, 263)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (368, 72)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (368, 198)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (368, 304)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (369, 52)
@@ -2930,7 +3039,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (392, 277)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (393, 89)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (393, 99)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (393, 150)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (393, 151)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (393, 200)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (393, 321)
@@ -3031,7 +3142,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (414, 320)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (415, 51)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (415, 165)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (415, 284)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (415, 302)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (416, 40)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (416, 55)
@@ -3132,7 +3245,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (438, 126)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (438, 222)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (438, 234)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (438, 245)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (438, 292)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (439, 103)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (439, 119)
@@ -3233,7 +3348,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (460, 269)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (461, 59)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (461, 62)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (461, 294)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (462, 29)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (462, 213)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (462, 299)
@@ -3334,7 +3451,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (484, 265)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (484, 272)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (485, 17)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (485, 60)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (486, 121)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (486, 163)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (486, 250)
@@ -3435,7 +3554,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (508, 58)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (508, 202)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (508, 238)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (509, 20)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (509, 57)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (509, 63)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (509, 101)
@@ -3536,7 +3657,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (531, 198)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (531, 315)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (532, 70)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (532, 112)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (532, 156)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (532, 196)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (533, 19)
@@ -3637,7 +3760,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (554, 205)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (554, 207)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (554, 293)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (555, 146)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (555, 177)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (555, 215)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (555, 223)
@@ -3738,7 +3863,9 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (576, 7)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (576, 32)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (576, 78)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (576, 133)
+
 GO
+
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (576, 135)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (576, 136)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (576, 137)
@@ -3746,6 +3873,7 @@ INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (576, 197)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (576, 256)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (577, 69)
 INSERT [dbo].[UserGameItems] ([ItemId], [UserGameId]) VALUES (577, 265)
+
 SET IDENTITY_INSERT [dbo].[Users] ON 
 
 INSERT [dbo].[Users] ([Id], [Username], [FirstName], [LastName], [Email], [RegistrationDate], [IsDeleted], [IpAddress]) VALUES (1, N'VGeorgiev', N'Vladimir', N'Georgiev', N'vlado@softuni.bg', CAST(0x0000A29600000000 AS DateTime), 0, N'74.212.145.183')
@@ -3819,6 +3947,7 @@ INSERT [dbo].[Users] ([Id], [Username], [FirstName], [LastName], [Email], [Regis
 INSERT [dbo].[Users] ([Id], [Username], [FirstName], [LastName], [Email], [RegistrationDate], [IsDeleted], [IpAddress]) VALUES (69, N'skippingside', N'ROSE', N'MORRIS', N'b_astuti@telkomsel.co.id', CAST(0x0000A18300000000 AS DateTime), 0, N'88.28.151.138')
 INSERT [dbo].[Users] ([Id], [Username], [FirstName], [LastName], [Email], [RegistrationDate], [IsDeleted], [IpAddress]) VALUES (70, N'terrifymarzipan', N'JANICE', N'RIVERA', N'grfurniture@yahoo.com', CAST(0x00009D1900000000 AS DateTime), 1, N'136.208.113.14')
 INSERT [dbo].[Users] ([Id], [Username], [FirstName], [LastName], [Email], [RegistrationDate], [IsDeleted], [IpAddress]) VALUES (71, N'rotoriginally', N'KELLY', N'ROGERS', N'gosyen2000@hotmail.com', CAST(0x00009E2B00000000 AS DateTime), 1, N'146.141.16.116')
+
 SET IDENTITY_INSERT [dbo].[Users] OFF
 SET IDENTITY_INSERT [dbo].[UsersGames] ON 
 
@@ -3921,7 +4050,9 @@ INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [Jo
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (97, 71, 69, 12, 30, CAST(0x0000A4B100000000 AS DateTime), 2512.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (98, 49, 14, 10, 66, CAST(0x0000A14B00000000 AS DateTime), 6772.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (99, 204, 11, 5, 74, CAST(0x0000A49800000000 AS DateTime), 6976.0000)
+
 GO
+
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (100, 192, 65, 6, 32, CAST(0x0000A07200000000 AS DateTime), 6714.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (101, 164, 32, 1, 94, CAST(0x0000A37700000000 AS DateTime), 6869.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (102, 90, 68, 7, 87, CAST(0x00009F9700000000 AS DateTime), 6475.0000)
@@ -4022,7 +4153,9 @@ INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [Jo
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (197, 232, 28, 6, 84, CAST(0x0000A19D00000000 AS DateTime), 2934.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (198, 148, 44, 1, 97, CAST(0x0000A2CE00000000 AS DateTime), 6762.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (199, 223, 3, 4, 89, CAST(0x0000A28A00000000 AS DateTime), 7206.0000)
+
 GO
+
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (200, 101, 48, 11, 10, CAST(0x00009F3D00000000 AS DateTime), 4377.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (201, 189, 25, 2, 52, CAST(0x0000A0DF00000000 AS DateTime), 7758.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (202, 59, 27, 10, 88, CAST(0x0000A3CC00000000 AS DateTime), 7220.0000)
@@ -4123,7 +4256,9 @@ INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [Jo
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (297, 105, 54, 7, 38, CAST(0x0000A0DE00000000 AS DateTime), 8720.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (298, 198, 10, 4, 29, CAST(0x0000A3C100000000 AS DateTime), 5465.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (299, 163, 3, 9, 28, CAST(0x00009EE100000000 AS DateTime), 6478.0000)
+
 GO
+
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (300, 166, 17, 7, 39, CAST(0x00009F2900000000 AS DateTime), 6461.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (301, 128, 24, 6, 8, CAST(0x0000A2D000000000 AS DateTime), 7811.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (302, 237, 1, 2, 22, CAST(0x00009D3300000000 AS DateTime), 7396.0000)
@@ -4149,78 +4284,141 @@ INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [Jo
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (322, 151, 38, 12, 60, CAST(0x0000A25400000000 AS DateTime), 8202.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (323, 10, 28, 12, 43, CAST(0x0000A3FB00000000 AS DateTime), 8119.0000)
 INSERT [dbo].[UsersGames] ([Id], [GameId], [UserId], [CharacterId], [Level], [JoinedOn], [Cash]) VALUES (324, 122, 9, 1, 16, CAST(0x0000A15000000000 AS DateTime), 5832.0000)
+
 SET IDENTITY_INSERT [dbo].[UsersGames] OFF
+
 ALTER TABLE [dbo].[Games] ADD  CONSTRAINT [DF_Games_IsFinished]  DEFAULT ((0)) FOR [IsFinished]
+
 GO
+
 ALTER TABLE [dbo].[Users] ADD  CONSTRAINT [DF_Users_IsDeleted]  DEFAULT ((0)) FOR [IsDeleted]
+
 GO
+
 ALTER TABLE [dbo].[UsersGames] ADD  CONSTRAINT [DF_UsersGames_Cash]  DEFAULT ((1000)) FOR [Cash]
+
 GO
+
 ALTER TABLE [dbo].[Characters]  WITH CHECK ADD  CONSTRAINT [FK_Characters_Statistics] FOREIGN KEY([StatisticId])
 REFERENCES [dbo].[Statistics] ([Id])
+
 GO
+
 ALTER TABLE [dbo].[Characters] CHECK CONSTRAINT [FK_Characters_Statistics]
+
 GO
+
 ALTER TABLE [dbo].[Games]  WITH CHECK ADD  CONSTRAINT [FK_Games_GameTypes] FOREIGN KEY([GameTypeId])
 REFERENCES [dbo].[GameTypes] ([Id])
+
 GO
+
 ALTER TABLE [dbo].[Games] CHECK CONSTRAINT [FK_Games_GameTypes]
+
 GO
+
 ALTER TABLE [dbo].[GameTypeForbiddenItems]  WITH CHECK ADD  CONSTRAINT [FK_GameTypeForbiddenItems_GameTypes] FOREIGN KEY([GameTypeId])
 REFERENCES [dbo].[GameTypes] ([Id])
+
 GO
+
 ALTER TABLE [dbo].[GameTypeForbiddenItems] CHECK CONSTRAINT [FK_GameTypeForbiddenItems_GameTypes]
+
 GO
+
 ALTER TABLE [dbo].[GameTypeForbiddenItems]  WITH CHECK ADD  CONSTRAINT [FK_GameTypeForbiddenItems_Items] FOREIGN KEY([ItemId])
 REFERENCES [dbo].[Items] ([Id])
+
 GO
+
 ALTER TABLE [dbo].[GameTypeForbiddenItems] CHECK CONSTRAINT [FK_GameTypeForbiddenItems_Items]
+
 GO
+
 ALTER TABLE [dbo].[GameTypes]  WITH CHECK ADD  CONSTRAINT [FK_GameTypes_Statistics] FOREIGN KEY([BonusStatsId])
 REFERENCES [dbo].[Statistics] ([Id])
+
 GO
+
 ALTER TABLE [dbo].[GameTypes] CHECK CONSTRAINT [FK_GameTypes_Statistics]
+
 GO
-ALTER TABLE [dbo].[Items]  WITH CHECK ADD  CONSTRAINT [FK_Items_ItemTypes] FOREIGN KEY([ItemTypeId])
+
+ALTER TABLE [dbo].[Items]  WITH CHECK ADD CONSTRAINT [FK_Items_ItemTypes] FOREIGN KEY([ItemTypeId])
 REFERENCES [dbo].[ItemTypes] ([Id])
+
 GO
+
 ALTER TABLE [dbo].[Items] CHECK CONSTRAINT [FK_Items_ItemTypes]
+
 GO
+
 ALTER TABLE [dbo].[Items]  WITH CHECK ADD  CONSTRAINT [FK_Items_Statistics] FOREIGN KEY([StatisticId])
 REFERENCES [dbo].[Statistics] ([Id])
+
 GO
+
 ALTER TABLE [dbo].[Items] CHECK CONSTRAINT [FK_Items_Statistics]
+
 GO
+
 ALTER TABLE [dbo].[UserGameItems]  WITH CHECK ADD  CONSTRAINT [FK_UserGameItems_Items] FOREIGN KEY([ItemId])
 REFERENCES [dbo].[Items] ([Id])
+
 GO
+
 ALTER TABLE [dbo].[UserGameItems] CHECK CONSTRAINT [FK_UserGameItems_Items]
+
 GO
+
 ALTER TABLE [dbo].[UserGameItems]  WITH CHECK ADD  CONSTRAINT [FK_UserGameItems_UsersGames] FOREIGN KEY([UserGameId])
 REFERENCES [dbo].[UsersGames] ([Id])
+
 GO
+
 ALTER TABLE [dbo].[UserGameItems] CHECK CONSTRAINT [FK_UserGameItems_UsersGames]
+
 GO
+
 ALTER TABLE [dbo].[UsersGames]  WITH CHECK ADD  CONSTRAINT [FK_UsersGames_Characters] FOREIGN KEY([CharacterId])
 REFERENCES [dbo].[Characters] ([Id])
+
 GO
+
 ALTER TABLE [dbo].[UsersGames] CHECK CONSTRAINT [FK_UsersGames_Characters]
+
 GO
+
 ALTER TABLE [dbo].[UsersGames]  WITH CHECK ADD  CONSTRAINT [FK_UsersGames_Games] FOREIGN KEY([GameId])
 REFERENCES [dbo].[Games] ([Id])
+
 GO
+
 ALTER TABLE [dbo].[UsersGames] CHECK CONSTRAINT [FK_UsersGames_Games]
+
 GO
+
 ALTER TABLE [dbo].[UsersGames]  WITH CHECK ADD  CONSTRAINT [FK_UsersGames_Users1] FOREIGN KEY([UserId])
 REFERENCES [dbo].[Users] ([Id])
+
 GO
+
 ALTER TABLE [dbo].[UsersGames] CHECK CONSTRAINT [FK_UsersGames_Users1]
+
 GO
+
 ALTER TABLE [dbo].[UsersGames]  WITH CHECK ADD  CONSTRAINT [CK_UsersGames] CHECK  (([Cash]>=(0)))
+
 GO
+
 ALTER TABLE [dbo].[UsersGames] CHECK CONSTRAINT [CK_UsersGames]
+
 GO
+
 USE [master]
+
 GO
-ALTER DATABASE [Diablo] SET  READ_WRITE 
+
+ALTER DATABASE [Diablo] SET  READ_WRITE
+
 GO
