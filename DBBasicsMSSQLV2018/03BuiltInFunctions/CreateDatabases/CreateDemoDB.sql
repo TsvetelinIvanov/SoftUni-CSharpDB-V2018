@@ -1,490 +1,889 @@
 USE [master]
+
 GO
-/****** Object:  Database [Demo]    Script Date: 25.1.2017 ã. 14:01:37 ******/
+
+/****** Object:  Database [Demo]    Script Date: 25.1.2017 Ã£. 14:01:37 ******/
 CREATE DATABASE [Demo]
 
 GO
+
 ALTER DATABASE [Demo] SET ANSI_NULL_DEFAULT OFF 
+
 GO
+
 ALTER DATABASE [Demo] SET ANSI_NULLS OFF 
+
 GO
-ALTER DATABASE [Demo] SET ANSI_PADDING OFF 
+
+ALTER DATABASE [Demo] SET ANSI_PADDING OFF
+
 GO
-ALTER DATABASE [Demo] SET ANSI_WARNINGS OFF 
+
+ALTER DATABASE [Demo] SET ANSI_WARNINGS OFF
+
 GO
-ALTER DATABASE [Demo] SET ARITHABORT OFF 
+
+ALTER DATABASE [Demo] SET ARITHABORT OFF
+
 GO
-ALTER DATABASE [Demo] SET AUTO_CLOSE OFF 
+
+ALTER DATABASE [Demo] SET AUTO_CLOSE OFF
+
 GO
-ALTER DATABASE [Demo] SET AUTO_SHRINK OFF 
+
+ALTER DATABASE [Demo] SET AUTO_SHRINK OFF
+
 GO
-ALTER DATABASE [Demo] SET AUTO_UPDATE_STATISTICS ON 
+
+ALTER DATABASE [Demo] SET AUTO_UPDATE_STATISTICS ON
+
 GO
-ALTER DATABASE [Demo] SET CURSOR_CLOSE_ON_COMMIT OFF 
+
+ALTER DATABASE [Demo] SET CURSOR_CLOSE_ON_COMMIT OFF
+
 GO
-ALTER DATABASE [Demo] SET CURSOR_DEFAULT  GLOBAL 
+
+ALTER DATABASE [Demo] SET CURSOR_DEFAULT  GLOBAL
+
 GO
-ALTER DATABASE [Demo] SET CONCAT_NULL_YIELDS_NULL OFF 
+
+ALTER DATABASE [Demo] SET CONCAT_NULL_YIELDS_NULL OFF
+
 GO
-ALTER DATABASE [Demo] SET NUMERIC_ROUNDABORT OFF 
+
+ALTER DATABASE [Demo] SET NUMERIC_ROUNDABORT OFF
+
 GO
-ALTER DATABASE [Demo] SET QUOTED_IDENTIFIER OFF 
+
+ALTER DATABASE [Demo] SET QUOTED_IDENTIFIER OFF
+
 GO
-ALTER DATABASE [Demo] SET RECURSIVE_TRIGGERS OFF 
+
+ALTER DATABASE [Demo] SET RECURSIVE_TRIGGERS OFF
+
 GO
-ALTER DATABASE [Demo] SET  DISABLE_BROKER 
+
+ALTER DATABASE [Demo] SET  DISABLE_BROKER
+
 GO
-ALTER DATABASE [Demo] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+
+ALTER DATABASE [Demo] SET AUTO_UPDATE_STATISTICS_ASYNC OFF
+
 GO
-ALTER DATABASE [Demo] SET DATE_CORRELATION_OPTIMIZATION OFF 
+
+ALTER DATABASE [Demo] SET DATE_CORRELATION_OPTIMIZATION OFF
+
 GO
-ALTER DATABASE [Demo] SET TRUSTWORTHY OFF 
+
+ALTER DATABASE [Demo] SET TRUSTWORTHY OFF
+
 GO
-ALTER DATABASE [Demo] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+
+ALTER DATABASE [Demo] SET ALLOW_SNAPSHOT_ISOLATION OFF
+
 GO
-ALTER DATABASE [Demo] SET PARAMETERIZATION SIMPLE 
+
+ALTER DATABASE [Demo] SET PARAMETERIZATION SIMPLE
+
 GO
-ALTER DATABASE [Demo] SET READ_COMMITTED_SNAPSHOT OFF 
+
+ALTER DATABASE [Demo] SET READ_COMMITTED_SNAPSHOT OFF
+
 GO
-ALTER DATABASE [Demo] SET HONOR_BROKER_PRIORITY OFF 
+
+ALTER DATABASE [Demo] SET HONOR_BROKER_PRIORITY OFF
+
 GO
-ALTER DATABASE [Demo] SET RECOVERY SIMPLE 
+
+ALTER DATABASE [Demo] SET RECOVERY SIMPLE
+
 GO
-ALTER DATABASE [Demo] SET  MULTI_USER 
+
+ALTER DATABASE [Demo] SET  MULTI_USER
+
 GO
-ALTER DATABASE [Demo] SET PAGE_VERIFY CHECKSUM  
+
+ALTER DATABASE [Demo] SET PAGE_VERIFY CHECKSUM
+
 GO
-ALTER DATABASE [Demo] SET DB_CHAINING OFF 
+
+ALTER DATABASE [Demo] SET DB_CHAINING OFF
+
 GO
-ALTER DATABASE [Demo] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+
+ALTER DATABASE [Demo] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF )
+
 GO
-ALTER DATABASE [Demo] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+
+ALTER DATABASE [Demo] SET TARGET_RECOVERY_TIME = 60 SECONDS
+
 GO
-ALTER DATABASE [Demo] SET DELAYED_DURABILITY = DISABLED 
+
+ALTER DATABASE [Demo] SET DELAYED_DURABILITY = DISABLED
+
 GO
+
 ALTER DATABASE [Demo] SET QUERY_STORE = OFF
+
 GO
+
 USE [Demo]
+
 GO
+
 ALTER DATABASE SCOPED CONFIGURATION SET MAXDOP = 0;
+
 GO
+
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY;
+
 GO
+
 ALTER DATABASE SCOPED CONFIGURATION SET LEGACY_CARDINALITY_ESTIMATION = OFF;
+
 GO
+
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = PRIMARY;
+
 GO
+
 ALTER DATABASE SCOPED CONFIGURATION SET PARAMETER_SNIFFING = ON;
+
 GO
+
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMARY;
+
 GO
+
 ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = OFF;
+
 GO
+
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET QUERY_OPTIMIZER_HOTFIXES = PRIMARY;
+
 GO
+
 USE [Demo]
-GO
-/****** Object:  Table [dbo].[Customers]    Script Date: 25.1.2017 ã. 14:01:37 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Customers](
-	[CustomerID] [int] NOT NULL,
-	[FirstName] [nvarchar](50) NOT NULL,
-	[LastName] [nvarchar](50) NOT NULL,
-	[PaymentNumber] [char](16) NOT NULL
-) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[Lines]    Script Date: 25.1.2017 ã. 14:01:37 ******/
+
+/****** Object:  Table [dbo].[Customers]    Script Date: 25.1.2017 Ã£. 14:01:37 ******/
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[Lines](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[X1] [float] NOT NULL,
-	[Y1] [float] NOT NULL,
-	[X2] [float] NOT NULL,
-	[Y2] [float] NOT NULL,
- CONSTRAINT [PK_Lines] PRIMARY KEY CLUSTERED 
+
+CREATE TABLE [dbo].[Customers]
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[CustomerID] [int] NOT NULL,
+[FirstName] [nvarchar](50) NOT NULL,
+[LastName] [nvarchar](50) NOT NULL,
+[PaymentNumber] [char](16) NOT NULL
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[Minions]    Script Date: 25.1.2017 ã. 14:01:37 ******/
+
+/****** Object:  Table [dbo].[Lines]    Script Date: 25.1.2017 Ã£. 14:01:37 ******/
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[Minions](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [varchar](50) NULL,
-	[Age] [int] NULL
+
+CREATE TABLE [dbo].[Lines]
+(
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[X1] [float] NOT NULL,
+[Y1] [float] NOT NULL,
+[X2] [float] NOT NULL,
+[Y2] [float] NOT NULL,
+CONSTRAINT [PK_Lines] PRIMARY KEY CLUSTERED 
+(
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[People]    Script Date: 25.1.2017 ã. 14:01:37 ******/
+
+/****** Object:  Table [dbo].[Minions]    Script Date: 25.1.2017 Ã£. 14:01:37 ******/
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[People](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Email] [varchar](255) NOT NULL,
-	[FirstName] [nvarchar](50) NULL,
-	[LastName] [nvarchar](50) NULL,
-	[Salary] [money] NULL,
+
+CREATE TABLE [dbo].[Minions]
+(
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[Name] [varchar](50) NULL,
+[Age] [int] NULL
+) ON [PRIMARY]
+
+GO
+
+/****** Object:  Table [dbo].[People]    Script Date: 25.1.2017 Ã£. 14:01:37 ******/
+SET ANSI_NULLS ON
+
+GO
+
+SET QUOTED_IDENTIFIER ON
+
+GO
+
+CREATE TABLE [dbo].[People]
+(
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[Email] [varchar](255) NOT NULL,
+[FirstName] [nvarchar](50) NULL,
+[LastName] [nvarchar](50) NULL,
+[Salary] [money] NULL,
 PRIMARY KEY CLUSTERED 
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[Products]    Script Date: 25.1.2017 ã. 14:01:37 ******/
+
+/****** Object:  Table [dbo].[Products]    Script Date: 25.1.2017 Ã£. 14:01:37 ******/
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[Products](
-	[Id] [int] NOT NULL,
-	[Name] [varchar](50) NOT NULL,
-	[Quantity] [int] NOT NULL,
-	[BoxCapacity] [int] NOT NULL,
-	[PalletCapacity] [int] NOT NULL,
- CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
+
+CREATE TABLE [dbo].[Products]
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-
-GO
-/****** Object:  Table [dbo].[Rectangles]    Script Date: 25.1.2017 ã. 14:01:37 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Rectangles](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[A] [float] NOT NULL,
-	[B] [float] NOT NULL,
- CONSTRAINT [PK_Rectangles] PRIMARY KEY CLUSTERED 
+[Id] [int] NOT NULL,
+[Name] [varchar](50) NOT NULL,
+[Quantity] [int] NOT NULL,
+[BoxCapacity] [int] NOT NULL,
+[PalletCapacity] [int] NOT NULL,
+CONSTRAINT [PK_Products] PRIMARY KEY CLUSTERED 
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[Towns]    Script Date: 25.1.2017 ã. 14:01:37 ******/
+
+/****** Object:  Table [dbo].[Rectangles]    Script Date: 25.1.2017 Ã£. 14:01:37 ******/
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[Towns](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Name] [varchar](50) NULL,
+
+CREATE TABLE [dbo].[Rectangles]
+(
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[A] [float] NOT NULL,
+[B] [float] NOT NULL,
+CONSTRAINT [PK_Rectangles] PRIMARY KEY CLUSTERED 
+(
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+/****** Object:  Table [dbo].[Towns]    Script Date: 25.1.2017 Ã£. 14:01:37 ******/
+SET ANSI_NULLS ON
+
+GO
+
+SET QUOTED_IDENTIFIER ON
+
+GO
+
+CREATE TABLE [dbo].[Towns]
+(
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[Name] [varchar](50) NULL,
 PRIMARY KEY CLUSTERED 
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[Triangles]    Script Date: 25.1.2017 ã. 14:01:37 ******/
+
+/****** Object:  Table [dbo].[Triangles]    Script Date: 25.1.2017 Ã£. 14:01:37 ******/
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[Triangles](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[A] [float] NOT NULL,
-	[B] [float] NOT NULL,
-	[C] [float] NOT NULL,
- CONSTRAINT [PK_Triangles] PRIMARY KEY CLUSTERED 
+
+CREATE TABLE [dbo].[Triangles]
 (
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[A] [float] NOT NULL,
+[B] [float] NOT NULL,
+[C] [float] NOT NULL,
+CONSTRAINT [PK_Triangles] PRIMARY KEY CLUSTERED 
+(
+[Id] ASC
+) WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
 ) ON [PRIMARY]
 
 GO
-/****** Object:  Table [dbo].[Triangles2]    Script Date: 25.1.2017 ã. 14:01:37 ******/
+
+/****** Object:  Table [dbo].[Triangles2]    Script Date: 25.1.2017 Ã£. 14:01:37 ******/
 SET ANSI_NULLS ON
+
 GO
+
 SET QUOTED_IDENTIFIER ON
+
 GO
-CREATE TABLE [dbo].[Triangles2](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[A] [float] NOT NULL,
-	[H] [float] NOT NULL
+
+CREATE TABLE [dbo].[Triangles2]
+(
+[Id] [int] IDENTITY(1,1) NOT NULL,
+[A] [float] NOT NULL,
+[H] [float] NOT NULL
 ) ON [PRIMARY]
 
 GO
+	
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (1, N'Guy', N'Gilbert', N'5645322227179083')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (2, N'Kevin', N'Brown', N'4417937746396076')
+
 GO
+	
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (3, N'Roberto', N'Tamburello', N'7927545745782378')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (4, N'Rob', N'Walters', N'8373866836827081')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (5, N'Thierry', N'D''Hers', N'6324824830110281')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (6, N'David', N'Bradley', N'9814901018722947')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (7, N'JoLynn', N'Dobney', N'4599692018956432')
+
 GO
+	
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (8, N'Ruth', N'Ellerbrock', N'6122441931293978')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (9, N'Gail', N'Erickson', N'1163087434114868')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (10, N'Barry', N'Johnson', N'3970818232390811')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (11, N'Jossef', N'Goldberg', N'9151658894664016')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (12, N'Terri', N'Duffy', N'6183355082422774')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (13, N'Sidney', N'Higa', N'4120537582244300')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (14, N'Taylor', N'Maxwell', N'1938568596870607')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (15, N'Jeffrey', N'Ford', N'8915810955572860')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (16, N'Jo', N'Brown', N'7273205948371278')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (17, N'Doris', N'Hartwig', N'5922753170391384')
+
 GO
+	
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (18, N'John', N'Campbell', N'1209925930853143')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (19, N'Diane', N'Glimp', N'2476362479035343')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (20, N'Steven', N'Selikoff', N'4815598168041326')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (21, N'Peter', N'Krebs', N'3265508651416842')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (22, N'Stuart', N'Munson', N'2668216470313532')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (23, N'Greg', N'Alderson', N'7251223138404247')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (24, N'David', N'Johnson', N'6929964196396225')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (25, N'Zheng', N'Mu', N'7110549042521172')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (26, N'Ivo', N'Salmre', N'9004736779009908')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (27, N'Paul', N'Komosinski', N'9037774293366599')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (28, N'Ashvini', N'Sharma', N'8084587447142873')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (29, N'Kendall', N'Keil', N'5872696533959082')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (30, N'Paula', N'Barreto de Mattos', N'8844359368419097')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (31, N'Alejandro', N'McGuel', N'3109197055164785')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (32, N'Garrett', N'Young', N'6519517838299156')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (33, N'Jian Shuo', N'Wang', N'2363733520443413')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (34, N'Susan', N'Eaton', N'9367115272055768')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (35, N'Vamsi', N'Kuppa', N'4209682755728257')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (36, N'Alice', N'Ciccu', N'5267558936996135')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (37, N'Simon', N'Rapier', N'8970108450616046')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (38, N'Jinghao', N'Liu', N'7432945187196856')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (39, N'Michael', N'Hines', N'8774260387313280')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (40, N'Yvonne', N'McKay', N'9616182116114934')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (41, N'Peng', N'Wu', N'6179870316211712')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (42, N'Jean', N'Trenary', N'5296317916849649')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (43, N'Russell', N'Hunter', N'5775476574279567')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (44, N'A. Scott', N'Wright', N'6518562162666714')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (45, N'Fred', N'Northup', N'2300788501129671')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (46, N'Sariya', N'Harnpadoungsataya', N'8148745065538021')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (47, N'Willis', N'Johnson', N'1624100548057725')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (48, N'Jun', N'Cao', N'2825462680946393')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (49, N'Christian', N'Kleinerman', N'9625942215524469')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (50, N'Susan', N'Metters', N'7040957321118931')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (51, N'Reuben', N'D''sa', N'6504592353671722')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (52, N'Kirk', N'Koenigsbauer', N'4891114540364065')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (53, N'David', N'Ortiz', N'3868546622008669')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (54, N'Tengiz', N'Kharatishvili', N'8837587181443844')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (55, N'Hanying', N'Feng', N'2141729963267669')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (56, N'Kevin', N'Liu', N'5682883488088952')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (57, N'Annik', N'Stahl', N'5698978315073488')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (58, N'Suroor', N'Fatima', N'5374955487782798')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (59, N'Deborah', N'Poe', N'2877525595357834')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (60, N'Jim', N'Scardelis', N'6479803552302813')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (61, N'Carole', N'Poland', N'4605276124663141')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (62, N'George', N'Li', N'7363210936606573')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (63, N'Gary', N'Yukish', N'5138825330365260')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (64, N'Cristian', N'Petculescu', N'2412910923043320')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (65, N'Raymond', N'Sam', N'3077304081241467')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (66, N'Janaina', N'Bueno', N'3463360976684155')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (67, N'Bob', N'Hohman', N'2954138092016867')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (68, N'Shammi', N'Mohamed', N'5351639369348379')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (69, N'Linda', N'Moschell', N'8141750981374248')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (70, N'Mindy', N'Martin', N'8883961113738272')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (71, N'Wendy', N'Kahn', N'9184130564334373')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (72, N'Kim', N'Ralls', N'7786327852767652')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (73, N'Sandra', N'Reategui Alayo', N'5360938568407870')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (74, N'Kok-Ho', N'Loh', N'4232997837143935')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (75, N'Douglas', N'Hite', N'9070921883829678')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (76, N'James', N'Kramer', N'2146775071463607')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (77, N'Sean', N'Alexander', N'7313952826834153')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (78, N'Nitin', N'Mirchandani', N'3296819140813283')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (79, N'Diane', N'Margheim', N'5891437299591687')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (80, N'Rebecca', N'Laszlo', N'8433252729699512')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (81, N'Rajesh', N'Patel', N'3469434974728436')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (82, N'Vidur', N'Luthra', N'5235580777351856')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (83, N'John', N'Evans', N'6823267130825578')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (84, N'Nancy', N'Anderson', N'8505146310605636')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (85, N'Pilar', N'Ackerman', N'6753723148771716')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (86, N'David', N'Yalovsky', N'4216467551008706')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (87, N'David', N'Hamilton', N'1856387746715488')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (88, N'Laura', N'Steele', N'8130518688981523')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (89, N'Margie', N'Shoop', N'5304293163488522')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (90, N'Zainal', N'Arifin', N'2624734840262337')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (91, N'Lorraine', N'Nay', N'9187844150880843')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (92, N'Fadi', N'Fakhouri', N'3495217525796088')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (93, N'Ryan', N'Cornelsen', N'3533330030685704')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (94, N'Candy', N'Spoon', N'4851735094141587')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (95, N'Nuan', N'Yu', N'7205104569023977')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (96, N'William', N'Vong', N'1967385880412958')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (97, N'Bjorn', N'Rettig', N'9202608050797826')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (98, N'Scott', N'Gode', N'3404229243612619')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (99, N'Michael', N'Rothkugel', N'2581996622413596')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (100, N'Lane', N'Sacksteder', N'3344229237743186')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (101, N'Pete', N'Male', N'5971284288741676')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (102, N'Dan', N'Bacon', N'8257190729424129')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (103, N'David', N'Barber', N'3917930966008848')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (104, N'Lolan', N'Song', N'5857117345582640')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (105, N'Paula', N'Nartker', N'6166872648404718')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (106, N'Mary', N'Gibson', N'5461160193093344')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (107, N'Mindaugas', N'Krapauskas', N'9160674453776619')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (108, N'Eric', N'Gubbels', N'5729184214926461')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (109, N'Ken', N'Sanchez', N'5469419562316958')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (110, N'Jason', N'Watters', N'1208260343171875')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (111, N'Mark', N'Harrington', N'7067584113217553')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (112, N'Janeth', N'Esteves', N'7410399981241001')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (113, N'Marc', N'Ingle', N'3514405562796816')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (114, N'Gigi', N'Matthew', N'2468248896285846')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (115, N'Paul', N'Singh', N'2989836421728909')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (116, N'Frank', N'Lee', N'4523905755659381')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (117, N'Francois', N'Ajenstat', N'6871256525378619')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (118, N'Diane', N'Tibbott', N'5064955045588475')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (119, N'Jill', N'Williams', N'2141654646759205')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (120, N'Angela', N'Barbariol', N'2002689182068600')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (121, N'Matthias', N'Berndt', N'6158897539075660')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (122, N'Bryan', N'Baker', N'5698547130333879')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (123, N'Jeff', N'Hay', N'4967654749933032')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (124, N'Eugene', N'Zabokritski', N'8712482264087016')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (125, N'Barbara', N'Decker', N'9580409985079387')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (126, N'Chris', N'Preston', N'3831669775322551')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (127, N'Sean', N'Chai', N'9929334171913209')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (128, N'Dan', N'Wilson', N'6700939478932423')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (129, N'Mark', N'McArthur', N'7878340445148873')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (130, N'Bryan', N'Walton', N'1740643346238814')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (131, N'Houman', N'Pournasseh', N'7510194456852004')
+
 GO
+
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (132, N'Sairaj', N'Uddin', N'8695190158681069')
 GO
 INSERT [dbo].[Customers] ([CustomerID], [FirstName], [LastName], [PaymentNumber]) VALUES (133, N'Michiko', N'Osada', N'4911159787986576')
@@ -882,7 +1281,7 @@ GO
 SET ANSI_PADDING ON
 
 GO
-/****** Object:  Index [UQ__People__A9D10534FDC618ED]    Script Date: 25.1.2017 ã. 14:01:37 ******/
+/****** Object:  Index [UQ__People__A9D10534FDC618ED]    Script Date: 25.1.2017 Ã£. 14:01:37 ******/
 ALTER TABLE [dbo].[People] ADD UNIQUE NONCLUSTERED 
 (
 	[Email] ASC
