@@ -3,7 +3,7 @@ FROM Employees
 --WHERE DepartmentId <> 4
 WHERE DepartmentId != 4
 
---In Judge must be paste only one query
+--In Judge must be pasted only one query
 
 SELECT FirstName, LastName 
 FROM Employees 
