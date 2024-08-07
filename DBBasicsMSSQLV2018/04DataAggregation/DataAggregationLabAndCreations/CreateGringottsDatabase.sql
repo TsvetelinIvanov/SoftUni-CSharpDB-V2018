@@ -1,43 +1,61 @@
 USE [master]
+
 GO
 
 CREATE DATABASE [Gringotts]
+
 GO
 
 USE [Gringotts]
+
 GO
 
-CREATE TABLE [WizzardDeposits](
-	[Id] INT PRIMARY KEY,
-	[FirstName] VARCHAR(50),
-	[LastName] VARCHAR(60),
-	[Notes] TEXT,
-	[Age] INT,
-	[MagicWandCreator] VARCHAR(100),
-	[MagicWandSize] SMALLINT,
-	[DepositGroup] VARCHAR(20),
-	[DepositStartDate] DATE,
-	[DepositAmount] DECIMAL(8,2),
-	[DepositInterest] DECIMAL(5,2),
-	[DepositCharge] DECIMAL (8,2),
-	[DepositExpirationDate] DATE,
-	[IsDepositExpired] BIT
+CREATE TABLE [WizzardDeposits]
+(
+[Id] INT PRIMARY KEY,
+[FirstName] VARCHAR(50),
+[LastName] VARCHAR(60),
+[Notes] TEXT,
+[Age] INT,
+[MagicWandCreator] VARCHAR(100),
+[MagicWandSize] SMALLINT,
+[DepositGroup] VARCHAR(20),
+[DepositStartDate] DATE,
+[DepositAmount] DECIMAL(8,2),
+[DepositInterest] DECIMAL(5,2),
+[DepositCharge] DECIMAL (8,2),
+[DepositExpirationDate] DATE,
+[IsDepositExpired] BIT
 )
 
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (1, 'Hannah', 'Abbott', 'Hufflepuff student in Harry''s year and member of Dumbledore''s Army.', 71, 'Antioch Peverell', 19, 'Troll Chest', CAST('1990-09-27' AS Date), CAST(47443.03 AS Decimal(8, 2)), CAST(29.28 AS Decimal(5, 2)), CAST(73.00 AS Decimal(8, 2)), CAST('1991-04-08' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (2, 'Bathsheda', 'Babbling', 'Ancient Runes teacher at Hogwarts', 63, 'Ollivander family', 20, 'Human Pride', CAST('1986-03-27' AS Date), CAST(46597.40 AS Decimal(8, 2)), CAST(26.64 AS Decimal(5, 2)), CAST(64.00 AS Decimal(8, 2)), CAST('1986-05-16' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (3, 'Ludo', 'Bagman', 'Quidditch Beater for the Wimbourne Wasps and Head of the Department of Magical Games and Sports within the Ministry of Magic', 19, 'Mykew Gregorovitch', 18, 'Venomous Tongue', CAST('1990-07-04' AS Date), CAST(23190.94 AS Decimal(8, 2)), CAST(14.92 AS Decimal(5, 2)), CAST(30.00 AS Decimal(8, 2)), CAST('1990-12-27' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (4, 'Bathilda', 'Bagshot', 'Author of A History of Magic, great aunt of Gellert Grindelwald.', 52, 'Jimmy Kiddell', 15, 'Blue Phoenix', CAST('1993-06-07' AS Date), CAST(687.67 AS Decimal(8, 2)), CAST(18.18 AS Decimal(5, 2)), CAST(62.00 AS Decimal(8, 2)), CAST('1993-09-10' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (5, 'Katie', 'Bell', 'Gryffindor student one year above Harry Potter; Chaser on the Gryffindor Quidditch team.', 40, 'Arturo Cephalopos', 14, 'Troll Chest', CAST('1981-05-08' AS Date), CAST(8092.93 AS Decimal(8, 2)), CAST(16.58 AS Decimal(5, 2)), CAST(11.00 AS Decimal(8, 2)), CAST('1982-02-03' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (6, 'Cuthbert', 'Binns', 'Ghost, History of Magic professor.', 28, 'Death', 23, 'Human Pride', CAST('1985-10-26' AS Date), CAST(11902.72 AS Decimal(8, 2)), CAST(24.84 AS Decimal(5, 2)), CAST(95.00 AS Decimal(8, 2)), CAST('1985-12-27' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (7, 'Phineas', 'Nigellus', 'deceased great-great-grandfather of Sirius Black and former headmaster of Hogwarts, whose painting still hangs in the office and helps out the current headmaster.', 47, 'Mykew Gregorovitch', 18, 'Venomous Tongue', CAST('1985-12-05' AS Date), CAST(11248.58 AS Decimal(8, 2)), CAST(12.31 AS Decimal(5, 2)), CAST(32.00 AS Decimal(8, 2)), CAST('1986-11-12' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (8, 'Regulus', 'Arcturus', 'Late brother of Sirius Black, a Death Eater who had turned against Lord Voldemort.', 46, 'Ollivander family', 22, 'Blue Phoenix', CAST('1989-05-31' AS Date), CAST(1173.12 AS Decimal(8, 2)), CAST(9.68 AS Decimal(5, 2)), CAST(56.00 AS Decimal(8, 2)), CAST('1989-10-13' AS Date), 0)
 GO
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (9, 'Sirius', 'Black', 'Harry Potter''s godfather, a member of the Order of the Phoenix and prisoner on the run.', 25, 'Mykew Gregorovitch', 30, 'Troll Chest', CAST('1993-08-29' AS Date), CAST(15793.54 AS Decimal(8, 2)), CAST(26.34 AS Decimal(5, 2)), CAST(17.00 AS Decimal(8, 2)), CAST('1994-05-21' AS Date), 0)
