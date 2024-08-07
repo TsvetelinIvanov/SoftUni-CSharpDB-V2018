@@ -3,7 +3,7 @@ FROM Countries
 WHERE ContinentCode = 'EU'
 ORDER BY [Population] DESC, CountryName
 
---In Judge must be paste only one query
+--In Judge must be pasted only one query
 
 SELECT TOP(30) CountryName, [Population]
 FROM Countries
