@@ -3,7 +3,7 @@ FROM WizzardDeposits
 WHERE MagicWandCreator = 'Ollivander family'
 GROUP BY DepositGroup
 
---In Judge must be paste only one query 
+--In Judge must be pasted only one query 
 
 SELECT DepositGroup, SUM(DepositAmount) AS TotalSum
 FROM WizzardDeposits
