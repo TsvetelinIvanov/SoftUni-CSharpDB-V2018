@@ -4,19 +4,24 @@
 -------------------------------------------------------------------
 
 USE master
+
 GO
 
 CREATE DATABASE SoftUni
+
 GO
 
 USE SoftUni
+
 GO
 
-CREATE TABLE Towns(
-  TownID int IDENTITY NOT NULL,
-  Name VARCHAR(50) NOT NULL,
-  CONSTRAINT PK_Towns PRIMARY KEY CLUSTERED(TownID ASC)
+CREATE TABLE Towns
+(
+TownID int IDENTITY NOT NULL,
+Name VARCHAR(50) NOT NULL,
+CONSTRAINT PK_Towns PRIMARY KEY CLUSTERED(TownID ASC)
 )
+
 GO
 
 SET IDENTITY_INSERT Towns ON
@@ -121,12 +126,14 @@ SET IDENTITY_INSERT Towns OFF
 
 GO
 
-CREATE TABLE Addresses(
-  AddressID int IDENTITY NOT NULL,
-  AddressText VARCHAR(100) NOT NULL,
-  TownID int NULL,
-  CONSTRAINT PK_Addresses PRIMARY KEY CLUSTERED (AddressID ASC)
+CREATE TABLE Addresses
+(
+AddressID int IDENTITY NOT NULL,
+AddressText VARCHAR(100) NOT NULL,
+TownID int NULL,
+CONSTRAINT PK_Addresses PRIMARY KEY CLUSTERED (AddressID ASC)
 )
+
 GO
 
 SET IDENTITY_INSERT Addresses ON
@@ -1008,14 +1015,16 @@ SET IDENTITY_INSERT Addresses OFF
 
 GO
 
-CREATE TABLE Projects(
-  ProjectID int IDENTITY NOT NULL,
-  Name VARCHAR(50) NOT NULL,
-  Description ntext NULL,
-  StartDate smalldatetime NOT NULL,
-  EndDate smalldatetime NULL,
-  CONSTRAINT PK_Projects PRIMARY KEY CLUSTERED (ProjectID ASC)
+CREATE TABLE Projects
+(
+ProjectID int IDENTITY NOT NULL,
+Name VARCHAR(50) NOT NULL,
+Description ntext NULL,
+StartDate smalldatetime NOT NULL,
+EndDate smalldatetime NULL,
+CONSTRAINT PK_Projects PRIMARY KEY CLUSTERED (ProjectID ASC)
 )
+
 GO
 
 SET IDENTITY_INSERT Projects ON
@@ -1261,10 +1270,11 @@ GO
 
 SET IDENTITY_INSERT Projects OFF
 
-CREATE TABLE EmployeesProjects(
-  EmployeeID int NOT NULL,
-  ProjectID int NOT NULL,
-  CONSTRAINT PK_EmployeesProjects PRIMARY KEY CLUSTERED (EmployeeID ASC, ProjectID ASC)
+CREATE TABLE EmployeesProjects
+(
+EmployeeID int NOT NULL,
+ProjectID int NOT NULL,
+CONSTRAINT PK_EmployeesProjects PRIMARY KEY CLUSTERED (EmployeeID ASC, ProjectID ASC)
 )
 GO
 
@@ -3798,12 +3808,14 @@ VALUES (267, 80)
 
 GO
 
-CREATE TABLE Departments(
-  DepartmentID int IDENTITY NOT NULL,
-  Name VARCHAR(50) NOT NULL,
-  ManagerID int NOT NULL,
-  CONSTRAINT PK_Departments PRIMARY KEY CLUSTERED (DepartmentID ASC)
+CREATE TABLE Departments
+(
+DepartmentID int IDENTITY NOT NULL,
+Name VARCHAR(50) NOT NULL,
+ManagerID int NOT NULL,
+CONSTRAINT PK_Departments PRIMARY KEY CLUSTERED (DepartmentID ASC)
 )
+
 GO
 
 SET IDENTITY_INSERT Departments ON
@@ -3860,19 +3872,21 @@ SET IDENTITY_INSERT Departments OFF
 
 GO
 
-CREATE TABLE Employees(
-  EmployeeID int IDENTITY NOT NULL,
-  FirstName VARCHAR(50) NOT NULL,
-  LastName VARCHAR(50) NOT NULL,
-  MiddleName VARCHAR(50) NULL,
-  JobTitle VARCHAR(50) NOT NULL,
-  DepartmentID int NOT NULL,
-  ManagerID int NULL,
-  HireDate smalldatetime NOT NULL,
-  Salary money NOT NULL,
-  AddressID int NULL,
-  CONSTRAINT PK_Employees PRIMARY KEY CLUSTERED (EmployeeID ASC)
+CREATE TABLE Employees
+(
+EmployeeID int IDENTITY NOT NULL,
+FirstName VARCHAR(50) NOT NULL,
+LastName VARCHAR(50) NOT NULL,
+MiddleName VARCHAR(50) NULL,
+JobTitle VARCHAR(50) NOT NULL,
+DepartmentID int NOT NULL,
+ManagerID int NULL,
+HireDate smalldatetime NOT NULL,
+Salary money NOT NULL,
+AddressID int NULL,
+CONSTRAINT PK_Employees PRIMARY KEY CLUSTERED (EmployeeID ASC)
 )
+
 GO
 
 SET IDENTITY_INSERT Employees ON
@@ -4763,34 +4777,41 @@ GO
 ALTER TABLE Employees
 ADD CONSTRAINT FK_Employees_Addresses FOREIGN KEY(AddressID)
 REFERENCES Addresses(AddressID)
+
 GO
 
 ALTER TABLE Employees
 ADD CONSTRAINT FK_Employees_Departments FOREIGN KEY(DepartmentID)
 REFERENCES Departments(DepartmentID)
+
 GO
 
 ALTER TABLE Employees
 ADD CONSTRAINT FK_Employees_Employees FOREIGN KEY(ManagerID)
 REFERENCES Employees(EmployeeID)
+
 GO
 
 ALTER TABLE EmployeesProjects
 ADD CONSTRAINT FK_EmployeesProjects_Employees FOREIGN KEY(EmployeeID)
 REFERENCES Employees(EmployeeID)
+
 GO
 
 ALTER TABLE EmployeesProjects
 ADD CONSTRAINT FK_EmployeesProjects_Projects FOREIGN KEY(ProjectID)
 REFERENCES Projects(ProjectID)
+
 GO
 
 ALTER TABLE Departments
 ADD CONSTRAINT FK_Departments_Employees FOREIGN KEY(ManagerID)
 REFERENCES Employees(EmployeeID)
+
 GO
 
 ALTER TABLE Addresses
 ADD CONSTRAINT FK_Addresses_Towns FOREIGN KEY(TownID)
 REFERENCES Towns(TownID)
+
 GO
