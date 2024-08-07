@@ -3,7 +3,7 @@ FROM Towns
 WHERE [Name] LIKE '_____' OR [Name] LIKE '______'
 ORDER BY [Name]
 
---In Judge must be paste one query
+--In Judge must be pasted one query
 
 SELECT [Name] 
 FROM Towns
