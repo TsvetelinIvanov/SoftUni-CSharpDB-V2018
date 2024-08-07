@@ -1,8 +1,11 @@
 CREATE DATABASE Orders;
+
 GO
 
 USE Orders;
+
 GO
+
 CREATE TABLE Orders
 (
 Id INT NOT NULL,
