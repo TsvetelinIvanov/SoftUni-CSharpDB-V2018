@@ -2,7 +2,7 @@ SELECT SUM(d.Diff) AS SumDifference
 FROM (SELECT DepositAmount - (SELECT DepositAmount FROM WizzardDeposits WHERE Id = Host.Id + 1) AS Diff
 FROM WizzardDeposits AS Host) AS d
 
---In Judge must be paste only one query 
+--In Judge must be pasted only one query 
 
 SELECT SUM(wd.Diff)
 FROM (SELECT FirstName, DepositAmount, 
