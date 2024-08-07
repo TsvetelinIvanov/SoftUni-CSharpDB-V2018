@@ -3,7 +3,7 @@ SELECT FirstName + ' ' + ISNULL(MiddleName, '') + ' ' + LastName AS [Full Name],
 JobTitle
 FROM Employees
 
---It must be paste in Judge without the text down 
+--It must be pasted in Judge without the text below
 GO
 
 SELECT * FROM V_EmployeeNameJobTitle
