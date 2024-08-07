@@ -20,7 +20,7 @@ WHEN w.Age BETWEEN 51 AND 60 THEN '[51-60]'
 WHEN w.Age >= 61 THEN '[61+]'
 END 
 
---In Judge must be paste only one query 
+--In Judge must be pasted only one query 
 
 SELECT g.AgeGroup, COUNT(*) AS WizardCount FROM
 (
