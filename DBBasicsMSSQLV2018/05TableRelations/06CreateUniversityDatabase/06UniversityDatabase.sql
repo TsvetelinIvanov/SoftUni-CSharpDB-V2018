@@ -1,6 +1,6 @@
 CREATE DATABASE University
 
---In Judge must be paste without this above
+--In Judge must be pasted without this above
 
 CREATE TABLE Subjects
 (
