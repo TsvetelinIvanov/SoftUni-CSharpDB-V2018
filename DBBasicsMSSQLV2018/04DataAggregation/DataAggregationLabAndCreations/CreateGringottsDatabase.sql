@@ -484,98 +484,193 @@ INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [
 GO
 
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (115, 'Helena', 'Ravenclaw/The', 'Daughter of Rowena Ravenclaw, stole her mother''s diadem and hid it, killed by the Bloody Baron and became Ravenclaw''s house ghost.', 62, 'Jimmy Kiddell', 18, 'Venomous Tongue', CAST('1985-10-13' AS Date), CAST(1238.51 AS Decimal(8, 2)), CAST(10.17 AS Decimal(5, 2)), CAST(57.00 AS Decimal(8, 2)), CAST('1985-12-30' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (116, 'Rowena', 'Ravenclaw', 'Co-founder of Hogwarts, mother of Helena Ravenclaw', 40, 'Arturo Cephalopos', 28, 'Blue Phoenix', CAST('1994-10-16' AS Date), CAST(16236.00 AS Decimal(8, 2)), CAST(11.11 AS Decimal(5, 2)), CAST(26.00 AS Decimal(8, 2)), CAST('1995-04-25' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (117, 'Mary', 'Riddle', 'Muggle wife of Thomas Riddle, mother of Tom Riddle Sr, mother-in-law of Merope Gaunt, grandmother of Tom Marvolo Riddle/Lord Voldemort, killed by her grandson', 24, 'Death', 12, 'Troll Chest', CAST('1982-06-14' AS Date), CAST(43375.01 AS Decimal(8, 2)), CAST(23.97 AS Decimal(5, 2)), CAST(82.00 AS Decimal(8, 2)), CAST('1982-08-30' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (118, 'Thomas', 'Riddle', 'Muggle husband of Mary Riddle, father of Tom Riddle Sr, grandfather of Tom Marvolo Riddle/Lord Voldemort, killed by his grandson.', 36, 'Arturo Cephalopos', 28, 'Human Pride', CAST('1989-05-14' AS Date), CAST(24304.57 AS Decimal(8, 2)), CAST(21.47 AS Decimal(5, 2)), CAST(86.00 AS Decimal(8, 2)), CAST('1989-12-04' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (119, 'Tom', 'Riddle', 'Muggle husband of Merope Gaunt, father of Tom Marvolo Riddle/Lord Voldemort, son of Thomas and Mary Riddle, killed by his son', 26, 'Death', 23, 'Venomous Tongue', CAST('1990-04-22' AS Date), CAST(44456.65 AS Decimal(8, 2)), CAST(25.24 AS Decimal(5, 2)), CAST(76.00 AS Decimal(8, 2)), CAST('1990-08-03' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (120, 'Tom', 'Marvolo', 'see Lord Voldemort', 33, 'Mykew Gregorovitch', 30, 'Blue Phoenix', CAST('1986-05-20' AS Date), CAST(23897.12 AS Decimal(8, 2)), CAST(29.66 AS Decimal(5, 2)), CAST(23.00 AS Decimal(8, 2)), CAST('1987-01-27' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (121, 'Demelza', 'Robins', '', 45, 'Mykew Gregorovitch', 24, 'Troll Chest', CAST('1988-09-19' AS Date), CAST(8523.42 AS Decimal(8, 2)), CAST(5.34 AS Decimal(5, 2)), CAST(40.00 AS Decimal(8, 2)), CAST('1989-02-21' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (122, 'Augustus', 'Rookwood', 'Death Eater, spy working in the Department of Mysteries', 26, 'Death', 28, 'Human Pride', CAST('1994-12-06' AS Date), CAST(43137.27 AS Decimal(8, 2)), CAST(13.09 AS Decimal(5, 2)), CAST(61.00 AS Decimal(8, 2)), CAST('1995-01-01' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (123, 'Albert', 'Runcorn', '', 23, 'Jimmy Kiddell', 12, 'Venomous Tongue', CAST('1982-12-06' AS Date), CAST(47140.32 AS Decimal(8, 2)), CAST(3.77 AS Decimal(5, 2)), CAST(35.00 AS Decimal(8, 2)), CAST('1983-01-13' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (124, 'Scabior', '', 'Snatcher who captures Harry Potter, Ron Weasley and Hermione Granger in Deathly Hallows.', 23, 'Arturo Cephalopos', 21, 'Blue Phoenix', CAST('1992-06-06' AS Date), CAST(25342.73 AS Decimal(8, 2)), CAST(14.88 AS Decimal(5, 2)), CAST(27.00 AS Decimal(8, 2)), CAST('1993-05-07' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (125, 'Newt', 'Scamander', 'Author of Fantastic Beasts and Where to Find Them, among other books. Headmaster and, Hufflepuff student at Hogwarts.', 49, 'Death', 24, 'Troll Chest', CAST('1988-02-08' AS Date), CAST(36247.69 AS Decimal(8, 2)), CAST(28.85 AS Decimal(5, 2)), CAST(22.00 AS Decimal(8, 2)), CAST('1988-12-31' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (126, 'Rufus', 'Scrimgeour', 'Head of the Auror Office, replaces Cornelius Fudge as Minister for Magic.', 61, 'Ollivander family', 13, 'Human Pride', CAST('1987-07-31' AS Date), CAST(39764.02 AS Decimal(8, 2)), CAST(25.14 AS Decimal(5, 2)), CAST(10.00 AS Decimal(8, 2)), CAST('1988-04-03' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (127, 'Kingsley', 'Shacklebolt', 'Auror, replaces Pius Thicknesse as Minister for Magic, member of the Order of the Phoenix', 33, 'Mykew Gregorovitch', 26, 'Venomous Tongue', CAST('1992-03-06' AS Date), CAST(31218.37 AS Decimal(8, 2)), CAST(8.53 AS Decimal(5, 2)), CAST(42.00 AS Decimal(8, 2)), CAST('1993-01-30' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (128, 'Stan', 'Shunpike', 'Conductor of the Knight Bus, later jailed in Azkaban on suspicions of being a death-eater.', 30, 'Jimmy Kiddell', 22, 'Blue Phoenix', CAST('1992-09-21' AS Date), CAST(19775.78 AS Decimal(8, 2)), CAST(0.14 AS Decimal(5, 2)), CAST(61.00 AS Decimal(8, 2)), CAST('1992-12-07' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (129, 'Aurora', 'Sinistra', 'Professor and member of the Astronomy Department at Hogwarts, a witch with dark skin, hair, and eyes.', 47, 'Arturo Cephalopos', 22, 'Troll Chest', CAST('1991-06-28' AS Date), CAST(17257.17 AS Decimal(8, 2)), CAST(30.67 AS Decimal(5, 2)), CAST(45.00 AS Decimal(8, 2)), CAST('1992-01-25' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (130, 'Rita', 'Skeeter', 'Reporter for the Daily Prophet, author of The Life and Lies of Albus Dumbledore, unregistered animagus.', 38, 'Death', 13, 'Human Pride', CAST('1990-04-18' AS Date), CAST(22876.54 AS Decimal(8, 2)), CAST(17.02 AS Decimal(5, 2)), CAST(3.00 AS Decimal(8, 2)), CAST('1990-07-06' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (131, 'Horace', 'Slughorn', 'Former Potions professor at Hogwarts and Head of Slytherin House who taught Tom Marvolo Riddle and returns to Hogwarts in Harry''s sixth year.', 32, 'Ollivander family', 10, 'Venomous Tongue', CAST('1986-10-30' AS Date), CAST(19165.02 AS Decimal(8, 2)), CAST(7.95 AS Decimal(5, 2)), CAST(76.00 AS Decimal(8, 2)), CAST('1987-09-27' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (132, 'Salazar', 'Slytherin', 'Co-founder of Hogwarts, Parseltongue, ancestor of the Gaunt family and Lord Voldemort.', 59, 'Antioch Peverell', 28, 'Blue Phoenix', CAST('1980-10-26' AS Date), CAST(1168.22 AS Decimal(8, 2)), CAST(26.55 AS Decimal(5, 2)), CAST(71.00 AS Decimal(8, 2)), CAST('1981-01-30' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (133, 'Hepzibah', 'Smith', 'Elderly, wealthy antique collector, descendant of Helga Hufflepuff, murdered and robbed by Tom Marvolo Riddle', 30, 'Ollivander family', 12, 'Troll Chest', CAST('1983-05-25' AS Date), CAST(33665.13 AS Decimal(8, 2)), CAST(7.98 AS Decimal(5, 2)), CAST(21.00 AS Decimal(8, 2)), CAST('1983-08-17' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (134, 'Zacharias', 'Smith', 'Hufflepuff student, a member of Dumbledore''s Army.', 39, 'Antioch Peverell', 15, 'Human Pride', CAST('1985-12-01' AS Date), CAST(45543.40 AS Decimal(8, 2)), CAST(24.78 AS Decimal(5, 2)), CAST(98.00 AS Decimal(8, 2)), CAST('1986-10-29' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (135, 'Severus', 'Snape', 'Hogwarts, Potions and later Defence Against the Dark Arts professor, Head of Slytherin House, a member of both the Death Eaters and the Order of the Phoenix.', 53, 'Mykew Gregorovitch', 15, 'Venomous Tongue', CAST('1992-11-06' AS Date), CAST(17820.90 AS Decimal(8, 2)), CAST(16.53 AS Decimal(5, 2)), CAST(38.00 AS Decimal(8, 2)), CAST('1992-12-20' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (136, 'Alicia', 'Spinnet', 'Chaser on the Gryffindor Quidditch team, two years above Harry Potter at Hogwarts. Member of Dumbledore''s Army.', 65, 'Jimmy Kiddell', 16, 'Blue Phoenix', CAST('1980-02-06' AS Date), CAST(6269.39 AS Decimal(8, 2)), CAST(3.66 AS Decimal(5, 2)), CAST(77.00 AS Decimal(8, 2)), CAST('1980-03-04' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (137, 'Pomona', 'Sprout', 'Hogwarts Herbology professor, Head of Hufflepuff House.', 46, 'Arturo Cephalopos', 24, 'Troll Chest', CAST('1993-06-10' AS Date), CAST(16789.73 AS Decimal(8, 2)), CAST(30.80 AS Decimal(5, 2)), CAST(58.00 AS Decimal(8, 2)), CAST('1993-10-07' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (138, 'Pius', 'Thicknesse', 'Minister for Magic while under the Imperius Curse, later replaced by Kingsley Shacklebolt.', 47, 'Death', 24, 'Human Pride', CAST('1982-06-01' AS Date), CAST(8359.46 AS Decimal(8, 2)), CAST(26.64 AS Decimal(5, 2)), CAST(59.00 AS Decimal(8, 2)), CAST('1983-01-04' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (139, 'Dean', 'Thomas', 'Gryffindor student in Harry''s year, a member of Dumbledore''s Army, briefly Ginny Weasley''s boyfriend, Gryffindor Quidditch Chaser.', 69, 'Antioch Peverell', 18, 'Venomous Tongue', CAST('1992-12-04' AS Date), CAST(6579.08 AS Decimal(8, 2)), CAST(7.43 AS Decimal(5, 2)), CAST(69.00 AS Decimal(8, 2)), CAST('1993-04-09' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (140, 'Andromeda', 'Tonks', 'Sister of Bellatrix Lestrange and Narcissa Malfoy, disowned by her family for marrying Muggle-born Ted Tonks, mother of Nymphadora Tonks.', 68, 'Death', 28, 'Blue Phoenix', CAST('1993-02-18' AS Date), CAST(30024.64 AS Decimal(8, 2)), CAST(8.80 AS Decimal(5, 2)), CAST(36.00 AS Decimal(8, 2)), CAST('1993-06-14' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (141, 'Nymphadora', 'Tonks', 'Daughter of Ted and Andromeda Tonks, Auror and member of the Order of the Phoenix. She marries Remus Lupin, and become the mother of Teddy Lupin.', 18, 'Jimmy Kiddell', 13, 'Troll Chest', CAST('1982-11-25' AS Date), CAST(16724.98 AS Decimal(8, 2)), CAST(22.83 AS Decimal(5, 2)), CAST(37.00 AS Decimal(8, 2)), CAST('1983-09-21' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (142, 'Ted', 'Tonks', 'Muggle-born husband of Andromeda and father of Nymphadora Tonks.', 19, 'Arturo Cephalopos', 13, 'Human Pride', CAST('1984-03-07' AS Date), CAST(39096.67 AS Decimal(8, 2)), CAST(25.20 AS Decimal(5, 2)), CAST(82.00 AS Decimal(8, 2)), CAST('1984-10-04' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (143, 'Travers', '', '', 53, 'Death', 24, 'Venomous Tongue', CAST('1984-01-05' AS Date), CAST(25085.58 AS Decimal(8, 2)), CAST(1.95 AS Decimal(5, 2)), CAST(91.00 AS Decimal(8, 2)), CAST('1984-05-27' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (144, 'Sybill', 'Patricia', 'Hogwarts Divination professor, predicted the prophecy that prompted Lord Voldemort to go after the Potters', 25, 'Ollivander family', 17, 'Blue Phoenix', CAST('1994-07-05' AS Date), CAST(15237.30 AS Decimal(8, 2)), CAST(7.31 AS Decimal(5, 2)), CAST(21.00 AS Decimal(8, 2)), CAST('1994-07-21' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (145, 'Dolores', 'Jane', 'Senior Undersecretary to the Minister for Magic, Defence Against the Dark Arts professor, Hogwarts High Inquisitor, Headmistress of Hogwarts, who enthusiastically joins in the persecution of half-bloods under Voldermort.', 34, 'Mykew Gregorovitch', 30, 'Troll Chest', CAST('1982-09-25' AS Date), CAST(10628.58 AS Decimal(8, 2)), CAST(12.08 AS Decimal(5, 2)), CAST(50.00 AS Decimal(8, 2)), CAST('1983-01-22' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (146, 'Emmeline', 'Vance', 'a member of the party that brings Harry to Grimmauld Place, a member of the Order of the Phoenix. Described as "A stately looking witch in an emerald green shawl".', 57, 'Jimmy Kiddell', 25, 'Human Pride', CAST('1992-10-30' AS Date), CAST(34993.10 AS Decimal(8, 2)), CAST(29.94 AS Decimal(5, 2)), CAST(82.00 AS Decimal(8, 2)), CAST('1992-11-03' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (147, 'Romilda', 'Vane', 'Hogwarts student who tried to romance Harry with Chocolate Cauldrons containing a love potion from Weasley''s Wizard Wheezes', 17, 'Mykew Gregorovitch', 16, 'Venomous Tongue', CAST('1983-09-06' AS Date), CAST(26267.34 AS Decimal(8, 2)), CAST(16.63 AS Decimal(5, 2)), CAST(100.00 AS Decimal(8, 2)), CAST('1984-04-15' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (148, 'Septima', 'Vector', 'Arithmancy professor at Hogwarts.', 43, 'Arturo Cephalopos', 26, 'Blue Phoenix', CAST('1981-01-23' AS Date), CAST(6146.94 AS Decimal(8, 2)), CAST(6.57 AS Decimal(5, 2)), CAST(66.00 AS Decimal(8, 2)), CAST('1982-01-22' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (149, 'Lord', 'Voldemort', 'The villain of the series, the murderer of Harry Potter''s parents and many others in his quest for immortality and absolute power.', 25, 'Death', 31, 'Troll Chest', CAST('1989-04-28' AS Date), CAST(38085.84 AS Decimal(8, 2)), CAST(22.53 AS Decimal(5, 2)), CAST(88.00 AS Decimal(8, 2)), CAST('1989-08-01' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (150, 'Arthur', 'Weasley', 'Muggle-obsessed Ministry of Magic employee. Husband of Molly Weasley, father of Bill, Charlie, Percy, Fred, George, Ron, and Ginny Weasley, member of the Order of the Phoenix', 65, 'Antioch Peverell', 26, 'Human Pride', CAST('1989-09-05' AS Date), CAST(6647.70 AS Decimal(8, 2)), CAST(15.82 AS Decimal(5, 2)), CAST(23.00 AS Decimal(8, 2)), CAST('1989-09-28' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (151, 'Bill', 'Weasley', 'Oldest son of Arthur and Molly Weasley, Gringotts employee.', 51, 'Death', 30, 'Venomous Tongue', CAST('1988-04-01' AS Date), CAST(11346.57 AS Decimal(8, 2)), CAST(2.63 AS Decimal(5, 2)), CAST(98.00 AS Decimal(8, 2)), CAST('1988-08-03' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (152, 'Charlie', 'Weasley', 'Second son of Arthur and Molly Weasley, and a member of the Order of the Phoenix, works with dragons in Romania.', 21, 'Jimmy Kiddell', 16, 'Blue Phoenix', CAST('1988-11-14' AS Date), CAST(7831.46 AS Decimal(8, 2)), CAST(26.31 AS Decimal(5, 2)), CAST(20.00 AS Decimal(8, 2)), CAST('1989-07-26' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (153, 'Fred', 'Weasley', 'Son of Arthur and Molly Weasley and identical twin brother of George Weasley, a member of Dumbledore''s Army, Gryffindor Quidditch Beater, co-owner of Weasleys'' Wizard Wheezes, killed in an explosion caused by Augustus Rookwood in the Battle of Hogwarts.', 48, 'Arturo Cephalopos', 18, 'Troll Chest', CAST('1992-02-22' AS Date), CAST(23860.37 AS Decimal(8, 2)), CAST(28.37 AS Decimal(5, 2)), CAST(39.00 AS Decimal(8, 2)), CAST('1992-05-06' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (154, 'George', 'Weasley', 'Son of Arthur and Molly Weasley and identical twin brother of Fred Weasley, member of Dumbledore''s Army, Gryffindor Quidditch Beater, co-owner of Weasleys'' Wizard Wheezes, marries Angelina Johnson', 48, 'Death', 13, 'Human Pride', CAST('1994-11-16' AS Date), CAST(16556.88 AS Decimal(8, 2)), CAST(2.82 AS Decimal(5, 2)), CAST(19.00 AS Decimal(8, 2)), CAST('1994-12-13' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (155, 'Ginny', 'Weasley', 'Only daughter and youngest child of Arthur and Molly Weasley, Gryffindor student one year under Harry, Gryffindor Quidditch Seeker and Chaser, a member of Dumbledore''s Army.', 47, 'Ollivander family', 12, 'Venomous Tongue', CAST('1990-03-21' AS Date), CAST(9347.41 AS Decimal(8, 2)), CAST(28.27 AS Decimal(5, 2)), CAST(78.00 AS Decimal(8, 2)), CAST('1990-03-31' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (156, 'Molly', 'Weasley', 'Wife of Arthur Weasley, mother of Bill, Charlie, Percy, Fred, George, Ron and Ginny Weasley, a member of the Order of the Phoenix.', 14, 'Mykew Gregorovitch', 18, 'Blue Phoenix', CAST('1992-02-03' AS Date), CAST(39815.04 AS Decimal(8, 2)), CAST(9.43 AS Decimal(5, 2)), CAST(53.00 AS Decimal(8, 2)), CAST('1992-08-30' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (157, 'Percy', 'Weasley', 'Third son of Arthur and Molly Weasley, Gryffindor prefect and Head Boy then Ministry of Magic employee, long estranged from his family before joining them against the Death Eaters in Deathly Hallows,', 54, 'Arturo Cephalopos', 14, 'Troll Chest', CAST('1985-04-24' AS Date), CAST(25537.20 AS Decimal(8, 2)), CAST(3.05 AS Decimal(5, 2)), CAST(12.00 AS Decimal(8, 2)), CAST('1985-05-16' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (158, 'Ron', 'Weasley', 'Harry''s close friend, youngest Son of Arthur and Molly Weasley, Gryffindor Quidditch Keeper, school prefect, a member of Dumbledore''s Army.', 51, 'Death', 26, 'Human Pride', CAST('1985-07-16' AS Date), CAST(4085.37 AS Decimal(8, 2)), CAST(25.25 AS Decimal(5, 2)), CAST(32.00 AS Decimal(8, 2)), CAST('1985-09-29' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (159, 'Oliver', 'Wood', 'Hogwarts student, Gryffindor Quidditch Keeper and captain.', 26, 'Ollivander family', 10, 'Venomous Tongue', CAST('1985-06-29' AS Date), CAST(40902.03 AS Decimal(8, 2)), CAST(10.82 AS Decimal(5, 2)), CAST(68.00 AS Decimal(8, 2)), CAST('1985-08-01' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (160, 'Kennilworthy', 'Whisp', 'author of "Quidditch Through the Ages"', 57, 'Mykew Gregorovitch', 31, 'Blue Phoenix', CAST('1989-03-11' AS Date), CAST(17335.62 AS Decimal(8, 2)), CAST(21.72 AS Decimal(5, 2)), CAST(7.00 AS Decimal(8, 2)), CAST('1989-10-09' AS Date), 0)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (161, 'Yaxley', '', 'Death Eater, Head of Magical Law Enforcement under Voldemort''s regime.', 38, 'Jimmy Kiddell', 16, 'Troll Chest', CAST('1988-01-03' AS Date), CAST(26638.92 AS Decimal(8, 2)), CAST(7.11 AS Decimal(5, 2)), CAST(74.00 AS Decimal(8, 2)), CAST('1988-02-21' AS Date), 1)
+
 GO
+
 INSERT [dbo].[WizzardDeposits] ([Id], [FirstName], [LastName], [Notes], [Age], [MagicWandCreator], [MagicWandSize], [DepositGroup], [DepositStartDate], [DepositAmount], [DepositInterest], [DepositCharge], [DepositExpirationDate], [IsDepositExpired]) VALUES (162, 'Blaise', 'Zabini', 'Slytherin student in Harry''s year, friends with Draco Malfoy.', 16, 'Mykew Gregorovitch', 11, 'Human Pride', CAST('1990-03-28' AS Date), CAST(3049.06 AS Decimal(8, 2)), CAST(6.27 AS Decimal(5, 2)), CAST(61.00 AS Decimal(8, 2)), CAST('1990-07-04' AS Date), 0)
+
 GO
