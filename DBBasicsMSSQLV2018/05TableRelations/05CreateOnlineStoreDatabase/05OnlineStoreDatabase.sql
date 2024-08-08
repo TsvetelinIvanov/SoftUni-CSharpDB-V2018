@@ -1,6 +1,6 @@
 CREATE DATABASE OnlineStore
 
---In Judge must be paste without this above
+--In Judge must be pasted without this above
 
 CREATE TABLE ItemTypes
 (
