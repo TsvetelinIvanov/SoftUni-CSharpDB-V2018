@@ -5,7 +5,7 @@ LEFT JOIN Rivers AS r ON r.Id = cr.RiverId
 WHERE c.ContinentCode = 'AF'
 ORDER BY c.CountryName
 
---Only one query must be paste in Judge
+--Only one query must be pasted in Judge
 
 SELECT TOP(5) c.CountryName, r.RiverName
 FROM Countries AS c
