@@ -8,7 +8,7 @@ Body NVARCHAR(300)
 
 GO
 
---In Judge must be paste only the Trigger's creation below
+--In Judge must be pasted only the Trigger's creation below
 
 CREATE TRIGGER tr_Logs_NotificationEmails_AfterInsert ON Logs
 FOR INSERT AS
