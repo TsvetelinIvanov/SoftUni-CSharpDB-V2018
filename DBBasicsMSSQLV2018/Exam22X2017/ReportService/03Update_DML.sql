@@ -1,7 +1,7 @@
 UPDATE Reports
 SET StatusId = 2 WHERE StatusId = 1 AND CategoryId = 4
 
---Only one query must be paste in Judge
+--Only one query must be pasted in Judge
 
 UPDATE Reports
 SET StatusId = (SELECT Id FROM [Status] WHERE Label = 'in progress') 
