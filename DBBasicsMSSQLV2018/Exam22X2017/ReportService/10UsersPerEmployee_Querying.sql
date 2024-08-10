@@ -4,7 +4,7 @@ LEFT JOIN Reports AS r ON r.EmployeeId = e.Id
 GROUP BY e.FirstName + ' ' + e.LastName
 ORDER BY [Users Number] DESC, [Name]
 
---Only one query must be paste in Judge
+--Only one query must be pasted in Judge
 
 SELECT e.FirstName + ' ' + e.LastName AS [Name], COUNT(DISTINCT r.UserId) AS [Users Number]
 FROM Employees AS e
