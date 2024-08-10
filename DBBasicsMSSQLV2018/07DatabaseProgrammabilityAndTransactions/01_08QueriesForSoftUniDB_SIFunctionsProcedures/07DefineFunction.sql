@@ -10,22 +10,26 @@ BEGIN
    BEGIN
     WHILE(@setOfLettersIndex <= LEN(@setOfLetters))
      BEGIN
-     IF (SUBSTRING(@word, @wordIndex, 1) = SUBSTRING(@setOfLetters, @setOfLettersIndex, 1)
-	 AND @isCounted = 0)
-     BEGIN
-      SET @counter += 1
-      SET @isCounted = 1	  	      
-     END	  
-     SET @setOfLettersIndex += 1
-    END
-    SET @isCounted = 0     
-    SET @wordIndex += 1
-    SET @setOfLettersIndex = 1
-   END  
-   IF (@counter = LEN(@word))
-   SET @result = 1
-  RETURN @result
- END
+       IF (SUBSTRING(@word, @wordIndex, 1) = SUBSTRING(@setOfLetters, @setOfLettersIndex, 1)
+	   AND @isCounted = 0)
+         BEGIN
+           SET @counter += 1
+           SET @isCounted = 1	  	      
+         END
+	
+         SET @setOfLettersIndex += 1
+      END
+
+      SET @isCounted = 0     
+      SET @wordIndex += 1
+      SET @setOfLettersIndex = 1
+     END
+	
+     IF (@counter = LEN(@word))
+       SET @result = 1
+	
+    RETURN @result
+   END
 
 --Only one query must be pasted in Judge
 
@@ -41,9 +45,11 @@ BEGIN
     IF (CHARINDEX(@letter, @setOfLetters) <= 0)
      BEGIN
       RETURN 0	  	      
-     END 
+     END
+	
      SET @index += 1
-   END    
+   END
+	
   RETURN 1
  END
 
