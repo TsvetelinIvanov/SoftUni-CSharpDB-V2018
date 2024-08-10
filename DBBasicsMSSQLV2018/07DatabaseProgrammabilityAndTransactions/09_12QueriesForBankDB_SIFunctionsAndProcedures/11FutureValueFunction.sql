@@ -8,7 +8,7 @@ SET @futureValue = @InitialSum * (POWER((1 + @YearlyInterestRate), @NumberOfYear
 RETURN @futureValue
 END
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
 GO
 
 SELECT dbo.ufn_CalculateFutureValue(1000, 0.1, 5)
