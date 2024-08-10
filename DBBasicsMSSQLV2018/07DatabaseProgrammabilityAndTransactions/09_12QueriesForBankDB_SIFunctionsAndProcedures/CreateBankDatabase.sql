@@ -1,7 +1,11 @@
 CREATE DATABASE Bank
+
 GO
+
 USE Bank
+
 GO
+
 CREATE TABLE AccountHolders
 (
 Id INT NOT NULL,
