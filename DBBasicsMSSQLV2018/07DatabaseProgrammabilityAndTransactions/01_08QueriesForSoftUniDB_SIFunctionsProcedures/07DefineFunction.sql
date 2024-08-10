@@ -27,7 +27,8 @@ BEGIN
   RETURN @result
  END
 
---Only one query must be paste in Judge
+--Only one query must be pasted in Judge
+
 GO
 
 CREATE FUNCTION ufn_IsWordComprised(@setOfLetters VARCHAR(MAX), @word VARCHAR(MAX))
@@ -46,9 +47,11 @@ BEGIN
   RETURN 1
  END
 
- --In Judge must be paste without this below
+ --In Judge must be pasted without this below
  GO
+
  DROP FUNCTION dbo.ufn_IsWordComprised
 
  GO
+
  SELECT dbo.ufn_IsWordComprised('gug', 'Guy') AS Result
