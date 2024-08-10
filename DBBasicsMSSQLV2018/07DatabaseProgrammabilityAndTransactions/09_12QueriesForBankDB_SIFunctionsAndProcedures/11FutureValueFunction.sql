@@ -3,9 +3,9 @@ CREATE FUNCTION ufn_CalculateFutureValue(@InitialSum DECIMAL(15, 4), @YearlyInte
 RETURNS DECIMAL(15, 4)
 AS
 BEGIN
-DECLARE @futureValue DECIMAL(15, 4)
-SET @futureValue = @InitialSum * (POWER((1 + @YearlyInterestRate), @NumberOfYears))
-RETURN @futureValue
+  DECLARE @futureValue DECIMAL(15, 4)
+  SET @futureValue = @InitialSum * (POWER((1 + @YearlyInterestRate), @NumberOfYears))
+  RETURN @futureValue
 END
 
 --In Judge must be pasted without this below
