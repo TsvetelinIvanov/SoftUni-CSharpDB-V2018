@@ -2,7 +2,7 @@ CREATE PROCEDURE usp_WithdrawMoney @AccountId INT, @MoneyAmount MONEY AS
 BEGIN
  IF (@MoneyAmount < 0)
  BEGIN
-  RAISERROR('Cannot deposit negative value!', 16, 1)
+  RAISERROR('Cannot withdraw negative value!', 16, 1)
  END
  ELSE
  BEGIN
@@ -31,7 +31,7 @@ BEGIN
  COMMIT
 END
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
 GO
 
 EXECUTE usp_WithdrawMoney 5, 25
