@@ -5,7 +5,7 @@ JOIN Addresses AS a ON a.AddressID = e.AddressID
 JOIN Towns AS t ON t.TownID = a.TownID
 WHERE t.[Name] = @TownName
 
---Only one query must be paste in Judge
+--Only one query must be pasted in Judge
 GO
 DROP PROC usp_GetEmployeesFromTown
 GO
@@ -17,7 +17,7 @@ JOIN Addresses AS a ON a.AddressID = e.AddressID
 JOIN Towns AS t ON t.TownID = a.TownID
 WHERE t.[Name] LIKE @TownName + '%'
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
 GO
 
 EXEC usp_GetEmployeesFromTown 'Sofia'
