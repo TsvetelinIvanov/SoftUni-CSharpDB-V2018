@@ -33,7 +33,7 @@ COMMIT TRANSACTION [Tran2]
  JOIN Items AS i ON i.Id = ugi.ItemId
  WHERE ugi.UserGameId = 110
 
---Only one query must be paste in Judge, this below is another solution
+--Only one query must be pasted in Judge, this below is another solution
 
 DECLARE @gameId INT, @sumForLevel11To12 MONEY, @sumForLevel19To21 MONEY
 
@@ -71,7 +71,7 @@ BEGIN TRANSACTION
  JOIN Items AS i ON i.Id = ugi.ItemId
  WHERE ugi.UserGameId = @gameId
 
- --This below doesn't work good - Judge doesen't accept it, but it must be more correctly than this above
+ --This below doesn't work good - Judge doesen't accept it, but it should be more correct than this above
 
  BEGIN TRANSACTION
  BEGIN TRY
@@ -83,8 +83,7 @@ BEGIN TRANSACTION
   JOIN Games AS g ON g.Id = ug.GameId
   JOIN UserGameItems AS ugi ON ugi.UserGameId = ug.Id
   JOIN Items AS i ON i.Id = ugi.ItemId
-  WHERE u.FirstName = 'Stamat' AND g.[Name] = 'Safflower' AND
-   i.Id NOT IN(SELECT ugi1.ItemId FROM UserGameItems AS ugi1 WHERE ugi1.UserGameId = ugi.UserGameId)
+  WHERE u.FirstName = 'Stamat' AND g.[Name] = 'Safflower' AND i.Id NOT IN (SELECT ugi1.ItemId FROM UserGameItems AS ugi1 WHERE ugi1.UserGameId = ugi.UserGameId)
   ) AS j
 END TRY
 BEGIN CATCH
@@ -98,12 +97,8 @@ JOIN UsersGames AS ug ON ug.UserId = u.Id
 JOIN Games AS g ON g.Id = ug.GameId
 JOIN UserGameItems AS ugi ON ugi.UserGameId = ug.Id
 JOIN Items AS i ON i.Id = ugi.ItemId
-WHERE u.FirstName = 'Stamat' AND g.[Name] = 'Safflower' AND
-  i.Id NOT IN(SELECT ugi1.ItemId FROM UserGameItems AS ugi1 WHERE ugi1.UserGameId = ugi.UserGameId)
-IF ((SELECT ug.Cash FROM Users AS u
-    JOIN UsersGames AS ug ON ug.UserId = u.Id
-	JOIN Games AS g ON g.Id = ug.GameId
-	WHERE u.FirstName = 'Stamat' AND g.[Name] = 'Safflower') < 0)
+WHERE u.FirstName = 'Stamat' AND g.[Name] = 'Safflower' AND i.Id NOT IN(SELECT ugi1.ItemId FROM UserGameItems AS ugi1 WHERE ugi1.UserGameId = ugi.UserGameId)
+IF ((SELECT ug.Cash FROM Users AS u JOIN UsersGames AS ug ON ug.UserId = u.Id JOIN Games AS g ON g.Id = ug.GameId WHERE u.FirstName = 'Stamat' AND g.[Name] = 'Safflower') < 0)
 BEGIN
  ROLLBACK
  RAISERROR('Cash is not enough!', 16, 1)
