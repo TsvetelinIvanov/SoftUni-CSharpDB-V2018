@@ -14,11 +14,11 @@ BEGIN
 	 AND @isCounted = 0)
      BEGIN
       SET @counter += 1
-	  SET @isCounted = 1	  	      
+      SET @isCounted = 1	  	      
      END	  
      SET @setOfLettersIndex += 1
     END
-	SET @isCounted = 0     
+    SET @isCounted = 0     
     SET @wordIndex += 1
     SET @setOfLettersIndex = 1
    END  
@@ -42,7 +42,7 @@ BEGIN
      BEGIN
       RETURN 0	  	      
      END 
-	 SET @index += 1
+     SET @index += 1
    END    
   RETURN 1
  END
