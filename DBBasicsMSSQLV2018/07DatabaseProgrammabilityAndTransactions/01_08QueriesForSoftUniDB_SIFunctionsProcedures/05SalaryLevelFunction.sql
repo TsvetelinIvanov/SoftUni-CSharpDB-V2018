@@ -11,7 +11,7 @@ SET @salaryLevel = 'High'
 RETURN @salaryLevel
 END
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
 GO
 
 SELECT e.Salary, dbo.ufn_GetSalaryLevel(e.Salary) AS [Salary Level]
