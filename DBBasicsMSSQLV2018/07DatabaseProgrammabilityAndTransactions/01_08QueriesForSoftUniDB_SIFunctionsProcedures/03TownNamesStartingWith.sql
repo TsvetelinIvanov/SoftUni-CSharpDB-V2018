@@ -3,7 +3,7 @@ SELECT [Name] AS Town
 FROM Towns
 WHERE [Name] LIKE @StartingPattern + '%'
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
 GO
 
 EXEC usp_GetTownsStartingWith 'B'
