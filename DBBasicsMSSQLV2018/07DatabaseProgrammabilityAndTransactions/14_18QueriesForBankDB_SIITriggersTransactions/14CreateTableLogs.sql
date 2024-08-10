@@ -22,7 +22,7 @@ BEGIN
  )
 END
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
 GO
 
 UPDATE Accounts SET Balance -= 10 WHERE Id = 1
