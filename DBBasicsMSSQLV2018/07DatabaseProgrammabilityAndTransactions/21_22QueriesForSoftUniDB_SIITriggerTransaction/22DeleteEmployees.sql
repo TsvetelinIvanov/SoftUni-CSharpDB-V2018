@@ -10,7 +10,7 @@ CONSTRAINT FK_Deleted_Employees_Departments FOREIGN KEY REFERENCES Departments(D
 Salary MONEY NOT NULL
 )
 
---In Judge must be paste only the Trigger's creation below
+--In Judge must be pasted only the Trigger's creation below
 GO
 
 --The query below doesn't past in Judge - Compile time error
@@ -30,7 +30,7 @@ BEGIN
  )
 END
 
---Only one query must be paste in Judge
+--Only one query must be pasted in Judge
 GO
 
 CREATE TRIGGER tr_Deleted_Employees_Employees_AfterFirring ON Employees
@@ -41,7 +41,7 @@ BEGIN
  FROM deleted
 END
 
---Only one query must be paste in Judge
+--Only one query must be pasted in Judge
 GO
 
 CREATE TRIGGER tr_Deleted_Employees_Employees_AfterFirring ON Employees
@@ -52,7 +52,7 @@ BEGIN
  FROM deleted
 END
 
---In Judge must be paste without this below 
+--In Judge must be pasted without this below 
 
 ALTER TABLE Employees ALTER COLUMN ManagerID INT
 
@@ -72,7 +72,7 @@ SELECT * FROM Employees
 --the table is empty because the delete query work only when the trigger isn't created
 SELECT * FROM Deleted_Employees
 
---the commeted rows below doesn't work - drop Database SoftUni and create it again
+--the commeted rows below don't work - drop Database SoftUni and create it again
 --ALTER TABLE Employees ALTER COLUMN ManagerID INT NOT NULL
 
 --ALTER TABLE Employees ALTER COLUMN DepartmentID INT NOT NULL
