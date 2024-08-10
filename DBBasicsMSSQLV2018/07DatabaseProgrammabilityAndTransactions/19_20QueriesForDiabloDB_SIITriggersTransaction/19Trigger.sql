@@ -18,6 +18,7 @@ JOIN Users AS u ON u.Id = ug.UserId
 JOIN Games AS g ON g.Id = ug.GameId
 WHERE g.[Name] = 'Bali' AND 
 u.Username IN('baleremuda', 'loosenoise','inguinalself','buildingdeltoid','monoxidecos')
+
 GO
 
 CREATE PROCEDURE usp_GiveBonusInCash (@GameName NVARCHAR(50), @Username NVARCHAR(50), 
@@ -45,13 +46,10 @@ EXECUTE usp_GiveBonusInCash 'Bali', 'monoxidecos', 50000
 UPDATE UsersGames 
 SET Cash += 50000 + (SELECT SUM(i.Price) FROM Items AS i JOIN UserGameItems AS ugi ON ugi.ItemId = i.Id
         WHERE ugi.UserGameId = UsersGames.Id)
-WHERE UserId IN (SELECT Id FROM Users 
-             WHERE Username IN('baleremuda', 'loosenoise','inguinalself','buildingdeltoid','monoxidecos'))
+WHERE UserId IN (SELECT Id FROM Users WHERE Username IN('baleremuda', 'loosenoise','inguinalself','buildingdeltoid','monoxidecos'))
       AND GameId = (SELECT Id FROM Games WHERE [Name] = 'Bali')
 
-DECLARE @bonusCash MONEY = 50000 + 
-       (SELECT SUM(i.Price) FROM Items AS i JOIN UserGameItems AS ugi ON ugi.ItemId = i.Id
-                                            JOIN UsersGames AS ug ON ug.Id = ugi.UserGameId)									 
+DECLARE @bonusCash MONEY = 50000 + (SELECT SUM(i.Price) FROM Items AS i JOIN UserGameItems AS ugi ON ugi.ItemId = i.Id JOIN UsersGames AS ug ON ug.Id = ugi.UserGameId)									 
 
 EXECUTE usp_GiveBonusInCash 'Bali', 'baleremuda', @bonusCash
 EXECUTE usp_GiveBonusInCash 'Bali', 'loosenoise', @bonusCash
@@ -61,6 +59,7 @@ EXECUTE usp_GiveBonusInCash 'Bali', 'monoxidecos', @bonusCash
 
 --Buying the items
 GO
+
 CREATE PROCEDURE usp_BuyingItem(@GameName NVARCHAR(50), @Username NVARCHAR(50), @ItemId INT) AS
 BEGIN
  INSERT INTO UserGameItems
@@ -74,11 +73,11 @@ BEGIN
  FROM UsersGames AS ug
  JOIN Users AS u ON u.Id = ug.UserId
  JOIN Games AS g ON g.Id = ug.GameId
- WHERE g.[Name] = @GameName AND 
- u.Username = @Username
+ WHERE g.[Name] = @GameName AND u.Username = @Username
 END
 
 GO
+
 CREATE PROCEDURE usp_BuyingItems(@GameName NVARCHAR(50), @Username NVARCHAR(50), 
 @StartItemId INT, @EndItemId INT) AS
 BEGIN
@@ -122,28 +121,22 @@ INSTEAD OF INSERT
 AS
 INSERT INTO UserGameItems
 SELECT ItemId, UserGameId FROM inserted
-WHERE ItemId IN 
-(SELECT Id FROM Items WHERE MinLevel <= (SELECT [Level] FROM UsersGames WHERE Id = UserGameId))
+WHERE ItemId IN (SELECT Id FROM Items WHERE MinLevel <= (SELECT [Level] FROM UsersGames WHERE Id = UserGameId))
 
 UPDATE UsersGames 
-SET Cash += 50000 + (SELECT SUM(i.Price) FROM Items AS i JOIN UserGameItems AS ugi ON ugi.ItemId = i.Id
-        WHERE ugi.UserGameId = UsersGames.Id)
-WHERE UserId IN (SELECT Id FROM Users 
-             WHERE Username IN('baleremuda', 'loosenoise','inguinalself','buildingdeltoid','monoxidecos'))
+SET Cash += 50000 + (SELECT SUM(i.Price) FROM Items AS i JOIN UserGameItems AS ugi ON ugi.ItemId = i.Id WHERE ugi.UserGameId = UsersGames.Id)
+WHERE UserId IN (SELECT Id FROM Users WHERE Username IN ('baleremuda', 'loosenoise','inguinalself','buildingdeltoid','monoxidecos'))
       AND GameId = (SELECT Id FROM Games WHERE [Name] = 'Bali')
 
 INSERT INTO UserGameItems(UserGameId, ItemId)
 SELECT UsersGames.Id, i.Id FROM UsersGames, Items AS i
-WHERE UserId IN (SELECT Id FROM Users 
-             WHERE Username IN('baleremuda', 'loosenoise','inguinalself','buildingdeltoid','monoxidecos'))
+WHERE UserId IN (SELECT Id FROM Users WHERE Username IN('baleremuda', 'loosenoise','inguinalself','buildingdeltoid','monoxidecos'))
 AND GameId = (SELECT Id FROM Games WHERE [Name] = 'Bali') 
 AND ((i.Id > 250 AND i.Id < 300) OR (i.Id > 500 AND i.Id < 540))
 
 UPDATE UsersGames
-SET Cash -= (SELECT SUM(i.Price) FROM Items AS i JOIN UserGameItems AS ugi ON ugi.ItemId = i.Id
-        WHERE ugi.UserGameId = UsersGames.Id)
-WHERE UserId IN (SELECT Id FROM Users 
-             WHERE Username IN('baleremuda', 'loosenoise','inguinalself','buildingdeltoid','monoxidecos'))
+SET Cash -= (SELECT SUM(i.Price) FROM Items AS i JOIN UserGameItems AS ugi ON ugi.ItemId = i.Id WHERE ugi.UserGameId = UsersGames.Id)
+WHERE UserId IN (SELECT Id FROM Users WHERE Username IN ('baleremuda', 'loosenoise','inguinalself','buildingdeltoid','monoxidecos'))
       AND GameId = (SELECT Id FROM Games WHERE [Name] = 'Bali')
 
 SELECT u.Username, g.[Name], ug.Cash, i.[Name] AS [Item Name]
