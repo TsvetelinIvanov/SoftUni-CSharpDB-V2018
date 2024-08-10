@@ -13,7 +13,7 @@ WHERE g.[Name] = @GameName
 WHERE ncr.RowNumber % 2 != 0
 )
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
  GO
 
 SELECT * FROM ufn_CashInUsersGames('Lily Stargazer')
