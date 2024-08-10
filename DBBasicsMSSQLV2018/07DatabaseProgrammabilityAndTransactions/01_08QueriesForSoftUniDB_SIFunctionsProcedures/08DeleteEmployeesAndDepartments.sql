@@ -28,7 +28,7 @@ BEGIN
  SELECT COUNT(*) FROM Employees WHERE DepartmentID = @departmentId
 END
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
 EXEC usp_DeleteEmployeesFromDepartment 3
 
 
