@@ -24,4 +24,3 @@ WHERE t.[Name] LIKE @TownName + '%'
 GO
 
 EXEC usp_GetEmployeesFromTown 'Sofia'
-
