@@ -5,6 +5,7 @@ AccountId INT NOT NULL CONSTRAINT FK_Logs_Accounts FOREIGN KEY REFERENCES Accoun
 OldSum MONEY NOT NULL,
 NewSum MONEY NOT NULL
 )
+
 GO
 
 --In Judge must be pasted only the Trigger's creation below
