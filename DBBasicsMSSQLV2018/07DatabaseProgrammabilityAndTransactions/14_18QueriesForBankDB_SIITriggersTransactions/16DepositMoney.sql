@@ -22,7 +22,7 @@ BEGIN
  COMMIT
 END
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
 GO
 
 EXECUTE usp_DepositMoney 1, 10
