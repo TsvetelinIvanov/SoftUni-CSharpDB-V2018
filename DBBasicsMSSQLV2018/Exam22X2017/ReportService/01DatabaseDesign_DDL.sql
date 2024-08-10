@@ -51,4 +51,3 @@ CloseDate DATETIME,
 UserId INT NOT NULL CONSTRAINT FK_Reports_Users FOREIGN KEY REFERENCES Users(Id),
 EmployeeId INT CONSTRAINT FK_Reports_Employees FOREIGN KEY REFERENCES Employees(Id)
 )
-
