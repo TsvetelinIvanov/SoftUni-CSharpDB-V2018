@@ -6,6 +6,7 @@ JOIN Towns AS t ON t.TownID = a.TownID
 WHERE t.[Name] = @TownName
 
 --Only one query must be pasted in Judge
+
 GO
 
 DROP PROC usp_GetEmployeesFromTown
