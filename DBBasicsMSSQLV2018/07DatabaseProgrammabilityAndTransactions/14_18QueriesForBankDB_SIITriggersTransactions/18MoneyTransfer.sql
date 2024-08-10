@@ -2,7 +2,7 @@ CREATE PROCEDURE usp_TransferMoney(@SenderId INT, @ReceiverId INT, @MoneyAmount 
 BEGIN
  IF (@MoneyAmount < 0)
  BEGIN
-  RAISERROR('Cannot deposit negative value!', 16, 1)
+  RAISERROR('Cannot transfer negative value!', 16, 1)
  END
  ELSE
  BEGIN
@@ -37,7 +37,7 @@ BEGIN
  COMMIT
 END
 
---Only one query must be paste in Judge
+--Only one query must be pasted in Judge
 GO
 
 CREATE PROCEDURE usp_TransferMoney(@SenderId INT, @ReceiverId INT, @MoneyAmount MONEY) AS
@@ -51,7 +51,7 @@ BEGIN
  COMMIT
 END
 
---Only one query must be paste in Judge
+--Only one query must be pasted in Judge
 GO
 
 CREATE PROCEDURE usp_TransferMoney(@SenderId INT, @ReceiverId INT, @MoneyAmount MONEY) AS
@@ -63,7 +63,7 @@ BEGIN
  
 END
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
 GO
 
 DROP PROCEDURE usp_TransferMoney
