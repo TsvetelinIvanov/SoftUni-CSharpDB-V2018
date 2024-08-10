@@ -23,7 +23,7 @@ BEGIN
  )
 END
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
 GO
 
 UPDATE Accounts SET Balance -= 10 WHERE Id = 1
@@ -31,9 +31,8 @@ UPDATE Accounts SET Balance -= 10 WHERE Id = 1
 UPDATE Accounts SET Balance += 10 WHERE Id = 1
 
 INSERT INTO Logs 
-VALUES 
-(1, 123.12, 123.12) 
+VALUES (1, 123.12, 123.12) 
 
 SELECT * FROM NotificationEmails
 
-DROP TRIGGER tr_Logs_NotificationEmails_AfterInsert 
+DROP TRIGGER tr_Logs_NotificationEmails_AfterInsert
