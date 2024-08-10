@@ -7,7 +7,9 @@ WHERE t.[Name] = @TownName
 
 --Only one query must be pasted in Judge
 GO
+
 DROP PROC usp_GetEmployeesFromTown
+
 GO
 
 CREATE PROCEDURE usp_GetEmployeesFromTown(@TownName VARCHAR(50)) AS
