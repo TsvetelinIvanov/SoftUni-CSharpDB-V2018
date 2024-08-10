@@ -7,7 +7,7 @@ NewSum MONEY NOT NULL
 )
 GO
 
---In Judge must be paste only the Trigger's creation below
+--In Judge must be pasted only the Trigger's creation below
 
 CREATE TRIGGER tr_Accounts_Logs_After_Update ON Accounts 
 FOR UPDATE AS
