@@ -1,18 +1,23 @@
 USE ReportService
+
 GO
 
 -- Disable referential integrity
 EXEC sp_MSForEachTable 'ALTER TABLE ? NOCHECK CONSTRAINT ALL'
+
 GO
 
 EXEC sp_MSForEachTable 'DELETE FROM ?'
+
 GO
 
 EXEC sp_MSForEachTable 'DBCC CHECKIDENT(''?'', RESEED, 0)'
+
 GO
 
 -- Enable referential integrity 
 EXEC sp_MSForEachTable 'ALTER TABLE ? WITH CHECK CHECK CONSTRAINT ALL'
+
 GO
 
 --INSERT Departments
@@ -27,9 +32,7 @@ SET IDENTITY_INSERT Departments OFF;
 --INSERT Categories
 SET IDENTITY_INSERT Categories ON;
 
-INSERT INTO Categories(Id,
-                       Name,
-                       Departmentid)
+INSERT INTO Categories(Id, Name, Departmentid)
 VALUES(1, 'Snow Removal', 5), (2, 'Recycling', 10), (3, 'Water/Air Pollution', 10), (4, 'Streetlight', 1), (5, 'Illegal Construction', 8), (6, 'Sports Events', 9), (7, 'Homeless Elders', 2), (8, 'Disabled People', 2), (9, 'Art Events', 9), (10, 'Animal in Danger', 6), (11, 'Destroyed Home', 4), (12, 'Street animal', 6), (13, 'Music Events', 9), (14, 'Dangerous Building', 8), (15, 'Traffic Lights', 5), (16, 'Potholes', 5), (17, 'Green Areas', 7), (18, 'Dangerous Trees', 7);
 
 SET IDENTITY_INSERT Categories OFF;
@@ -37,8 +40,7 @@ SET IDENTITY_INSERT Categories OFF;
 --INSERT Status
 SET IDENTITY_INSERT [Status] ON;
 
-INSERT INTO Status(Id,
-                   Label)
+INSERT INTO Status(Id, Label)
 VALUES(1, 'waiting'), (2, 'in progress'), (3, 'completed'), (4, 'blocked');
 
 SET IDENTITY_INSERT [Status] OFF;
@@ -46,12 +48,7 @@ SET IDENTITY_INSERT [Status] OFF;
 --INSERT Employees
 SET IDENTITY_INSERT Employees ON;
 
-INSERT INTO Employees(Id,
-                      Firstname,
-                      Lastname,
-                      Gender,
-                      Birthdate,
-                      DepartmentId)
+INSERT INTO Employees(Id, Firstname, Lastname, Gender, Birthdate, DepartmentId)
 VALUES(1, 'Marlo', 'O''Malley', 'M', '9/21/1958', 1), (2, 'Nolan', 'Meneyer', 'M', '4/29/1961', 6), (3, 'Tarah', 'McWaters', 'F', '5/22/1954', 9), (4, 'Bernetta', 'Bigley', 'F', '10/18/1979', 2), (5, 'Gregory', 'Stithe', 'M', '6/25/1952', 5), (6, 'Bord', 'Hambleton', 'M', NULL, 8), (7, 'Humphrey', 'Tamblyn', 'M', '3/26/1941', 6), (8, 'Dinah', 'Zini', 'F', '9/8/1950', 10), (9, 'Eustace', 'Sharpling', 'M', '10/29/1956', 1), (10, 'Shannon', 'Partridge', 'M', '2/14/1952', 1), (11, 'Nancey', 'Heintsch', 'F', '8/20/1967', 3), (12, 'Niki', 'Stranaghan', 'M', '11/26/1969', 9), (13, 'Dick', 'Wentworth', 'M', '4/29/1983', 4), (14, 'Ives', 'McNeigh', 'M', '11/15/1952', 1), (15, 'Leonardo', 'Shopcott', 'M', '1/15/1939', 6), (16, 'Howard', 'Lovelady', 'M', '6/6/1969', 5), (17, 'Bron', 'Ledur', 'M', '11/26/1996', 10), (18, 'Adelind', 'Benns', 'F', '11/23/1935', 10), (19, 'Imogen', 'Burnup', 'F', '5/8/1952', 3), (20, 'Eldon', 'Gaze', 'M', '8/24/1947', 5), (21, 'Patsy', 'McLenahan', 'F', NULL, 10), (22, 'Jeane', 'Salisbury', 'F', '9/13/1967', 5), (23, 'Tiena', 'Ritchard', 'F', '4/18/1985', 3), (24, 'Hakim', 'Guilaem', 'M', '4/9/1963', 9), (25, 'Corny', 'Pickthall', 'M', '12/18/1979', 2), (26, 'Tam', 'Kornel', 'M', '10/3/1995', 9), (27, 'Abby', 'Brettoner', 'F', '4/16/1992', 9), (28, 'Galven', 'Moston', 'M', '3/20/1945', 5), (29, 'Stefa', 'Jakubovski', 'F', '1/10/1947', 2), (30, 'Hewet', 'Juschke', 'M', '12/26/1997', 7);
 
 SET IDENTITY_INSERT Employees OFF;
@@ -59,14 +56,7 @@ SET IDENTITY_INSERT Employees OFF;
 --INSERT Users
 SET IDENTITY_INSERT Users ON;
 
-INSERT INTO Users(Id,
-                  Username,
-                  Name,
-			   Password,
-                  Gender,
-                  BirthDate,
-		        Age,
-                  Email)
+INSERT INTO Users(Id, Username, Name, Password, Gender, BirthDate, Age, Email)
 VALUES
 (1, 'ealpine0', 'Erhart Alpine', 'b8eYD1a7R44', 'F', '07/07/1949', 68, 'ealpine0@squarespace.com'),
 (2, 'awight1', 'Anitra Wight', 'hbHhuwBSxqeo', 'F', '05/31/1943', 74, 'awight1@artisteer.com'),
@@ -94,14 +84,7 @@ SET IDENTITY_INSERT Users OFF;
 --INSERT Reports
 SET IDENTITY_INSERT Reports ON;
 
-INSERT INTO Reports(Id,
-                    CategoryId,
-                    StatusId,
-                    OpenDate,
-                    CloseDate,
-                    Description,
-                    UserId,
-                    EmployeeId)
+INSERT INTO Reports(Id, CategoryId, StatusId, OpenDate, CloseDate, Description, UserId, EmployeeId)
 VALUES
 (1, 1, 4, '04/13/2017', NULL, 'Stuck Road on Str.14', 14, 5),
 (2, 2, 3, '09/05/2015', '09/17/2015', '366 kg plastic for recycling.', 10, NULL),
