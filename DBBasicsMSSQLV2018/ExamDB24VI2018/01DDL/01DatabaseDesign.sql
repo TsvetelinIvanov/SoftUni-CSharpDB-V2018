@@ -31,8 +31,8 @@ BookDate DATE NOT NULL,
 ArrivalDate DATE NOT NULL ,
 ReturnDate DATE NOT NULL,
 CancelDate DATE,
-CONSTRAINT CH_BookDate_Befor_ArrivalDate CHECK(BookDate < ArrivalDate),
-CONSTRAINT CH_ArrivalDate_Befor_ReturnDate CHECK(ArrivalDate < ReturnDate)
+CONSTRAINT CH_BookDate_Before_ArrivalDate CHECK(BookDate < ArrivalDate),
+CONSTRAINT CH_ArrivalDate_Before_ReturnDate CHECK(ArrivalDate < ReturnDate)
 )
 
 CREATE TABLE Accounts
