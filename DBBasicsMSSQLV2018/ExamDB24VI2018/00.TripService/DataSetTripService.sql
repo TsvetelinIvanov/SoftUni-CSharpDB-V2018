@@ -1,19 +1,22 @@
 USE TripService
+
 GO
 
 -- Disable referential integrity
 EXEC sp_MSForEachTable 'DISABLE TRIGGER ALL ON ?'
+
 GO
 
 EXEC sp_MSForEachTable 'ALTER TABLE ? NOCHECK CONSTRAINT ALL';
+
 GO
 
 EXEC sp_MSForEachTable 'DELETE FROM ?';
+
 GO
 
-EXEC sp_MSForEachTable
-    'IF OBJECT_ID(''?'') IN (SELECT OBJECT_ID FROM SYS.IDENTITY_COLUMNS)
-     DBCC CHECKIDENT(''?'', RESEED, 0)';
+EXEC sp_MSForEachTable 'IF OBJECT_ID(''?'') IN (SELECT OBJECT_ID FROM SYS.IDENTITY_COLUMNS) DBCC CHECKIDENT(''?'', RESEED, 0)';
+
 GO
 
 SET IDENTITY_INSERT Cities OFF;
@@ -24,9 +27,11 @@ SET IDENTITY_INSERT Accounts OFF;
 
 -- Enable referential integrity
 EXEC sp_MSForEachTable 'ALTER TABLE ? WITH CHECK CHECK CONSTRAINT ALL';
+
 GO
 
 EXEC sp_MSForEachTable 'ENABLE TRIGGER ALL ON ?'
+
 GO
 
 -- Insert Cities
