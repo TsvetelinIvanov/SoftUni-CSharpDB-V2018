@@ -4,7 +4,3 @@ SELECT * FROM Rooms
 SELECT * FROM Trips
 SELECT * FROM Accounts
 SELECT * FROM AccountsTrips
-
-
-
-
