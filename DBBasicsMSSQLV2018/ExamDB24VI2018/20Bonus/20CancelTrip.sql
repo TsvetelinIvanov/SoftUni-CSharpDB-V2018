@@ -6,7 +6,7 @@ BEGIN
  WHERE Id IN (SELECT Id FROM deleted WHERE CancelDate IS NULL)
 END
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
 
 DELETE FROM Trips
 WHERE Id IN (48, 49, 50)
