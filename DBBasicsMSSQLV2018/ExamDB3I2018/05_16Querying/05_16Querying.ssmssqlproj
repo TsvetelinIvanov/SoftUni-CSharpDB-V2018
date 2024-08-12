@@ -55,11 +55,11 @@
           <AssociatedConnUserName />
           <FullPath>10BuyersBestChoice.sql</FullPath>
         </FileNode>
-        <FileNode Name="11KindaPerson.sql">
+        <FileNode Name="11KindAPerson.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UGR754R\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-UGR754R\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>11KindaPerson.sql</FullPath>
+          <FullPath>11KindAPerson.sql</FullPath>
         </FileNode>
         <FileNode Name="12AgeGroupsRevenue.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UGR754R\SQLEXPRESS:True</AssociatedConnectionMoniker>
@@ -85,7 +85,7 @@
           <AssociatedConnUserName />
           <FullPath>15TownStatistics.sql</FullPath>
         </FileNode>
-        <FileNode Name="16HomeSeetHome.sql">
+        <FileNode Name="16HomeSweetHome.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-UGR754R\SQLEXPRESS:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-UGR754R\SQLEXPRESS</AssociatedConnSrvName>
           <AssociatedConnUserName />
