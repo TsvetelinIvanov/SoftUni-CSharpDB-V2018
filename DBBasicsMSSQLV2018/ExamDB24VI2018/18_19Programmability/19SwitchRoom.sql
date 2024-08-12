@@ -17,15 +17,14 @@ BEGIN
    RAISERROR('Not enough beds in target room!', 16, 1)  
   END  
 
- UPDATE Trips
+  UPDATE Trips
   SET RoomId = @TargetRoomId
   WHERE Id = @TripId
-
 END
 
---In judje must be paste only one query, but this query below does not work good - 4/7 in Judge, because 
---exception 'Target room is in another hotel!' don't work in transaction, I don't know way
 GO
+--In judje must be pasted only one query, but this query below does not work good - 4/7 in Judge, because 
+--exception 'Target room is in another hotel!' doesn't work in transaction - I don't know way!
 
 CREATE PROCEDURE usp_SwitchRoom @TripId INT, @TargetRoomId INT 
 AS
@@ -58,42 +57,38 @@ BEGIN
  COMMIT
 END
 
---In judje must be paste only one query, but this below is autor's solution
+--In judje must be pasted only one query, but this below is autor's solution:
 
 CREATE PROC usp_SwitchRoom(@TripId INT, @TargetRoomId INT)
 AS
   BEGIN
-    DECLARE @SourceHotelId INT = (SELECT H.Id
-                                  FROM Hotels H
-                                    JOIN Rooms R on H.Id = R.HotelId
-                                    JOIN Trips T on R.Id = T.RoomId
+    DECLARE @SourceHotelId INT = (SELECT H.Id FROM Hotels H
+                                  JOIN Rooms R on H.Id = R.HotelId
+                                  JOIN Trips T on R.Id = T.RoomId
                                   WHERE T.Id = @TripId)
 
-    DECLARE @TargetHotelId INT = (SELECT H.Id
-                                  FROM Hotels H
-                                    JOIN Rooms R on H.Id = R.HotelId
+    DECLARE @TargetHotelId INT = (SELECT H.Id FROM Hotels H
+                                  JOIN Rooms R on H.Id = R.HotelId
                                   WHERE R.Id = @TargetRoomId)
 
     IF (@SourceHotelId <> @TargetHotelId)
-      THROW 50013, 'Target room is in another hotel!', 1
+        THROW 50013, 'Target room is in another hotel!', 1
 
-    DECLARE @PeopleCount INT = (SELECT COUNT(*)
-                                FROM AccountsTrips
+    DECLARE @PeopleCount INT = (SELECT COUNT(*) FROM AccountsTrips
                                 WHERE TripId = @TripId)
 
-    DECLARE @TargetRoomBeds INT = (SELECT Beds
-                                   FROM Rooms
+    DECLARE @TargetRoomBeds INT = (SELECT Beds FROM Rooms
                                    WHERE Id = @TargetRoomId)
 
     IF (@PeopleCount > @TargetRoomBeds)
-      THROW 50013, 'Not enough beds in target room!', 1
+        THROW 50013, 'Not enough beds in target room!', 1
 
     UPDATE Trips
     SET RoomId = @TargetRoomId
     WHERE Id = @TripId
   END
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
 
 EXEC usp_SwitchRoom 10, 11
 
