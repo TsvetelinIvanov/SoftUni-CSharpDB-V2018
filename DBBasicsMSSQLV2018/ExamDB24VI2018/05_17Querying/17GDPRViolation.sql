@@ -2,7 +2,8 @@ SELECT t.Id,
 CONCAT(a.FirstName, ' ' +  a.MiddleName, ' ', a.LastName) AS [Full Name],
 cA.[Name] AS [From],
 cH.[Name] AS [To], 
-CASE WHEN t.CancelDate IS NOT NULL THEN 'Canceled'
+CASE
+    WHEN t.CancelDate IS NOT NULL THEN 'Canceled'
     ELSE CONCAT(DATEDIFF(DAY, t.ArrivalDate, t.ReturnDate), ' days')
 END AS Duration
 FROM Trips AS t
