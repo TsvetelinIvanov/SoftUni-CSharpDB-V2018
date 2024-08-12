@@ -23,7 +23,7 @@ BEGIN
  END
 
  DECLARE @Result NVARCHAR(MAX) = (SELECT CONCAT('Room ', Id, ': ', [Type], ' (', Beds, ' beds) - ', 
-                                   '$', TotalPrice) FROM @Rooms)
+                                  '$', TotalPrice) FROM @Rooms)
  
  RETURN @Result
 END
