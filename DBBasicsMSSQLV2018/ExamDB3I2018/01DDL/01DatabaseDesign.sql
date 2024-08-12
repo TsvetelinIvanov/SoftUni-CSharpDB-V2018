@@ -56,5 +56,3 @@ ReturnOfficeId INT CONSTRAINT FK_Orders_Offices_Return FOREIGN KEY REFERENCES Of
 Bill DECIMAL(14, 2),
 TotalMileage INT
 )
-
-
