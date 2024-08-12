@@ -14,9 +14,8 @@ BEGIN
  END
 END
 
---In Judge must be paste without this below
+--In Judge must be pasted without this below
 
 UPDATE Orders
-SET
-TotalMileage = 100
+SET TotalMileage = 100
 WHERE Id = 40
