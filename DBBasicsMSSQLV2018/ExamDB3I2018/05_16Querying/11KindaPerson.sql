@@ -7,6 +7,6 @@ FROM (
       JOIN Vehicles AS v ON v.Id = o.VehicleId
       JOIN Models AS m ON m.Id = v.ModelId
       GROUP BY c.FirstName + ' ' + c.LastName, m.Class
-	  ) AS ocvm
+     ) AS ocvm
 WHERE [Rank] = 1
 ORDER BY Names, Class
