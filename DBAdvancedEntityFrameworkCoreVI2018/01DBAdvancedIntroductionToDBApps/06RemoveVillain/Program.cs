@@ -27,6 +27,7 @@ namespace _06RemoveVillain
                         int releasedMinionsCount = ReleaseMinions(villainId, connection, transaction);
                         string villainName = GetVillainName(villainId, connection, transaction);
                         DeleteVillain(villainId, connection, transaction);
+                        
                         Console.WriteLine($"{villainName} was deleted.");
                         Console.WriteLine($"{releasedMinionsCount} minions were released.");
                     }
