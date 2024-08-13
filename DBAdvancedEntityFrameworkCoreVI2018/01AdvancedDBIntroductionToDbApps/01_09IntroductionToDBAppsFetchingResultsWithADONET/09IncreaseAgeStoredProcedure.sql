@@ -8,6 +8,7 @@ END
 
 EXECUTE usp_GetOlder 7
 
-SELECT [Name], Age FROM Minions WHERE Id = 7
+SELECT [Name], Age FROM Minions
+WHERE Id = 7
 
 DROP PROCEDURE usp_GetOlder
