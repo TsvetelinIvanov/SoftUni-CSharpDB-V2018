@@ -33,7 +33,7 @@ namespace _04AddMinion
 
         private static int GetTownId(string minionTownName, SqlConnection connection)
         {
-            string stringSqlSelectTownId = "SELECT Id FROM Towns WHERE[Name] = @minionTownName";
+            string stringSqlSelectTownId = "SELECT Id FROM Towns WHERE [Name] = @minionTownName";
             using (SqlCommand command = new SqlCommand(stringSqlSelectTownId, connection))
             {
                 command.Parameters.AddWithValue("@minionTownName", minionTownName);
@@ -62,7 +62,7 @@ namespace _04AddMinion
 
         private static int GetVillainId(string villainName, SqlConnection connection)
         {
-            string stringSqlSelectVillainId = "SELECT Id FROM Villains WHERE[Name] = @villainName";
+            string stringSqlSelectVillainId = "SELECT Id FROM Villains WHERE [Name] = @villainName";
             using (SqlCommand command = new SqlCommand(stringSqlSelectVillainId, connection))
             {
                 command.Parameters.AddWithValue("@villainName", villainName);
