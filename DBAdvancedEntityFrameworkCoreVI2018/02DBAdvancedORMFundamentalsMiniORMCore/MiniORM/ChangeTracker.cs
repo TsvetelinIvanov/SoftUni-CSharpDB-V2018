@@ -6,7 +6,7 @@ using System.Reflection;
 
 namespace MiniORM
 {
-	internal class ChangeTracker<T> where T: class, new()
+    internal class ChangeTracker<T> where T: class, new()
     {
         private readonly List<T> allEntities;
         private readonly List<T> added;
@@ -75,8 +75,8 @@ namespace MiniORM
         private static bool IsModified(T proxyEntity, T entity)
         {
             IEnumerable<PropertyInfo> monitoredProperties = typeof(T).GetProperties().Where(pi => DbContext.AllowedSqlTypes.Contains(pi.PropertyType));
-            PropertyInfo[] modifiertProperties = monitoredProperties.Where(pi => !Equals(pi.GetValue(entity), pi.GetValue(proxyEntity))).ToArray();
-            bool isModified = modifiertProperties.Any();
+            PropertyInfo[] modifiedProperties = monitoredProperties.Where(pi => !Equals(pi.GetValue(entity), pi.GetValue(proxyEntity))).ToArray();
+            bool isModified = modifiedProperties.Any();
 
             return isModified;
         }        
