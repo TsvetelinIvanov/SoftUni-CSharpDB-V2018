@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace MiniORM
 {
-	public class DbSet<TEntity> : ICollection<TEntity> where TEntity : class, new()
+    public class DbSet<TEntity> : ICollection<TEntity> where TEntity : class, new()
     {
         internal DbSet(IEnumerable<TEntity> entities)
         {
