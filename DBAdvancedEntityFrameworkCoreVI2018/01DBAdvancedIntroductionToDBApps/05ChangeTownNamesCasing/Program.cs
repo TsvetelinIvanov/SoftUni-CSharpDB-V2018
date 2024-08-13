@@ -24,6 +24,7 @@ namespace _05ChangeTownNamesCasing
                 {
                     int affectedTownNamesCount = MakeTownNamesUpperCaseAndReturnNumberOfAffected(countryId, connection);
                     List<string> upperCaseTownNames = GetUpperCaseTownNames(countryId, connection);
+                    
                     Console.WriteLine($"{affectedTownNamesCount} town names were affected.");
                     Console.WriteLine($"[{String.Join(", ", upperCaseTownNames)}]");
                 }
@@ -51,7 +52,7 @@ namespace _05ChangeTownNamesCasing
 
         private static int MakeTownNamesUpperCaseAndReturnNumberOfAffected(int countryId, SqlConnection connection)
         {
-            string stringSqlUpdateTownNamesToUpperCase = "UPDATE Towns SET[Name] = UPPER([Name]) WHERE CountryCode = @countryId";
+            string stringSqlUpdateTownNamesToUpperCase = "UPDATE Towns SET [Name] = UPPER([Name]) WHERE CountryCode = @countryId";
             using (SqlCommand command = new SqlCommand(stringSqlUpdateTownNamesToUpperCase, connection))
             {
                 command.Parameters.AddWithValue("@countryId", countryId);
