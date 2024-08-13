@@ -7,4 +7,5 @@ UPDATE Towns
 SET [Name] = UPPER([Name])
 WHERE CountryCode = 1
 
-SELECT [Name] FROM  Towns WHERE CountryCode = 1
+SELECT [Name] FROM Towns
+WHERE CountryCode = 1
