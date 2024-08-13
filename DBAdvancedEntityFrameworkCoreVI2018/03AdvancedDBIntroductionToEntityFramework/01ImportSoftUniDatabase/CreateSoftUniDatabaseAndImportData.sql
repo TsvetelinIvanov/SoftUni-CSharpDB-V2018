@@ -4,1563 +4,2073 @@
 -------------------------------------------------------------------
 
 USE master
+
 GO
 
 DROP DATABASE SoftUni
+
 GO
 
 CREATE DATABASE SoftUni
+
 GO
 
 USE SoftUni
+
 GO
 
-CREATE TABLE Towns(
-  TownID int IDENTITY NOT NULL,
-  Name VARCHAR(50) NOT NULL,
-  CONSTRAINT PK_Towns PRIMARY KEY CLUSTERED(TownID ASC)
+CREATE TABLE Towns
+(
+TownID int IDENTITY NOT NULL,
+Name VARCHAR(50) NOT NULL,
+CONSTRAINT PK_Towns PRIMARY KEY CLUSTERED(TownID ASC)
 )
+
 GO
 
 SET IDENTITY_INSERT Towns ON
 
 INSERT INTO Towns (TownID, Name)
-VALUES (1, 'Redmond')
+VALUES
+(1, 'Redmond')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (2, 'Calgary')
+VALUES
+(2, 'Calgary')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (3, 'Edmonds')
+VALUES
+(3, 'Edmonds')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (4, 'Seattle')
+VALUES
+(4, 'Seattle')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (5, 'Bellevue')
+VALUES
+(5, 'Bellevue')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (6, 'Issaquah')
+VALUES
+(6, 'Issaquah')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (7, 'Everett')
+VALUES
+(7, 'Everett')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (8, 'Bothell')
+VALUES
+(8, 'Bothell')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (9, 'San Francisco')
+VALUES
+(9, 'San Francisco')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (10, 'Index')
+VALUES
+(10, 'Index')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (11, 'Snohomish')
+VALUES
+(11, 'Snohomish')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (12, 'Monroe')
+VALUES
+(12, 'Monroe')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (13, 'Renton')
+VALUES
+(13, 'Renton')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (14, 'Newport Hills')
+VALUES
+(14, 'Newport Hills')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (15, 'Carnation')
+VALUES
+(15, 'Carnation')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (16, 'Sammamish')
+VALUES
+(16, 'Sammamish')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (17, 'Duvall')
+VALUES
+(17, 'Duvall')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (18, 'Gold Bar')
+VALUES
+(18, 'Gold Bar')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (19, 'Nevada')
+VALUES
+(19, 'Nevada')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (20, 'Kenmore')
+VALUES
+(20, 'Kenmore')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (21, 'Melbourne')
+VALUES
+(21, 'Melbourne')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (22, 'Kent')
+VALUES
+(22, 'Kent')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (23, 'Cambridge')
+VALUES
+(23, 'Cambridge')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (24, 'Minneapolis')
+VALUES
+(24, 'Minneapolis')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (25, 'Portland')
+VALUES
+(25, 'Portland')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (26, 'Duluth')
+VALUES
+(26, 'Duluth')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (27, 'Detroit')
+VALUES
+(27, 'Detroit')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (28, 'Memphis')
+VALUES
+(28, 'Memphis')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (29, 'Ottawa')
+VALUES
+(29, 'Ottawa')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (30, 'Bordeaux')
+VALUES
+(30, 'Bordeaux')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (31, 'Berlin')
+VALUES
+(31, 'Berlin')
 
 INSERT INTO Towns (TownID, Name)
-VALUES (32, 'Sofia')
+VALUES
+(32, 'Sofia')
 
 SET IDENTITY_INSERT Towns OFF
 
 GO
 
-CREATE TABLE Addresses(
-  AddressID int IDENTITY NOT NULL,
-  AddressText VARCHAR(100) NOT NULL,
-  TownID int NULL,
-  CONSTRAINT PK_Addresses PRIMARY KEY CLUSTERED (AddressID ASC)
+CREATE TABLE Addresses
+(
+AddressID int IDENTITY NOT NULL,
+AddressText VARCHAR(100) NOT NULL,
+TownID int NULL,
+CONSTRAINT PK_Addresses PRIMARY KEY CLUSTERED (AddressID ASC)
 )
+
 GO
 
 SET IDENTITY_INSERT Addresses ON
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (1, '108 Lakeside Court', 5)
+VALUES
+(1, '108 Lakeside Court', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (2, '1343 Prospect St', 5)
+VALUES
+(2, '1343 Prospect St', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (3, '1648 Eastgate Lane', 5)
+VALUES
+(3, '1648 Eastgate Lane', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (4, '2284 Azalea Avenue', 5)
+VALUES
+(4, '2284 Azalea Avenue', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (5, '2947 Vine Lane', 5)
+VALUES
+(5, '2947 Vine Lane', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (6, '3067 Maya', 5)
+VALUES
+(6, '3067 Maya', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (7, '3197 Thornhill Place', 5)
+VALUES
+(7, '3197 Thornhill Place', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (8, '3284 S. Blank Avenue', 5)
+VALUES
+(8, '3284 S. Blank Avenue', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (9, '332 Laguna Niguel', 5)
+VALUES
+(9, '332 Laguna Niguel', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (10, '3454 Bel Air Drive', 5)
+VALUES
+(10, '3454 Bel Air Drive', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (11, '3670 All Ways Drive', 5)
+VALUES
+(11, '3670 All Ways Drive', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (12, '3708 Montana', 5)
+VALUES
+(12, '3708 Montana', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (13, '3711 Rollingwood Dr', 5)
+VALUES
+(13, '3711 Rollingwood Dr', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (14, '3919 Pinto Road', 5)
+VALUES
+(14, '3919 Pinto Road', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (15, '4311 Clay Rd', 5)
+VALUES
+(15, '4311 Clay Rd', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (16, '4777 Rockne Drive', 5)
+VALUES
+(16, '4777 Rockne Drive', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (17, '5678 Clear Court', 5)
+VALUES 
+(17, '5678 Clear Court', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (18, '5863 Sierra', 5)
+VALUES
+(18, '5863 Sierra', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (19, '6058 Hill Street', 5)
+VALUES
+(19, '6058 Hill Street', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (20, '6118 Grasswood Circle', 5)
+VALUES
+(20, '6118 Grasswood Circle', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (21, '620 Woodside Ct.', 5)
+VALUES
+(21, '620 Woodside Ct.', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (22, '6307 Greenbelt Way', 5)
+VALUES
+(22, '6307 Greenbelt Way', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (23, '6448 Castle Court', 5)
+VALUES
+(23, '6448 Castle Court', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (24, '6774 Bonanza', 5)
+VALUES
+(24, '6774 Bonanza', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (25, '6968 Wren Ave.', 5)
+VALUES
+(25, '6968 Wren Ave.', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (26, '7221 Peachwillow Street', 5)
+VALUES
+(26, '7221 Peachwillow Street', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (27, '7270 Pepper Way', 5)
+VALUES
+(27, '7270 Pepper Way', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (28, '7396 Stratton Circle', 5)
+VALUES
+(28, '7396 Stratton Circle', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (29, '7808 Brown St.', 5)
+VALUES
+(29, '7808 Brown St.', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (30, '7902 Grammercy Lane', 5)
+VALUES
+(30, '7902 Grammercy Lane', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (31, '8668 Via Neruda', 5)
+VALUES
+(31, '8668 Via Neruda', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (32, '8684 Military East', 5)
+VALUES
+(32, '8684 Military East', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (33, '8751 Norse Drive', 5)
+VALUES
+(33, '8751 Norse Drive', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (34, '9320 Teakwood Dr.', 5)
+VALUES
+(34, '9320 Teakwood Dr.', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (35, '9435 Breck Court', 5)
+VALUES
+(35, '9435 Breck Court', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (36, '9745 Bonita Ct.', 5)
+VALUES
+(36, '9745 Bonita Ct.', 5)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (37, 'Pascalstr 951', 31)
+VALUES
+(37, 'Pascalstr 951', 31)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (38, '94, rue Descartes', 30)
+VALUES
+(38, '94, rue Descartes', 30)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (39, '1226 Shoe St.', 8)
+VALUES
+(39, '1226 Shoe St.', 8)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (40, '1399 Firestone Drive', 8)
+VALUES
+(40, '1399 Firestone Drive', 8)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (41, '1902 Santa Cruz', 8)
+VALUES
+(41, '1902 Santa Cruz', 8)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (42, '1970 Napa Ct.', 8)
+VALUES
+(42, '1970 Napa Ct.', 8)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (43, '250 Race Court', 8)
+VALUES
+(43, '250 Race Court', 8)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (44, '5672 Hale Dr.', 8)
+VALUES
+(44, '5672 Hale Dr.', 8)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (45, '5747 Shirley Drive', 8)
+VALUES
+(45, '5747 Shirley Drive', 8)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (46, '6387 Scenic Avenue', 8)
+VALUES
+(46, '6387 Scenic Avenue', 8)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (47, '6872 Thornwood Dr.', 8)
+VALUES
+(47, '6872 Thornwood Dr.', 8)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (48, '7484 Roundtree Drive', 8)
+VALUES
+(48, '7484 Roundtree Drive', 8)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (49, '8157 W. Book', 8)
+VALUES
+(49, '8157 W. Book', 8)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (50, '9539 Glenside Dr', 8)
+VALUES
+(50, '9539 Glenside Dr', 8)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (51, '9833 Mt. Dias Blv.', 8)
+VALUES
+(51, '9833 Mt. Dias Blv.', 8)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (52, '10203 Acorn Avenue', 2)
+VALUES
+(52, '10203 Acorn Avenue', 2)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (53, '3997 Via De Luna', 23)
+VALUES
+(53, '3997 Via De Luna', 23)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (54, 'Downshire Way', 23)
+VALUES
+(54, 'Downshire Way', 23)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (55, '1411 Ranch Drive', 15)
+VALUES
+(55, '1411 Ranch Drive', 15)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (56, '3074 Arbor Drive', 15)
+VALUES
+(56, '3074 Arbor Drive', 15)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (57, '390 Ridgewood Ct.', 15)
+VALUES
+(57, '390 Ridgewood Ct.', 15)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (58, '9666 Northridge Ct.', 15)
+VALUES
+(58, '9666 Northridge Ct.', 15)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (59, '9752 Jeanne Circle', 15)
+VALUES
+(59, '9752 Jeanne Circle', 15)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (60, '8154 Via Mexico', 27)
+VALUES
+(60, '8154 Via Mexico', 27)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (61, '80 Sunview Terrace', 26)
+VALUES
+(61, '80 Sunview Terrace', 26)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (62, '1825 Corte Del Prado', 17)
+VALUES
+(62, '1825 Corte Del Prado', 17)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (63, '2598 La Vista Circle', 17)
+VALUES
+(63, '2598 La Vista Circle', 17)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (64, '3421 Bouncing Road', 17)
+VALUES
+(64, '3421 Bouncing Road', 17)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (65, '3977 Central Avenue', 17)
+VALUES
+(65, '3977 Central Avenue', 17)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (66, '5086 Nottingham Place', 17)
+VALUES
+(66, '5086 Nottingham Place', 17)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (67, '5379 Treasure Island Way', 17)
+VALUES
+(67, '5379 Treasure Island Way', 17)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (68, '8209 Green View Court', 17)
+VALUES
+(68, '8209 Green View Court', 17)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (69, '8463 Vista Avenue', 17)
+VALUES
+(69, '8463 Vista Avenue', 17)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (70, '9693 Mellowood Street', 17)
+VALUES
+(70, '9693 Mellowood Street', 17)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (71, '991 Vista Verde', 17)
+VALUES
+(71, '991 Vista Verde', 17)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (72, '1061 Buskrik Avenue', 3)
+VALUES
+(72, '1061 Buskrik Avenue', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (73, '172 Turning Dr.', 3)
+VALUES
+(73, '172 Turning Dr.', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (74, '2038 Encino Drive', 3)
+VALUES
+(74, '2038 Encino Drive', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (75, '2046 Las Palmas', 3)
+VALUES
+(75, '2046 Las Palmas', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (76, '2059 Clay Rd', 3)
+VALUES
+(76, '2059 Clay Rd', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (77, '207 Berry Court', 3)
+VALUES
+(77, '207 Berry Court', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (78, '2080 Sycamore Drive', 3)
+VALUES
+(78, '2080 Sycamore Drive', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (79, '2466 Clearland Circle', 3)
+VALUES
+(79, '2466 Clearland Circle', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (80, '2687 Ridge Road', 3)
+VALUES
+(80, '2687 Ridge Road', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (81, '2812 Mazatlan', 3)
+VALUES
+(81, '2812 Mazatlan', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (82, '3026 Anchor Drive', 3)
+VALUES
+(82, '3026 Anchor Drive', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (83, '3281 Hillview Dr.', 3)
+VALUES
+(83, '3281 Hillview Dr.', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (84, '3632 Bank Way', 3)
+VALUES
+(84, '3632 Bank Way', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (85, '371 Apple Dr.', 3)
+VALUES
+(85, '371 Apple Dr.', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (86, '504 O St.', 3)
+VALUES
+(86, '504 O St.', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (87, '5423 Champion Rd.', 3)
+VALUES
+(87, '5423 Champion Rd.', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (88, '6057 Hill Street', 3)
+VALUES
+(88, '6057 Hill Street', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (89, '6870 D Bel Air Drive', 3)
+VALUES
+(89, '6870 D Bel Air Drive', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (90, '7338 Green St.', 3)
+VALUES
+(90, '7338 Green St.', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (91, '7511 Cooper Dr.', 3)
+VALUES
+(91, '7511 Cooper Dr.', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (92, '8152 Claudia Dr.', 3)
+VALUES
+(92, '8152 Claudia Dr.', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (93, '8411 Mt. Orange Place', 3)
+VALUES
+(93, '8411 Mt. Orange Place', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (94, '9277 Country View Lane', 3)
+VALUES
+(94, '9277 Country View Lane', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (95, '9784 Mt Etna Drive', 3)
+VALUES
+(95, '9784 Mt Etna Drive', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (96, '9825 Coralie Drive', 3)
+VALUES
+(96, '9825 Coralie Drive', 3)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (97, '1185 Dallas Drive', 7)
+VALUES
+(97, '1185 Dallas Drive', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (98, '1362 Somerset Place', 7)
+VALUES
+(98, '1362 Somerset Place', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (99, '181 Gaining Drive', 7)
+VALUES
+(99, '181 Gaining Drive', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (100, '1962 Cotton Ct.', 7)
+VALUES
+(100, '1962 Cotton Ct.', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (101, '2176 Apollo Way', 7)
+VALUES
+(101, '2176 Apollo Way', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (102, '2294 West 39th St.', 7)
+VALUES
+(102, '2294 West 39th St.', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (103, '3238 Laguna Circle', 7)
+VALUES
+(103, '3238 Laguna Circle', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (104, '3385 Crestview Drive', 7)
+VALUES
+(104, '3385 Crestview Drive', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (105, '3665 Oak Creek Ct.', 7)
+VALUES
+(105, '3665 Oak Creek Ct.', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (106, '3928 San Francisco', 7)
+VALUES
+(106, '3928 San Francisco', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (107, '475 Santa Maria', 7)
+VALUES
+(107, '475 Santa Maria', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (108, '5242 Marvelle Ln.', 7)
+VALUES
+(108, '5242 Marvelle Ln.', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (109, '5452 Corte Gilberto', 7)
+VALUES
+(109, '5452 Corte Gilberto', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (110, '6629 Polson Circle', 7)
+VALUES
+(110, '6629 Polson Circle', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (111, '7640 First Ave.', 7)
+VALUES
+(111, '7640 First Ave.', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (112, '7883 Missing Canyon Court', 7)
+VALUES
+(112, '7883 Missing Canyon Court', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (113, '8624 Pepper Way', 7)
+VALUES
+(113, '8624 Pepper Way', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (114, '9241 St George Dr.', 7)
+VALUES
+(114, '9241 St George Dr.', 7)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (115, '213 Stonewood Drive', 18)
+VALUES
+(115, '213 Stonewood Drive', 18)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (116, '2425 Notre Dame Ave', 18)
+VALUES
+(116, '2425 Notre Dame Ave', 18)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (117, '3884 Beauty Street', 18)
+VALUES
+(117, '3884 Beauty Street', 18)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (118, '8036 Summit View Dr.', 18)
+VALUES
+(118, '8036 Summit View Dr.', 18)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (119, '9605 Pheasant Circle', 18)
+VALUES
+(119, '9605 Pheasant Circle', 18)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (120, '1245 Clay Road', 10)
+VALUES
+(120, '1245 Clay Road', 10)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (121, '1748 Bird Drive', 10)
+VALUES
+(121, '1748 Bird Drive', 10)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (122, '310 Winter Lane', 10)
+VALUES
+(122, '310 Winter Lane', 10)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (123, '3127 El Camino Drive', 10)
+VALUES
+(123, '3127 El Camino Drive', 10)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (124, '3514 Sunshine', 10)
+VALUES
+(124, '3514 Sunshine', 10)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (125, '1144 Paradise Ct.', 6)
+VALUES
+(125, '1144 Paradise Ct.', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (126, '1921 Ranch Road', 6)
+VALUES
+(126, '1921 Ranch Road', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (127, '3333 Madhatter Circle', 6)
+VALUES
+(127, '3333 Madhatter Circle', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (128, '342 San Simeon', 6)
+VALUES
+(128, '342 San Simeon', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (129, '3848 East 39th Street', 6)
+VALUES
+(129, '3848 East 39th Street', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (130, '5256 Chickpea Ct.', 6)
+VALUES
+(130, '5256 Chickpea Ct.', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (131, '5979 El Pueblo', 6)
+VALUES
+(131, '5979 El Pueblo', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (132, '6580 Poor Ridge Court', 6)
+VALUES
+(132, '6580 Poor Ridge Court', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (133, '7435 Ricardo', 6)
+VALUES
+(133, '7435 Ricardo', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (134, '7691 Benedict Ct.', 6)
+VALUES
+(134, '7691 Benedict Ct.', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (135, '7772 Golden Meadow', 6)
+VALUES
+(135, '7772 Golden Meadow', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (136, '8585 Los Gatos Ct.', 6)
+VALUES
+(136, '8585 Los Gatos Ct.', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (137, '9314 Icicle Way', 6)
+VALUES
+(137, '9314 Icicle Way', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (138, '9530 Vine Lane', 6)
+VALUES
+(138, '9530 Vine Lane', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (139, '989 Crown Ct', 6)
+VALUES
+(139, '989 Crown Ct', 6)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (140, '25 95th Ave NE', 20)
+VALUES
+(140, '25 95th Ave NE', 20)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (141, '4095 Cooper Dr.', 20)
+VALUES
+(141, '4095 Cooper Dr.', 20)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (142, '4155 Working Drive', 20)
+VALUES
+(142, '4155 Working Drive', 20)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (143, '463 H Stagecoach Rd.', 20)
+VALUES
+(143, '463 H Stagecoach Rd.', 20)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (144, '5050 Mt. Wilson Way', 20)
+VALUES
+(144, '5050 Mt. Wilson Way', 20)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (145, '5203 Virginia Lane', 20)
+VALUES
+(145, '5203 Virginia Lane', 20)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (146, '5458 Gladstone Drive', 20)
+VALUES
+(146, '5458 Gladstone Drive', 20)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (147, '5553 Cash Avenue', 20)
+VALUES
+(147, '5553 Cash Avenue', 20)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (148, '5669 Ironwood Way', 20)
+VALUES
+(148, '5669 Ironwood Way', 20)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (149, '6697 Ridge Park Drive', 20)
+VALUES
+(149, '6697 Ridge Park Drive', 20)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (150, '7048 Laurel', 20)
+VALUES
+(150, '7048 Laurel', 20)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (151, '8192 Seagull Court', 20)
+VALUES
+(151, '8192 Seagull Court', 20)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (152, '350 Pastel Drive', 22)
+VALUES
+(152, '350 Pastel Drive', 22)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (153, '34 Waterloo Road', 21)
+VALUES
+(153, '34 Waterloo Road', 21)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (154, '8291 Crossbow Way', 28)
+VALUES
+(154, '8291 Crossbow Way', 28)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (155, '5678 Lakeview Blvd.', 24)
+VALUES
+(155, '5678 Lakeview Blvd.', 24)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (156, '1356 Grove Way', 12)
+VALUES
+(156, '1356 Grove Way', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (157, '158 Walnut Ave', 12)
+VALUES
+(157, '158 Walnut Ave', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (158, '1792 Belmont Rd.', 12)
+VALUES
+(158, '1792 Belmont Rd.', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (159, '2275 Valley Blvd.', 12)
+VALUES
+(159, '2275 Valley Blvd.', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (160, '3747 W. Landing Avenue', 12)
+VALUES
+(160, '3747 W. Landing Avenue', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (161, '3841 Silver Oaks Place', 12)
+VALUES
+(161, '3841 Silver Oaks Place', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (162, '4566 La Jolla', 12)
+VALUES
+(162, '4566 La Jolla', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (163, '4734 Sycamore Court', 12)
+VALUES
+(163, '4734 Sycamore Court', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (164, '5030 Blue Ridge Dr.', 12)
+VALUES
+(164, '5030 Blue Ridge Dr.', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (165, '5734 Ashford Court', 12)
+VALUES
+(165, '5734 Ashford Court', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (166, '7726 Driftwood Drive', 12)
+VALUES
+(166, '7726 Driftwood Drive', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (167, '8310 Ridge Circle', 12)
+VALUES
+(167, '8310 Ridge Circle', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (168, '896 Southdale', 12)
+VALUES
+(168, '896 Southdale', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (169, '9652 Los Angeles', 12)
+VALUES
+(169, '9652 Los Angeles', 12)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (170, '2487 Riverside Drive', 19)
+VALUES
+(170, '2487 Riverside Drive', 19)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (171, '1397 Paradise Ct.', 14)
+VALUES
+(171, '1397 Paradise Ct.', 14)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (172, '1400 Gate Drive', 14)
+VALUES
+(172, '1400 Gate Drive', 14)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (173, '3030 Blackburn Ct.', 14)
+VALUES
+(173, '3030 Blackburn Ct.', 14)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (174, '4350 Minute Dr.', 14)
+VALUES
+(174, '4350 Minute Dr.', 14)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (175, '8967 Hamilton Ave.', 14)
+VALUES
+(175, '8967 Hamilton Ave.', 14)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (176, '9297 Kenston Dr.', 14)
+VALUES
+(176, '9297 Kenston Dr.', 14)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (177, '9687 Shakespeare Drive', 14)
+VALUES
+(177, '9687 Shakespeare Drive', 14)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (178, '9100 Sheppard Avenue North', 29)
+VALUES
+(178, '9100 Sheppard Avenue North', 29)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (179, '636 Vine Hill Way', 25)
+VALUES
+(179, '636 Vine Hill Way', 25)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (180, '101 Candy Rd.', 1)
+VALUES
+(180, '101 Candy Rd.', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (181, '1275 West Street', 1)
+VALUES
+(181, '1275 West Street', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (182, '2137 Birchwood Dr', 1)
+VALUES
+(182, '2137 Birchwood Dr', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (183, '2383 Pepper Drive', 1)
+VALUES
+(183, '2383 Pepper Drive', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (184, '2427 Notre Dame Ave.', 1)
+VALUES
+(184, '2427 Notre Dame Ave.', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (185, '2482 Buckingham Dr.', 1)
+VALUES
+(185, '2482 Buckingham Dr.', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (186, '3066 Wallace Dr.', 1)
+VALUES
+(186, '3066 Wallace Dr.', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (187, '3397 Rancho View Drive', 1)
+VALUES
+(187, '3397 Rancho View Drive', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (188, '3768 Door Way', 1)
+VALUES
+(188, '3768 Door Way', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (189, '4909 Poco Lane', 1)
+VALUES
+(189, '4909 Poco Lane', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (190, '6369 Ellis Street', 1)
+VALUES
+(190, '6369 Ellis Street', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (191, '6891 Ham Drive', 1)
+VALUES
+(191, '6891 Ham Drive', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (192, '7297 RisingView', 1)
+VALUES
+(192, '7297 RisingView', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (193, '8000 Crane Court', 1)
+VALUES
+(193, '8000 Crane Court', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (194, '8040 Hill Ct', 1)
+VALUES
+(194, '8040 Hill Ct', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (195, '8467 Clifford Court', 1)
+VALUES
+(195, '8467 Clifford Court', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (196, '9006 Woodside Way', 1)
+VALUES
+(196, '9006 Woodside Way', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (197, '9322 Driving Drive', 1)
+VALUES
+(197, '9322 Driving Drive', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (198, '9863 Ridge Place', 1)
+VALUES
+(198, '9863 Ridge Place', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (199, '9882 Clay Rde', 1)
+VALUES
+(199, '9882 Clay Rde', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (200, '9906 Oak Grove Road', 1)
+VALUES
+(200, '9906 Oak Grove Road', 1)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (201, '1378 String Dr', 13)
+VALUES
+(201, '1378 String Dr', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (202, '1803 Olive Hill', 13)
+VALUES
+(202, '1803 Olive Hill', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (203, '2176 Brown Street', 13)
+VALUES
+(203, '2176 Brown Street', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (204, '2266 Greenwood Circle', 13)
+VALUES
+(204, '2266 Greenwood Circle', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (205, '2598 Breck Court', 13)
+VALUES
+(205, '2598 Breck Court', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (206, '2736 Scramble Rd', 13)
+VALUES
+(206, '2736 Scramble Rd', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (207, '4312 Cambridge Drive', 13)
+VALUES
+(207, '4312 Cambridge Drive', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (208, '5009 Orange Street', 13)
+VALUES
+(208, '5009 Orange Street', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (209, '5670 Bel Air Dr.', 13)
+VALUES
+(209, '5670 Bel Air Dr.', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (210, '5980 Icicle Circle', 13)
+VALUES
+(210, '5980 Icicle Circle', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (211, '6510 Hacienda Drive', 13)
+VALUES
+(211, '6510 Hacienda Drive', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (212, '6937 E. 42nd Street', 13)
+VALUES
+(212, '6937 E. 42nd Street', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (213, '7165 Brock Lane', 13)
+VALUES
+(213, '7165 Brock Lane', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (214, '7559 Worth Ct.', 13)
+VALUES
+(214, '7559 Worth Ct.', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (215, '7985 Center Street', 13)
+VALUES
+(215, '7985 Center Street', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (216, '9495 Limewood Place', 13)
+VALUES
+(216, '9495 Limewood Place', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (217, '9533 Working Drive', 13)
+VALUES
+(217, '9533 Working Drive', 13)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (218, '177 11th Ave', 16)
+VALUES
+(218, '177 11th Ave', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (219, '1962 Ferndale Lane', 16)
+VALUES
+(219, '1962 Ferndale Lane', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (220, '2473 Orchard Way', 16)
+VALUES
+(220, '2473 Orchard Way', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (221, '4096 San Remo', 16)
+VALUES
+(221, '4096 San Remo', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (222, '4310 Kenston Dr.', 16)
+VALUES
+(222, '4310 Kenston Dr.', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (223, '4444 Pepper Way', 16)
+VALUES
+(223, '4444 Pepper Way', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (224, '4525 Benedict Ct.', 16)
+VALUES
+(224, '4525 Benedict Ct.', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (225, '5263 Etcheverry Dr', 16)
+VALUES
+(225, '5263 Etcheverry Dr', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (226, '535 Greendell Pl', 16)
+VALUES
+(226, '535 Greendell Pl', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (227, '6871 Thornwood Dr.', 16)
+VALUES
+(227, '6871 Thornwood Dr.', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (228, '6951 Harmony Way', 16)
+VALUES
+(228, '6951 Harmony Way', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (229, '7086 O St.', 16)
+VALUES
+(229, '7086 O St.', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (230, '7145 Matchstick Drive', 16)
+VALUES
+(230, '7145 Matchstick Drive', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (231, '7820 Bird Drive', 16)
+VALUES
+(231, '7820 Bird Drive', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (232, '7939 Bayview Court', 16)
+VALUES
+(232, '7939 Bayview Court', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (233, '8316 La Salle St.', 16)
+VALUES
+(233, '8316 La Salle St.', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (234, '9104 Mt. Sequoia Ct.', 16)
+VALUES
+(234, '9104 Mt. Sequoia Ct.', 16)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (235, '1234 Seaside Way', 9)
+VALUES
+(235, '1234 Seaside Way', 9)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (236, '5725 Glaze Drive', 9)
+VALUES
+(236, '5725 Glaze Drive', 9)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (237, '1064 Slow Creek Road', 4)
+VALUES
+(237, '1064 Slow Creek Road', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (238, '1102 Ravenwood', 4)
+VALUES
+(238, '1102 Ravenwood', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (239, '1220 Bradford Way', 4)
+VALUES
+(239, '1220 Bradford Way', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (240, '1349 Steven Way', 4)
+VALUES
+(240, '1349 Steven Way', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (241, '136 Balboa Court', 4)
+VALUES
+(241, '136 Balboa Court', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (242, '137 Mazatlan', 4)
+VALUES
+(242, '137 Mazatlan', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (243, '1398 Yorba Linda', 4)
+VALUES
+(243, '1398 Yorba Linda', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (244, '1619 Stillman Court', 4)
+VALUES
+(244, '1619 Stillman Court', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (245, '2144 San Rafael', 4)
+VALUES
+(245, '2144 San Rafael', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (246, '2354 Frame Ln.', 4)
+VALUES
+(246, '2354 Frame Ln.', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (247, '2639 Anchor Court', 4)
+VALUES
+(247, '2639 Anchor Court', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (248, '3029 Pastime Dr', 4)
+VALUES
+(248, '3029 Pastime Dr', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (249, '3243 Buckingham Dr.', 4)
+VALUES
+(249, '3243 Buckingham Dr.', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (250, '426 San Rafael', 4)
+VALUES
+(250, '426 San Rafael', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (251, '4598 Manila Avenue', 4)
+VALUES 
+(251, '4598 Manila Avenue', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (252, '4948 West 4th St', 4)
+VALUES
+(252, '4948 West 4th St', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (253, '502 Alexander Pl.', 4)
+VALUES
+(253, '502 Alexander Pl.', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (254, '5025 Holiday Hills', 4)
+VALUES
+(254, '5025 Holiday Hills', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (255, '5125 Cotton Ct.', 4)
+VALUES
+(255, '5125 Cotton Ct.', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (256, '5375 Clearland Circle', 4)
+VALUES
+(256, '5375 Clearland Circle', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (257, '5376 Catanzaro Way', 4)
+VALUES
+(257, '5376 Catanzaro Way', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (258, '5407 Cougar Way', 4)
+VALUES
+(258, '5407 Cougar Way', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (259, '5666 Hazelnut Lane', 4)
+VALUES
+(259, '5666 Hazelnut Lane', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (260, '5802 Ampersand Drive', 4)
+VALUES
+(260, '5802 Ampersand Drive', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (261, '6498 Mining Rd.', 4)
+VALUES
+(261, '6498 Mining Rd.', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (262, '6578 Woodhaven Ln.', 4)
+VALUES
+(262, '6578 Woodhaven Ln.', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (263, '6657 Sand Pointe Lane', 4)
+VALUES
+(263, '6657 Sand Pointe Lane', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (264, '6843 San Simeon Dr.', 4)
+VALUES
+(264, '6843 San Simeon Dr.', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (265, '7126 Ending Ct.', 4)
+VALUES
+(265, '7126 Ending Ct.', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (266, '7127 Los Gatos Court', 4)
+VALUES
+(266, '7127 Los Gatos Court', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (267, '7166 Brock Lane', 4)
+VALUES
+(267, '7166 Brock Lane', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (268, '7403 N. Broadway', 4)
+VALUES
+(268, '7403 N. Broadway', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (269, '7439 Laguna Niguel', 4)
+VALUES
+(269, '7439 Laguna Niguel', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (270, '7594 Alexander Pl.', 4)
+VALUES
+(270, '7594 Alexander Pl.', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (271, '7616 Honey Court', 4)
+VALUES
+(271, '7616 Honey Court', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (272, '77 Birchwood', 4)
+VALUES
+(272, '77 Birchwood', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (273, '7765 Sunsine Drive', 4)
+VALUES
+(273, '7765 Sunsine Drive', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (274, '7842 Ygnacio Valley Road', 4)
+VALUES
+(274, '7842 Ygnacio Valley Road', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (275, '8290 Margaret Ct.', 4)
+VALUES
+(275, '8290 Margaret Ct.', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (276, '8656 Lakespring Place', 4)
+VALUES
+(276, '8656 Lakespring Place', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (277, '874 Olivera Road', 4)
+VALUES
+(277, '874 Olivera Road', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (278, '931 Corte De Luna', 4)
+VALUES
+(278, '931 Corte De Luna', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (279, '9537 Ridgewood Drive', 4)
+VALUES
+(279, '9537 Ridgewood Drive', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (280, '9964 North Ridge Drive', 4)
+VALUES
+(280, '9964 North Ridge Drive', 4)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (281, '1285 Greenbrier Street', 11)
+VALUES
+(281, '1285 Greenbrier Street', 11)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (282, '2115 Passing', 11)
+VALUES
+(282, '2115 Passing', 11)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (283, '2601 Cambridge Drive', 11)
+VALUES
+(283, '2601 Cambridge Drive', 11)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (284, '3114 Notre Dame Ave.', 11)
+VALUES
+(284, '3114 Notre Dame Ave.', 11)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (285, '3280 Pheasant Circle', 11)
+VALUES
+(285, '3280 Pheasant Circle', 11)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (286, '4231 Spar Court', 11)
+VALUES
+(286, '4231 Spar Court', 11)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (287, '4852 Chaparral Court', 11)
+VALUES
+(287, '4852 Chaparral Court', 11)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (288, '5724 Victory Lane', 11)
+VALUES
+(288, '5724 Victory Lane', 11)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (289, '591 Merriewood Drive', 11)
+VALUES
+(289, '591 Merriewood Drive', 11)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (290, '7230 Vine Maple Street', 11)
+VALUES
+(290, '7230 Vine Maple Street', 11)
 
 INSERT INTO Addresses (AddressID, AddressText, TownID)
-VALUES (291, '163 Nishava Str, ent A, apt. 1', 32)
+VALUES
+(291, '163 Nishava Str, ent A, apt. 1', 32)
 
 SET IDENTITY_INSERT Addresses OFF
 
 GO
 
-CREATE TABLE Projects(
-  ProjectID int IDENTITY NOT NULL,
-  Name VARCHAR(50) NOT NULL,
-  Description ntext NULL,
-  StartDate smalldatetime NOT NULL,
-  EndDate smalldatetime NULL,
-  CONSTRAINT PK_Projects PRIMARY KEY CLUSTERED (ProjectID ASC)
+CREATE TABLE Projects
+(
+ProjectID int IDENTITY NOT NULL,
+Name VARCHAR(50) NOT NULL,
+Description ntext NULL,
+StartDate smalldatetime NOT NULL,
+EndDate smalldatetime NULL,
+CONSTRAINT PK_Projects PRIMARY KEY CLUSTERED (ProjectID ASC)
 )
+
 GO
 
 SET IDENTITY_INSERT Projects ON
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (1, 'Classic Vest', 'Research, design and development of Classic Vest. Light-weight, wind-resistant, packs to fit into a pocket.', '20030601', NULL)
+VALUES
+(1, 'Classic Vest', 'Research, design and development of Classic Vest. Light-weight, wind-resistant, packs to fit into a pocket.', '20030601', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (2, 'Cycling Cap', 'Research, design and development of Cycling Cap. Traditional style with a flip-up brim; one-size fits all.', '20010601', '20030601')
+VALUES
+(2, 'Cycling Cap', 'Research, design and development of Cycling Cap. Traditional style with a flip-up brim; one-size fits all.', '20010601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (3, 'Full-Finger Gloves', 'Research, design and development of Full-Finger Gloves. Synthetic palm, flexible knuckles, breathable mesh upper. Worn by the AWC team riders.', '20020601', '20030601')
+VALUES
+(3, 'Full-Finger Gloves', 'Research, design and development of Full-Finger Gloves. Synthetic palm, flexible knuckles, breathable mesh upper. Worn by the AWC team riders.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (4, 'Half-Finger Gloves', 'Research, design and development of Half-Finger Gloves. Full padding, improved finger flex, durable palm, adjustable closure.', '20020601', '20030601')
+VALUES
+(4, 'Half-Finger Gloves', 'Research, design and development of Half-Finger Gloves. Full padding, improved finger flex, durable palm, adjustable closure.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (5, 'HL Mountain Frame', 'Research, design and development of HL Mountain Frame. Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.', '20010601', '20030601')
+VALUES
+(5, 'HL Mountain Frame', 'Research, design and development of HL Mountain Frame. Each frame is hand-crafted in our Bothell facility to the optimum diameter and wall-thickness required of a premium mountain frame. The heat-treated welded aluminum frame has a larger diameter tube that absorbs the bumps.', '20010601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (6, 'HL Road Frame', 'Research, design and development of HL Road Frame. Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.', '19980502', '20030601')
+VALUES
+(6, 'HL Road Frame', 'Research, design and development of HL Road Frame. Our lightest and best quality aluminum frame made from the newest alloy; it is welded and heat-treated for strength. Our innovative design results in maximum comfort and performance.', '19980502', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (7, 'HL Touring Frame', 'Research, design and development of HL Touring Frame. The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men''s version.', '20050516 16:34:00', NULL)
+VALUES
+(7, 'HL Touring Frame', 'Research, design and development of HL Touring Frame. The HL aluminum frame is custom-shaped for both good looks and strength; it will withstand the most rigorous challenges of daily riding. Men''s version.', '20050516 16:34:00', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (8, 'LL Mountain Frame', 'Research, design and development of LL Mountain Frame. Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.', '20021120 09:57:00', '20030601')
+VALUES
+(8, 'LL Mountain Frame', 'Research, design and development of LL Mountain Frame. Our best value utilizing the same, ground-breaking frame technology as the ML aluminum frame.', '20021120 09:57:00', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (9, 'LL Road Frame', 'Research, design and development of LL Road Frame. The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.', '20010601', '20030601')
+VALUES
+(9, 'LL Road Frame', 'Research, design and development of LL Road Frame. The LL Frame provides a safe comfortable ride, while offering superior bump absorption in a value-priced aluminum frame.', '20010601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (10, 'LL Touring Frame', 'Research, design and development of LL Touring Frame. Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.', '20050516 16:34:00', NULL)
+VALUES
+(10, 'LL Touring Frame', 'Research, design and development of LL Touring Frame. Lightweight butted aluminum frame provides a more upright riding position for a trip around town.  Our ground-breaking design provides optimum comfort.', '20050516 16:34:00', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (11, 'Long-Sleeve Logo Jersey', 'Research, design and development of Long-Sleeve Logo Jersey. Unisex long-sleeve AWC logo microfiber cycling jersey', '20010601', '20030601')
+VALUES
+(11, 'Long-Sleeve Logo Jersey', 'Research, design and development of Long-Sleeve Logo Jersey. Unisex long-sleeve AWC logo microfiber cycling jersey', '20010601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (12, 'Men''s Bib-Shorts', 'Research, design and development of Men''s Bib-Shorts. Designed for the AWC team with stay-put straps, moisture-control, chamois padding, and leg grippers.', '20020601', '20030601')
+VALUES
+(12, 'Men''s Bib-Shorts', 'Research, design and development of Men''s Bib-Shorts. Designed for the AWC team with stay-put straps, moisture-control, chamois padding, and leg grippers.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (19, 'Mountain-100', 'Research, design and development of Mountain-100. Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.', '20010601', '20030601')
+VALUES
+(19, 'Mountain-100', 'Research, design and development of Mountain-100. Top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain.', '20010601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (20, 'Mountain-200', 'Research, design and development of Mountain-200. Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.', '20020601', '20040311 10:32:00')
+VALUES
+(20, 'Mountain-200', 'Research, design and development of Mountain-200. Serious back-country riding. Perfect for all levels of competition. Uses the same HL Frame as the Mountain-100.', '20020601', '20040311 10:32:00')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (21, 'Mountain-300', 'Research, design and development of Mountain-300. For true trail addicts.  An extremely durable bike that will go anywhere and keep you in control on challenging terrain - without breaking your budget.', '20020601', '20030601')
+VALUES
+(21, 'Mountain-300', 'Research, design and development of Mountain-300. For true trail addicts.  An extremely durable bike that will go anywhere and keep you in control on challenging terrain - without breaking your budget.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (22, 'Mountain-400-W', 'Research, design and development of Mountain-400-W. This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.', '20060222', NULL)
+VALUES
+(22, 'Mountain-400-W', 'Research, design and development of Mountain-400-W. This bike delivers a high-level of performance on a budget. It is responsive and maneuverable, and offers peace-of-mind when you decide to go off-road.', '20060222', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (23, 'Mountain-500', 'Research, design and development of Mountain-500. Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.', '20021120 09:57:00', '20030601')
+VALUES
+(23, 'Mountain-500', 'Research, design and development of Mountain-500. Suitable for any type of riding, on or off-road. Fits any budget. Smooth-shifting with a comfortable ride.', '20021120 09:57:00', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (24, 'Racing Socks', 'Research, design and development of Racing Socks. Thin, lightweight and durable with cuffs that stay up.', '20051122', NULL)
+VALUES
+(24, 'Racing Socks', 'Research, design and development of Racing Socks. Thin, lightweight and durable with cuffs that stay up.', '20051122', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (25, 'Road-150', 'Research, design and development of Road-150. This bike is ridden by race winners. Developed with the Adventure Works Cycles professional race team, it has a extremely light heat-treated aluminum frame, and steering that allows precision control.', '20010601', '20030601')
+VALUES
+(25, 'Road-150', 'Research, design and development of Road-150. This bike is ridden by race winners. Developed with the Adventure Works Cycles professional race team, it has a extremely light heat-treated aluminum frame, and steering that allows precision control.', '20010601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (26, 'Road-250', 'Research, design and development of Road-250. Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.', '20020601', '20030601')
+VALUES
+(26, 'Road-250', 'Research, design and development of Road-250. Alluminum-alloy frame provides a light, stiff ride, whether you are racing in the velodrome or on a demanding club ride on country roads.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (27, 'Road-350-W', 'Research, design and development of Road-350-W. Cross-train, race, or just socialize on a sleek, aerodynamic bike designed for a woman.  Advanced seat technology provides comfort all day.', '20030601', NULL)
+VALUES
+(27, 'Road-350-W', 'Research, design and development of Road-350-W. Cross-train, race, or just socialize on a sleek, aerodynamic bike designed for a woman.  Advanced seat technology provides comfort all day.', '20030601', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (28, 'Road-450', 'Research, design and development of Road-450. A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.', '20010601', '20030601')
+VALUES
+(28, 'Road-450', 'Research, design and development of Road-450. A true multi-sport bike that offers streamlined riding and a revolutionary design. Aerodynamic design lets you ride with the pros, and the gearing will conquer hilly roads.', '20010601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (29, 'Road-550-W', 'Research, design and development of Road-550-W. Same technology as all of our Road series bikes, but the frame is sized for a woman.  Perfect all-around bike for road or racing.', '20020601', '20030601')
+VALUES
+(29, 'Road-550-W', 'Research, design and development of Road-550-W. Same technology as all of our Road series bikes, but the frame is sized for a woman.  Perfect all-around bike for road or racing.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (30, 'Road-650', 'Research, design and development of Road-650. Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we''re famous for.', '20010601', '20030601')
+VALUES
+(30, 'Road-650', 'Research, design and development of Road-650. Value-priced bike with many features of our top-of-the-line models. Has the same light, stiff frame, and the quick acceleration we''re famous for.', '20010601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (31, 'Road-750', 'Research, design and development of Road-750. Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.', '20021120 09:57:00', '20030601')
+VALUES
+(31, 'Road-750', 'Research, design and development of Road-750. Entry level adult bike; offers a comfortable ride cross-country or down the block. Quick-release hubs and rims.', '20021120 09:57:00', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (32, 'Short-Sleeve Classic Jersey', 'Research, design and development of Short-Sleeve Classic Jersey. Short sleeve classic breathable jersey with superior moisture control, front zipper, and 3 back pockets.', '20030601', NULL)
+VALUES
+(32, 'Short-Sleeve Classic Jersey', 'Research, design and development of Short-Sleeve Classic Jersey. Short sleeve classic breathable jersey with superior moisture control, front zipper, and 3 back pockets.', '20030601', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (33, 'Sport-100', 'Research, design and development of Sport-100. Universal fit, well-vented, lightweight , snap-on visor.', '20010601', '20030601')
+VALUES
+(33, 'Sport-100', 'Research, design and development of Sport-100. Universal fit, well-vented, lightweight , snap-on visor.', '20010601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (34, 'Touring-1000', 'Research, design and development of Touring-1000. Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.', '20021120 09:57:00', '20030601')
+VALUES
+(34, 'Touring-1000', 'Research, design and development of Touring-1000. Travel in style and comfort. Designed for maximum comfort and safety. Wide gear range takes on all hills. High-tech aluminum alloy construction provides durability without added weight.', '20021120 09:57:00', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (35, 'Touring-2000', 'Research, design and development of Touring-2000. The plush custom saddle keeps you riding all day,  and there''s plenty of space to add panniers and bike bags to the newly-redesigned carrier.  This bike has stability when fully-loaded.', '20021120 09:57:00', '20030601')
+VALUES
+(35, 'Touring-2000', 'Research, design and development of Touring-2000. The plush custom saddle keeps you riding all day, and there''s plenty of space to add panniers and bike bags to the newly-redesigned carrier.  This bike has stability when fully-loaded.', '20021120 09:57:00', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (36, 'Touring-3000', 'Research, design and development of Touring-3000. All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.', '20021120 09:57:00', '20030601')
+VALUES
+(36, 'Touring-3000', 'Research, design and development of Touring-3000. All-occasion value bike with our basic comfort and safety features. Offers wider, more stable tires for a ride around town or weekend trip.', '20021120 09:57:00', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (37, 'Women''s Mountain Shorts', 'Research, design and development of Women''s Mountain Shorts. Heavy duty, abrasion-resistant shorts feature seamless, lycra inner shorts with anti-bacterial chamois for comfort.', '20030601', NULL)
+VALUES
+(37, 'Women''s Mountain Shorts', 'Research, design and development of Women''s Mountain Shorts. Heavy duty, abrasion-resistant shorts feature seamless, lycra inner shorts with anti-bacterial chamois for comfort.', '20030601', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (38, 'Women''s Tights', 'Research, design and development of Women''s Tights. Warm spandex tights for winter riding; seamless chamois construction eliminates pressure points.', '20020601', '20030601')
+VALUES
+(38, 'Women''s Tights', 'Research, design and development of Women''s Tights. Warm spandex tights for winter riding; seamless chamois construction eliminates pressure points.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (39, 'Mountain-400', 'Research, design and development of Mountain-400. Suitable for any type of off-road trip. Fits any budget.', '20010601', '20030601')
+VALUES
+(39, 'Mountain-400', 'Research, design and development of Mountain-400. Suitable for any type of off-road trip. Fits any budget.', '20010601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (40, 'Road-550', 'Research, design and development of Road-550. Same technology as all of our Road series bikes.  Perfect all-around bike for road or racing.', '20020601', '20030601')
+VALUES
+(40, 'Road-550', 'Research, design and development of Road-550. Same technology as all of our Road series bikes.  Perfect all-around bike for road or racing.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (41, 'Road-350', 'Research, design and development of Road-350. Cross-train, race, or just socialize on a sleek, aerodynamic bike.  Advanced seat technology provides comfort all day.', '20021120 09:57:00', '20030601')
+VALUES
+(41, 'Road-350', 'Research, design and development of Road-350. Cross-train, race, or just socialize on a sleek, aerodynamic bike.  Advanced seat technology provides comfort all day.', '20021120 09:57:00', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (42, 'LL Mountain Front Wheel', 'Research, design and development of LL Mountain Front Wheel. Replacement mountain wheel for entry-level rider.', '20021120 09:57:00', '20030601')
+VALUES
+(42, 'LL Mountain Front Wheel', 'Research, design and development of LL Mountain Front Wheel. Replacement mountain wheel for entry-level rider.', '20021120 09:57:00', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (43, 'Touring Rear Wheel', 'Research, design and development of Touring Rear Wheel. Excellent aerodynamic rims guarantee a smooth ride.', '20050516 16:34:00', NULL)
+VALUES
+(43, 'Touring Rear Wheel', 'Research, design and development of Touring Rear Wheel. Excellent aerodynamic rims guarantee a smooth ride.', '20050516 16:34:00', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (44, 'Touring Front Wheel', 'Research, design and development of Touring Front Wheel. Aerodynamic rims for smooth riding.', '20050516 16:34:00', NULL)
+VALUES
+(44, 'Touring Front Wheel', 'Research, design and development of Touring Front Wheel. Aerodynamic rims for smooth riding.', '20050516 16:34:00', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (45, 'ML Mountain Front Wheel', 'Research, design and development of ML Mountain Front Wheel. Replacement mountain wheel for the casual to serious rider.', '20020601', '20030601')
+VALUES
+(45, 'ML Mountain Front Wheel', 'Research, design and development of ML Mountain Front Wheel. Replacement mountain wheel for the casual to serious rider.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (46, 'HL Mountain Front Wheel', 'Research, design and development of HL Mountain Front Wheel. High-performance mountain replacement wheel.', '20020601', '20030601')
+VALUES
+(46, 'HL Mountain Front Wheel', 'Research, design and development of HL Mountain Front Wheel. High-performance mountain replacement wheel.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (47, 'LL Touring Handlebars', 'Research, design and development of LL Touring Handlebars. Unique shape reduces fatigue for entry level riders.', '20050516 16:34:00', NULL)
+VALUES
+(47, 'LL Touring Handlebars', 'Research, design and development of LL Touring Handlebars. Unique shape reduces fatigue for entry level riders.', '20050516 16:34:00', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (48, 'HL Touring Handlebars', 'Research, design and development of HL Touring Handlebars. A light yet stiff aluminum bar for long distance riding.', '20050516 16:34:00', NULL)
+VALUES
+(48, 'HL Touring Handlebars', 'Research, design and development of HL Touring Handlebars. A light yet stiff aluminum bar for long distance riding.', '20050516 16:34:00', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (49, 'LL Road Front Wheel', 'Research, design and development of LL Road Front Wheel. Replacement road front wheel for entry-level cyclist.', '20020601', '20030601')
+VALUES
+(49, 'LL Road Front Wheel', 'Research, design and development of LL Road Front Wheel. Replacement road front wheel for entry-level cyclist.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (50, 'ML Road Front Wheel', 'Research, design and development of ML Road Front Wheel. Sturdy alloy features a quick-release hub.', '20020601', '20030601')
+VALUES
+(50, 'ML Road Front Wheel', 'Research, design and development of ML Road Front Wheel. Sturdy alloy features a quick-release hub.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (51, 'HL Road Front Wheel', 'Research, design and development of HL Road Front Wheel. Strong wheel with double-walled rim.', '20020601', '20030601')
+VALUES
+(51, 'HL Road Front Wheel', 'Research, design and development of HL Road Front Wheel. Strong wheel with double-walled rim.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (52, 'LL Mountain Handlebars', 'Research, design and development of LL Mountain Handlebars. All-purpose bar for on or off-road.', '20020601', '20030601')
+VALUES
+(52, 'LL Mountain Handlebars', 'Research, design and development of LL Mountain Handlebars. All-purpose bar for on or off-road.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (53, 'Touring Pedal', 'Research, design and development of Touring Pedal. A stable pedal for all-day riding.', '20050516 16:34:00', NULL)
+VALUES
+(53, 'Touring Pedal', 'Research, design and development of Touring Pedal. A stable pedal for all-day riding.', '20050516 16:34:00', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (54, 'ML Mountain Handlebars', 'Research, design and development of ML Mountain Handlebars. Tough aluminum alloy bars for downhill.', '20020601', '20030601')
+VALUES
+(54, 'ML Mountain Handlebars', 'Research, design and development of ML Mountain Handlebars. Tough aluminum alloy bars for downhill.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (55, 'HL Mountain Handlebars', 'Research, design and development of HL Mountain Handlebars. Flat bar strong enough for the pro circuit.', '20020601', '20030601')
+VALUES
+(55, 'HL Mountain Handlebars', 'Research, design and development of HL Mountain Handlebars. Flat bar strong enough for the pro circuit.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (56, 'LL Road Handlebars', 'Research, design and development of LL Road Handlebars. Unique shape provides easier reach to the levers.', '20020601', '20030601')
+VALUES
+(56, 'LL Road Handlebars', 'Research, design and development of LL Road Handlebars. Unique shape provides easier reach to the levers.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (57, 'ML Road Handlebars', 'Research, design and development of ML Road Handlebars. Anatomically shaped aluminum tube bar will suit all riders.', '20020601', '20030601')
+VALUES
+(57, 'ML Road Handlebars', 'Research, design and development of ML Road Handlebars. Anatomically shaped aluminum tube bar will suit all riders.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (58, 'HL Road Handlebars', 'Research, design and development of HL Road Handlebars. Designed for racers; high-end anatomically shaped bar from aluminum alloy.', '20020601', '20030601')
+VALUES
+(58, 'HL Road Handlebars', 'Research, design and development of HL Road Handlebars. Designed for racers; high-end anatomically shaped bar from aluminum alloy.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (59, 'LL Headset', 'Research, design and development of LL Headset. Threadless headset provides quality at an economical price.', '20020601', '20030601')
+VALUES
+(59, 'LL Headset', 'Research, design and development of LL Headset. Threadless headset provides quality at an economical price.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (60, 'ML Headset', 'Research, design and development of ML Headset. Sealed cartridge keeps dirt out.', '20020601', '20030601')
+VALUES
+(60, 'ML Headset', 'Research, design and development of ML Headset. Sealed cartridge keeps dirt out.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (61, 'HL Headset', 'Research, design and development of HL Headset. High-quality 1" threadless headset with a grease port for quick lubrication.', '20020601', '20030601')
+VALUES
+(61, 'HL Headset', 'Research, design and development of HL Headset. High-quality 1" threadless headset with a grease port for quick lubrication.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (77, 'ML Road Rear Wheel', 'Research, design and development of ML Road Rear Wheel. Aluminum alloy rim with stainless steel spokes; built for speed.', '20020601', '20030601')
+VALUES
+(77, 'ML Road Rear Wheel', 'Research, design and development of ML Road Rear Wheel. Aluminum alloy rim with stainless steel spokes; built for speed.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (78, 'HL Road Rear Wheel', 'Research, design and development of HL Road Rear Wheel. Strong rear wheel with double-walled rim.', '20020601', '20030601')
+VALUES
+(78, 'HL Road Rear Wheel', 'Research, design and development of HL Road Rear Wheel. Strong rear wheel with double-walled rim.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (79, 'LL Mountain Seat/Saddle 2', 'Research, design and development of LL Mountain Seat/Saddle 2. Synthetic leather. Features gel for increased comfort.', '20030601', NULL)
+VALUES 
+(79, 'LL Mountain Seat/Saddle 2', 'Research, design and development of LL Mountain Seat/Saddle 2. Synthetic leather. Features gel for increased comfort.', '20030601', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (80, 'ML Mountain Seat/Saddle 2', 'Research, design and development of ML Mountain Seat/Saddle 2. Designed to absorb shock.', '20030601', '20040311 10:32:00')
+VALUES
+(80, 'ML Mountain Seat/Saddle 2', 'Research, design and development of ML Mountain Seat/Saddle 2. Designed to absorb shock.', '20030601', '20040311 10:32:00')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (104, 'LL Fork', 'Research, design and development of LL Fork. Stout design absorbs shock and offers more precise steering.', '20020601', '20030601')
+VALUES
+(104, 'LL Fork', 'Research, design and development of LL Fork. Stout design absorbs shock and offers more precise steering.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (105, 'ML Fork', 'Research, design and development of ML Fork. Composite road fork with an aluminum steerer tube.', '20020601', '20030601')
+VALUES
+(105, 'ML Fork', 'Research, design and development of ML Fork. Composite road fork with an aluminum steerer tube.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (106, 'HL Fork', 'Research, design and development of HL Fork. High-performance carbon road fork with curved legs.', '20020601', '20030601')
+VALUES
+(106, 'HL Fork', 'Research, design and development of HL Fork. High-performance carbon road fork with curved legs.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (107, 'Hydration Pack', 'Research, design and development of Hydration Pack. Versatile 70 oz hydration pack offers extra storage, easy-fill access, and a waist belt.', '20030601', NULL)
+VALUES 
+(107, 'Hydration Pack', 'Research, design and development of Hydration Pack. Versatile 70 oz hydration pack offers extra storage, easy-fill access, and a waist belt.', '20030601', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (108, 'Taillight', 'Research, design and development of Taillight. Affordable light for safe night riding - uses 3 AAA batteries', '20020601', '20030601')
+VALUES
+(108, 'Taillight', 'Research, design and development of Taillight. Affordable light for safe night riding - uses 3 AAA batteries', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (109, 'Headlights - Dual-Beam', 'Research, design and development of Headlights - Dual-Beam. Rechargeable dual-beam headlight.', '20020601', '20030601')
+VALUES
+(109, 'Headlights - Dual-Beam', 'Research, design and development of Headlights - Dual-Beam. Rechargeable dual-beam headlight.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (110, 'Headlights - Weatherproof', 'Research, design and development of Headlights - Weatherproof. Rugged weatherproof headlight.', '20020601', '20030601')
+VALUES
+(110, 'Headlights - Weatherproof', 'Research, design and development of Headlights - Weatherproof. Rugged weatherproof headlight.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
 VALUES (111, 'Water Bottle', 'Research, design and development of Water Bottle. AWC logo water bottle - holds 30 oz; leak-proof.', '20030601', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (112, 'Mountain Bottle Cage', 'Research, design and development of Mountain Bottle Cage. Tough aluminum cage holds bottle securly on tough terrain.', '20030601', NULL)
+VALUES
+(112, 'Mountain Bottle Cage', 'Research, design and development of Mountain Bottle Cage. Tough aluminum cage holds bottle securly on tough terrain.', '20030601', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (113, 'Road Bottle Cage', 'Research, design and development of Road Bottle Cage. Aluminum cage is lighter than our mountain version; perfect for long distance trips.', '20040221', NULL)
+VALUES
+(113, 'Road Bottle Cage', 'Research, design and development of Road Bottle Cage. Aluminum cage is lighter than our mountain version; perfect for long distance trips.', '20040221', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (114, 'Patch kit', 'Research, design and development of Patch kit. Includes 8 different size patches, glue and sandpaper.', '20030601', NULL)
+VALUES
+(114, 'Patch kit', 'Research, design and development of Patch kit. Includes 8 different size patches, glue and sandpaper.', '20030601', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (115, 'Cable Lock', 'Research, design and development of Cable Lock. Wraps to fit front and rear tires, carrier and 2 keys included.', '20020601', '20030601')
+VALUES
+(115, 'Cable Lock', 'Research, design and development of Cable Lock. Wraps to fit front and rear tires, carrier and 2 keys included.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (116, 'Minipump', 'Research, design and development of Minipump. Designed for convenience. Fits in your pocket. Aluminum barrel. 160psi rated.', '20020601', '20030601')
+VALUES
+(116, 'Minipump', 'Research, design and development of Minipump. Designed for convenience. Fits in your pocket. Aluminum barrel. 160psi rated.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (117, 'Mountain Pump', 'Research, design and development of Mountain Pump. Simple and light-weight. Emergency patches stored in handle.', '20020601', '20030601')
+VALUES
+(117, 'Mountain Pump', 'Research, design and development of Mountain Pump. Simple and light-weight. Emergency patches stored in handle.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (118, 'Hitch Rack - 4-Bike', 'Research, design and development of Hitch Rack - 4-Bike. Carries 4 bikes securely; steel construction, fits 2" receiver hitch.', '20030601', NULL)
+VALUES
+(118, 'Hitch Rack - 4-Bike', 'Research, design and development of Hitch Rack - 4-Bike. Carries 4 bikes securely; steel construction, fits 2" receiver hitch.', '20030601', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (119, 'Bike Wash', 'Research, design and development of Bike Wash. Washes off the toughest road grime; dissolves grease, environmentally safe. 1-liter bottle.', '20050801', NULL)
+VALUES
+(119, 'Bike Wash', 'Research, design and development of Bike Wash. Washes off the toughest road grime; dissolves grease, environmentally safe. 1-liter bottle.', '20050801', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (120, 'Touring-Panniers', 'Research, design and development of Touring-Panniers. Durable, water-proof nylon construction with easy access. Large enough for weekend trips.', '20020601', '20030601')
+VALUES
+(120, 'Touring-Panniers', 'Research, design and development of Touring-Panniers. Durable, water-proof nylon construction with easy access. Large enough for weekend trips.', '20020601', '20030601')
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (121, 'Fender Set - Mountain', 'Research, design and development of Fender Set - Mountain. Clip-on fenders fit most mountain bikes.', '20030601', NULL)
+VALUES
+(121, 'Fender Set - Mountain', 'Research, design and development of Fender Set - Mountain. Clip-on fenders fit most mountain bikes.', '20030601', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (122, 'All-Purpose Bike Stand', 'Research, design and development of All-Purpose Bike Stand. Perfect all-purpose bike stand for working on your bike at home. Quick-adjusting clamps and steel construction.', '20050901', NULL)
+VALUES
+(122, 'All-Purpose Bike Stand', 'Research, design and development of All-Purpose Bike Stand. Perfect all-purpose bike stand for working on your bike at home. Quick-adjusting clamps and steel construction.', '20050901', NULL)
 
 INSERT INTO Projects (ProjectID, Name, Description, StartDate, EndDate)
-VALUES (127, 'Rear Derailleur', 'Research, design and development of Rear Derailleur. Wide-link design.', '20030601', NULL)
+VALUES
+(127, 'Rear Derailleur', 'Research, design and development of Rear Derailleur. Wide-link design.', '20030601', NULL)
 
 GO
 
 SET IDENTITY_INSERT Projects OFF
 
-CREATE TABLE EmployeesProjects(
-  EmployeeID int NOT NULL,
-  ProjectID int NOT NULL,
-  CONSTRAINT PK_EmployeesProjects PRIMARY KEY CLUSTERED (EmployeeID ASC, ProjectID ASC)
+CREATE TABLE EmployeesProjects
+(
+EmployeeID int NOT NULL,
+ProjectID int NOT NULL,
+CONSTRAINT PK_EmployeesProjects PRIMARY KEY CLUSTERED (EmployeeID ASC, ProjectID ASC)
 )
+
 GO
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (1, 4)
+VALUES
+(1, 4)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (1, 24)
+VALUES
+(1, 24)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (1, 38)
+VALUES
+(1, 38)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (1, 113)
+VALUES
+(1, 113)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (3, 1)
+VALUES
+(3, 1)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (3, 21)
+VALUES
+(3, 21)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (3, 58)
+VALUES
+(3, 58)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (3, 110)
+VALUES
+(3, 110)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (4, 25)
+VALUES
+(4, 25)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (4, 39)
+VALUES
+(4, 39)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (4, 53)
+VALUES
+(4, 53)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (4, 105)
+VALUES
+(4, 105)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (5, 27)
+VALUES
+(5, 27)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (5, 41)
+VALUES
+(5, 41)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (5, 55)
+VALUES
+(5, 55)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (5, 107)
+VALUES
+(5, 107)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (7, 12)
+VALUES
+(7, 12)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (7, 32)
+VALUES
+(7, 32)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (7, 107)
+VALUES
+(7, 107)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (7, 121)
+VALUES
+(7, 121)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (8, 2)
+VALUES
+(8, 2)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (8, 22)
+VALUES
+(8, 22)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (8, 36)
+VALUES
+(8, 36)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (8, 111)
+VALUES
+(8, 111)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (9, 9)
+VALUES
+(9, 9)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (9, 52)
+VALUES
+(9, 52)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (9, 104)
+VALUES
+(9, 104)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (9, 118)
+VALUES
+(9, 118)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (10, 3)
+VALUES
+(10, 3)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (10, 23)
+VALUES
+(10, 23)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (10, 37)
+VALUES
+(10, 37)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (10, 112)
+VALUES
+(10, 112)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (11, 10)
+VALUES
+(11, 10)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (11, 53)
+VALUES
+(11, 53)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (11, 105)
+VALUES
+(11, 105)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (11, 119)
+VALUES
+(11, 119)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (12, 28)
+VALUES
+(12, 28)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (12, 42)
+VALUES
+(12, 42)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (12, 56)
+VALUES
+(12, 56)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (12, 108)
+VALUES
+(12, 108)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (13, 20)
+VALUES
+(13, 20)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (13, 34)
+VALUES
+(13, 34)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (13, 48)
+VALUES
+(13, 48)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (13, 127)
+VALUES
+(13, 127)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (14, 19)
+VALUES
+(14, 19)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (14, 33)
+VALUES
+(14, 33)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (14, 108)
+VALUES
+(14, 108)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (14, 122)
+VALUES
+(14, 122)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (15, 1)
+VALUES
+(15, 1)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (15, 21)
+VALUES
+(15, 21)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (15, 35)
+VALUES
+(15, 35)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (15, 110)
+VALUES
+(15, 110)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (16, 20)
+VALUES
+(16, 20)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (16, 34)
+VALUES
+(16, 34)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (16, 109)
+VALUES
+(16, 109)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (16, 127)
+VALUES
+(16, 127)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (17, 20)
+VALUES
+(17, 20)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (17, 34)
+VALUES
+(17, 34)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (17, 109)
+VALUES
+(17, 109)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (17, 127)
+VALUES
+(17, 127)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (18, 1)
+VALUES
+(18, 1)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (18, 21)
+VALUES
+(18, 21)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (18, 35)
+VALUES
+(18, 35)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (18, 110)
+VALUES
+(18, 110)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (19, 12)
+VALUES
+(19, 12)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (19, 32)
+VALUES
+(19, 32)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (19, 107)
+VALUES
+(19, 107)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (19, 121)
+VALUES
+(19, 121)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (20, 19)
+VALUES
+(20, 19)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (20, 33)
+VALUES
+(20, 33)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (20, 108)
+VALUES
+(20, 108)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (20, 122)
+VALUES
+(20, 122)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (21, 10)
+VALUES
+(21, 10)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (21, 30)
+VALUES
+(21, 30)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (21, 105)
+VALUES
+(21, 105)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (21, 119)
+VALUES
+(21, 119)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (22, 8)
+VALUES
+(22, 8)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (22, 28)
+VALUES
+(22, 28)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (22, 42)
+VALUES
+(22, 42)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (22, 117)
+VALUES
+(22, 117)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (23, 9)
+VALUES
+(23, 9)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (23, 29)
+VALUES
+(23, 29)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (23, 43)
+VALUES
+(23, 43)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (23, 118)
+VALUES
+(23, 118)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (24, 10)
+VALUES
+(24, 10)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (24, 30)
+VALUES
+(24, 30)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (24, 44)
+VALUES
+(24, 44)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (24, 119)
+VALUES
+(24, 119)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (25, 11)
+VALUES
+(25, 11)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (25, 31)
+VALUES
+(25, 31)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (25, 106)
+VALUES
+(25, 106)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (25, 120)
+VALUES
+(25, 120)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (26, 5)
+VALUES
+(26, 5)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (26, 25)
+VALUES
+(26, 25)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (26, 39)
+VALUES
+(26, 39)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (26, 114)
+VALUES
+(26, 114)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (27, 26)
+VALUES
+(27, 26)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
 VALUES (27, 40)
