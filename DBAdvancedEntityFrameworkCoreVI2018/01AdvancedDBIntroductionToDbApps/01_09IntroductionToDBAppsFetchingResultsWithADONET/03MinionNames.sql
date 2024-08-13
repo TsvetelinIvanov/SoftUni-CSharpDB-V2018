@@ -7,4 +7,3 @@ FROM Minions AS m
 JOIN MinionsVillains AS mv ON mv.MinionId = m.Id
 WHERE mv.VillainId = 7
 ORDER BY [Name]
-
