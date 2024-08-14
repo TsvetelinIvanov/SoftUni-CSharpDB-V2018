@@ -16,6 +16,7 @@ namespace P01_BillsPaymentSystem
             {
                 //context.Database.EnsureDeleted();
                 //context.Database.EnsureCreated();
+                
                 //Initializerr.Seed(context);
 
                 User user = GetUser(context);
@@ -57,24 +58,24 @@ namespace P01_BillsPaymentSystem
             Console.WriteLine("Bank Accounts:");
             BankAccount[] bankAccounts = user.PaymentMethods.Where(pm => pm.BankAccount != null)
                 .Select(pm => pm.BankAccount).ToArray();
-            foreach (var bankAccount in bankAccounts)
+            foreach (BankAccount bankAccount in bankAccounts)
             {
                 Console.WriteLine($"-- ID: {bankAccount.BankAccountId}");
                 Console.WriteLine($"--- Balance: {bankAccount.Balance:f2}");
                 Console.WriteLine($"--- Bank: {bankAccount.BankName}");
                 Console.WriteLine($"--- SWIFT: {bankAccount.SWIFTCode}");
             }
+            
             Console.WriteLine("Credit Cards:");
             CreditCard[] creditCards = user.PaymentMethods.Where(pm => pm.CreditCard != null)
                .Select(pm => pm.CreditCard).ToArray();
-            foreach (var creditCard in creditCards)
+            foreach (CreditCard creditCard in creditCards)
             {
                 Console.WriteLine($"-- ID {creditCard.CreditCardId}");
                 Console.WriteLine($"--- Limit: {creditCard.Limit:f2}");
                 Console.WriteLine($"--- Money Owed: {creditCard.MoneyOwed:f2}");
                 Console.WriteLine($"--- Limit Left: {creditCard.LimitLeft:f2}");
-                Console.WriteLine($"--- Expiration Date: " +
-                    $"{creditCard.ExpirationDate.ToString("yyyy/MM", CultureInfo.InvariantCulture)}");
+                Console.WriteLine($"--- Expiration Date: " + $"{creditCard.ExpirationDate.ToString("yyyy/MM", CultureInfo.InvariantCulture)}");
             }
         }
 
@@ -86,12 +87,11 @@ namespace P01_BillsPaymentSystem
                 .Sum(pm => pm.CreditCard.LimitLeft);
 
             decimal totalSum = bankAccountsSum + creditCartsSum;
-
             if (totalSum >= amount)
             {
                 BankAccount[] bankAccounts = user.PaymentMethods.Where(pm => pm.BankAccount != null)
                     .Select(pm => pm.BankAccount).OrderBy(pm => pm.BankAccountId).ToArray();
-                foreach (var bankAccount in bankAccounts)
+                foreach (BankAccount bankAccount in bankAccounts)
                 {
                     if (bankAccount.Balance >= amount)
                     {
@@ -107,12 +107,13 @@ namespace P01_BillsPaymentSystem
                     if (amount == 0)
                     {
                         Console.WriteLine("Bills were successfully payed.");
+                        
                         return;
                     }
 
                     CreditCard[] creditCards = user.PaymentMethods.Where(pm => pm.CreditCard != null)
                         .Select(pm => pm.CreditCard).OrderBy(pm => pm.CreditCardId).ToArray();
-                    foreach (var creditCard in creditCards)
+                    foreach (CreditCard creditCard in creditCards)
                     {
                         if (creditCard.LimitLeft >= amount)
                         {
@@ -128,6 +129,7 @@ namespace P01_BillsPaymentSystem
                         if (amount == 0)
                         {
                             Console.WriteLine("Bills were successfully payed.");
+                            
                             return;
                         }
                     }
