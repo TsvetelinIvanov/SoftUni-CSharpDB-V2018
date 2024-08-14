@@ -10,6 +10,7 @@ namespace P03_FootballBetting
             {
                 contex.Database.EnsureDeleted();
                 contex.Database.EnsureCreated();
+                
                 //contex.Database.Migrate();
             }
         }
