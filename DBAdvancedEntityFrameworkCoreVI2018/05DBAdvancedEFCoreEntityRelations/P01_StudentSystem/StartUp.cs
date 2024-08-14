@@ -10,6 +10,7 @@ namespace P01_StudentSystem
             {
                 //context.Database.EnsureDeleted();
                 //context.Database.EnsureCreated();
+                
                 //contex.Database.Migrate();
             }
         }
