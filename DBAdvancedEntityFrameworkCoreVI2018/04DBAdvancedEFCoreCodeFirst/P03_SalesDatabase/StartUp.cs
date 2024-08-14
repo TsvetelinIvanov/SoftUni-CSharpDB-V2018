@@ -10,6 +10,8 @@ namespace P03_SalesDatabase
             {
                 //context.Database.EnsureDeleted();
                 //context.Database.EnsureCreated();
+                
+                //contex.Database.Migrate();
             }
         }
     }
