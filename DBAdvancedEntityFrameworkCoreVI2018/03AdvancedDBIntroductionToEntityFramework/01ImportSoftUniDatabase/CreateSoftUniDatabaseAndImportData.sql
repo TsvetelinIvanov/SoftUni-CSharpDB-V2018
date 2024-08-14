@@ -21,7 +21,7 @@ GO
 
 CREATE TABLE Towns
 (
-TownID int IDENTITY NOT NULL,
+TownID INT IDENTITY NOT NULL,
 Name VARCHAR(50) NOT NULL,
 CONSTRAINT PK_Towns PRIMARY KEY CLUSTERED(TownID ASC)
 )
@@ -164,9 +164,9 @@ GO
 
 CREATE TABLE Addresses
 (
-AddressID int IDENTITY NOT NULL,
+AddressID INT IDENTITY NOT NULL,
 AddressText VARCHAR(100) NOT NULL,
-TownID int NULL,
+TownID INT NULL,
 CONSTRAINT PK_Addresses PRIMARY KEY CLUSTERED (AddressID ASC)
 )
 
@@ -1344,11 +1344,11 @@ GO
 
 CREATE TABLE Projects
 (
-ProjectID int IDENTITY NOT NULL,
+ProjectID INT IDENTITY NOT NULL,
 Name VARCHAR(50) NOT NULL,
-Description ntext NULL,
-StartDate smalldatetime NOT NULL,
-EndDate smalldatetime NULL,
+Description NTEXT NULL,
+StartDate SMALLDATETIME NOT NULL,
+EndDate SMALLDATETIME NULL,
 CONSTRAINT PK_Projects PRIMARY KEY CLUSTERED (ProjectID ASC)
 )
 
@@ -1677,8 +1677,8 @@ SET IDENTITY_INSERT Projects OFF
 
 CREATE TABLE EmployeesProjects
 (
-EmployeeID int NOT NULL,
-ProjectID int NOT NULL,
+EmployeeID INT NOT NULL,
+ProjectID INT NOT NULL,
 CONSTRAINT PK_EmployeesProjects PRIMARY KEY CLUSTERED (EmployeeID ASC, ProjectID ASC)
 )
 
@@ -2500,2880 +2500,3832 @@ VALUES
 (60, 117)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (61, 9)
+VALUES
+(61, 9)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (61, 52)
+VALUES
+(61, 52)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (61, 104)
+VALUES
+(61, 104)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (61, 118)
+VALUES
+(61, 118)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (62, 10)
+VALUES
+(62, 10)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (62, 53)
+VALUES
+(62, 53)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (62, 105)
+VALUES
+(62, 105)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (62, 119)
+VALUES
+(62, 119)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (63, 11)
+VALUES
+(63, 11)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (63, 54)
+VALUES
+(63, 54)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (63, 106)
+VALUES
+(63, 106)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (63, 120)
+VALUES
+(63, 120)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (64, 4)
+VALUES
+(64, 4)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (64, 24)
+VALUES
+(64, 24)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (64, 38)
+VALUES
+(64, 38)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (64, 113)
+VALUES
+(64, 113)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (65, 5)
+VALUES
+(65, 5)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (65, 48)
+VALUES
+(65, 48)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (65, 77)
+VALUES
+(65, 77)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (65, 114)
+VALUES
+(65, 114)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (66, 1)
+VALUES
+(66, 1)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (66, 44)
+VALUES
+(66, 44)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (66, 58)
+VALUES
+(66, 58)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (66, 110)
+VALUES
+(66, 110)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (67, 20)
+VALUES
+(67, 20)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (67, 57)
+VALUES
+(67, 57)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (67, 109)
+VALUES
+(67, 109)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (67, 127)
+VALUES
+(67, 127)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (68, 1)
+VALUES
+(68, 1)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (68, 21)
+VALUES
+(68, 21)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (68, 58)
+VALUES
+(68, 58)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (68, 110)
+VALUES
+(68, 110)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (69, 2)
+VALUES
+(69, 2)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (69, 22)
+VALUES
+(69, 22)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (69, 59)
+VALUES
+(69, 59)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (69, 111)
+VALUES
+(69, 111)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (70, 49)
+VALUES
+(70, 49)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (70, 78)
+VALUES
+(70, 78)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (70, 115)
+VALUES
+(70, 115)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (73, 19)
+VALUES
+(73, 19)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (73, 56)
+VALUES
+(73, 56)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (73, 108)
+VALUES
+(73, 108)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (73, 122)
+VALUES
+(73, 122)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (74, 10)
+VALUES
+(74, 10)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (74, 30)
+VALUES
+(74, 30)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (74, 44)
+VALUES
+(74, 44)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (74, 119)
+VALUES
+(74, 119)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (75, 11)
+VALUES
+(75, 11)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (75, 31)
+VALUES
+(75, 31)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (75, 45)
+VALUES
+(75, 45)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (75, 120)
+VALUES
+(75, 120)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (76, 12)
+VALUES
+(76, 12)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (76, 32)
+VALUES
+(76, 32)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (76, 46)
+VALUES
+(76, 46)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (76, 121)
+VALUES
+(76, 121)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (77, 7)
+VALUES
+(77, 7)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (77, 27)
+VALUES
+(77, 27)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (77, 41)
+VALUES
+(77, 41)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (77, 55)
+VALUES
+(77, 55)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (78, 19)
+VALUES
+(78, 19)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (78, 33)
+VALUES
+(78, 33)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (78, 47)
+VALUES
+(78, 47)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (78, 122)
+VALUES
+(78, 122)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (79, 9)
+VALUES
+(79, 9)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (79, 29)
+VALUES
+(79, 29)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (79, 43)
+VALUES
+(79, 43)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (79, 57)
+VALUES
+(79, 57)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (80, 20)
+VALUES
+(80, 20)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (80, 34)
+VALUES
+(80, 34)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (80, 48)
+VALUES
+(80, 48)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (80, 127)
+VALUES
+(80, 127)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (81, 1)
+VALUES
+(81, 1)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (81, 21)
+VALUES
+(81, 21)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (81, 35)
+VALUES
+(81, 35)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (81, 49)
+VALUES
+(81, 49)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (83, 4)
+VALUES
+(83, 4)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (83, 24)
+VALUES
+(83, 24)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (83, 38)
+VALUES
+(83, 38)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (83, 52)
+VALUES
+(83, 52)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (84, 5)
+VALUES
+(84, 5)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (84, 25)
+VALUES
+(84, 25)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (84, 39)
+VALUES
+(84, 39)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (84, 53)
+VALUES
+(84, 53)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (86, 9)
+VALUES
+(86, 9)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (86, 29)
+VALUES
+(86, 29)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (86, 43)
+VALUES
+(86, 43)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (86, 57)
+VALUES
+(86, 57)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (87, 9)
+VALUES
+(87, 9)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (87, 29)
+VALUES
+(87, 29)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (87, 43)
+VALUES
+(87, 43)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (87, 118)
+VALUES
+(87, 118)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (88, 2)
+VALUES
+(88, 2)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (88, 22)
+VALUES
+(88, 22)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (88, 36)
+VALUES
+(88, 36)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (88, 50)
+VALUES
+(88, 50)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (89, 3)
+VALUES
+(89, 3)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (89, 23)
+VALUES
+(89, 23)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (89, 37)
+VALUES
+(89, 37)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (89, 51)
+VALUES
+(89, 51)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (90, 20)
+VALUES
+(90, 20)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (90, 57)
+VALUES
+(90, 57)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (90, 109)
+VALUES
+(90, 109)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (90, 127)
+VALUES
+(90, 127)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (91, 26)
+VALUES
+(91, 26)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (91, 40)
+VALUES
+(91, 40)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (91, 54)
+VALUES
+(91, 54)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (92, 7)
+VALUES
+(92, 7)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (92, 27)
+VALUES
+(92, 27)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (92, 41)
+VALUES
+(92, 41)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (92, 55)
+VALUES
+(92, 55)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (93, 8)
+VALUES
+(93, 8)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (93, 28)
+VALUES
+(93, 28)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (93, 42)
+VALUES
+(93, 42)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (93, 56)
+VALUES
+(93, 56)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (95, 12)
+VALUES
+(95, 12)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (95, 32)
+VALUES
+(95, 32)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (95, 46)
+VALUES
+(95, 46)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (95, 60)
+VALUES
+(95, 60)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (96, 22)
+VALUES
+(96, 22)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (96, 36)
+VALUES
+(96, 36)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (96, 50)
+VALUES
+(96, 50)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (96, 79)
+VALUES
+(96, 79)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (97, 21)
+VALUES
+(97, 21)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (97, 35)
+VALUES
+(97, 35)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (97, 49)
+VALUES
+(97, 49)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (97, 78)
+VALUES
+(97, 78)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (98, 22)
+VALUES
+(98, 22)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (98, 36)
+VALUES
+(98, 36)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (98, 50)
+VALUES
+(98, 50)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (98, 79)
+VALUES
+(98, 79)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (99, 23)
+VALUES
+(99, 23)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (99, 37)
+VALUES
+(99, 37)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (99, 51)
+VALUES
+(99, 51)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (99, 80)
+VALUES
+(99, 80)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (100, 24)
+VALUES
+(100, 24)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (100, 38)
+VALUES
+(100, 38)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (100, 52)
+VALUES
+(100, 52)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (100, 104)
+VALUES\
+(100, 104)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (101, 25)
+VALUES
+(101, 25)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (101, 39)
+VALUES
+(101, 39)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (101, 53)
+VALUES
+(101, 53)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (101, 105)
+VALUES
+(101, 105)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (102, 2)
+VALUES
+(102, 2)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (102, 45)
+VALUES
+(102, 45)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (102, 59)
+VALUES
+(102, 59)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (102, 111)
+VALUES
+(102, 111)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (103, 5)
+VALUES
+(103, 5)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (103, 48)
+VALUES
+(103, 48)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (103, 77)
+VALUES
+(103, 77)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (103, 114)
+VALUES
+(103, 114)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (104, 19)
+VALUES
+(104, 19)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (104, 33)
+VALUES
+(104, 33)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (104, 47)
+VALUES
+(104, 47)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (104, 61)
+VALUES
+(104, 61)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (105, 20)
+VALUES
+(105, 20)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (105, 34)
+VALUES
+(105, 34)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (105, 48)
+VALUES
+(105, 48)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (105, 77)
+VALUES
+(105, 77)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (107, 11)
+VALUES
+(107, 11)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (107, 31)
+VALUES
+(107, 31)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (107, 45)
+VALUES
+(107, 45)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (107, 59)
+VALUES
+(107, 59)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (108, 8)
+VALUES
+(108, 8)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (108, 28)
+VALUES
+(108, 28)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (108, 42)
+VALUES
+(108, 42)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (108, 117)
+VALUES
+(108, 117)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (110, 10)
+VALUES
+(110, 10)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (110, 30)
+VALUES
+(110, 30)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (110, 44)
+VALUES
+(110, 44)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (110, 58)
+VALUES
+(110, 58)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (111, 26)
+VALUES
+(111, 26)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (111, 40)
+VALUES
+(111, 40)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (111, 54)
+VALUES
+(111, 54)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (112, 1)
+VALUES
+(112, 1)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (112, 44)
+VALUES
+(112, 44)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (112, 58)
+VALUES
+(112, 58)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (112, 110)
+VALUES
+(112, 110)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (113, 2)
+VALUES
+(113, 2)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (113, 45)
+VALUES
+(113, 45)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (113, 59)
+VALUES
+(113, 59)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (113, 111)
+VALUES
+(113, 111)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (114, 10)
+VALUES
+(114, 10)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (114, 30)
+VALUES
+(114, 30)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (114, 44)
+VALUES
+(114, 44)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (114, 58)
+VALUES
+(114, 58)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (115, 3)
+VALUES
+(115, 3)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (115, 46)
+VALUES
+(115, 46)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (115, 60)
+VALUES
+(115, 60)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (115, 112)
+VALUES
+(115, 112)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (116, 4)
+VALUES
+(116, 4)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (116, 47)
+VALUES
+(116, 47)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (116, 61)
+VALUES
+(116, 61)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (116, 113)
+VALUES
+(116, 113)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (118, 43)
+VALUES
+(118, 43)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (118, 57)
+VALUES
+(118, 57)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (118, 109)
+VALUES
+(118, 109)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (118, 127)
+VALUES
+(118, 127)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (120, 42)
+VALUES
+(120, 42)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (120, 56)
+VALUES
+(120, 56)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (120, 108)
+VALUES
+(120, 108)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (120, 122)
+VALUES
+(120, 122)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (122, 40)
+VALUES
+(122, 40)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (122, 54)
+VALUES
+(122, 54)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (122, 106)
+VALUES
+(122, 106)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (122, 120)
+VALUES
+(122, 120)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (123, 5)
+VALUES
+(123, 5)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (123, 25)
+VALUES
+(123, 25)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (123, 39)
+VALUES
+(123, 39)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (123, 114)
+VALUES
+(123, 114)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (124, 37)
+VALUES
+(124, 37)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (124, 51)
+VALUES
+(124, 51)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (124, 80)
+VALUES
+(124, 80)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (124, 117)
+VALUES
+(124, 117)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (125, 38)
+VALUES
+(125, 38)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (125, 52)
+VALUES
+(125, 52)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (125, 104)
+VALUES
+(125, 104)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (125, 118)
+VALUES
+(125, 118)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (126, 39)
+VALUES
+(126, 39)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (126, 53)
+VALUES
+(126, 53)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (126, 105)
+VALUES
+(126, 105)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (126, 119)
+VALUES
+(126, 119)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (127, 19)
+VALUES
+(127, 19)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (127, 56)
+VALUES
+(127, 56)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (127, 108)
+VALUES
+(127, 108)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (127, 122)
+VALUES
+(127, 122)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (129, 41)
+VALUES
+(129, 41)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (129, 55)
+VALUES
+(129, 55)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (129, 107)
+VALUES
+(129, 107)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (129, 121)
+VALUES
+(129, 121)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (131, 29)
+VALUES
+(131, 29)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (131, 43)
+VALUES
+(131, 43)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (131, 57)
+VALUES
+(131, 57)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (131, 109)
+VALUES
+(131, 109)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (132, 21)
+VALUES
+(132, 21)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (132, 35)
+VALUES
+(132, 35)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (132, 49)
+VALUES
+(132, 49)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (132, 78)
+VALUES
+(132, 78)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (133, 30)
+VALUES
+(133, 30)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (133, 44)
+VALUES
+(133, 44)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (133, 58)
+VALUES
+(133, 58)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (133, 110)
+VALUES
+(133, 110)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (134, 31)
+VALUES
+(134, 31)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (134, 45)
+VALUES
+(134, 45)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (134, 59)
+VALUES
+(134, 59)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (134, 111)
+VALUES
+(134, 111)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (135, 7)
+VALUES
+(135, 7)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (135, 27)
+VALUES
+(135, 27)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (135, 41)
+VALUES
+(135, 41)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (135, 116)
+VALUES
+(135, 116)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (136, 26)
+VALUES
+(136, 26)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (136, 40)
+VALUES
+(136, 40)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (136, 54)
+VALUES
+(136, 54)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (136, 106)
+VALUES
+(136, 106)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (137, 27)
+VALUES
+(137, 27)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (137, 41)
+VALUES
+(137, 41)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (137, 55)
+VALUES
+(137, 55)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (137, 107)
+VALUES
+(137, 107)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (138, 28)
+VALUES
+(138, 28)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (138, 42)
+VALUES
+(138, 42)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (138, 56)
+VALUES
+(138, 56)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (138, 108)
+VALUES
+(138, 108)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (141, 35)
+VALUES
+(141, 35)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (141, 49)
+VALUES
+(141, 49)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (141, 78)
+VALUES
+(141, 78)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (141, 115)
+VALUES
+(141, 115)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (142, 36)
+VALUES
+(142, 36)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (142, 50)
+VALUES
+(142, 50)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (142, 79)
+VALUES
+(142, 79)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (142, 116)
+VALUES
+(142, 116)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (143, 26)
+VALUES
+(143, 26)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (143, 40)
+VALUES
+(143, 40)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (143, 115)
+VALUES
+(143, 115)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (144, 32)
+VALUES
+(144, 32)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (144, 46)
+VALUES
+(144, 46)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (144, 60)
+VALUES
+(144, 60)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (144, 112)
+VALUES
+(144, 112)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (145, 5)
+VALUES
+(145, 5)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (145, 25)
+VALUES
+(145, 25)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (145, 39)
+VALUES
+(145, 39)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (145, 53)
+VALUES
+(145, 53)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (146, 33)
+VALUES
+(146, 33)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (146, 47)
+VALUES
+(146, 47)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (146, 61)
+VALUES
+(146, 61)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (146, 113)
+VALUES
+(146, 113)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (147, 34)
+VALUES
+(147, 34)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (147, 48)
+VALUES
+(147, 48)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (147, 77)
+VALUES
+(147, 77)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (147, 114)
+VALUES
+(147, 114)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (148, 29)
+VALUES
+(148, 29)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (148, 43)
+VALUES
+(148, 43)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (148, 57)
+VALUES
+(148, 57)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (148, 109)
+VALUES
+(148, 109)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (149, 3)
+VALUES
+(149, 3)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (149, 46)
+VALUES
+(149, 46)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (149, 60)
+VALUES
+(149, 60)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (149, 112)
+VALUES
+(149, 112)
+
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (151, 49)
+VALUES
+(151, 49)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (151, 78)
+VALUES
+(151, 78)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (151, 115)
+VALUES
+(151, 115)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (152, 7)
+VALUES
+(152, 7)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (152, 50)
+VALUES
+(152, 50)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (152, 79)
+VALUES
+(152, 79)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (152, 116)
+VALUES
+(152, 116)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (153, 8)
+VALUES
+(153, 8)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (153, 51)
+VALUES
+(153, 51)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (153, 80)
+VALUES
+(153, 80)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (153, 117)
+VALUES
+(153, 117)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (154, 5)
+VALUES
+(154, 5)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (154, 25)
+VALUES
+(154, 25)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (154, 77)
+VALUES
+(154, 77)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (154, 114)
+VALUES
+(154, 114)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (155, 9)
+VALUES
+(155, 9)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (155, 52)
+VALUES
+(155, 52)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (155, 104)
+VALUES
+(155, 104)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (155, 118)
+VALUES
+(155, 118)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (156, 10)
+VALUES
+(156, 10)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (156, 53)
+VALUES
+(156, 53)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (156, 105)
+VALUES
+(156, 105)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (156, 119)
+VALUES
+(156, 119)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (157, 11)
+VALUES
+(157, 11)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (157, 54)
+VALUES
+(157, 54)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (157, 106)
+VALUES
+(157, 106)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (157, 120)
+VALUES
+(157, 120)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (158, 12)
+VALUES
+(158, 12)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (158, 32)
+VALUES
+(158, 32)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (158, 46)
+VALUES
+(158, 46)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (158, 60)
+VALUES
+(158, 60)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (159, 11)
+VALUES
+(159, 11)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (159, 31)
+VALUES
+(159, 31)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (159, 45)
+VALUES
+(159, 45)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (159, 120)
+VALUES
+(159, 120)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (160, 43)
+VALUES
+(160, 43)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (160, 57)
+VALUES
+(160, 57)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (160, 109)
+VALUES
+(160, 109)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (160, 127)
+VALUES
+(160, 127)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (161, 12)
+VALUES
+(161, 12)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (161, 55)
+VALUES
+(161, 55)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (161, 107)
+VALUES
+(161, 107)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (161, 121)
+VALUES
+(161, 121)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (162, 1)
+VALUES
+(162, 1)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (162, 44)
+VALUES
+(162, 44)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (162, 58)
+VALUES
+(162, 58)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (162, 110)
+VALUES
+(162, 110)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (163, 2)
+VALUES
+(163, 2)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (163, 45)
+VALUES
+(163, 45)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (163, 59)
+VALUES
+(163, 59)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (163, 111)
+VALUES
+(163, 111)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (165, 40)
+VALUES
+(165, 40)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (165, 54)
+VALUES
+(165, 54)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (165, 106)
+VALUES
+(165, 106)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (165, 120)
+VALUES
+(165, 120)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (167, 3)
+VALUES
+(167, 3)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (167, 46)
+VALUES
+(167, 46)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (167, 60)
+VALUES
+(167, 60)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (167, 112)
+VALUES
+(167, 112)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (168, 4)
+VALUES
+(168, 4)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (168, 47)
+VALUES
+(168, 47)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (168, 61)
+VALUES
+(168, 61)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (168, 113)
+VALUES
+(168, 113)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (169, 5)
+VALUES
+(169, 5)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (169, 48)
+VALUES
+(169, 48)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (169, 77)
+VALUES
+(169, 77)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (169, 114)
+VALUES
+(169, 114)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (170, 19)
+VALUES
+(170, 19)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (170, 33)
+VALUES
+(170, 33)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (170, 47)
+VALUES
+(170, 47)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (170, 61)
+VALUES
+(170, 61)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (171, 41)
+VALUES
+(171, 41)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (171, 55)
+VALUES
+(171, 55)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (171, 107)
+VALUES
+(171, 107)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (171, 121)
+VALUES
+(171, 121)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (172, 42)
+VALUES
+(172, 42)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (172, 56)
+VALUES
+(172, 56)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (172, 108)
+VALUES
+(172, 108)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (172, 122)
+VALUES
+(172, 122)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (173, 12)
+VALUES
+(173, 12)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (173, 32)
+VALUES
+(173, 32)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (173, 46)
+VALUES
+(173, 46)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (173, 121)
+VALUES
+(173, 121)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (174, 37)
+VALUES
+(174, 37)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (174, 51)
+VALUES
+(174, 51)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (174, 80)
+VALUES
+(174, 80)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (174, 117)
+VALUES
+(174, 117)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (175, 38)
+VALUES
+(175, 38)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (175, 52)
+VALUES
+(175, 52)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (175, 104)
+VALUES
+(175, 104)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (175, 118)
+VALUES
+(175, 118)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (176, 4)
+VALUES
+(176, 4)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (176, 47)
+VALUES
+(176, 47)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (176, 61)
+VALUES
+(176, 61)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (176, 113)
+VALUES
+(176, 113)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (177, 39)
+VALUES
+(177, 39)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (177, 53)
+VALUES
+(177, 53)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (177, 105)
+VALUES
+(177, 105)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (177, 119)
+VALUES
+(177, 119)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (179, 34)
+VALUES
+(179, 34)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (179, 48)
+VALUES
+(179, 48)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (179, 77)
+VALUES
+(179, 77)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (179, 114)
+VALUES
+(179, 114)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (180, 35)
+VALUES
+(180, 35)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (180, 49)
+VALUES
+(180, 49)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (180, 78)
+VALUES
+(180, 78)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (180, 115)
+VALUES
+(180, 115)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (181, 36)
+VALUES
+(181, 36)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (181, 50)
+VALUES
+(181, 50)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (181, 79)
+VALUES
+(181, 79)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (181, 116)
+VALUES
+(181, 116)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (182, 1)
+VALUES
+(182, 1)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (182, 21)
+VALUES
+(182, 21)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (182, 35)
+VALUES
+(182, 35)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (182, 49)
+VALUES
+(182, 49)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (183, 26)
+VALUES
+(183, 26)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (183, 40)
+VALUES
+(183, 40)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (183, 54)
+VALUES
+(183, 54)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (183, 106)
+VALUES
+(183, 106)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (184, 19)
+VALUES
+(184, 19)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (184, 33)
+VALUES
+(184, 33)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (184, 47)
+VALUES
+(184, 47)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (184, 122)
+VALUES
+(184, 122)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (185, 20)
+VALUES
+(185, 20)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (185, 34)
+VALUES
+(185, 34)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (185, 48)
+VALUES
+(185, 48)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (185, 127)
+VALUES
+(185, 127)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (186, 32)
+VALUES
+(186, 32)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (186, 46)
+VALUES
+(186, 46)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (186, 60)
+VALUES
+(186, 60)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (186, 112)
+VALUES
+(186, 112)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (187, 33)
+VALUES
+(187, 33)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (187, 47)
+VALUES
+(187, 47)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (187, 61)
+VALUES
+(187, 61)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (187, 113)
+VALUES
+(187, 113)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (189, 27)
+VALUES
+(189, 27)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (189, 41)
+VALUES
+(189, 41)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (189, 55)
+VALUES
+(189, 55)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (189, 107)
+VALUES
+(189, 107)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (190, 28)
+VALUES
+(190, 28)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (190, 42)
+VALUES
+(190, 42)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (190, 56)
+VALUES
+(190, 56)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (190, 108)
+VALUES
+(190, 108)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (191, 4)
+VALUES
+(191, 4)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (191, 24)
+VALUES
+(191, 24)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (191, 61)
+VALUES
+(191, 61)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (191, 113)
+VALUES
+(191, 113)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (192, 29)
+VALUES
+(192, 29)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (192, 43)
+VALUES
+(192, 43)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (192, 57)
+VALUES
+(192, 57)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (192, 109)
+VALUES
+(192, 109)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (193, 30)
+VALUES
+(193, 30)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (193, 44)
+VALUES
+(193, 44)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (193, 58)
+VALUES
+(193, 58)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (193, 110)
+VALUES
+(193, 110)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (194, 31)
+VALUES
+(194, 31)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (194, 45)
+VALUES
+(194, 45)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (194, 59)
+VALUES
+(194, 59)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (194, 111)
+VALUES
+(194, 111)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (196, 22)
+VALUES
+(196, 22)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (196, 36)
+VALUES
+(196, 36)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (196, 50)
+VALUES
+(196, 50)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (196, 79)
+VALUES
+(196, 79)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (197, 2)
+VALUES
+(197, 2)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (197, 22)
+VALUES
+(197, 22)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (197, 36)
+VALUES
+(197, 36)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (197, 50)
+VALUES
+(197, 50)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (199, 23)
+VALUES
+(199, 23)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (199, 37)
+VALUES
+(199, 37)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (199, 51)
+VALUES
+(199, 51)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (199, 80)
+VALUES
+(199, 80)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (200, 3)
+VALUES
+(200, 3)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (200, 23)
+VALUES
+(200, 23)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (200, 37)
+VALUES
+(200, 37)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (200, 51)
+VALUES
+(200, 51)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (202, 12)
+VALUES
+(202, 12)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (202, 32)
+VALUES
+(202, 32)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (202, 46)
+VALUES
+(202, 46)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (202, 60)
+VALUES
+(202, 60)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (204, 24)
+VALUES
+(204, 24)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (204, 38)
+VALUES
+(204, 38)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (204, 52)
+VALUES
+(204, 52)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (204, 104)
+VALUES
+(204, 104)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (205, 25)
+VALUES
+(205, 25)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (205, 39)
+VALUES
+(205, 39)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (205, 53)
+VALUES
+(205, 53)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (205, 105)
+VALUES
+(205, 105)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (206, 20)
+VALUES
+(206, 20)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (206, 34)
+VALUES
+(206, 34)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (206, 48)
+VALUES
+(206, 48)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (206, 77)
+VALUES
+(206, 77)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (207, 19)
+VALUES
+(207, 19)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (207, 33)
+VALUES
+(207, 33)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (207, 47)
+VALUES
+(207, 47)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (207, 61)
+VALUES
+(207, 61)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (208, 20)
+VALUES
+(208, 20)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (208, 34)
+VALUES
+(208, 34)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (208, 48)
+VALUES
+(208, 48)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (208, 77)
+VALUES
+(208, 77)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (209, 21)
+VALUES
+(209, 21)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (209, 35)
+VALUES
+(209, 35)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (209, 49)
+VALUES
+(209, 49)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (209, 78)
+VALUES
+(209, 78)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (210, 3)
+VALUES
+(210, 3)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (210, 23)
+VALUES
+(210, 23)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (210, 37)
+VALUES
+(210, 37)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (210, 51)
+VALUES
+(210, 51)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (211, 4)
+VALUES
+(211, 4)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (211, 24)
+VALUES
+(211, 24)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (211, 38)
+VALUES
+(211, 38)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (211, 52)
+VALUES
+(211, 52)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (212, 8)
+VALUES
+(212, 8)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (212, 51)
+VALUES
+(212, 51)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (212, 80)
+VALUES
+(212, 80)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (212, 117)
+VALUES
+(212, 117)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (213, 9)
+VALUES
+(213, 9)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (213, 29)
+VALUES
+(213, 29)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (213, 43)
+VALUES
+(213, 43)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (213, 57)
+VALUES
+(213, 57)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (214, 10)
+VALUES
+(214, 10)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (214, 30)
+VALUES
+(214, 30)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (214, 44)
+VALUES
+(214, 44)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (214, 58)
+VALUES
+(214, 58)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (215, 11)
+VALUES
+(215, 11)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (215, 31)
+VALUES
+(215, 31)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (215, 45)
+VALUES
+(215, 45)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (215, 59)
+VALUES
+(215, 59)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (217, 31)
+VALUES
+(217, 31)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (217, 45)
+VALUES
+(217, 45)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (217, 59)
+VALUES
+(217, 59)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (218, 3)
+VALUES
+(218, 3)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (218, 23)
+VALUES
+(218, 23)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (218, 60)
+VALUES
+(218, 60)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (218, 112)
+VALUES
+(218, 112)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (219, 53)
+VALUES
+(219, 53)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (220, 26)
+VALUES
+(220, 26)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (220, 40)
+VALUES
+(220, 40)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (220, 54)
+VALUES
+(220, 54)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (221, 7)
+VALUES
+(221, 7)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (221, 27)
+VALUES
+(221, 27)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (221, 41)
+VALUES
+(221, 41)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (221, 55)
+VALUES
+(221, 55)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (222, 8)
+VALUES
+(222, 8)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (222, 42)
+VALUES
+(222, 42)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (222, 56)
+VALUES
+(222, 56)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (224, 10)
+VALUES
+(224, 10)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (224, 44)
+VALUES
+(224, 44)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (224, 119)
+VALUES
+(224, 119)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (225, 22)
+VALUES
+(225, 22)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (225, 59)
+VALUES
+(225, 59)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (225, 111)
+VALUES
+(225, 111)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (226, 4)
+VALUES
+(226, 4)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (226, 24)
+VALUES
+(226, 24)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (226, 38)
+VALUES
+(226, 38)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (226, 113)
+VALUES
+(226, 113)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (227, 114)
+VALUES
+(227, 114)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (228, 26)
+VALUES
+(228, 26)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (228, 40)
+VALUES
+(228, 40)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (228, 115)
+VALUES
+(228, 115)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (229, 7)
+VALUES
+(229, 7)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (229, 27)
+VALUES
+(229, 27)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (229, 41)
+VALUES
+(229, 41)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (229, 116)
+VALUES
+(229, 116)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (230, 8)
+VALUES
+(230, 8)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (230, 42)
+VALUES
+(230, 42)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (230, 117)
+VALUES
+(230, 117)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (232, 29)
+VALUES
+(232, 29)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (232, 43)
+VALUES
+(232, 43)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (232, 118)
+VALUES
+(232, 118)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (234, 20)
+VALUES
+(234, 20)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (234, 34)
+VALUES
+(234, 34)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (234, 109)
+VALUES
+(234, 109)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (234, 127)
+VALUES
+(234, 127)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (235, 1)
+VALUES
+(235, 1)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (235, 21)
+VALUES
+(235, 21)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (235, 35)
+VALUES
+(235, 35)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (235, 110)
+VALUES
+(235, 110)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (236, 22)
+VALUES
+(236, 22)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (236, 36)
+VALUES
+(236, 36)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (236, 111)
+VALUES
+(236, 111)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (237, 3)
+VALUES
+(237, 3)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (237, 23)
+VALUES
+(237, 23)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (237, 37)
+VALUES
+(237, 37)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (237, 112)
+VALUES
+(237, 112)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (239, 12)
+VALUES
+(239, 12)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (239, 32)
+VALUES
+(239, 32)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (239, 107)
+VALUES
+(239, 107)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (239, 121)
+VALUES
+(239, 121)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (240, 108)
+VALUES
+(240, 108)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (240, 122)
+VALUES
+(240, 122)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (243, 31)
+VALUES
+(243, 31)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (243, 106)
+VALUES
+(243, 106)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (243, 120)
+VALUES
+(243, 120)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (245, 20)
+VALUES
+(245, 20)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (245, 57)
+VALUES
+(245, 57)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (245, 109)
+VALUES
+(245, 109)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (245, 127)
+VALUES
+(245, 127)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (246, 1)
+VALUES
+(246, 1)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (246, 21)
+VALUES
+(246, 21)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (246, 58)
+VALUES
+(246, 58)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (246, 110)
+VALUES
+(246, 110)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (247, 22)
+VALUES
+(247, 22)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (247, 59)
+VALUES
+(247, 59)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (247, 111)
+VALUES
+(247, 111)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (248, 3)
+VALUES
+(248, 3)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (248, 23)
+VALUES
+(248, 23)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (248, 60)
+VALUES
+(248, 60)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (248, 112)
+VALUES
+(248, 112)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (249, 4)
+VALUES
+(249, 4)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (249, 24)
+VALUES
+(249, 24)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (249, 61)
+VALUES
+(249, 61)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (249, 113)
+VALUES
+(249, 113)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (250, 77)
+VALUES
+(250, 77)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (250, 114)
+VALUES
+(250, 114)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (252, 12)
+VALUES
+(252, 12)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (252, 55)
+VALUES
+(252, 55)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (252, 107)
+VALUES
+(252, 107)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (252, 121)
+VALUES
+(252, 121)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (253, 8)
+VALUES
+(253, 8)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (253, 42)
+VALUES
+(253, 42)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (253, 56)
+VALUES
+(253, 56)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (254, 26)
+VALUES
+(254, 26)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (254, 78)
+VALUES
+(254, 78)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (254, 115)
+VALUES
+(254, 115)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (255, 7)
+VALUES
+(255, 7)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (255, 27)
+VALUES
+(255, 27)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (255, 79)
+VALUES
+(255, 79)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (255, 116)
+VALUES
+(255, 116)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (256, 8)
+VALUES
+(256, 8)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (256, 80)
+VALUES
+(256, 80)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (256, 117)
+VALUES
+(256, 117)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (257, 29)
+VALUES
+(257, 29)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (257, 104)
+VALUES
+(257, 104)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (257, 118)
+VALUES
+(257, 118)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (258, 10)
+VALUES
+(258, 10)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (258, 105)
+VALUES
+(258, 105)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (258, 119)
+VALUES
+(258, 119)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (262, 56)
+VALUES
+(262, 56)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (262, 108)
+VALUES
+(262, 108)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (262, 122)
+VALUES
+(262, 122)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (263, 24)
+VALUES
+(263, 24)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (267, 37)
+VALUES
+(267, 37)
 
 INSERT INTO EmployeesProjects (EmployeeID, ProjectID)
-VALUES (267, 80)
+VALUES
+(267, 80)
 
 GO
 
-CREATE TABLE Departments(
-  DepartmentID int IDENTITY NOT NULL,
-  Name VARCHAR(50) NOT NULL,
-  ManagerID int NOT NULL,
-  CONSTRAINT PK_Departments PRIMARY KEY CLUSTERED (DepartmentID ASC)
+CREATE TABLE Departments
+(
+DepartmentID INT IDENTITY NOT NULL,
+Name VARCHAR(50) NOT NULL,
+ManagerID INT NOT NULL,
+CONSTRAINT PK_Departments PRIMARY KEY CLUSTERED (DepartmentID ASC)
 )
+
 GO
 
 SET IDENTITY_INSERT Departments ON
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (1, 'Engineering', 12)
+VALUES
+(1, 'Engineering', 12)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (2, 'Tool Design', 4)
+VALUES
+(2, 'Tool Design', 4)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (3, 'Sales', 273)
+VALUES
+(3, 'Sales', 273)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (4, 'Marketing', 46)
+VALUES
+(4, 'Marketing', 46)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (5, 'Purchasing', 6)
+VALUES
+(5, 'Purchasing', 6)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (6, 'Research and Development', 42)
+VALUES
+(6, 'Research and Development', 42)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (7, 'Production', 148)
+VALUES
+(7, 'Production', 148)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (8, 'Production Control', 21)
+VALUES
+(8, 'Production Control', 21)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (9, 'Human Resources', 30)
+VALUES
+(9, 'Human Resources', 30)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (10, 'Finance', 3)
+VALUES
+(10, 'Finance', 3)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (11, 'Information Services', 42)
+VALUES
+(11, 'Information Services', 42)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (12, 'Document Control', 90)
+VALUES
+(12, 'Document Control', 90)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (13, 'Quality Assurance', 274)
+VALUES
+(13, 'Quality Assurance', 274)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (14, 'Facilities and Maintenance', 218)
+VALUES
+(14, 'Facilities and Maintenance', 218)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (15, 'Shipping and Receiving', 85)
+VALUES
+(15, 'Shipping and Receiving', 85)
 
 INSERT INTO Departments (DepartmentID, Name, ManagerID)
-VALUES (16, 'Executive', 109)
+VALUES
+(16, 'Executive', 109)
 
 SET IDENTITY_INSERT Departments OFF
 
 GO
 
-CREATE TABLE Employees(
-  EmployeeID int IDENTITY NOT NULL,
-  FirstName VARCHAR(50) NOT NULL,
-  LastName VARCHAR(50) NOT NULL,
-  MiddleName VARCHAR(50) NULL,
-  JobTitle VARCHAR(50) NOT NULL,
-  DepartmentID int NOT NULL,
-  ManagerID int NULL,
-  HireDate smalldatetime NOT NULL,
-  Salary DECIMAL(15, 4) NOT NULL,
-  AddressID int NULL,
-  CONSTRAINT PK_Employees PRIMARY KEY CLUSTERED (EmployeeID ASC)
+CREATE TABLE Employees
+(
+EmployeeID INT IDENTITY NOT NULL,
+FirstName VARCHAR(50) NOT NULL,
+LastName VARCHAR(50) NOT NULL,
+MiddleName VARCHAR(50) NULL,
+JobTitle VARCHAR(50) NOT NULL,
+DepartmentID INT NOT NULL,
+ManagerID INT NULL,
+HireDate SMALLDATETIME NOT NULL,
+Salary DECIMAL(15, 4) NOT NULL,
+AddressID INT NULL,
+CONSTRAINT PK_Employees PRIMARY KEY CLUSTERED (EmployeeID ASC)
 )
+
 GO
 
 SET IDENTITY_INSERT Employees ON
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (1, 'Guy', 'Gilbert', 'R', 'Production Technician', 7, 16, '19980731', 12500, 166)
+VALUES 
+(1, 'Guy', 'Gilbert', 'R', 'Production Technician', 7, 16, '19980731', 12500, 166)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (2, 'Kevin', 'Brown', 'F', 'Marketing Assistant', 4, 6, '19990226', 13500, 102)
+VALUES
+(2, 'Kevin', 'Brown', 'F', 'Marketing Assistant', 4, 6, '19990226', 13500, 102)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (3, 'Roberto', 'Tamburello', NULL, 'Engineering Manager', 1, 12, '19991212', 43300, 193)
+VALUES
+(3, 'Roberto', 'Tamburello', NULL, 'Engineering Manager', 1, 12, '19991212', 43300, 193)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (4, 'Rob', 'Walters', NULL, 'Senior Tool Designer', 2, 3, '20000105', 29800, 155)
+VALUES
+(4, 'Rob', 'Walters', NULL, 'Senior Tool Designer', 2, 3, '20000105', 29800, 155)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (5, 'Thierry', 'D''Hers', 'B', 'Tool Designer', 2, 263, '20000111', 25000, 40)
+VALUES
+(5, 'Thierry', 'D''Hers', 'B', 'Tool Designer', 2, 263, '20000111', 25000, 40)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (6, 'David', 'Bradley', 'M', 'Marketing Manager', 5, 109, '20000120', 37500, 199)
+VALUES
+(6, 'David', 'Bradley', 'M', 'Marketing Manager', 5, 109, '20000120', 37500, 199)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (7, 'JoLynn', 'Dobney', 'M', 'Production Supervisor', 7, 21, '20000126', 25000, 275)
+VALUES
+(7, 'JoLynn', 'Dobney', 'M', 'Production Supervisor', 7, 21, '20000126', 25000, 275)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (8, 'Ruth', 'Ellerbrock', 'Ann', 'Production Technician', 7, 185, '20000206', 13500, 108)
+VALUES
+(8, 'Ruth', 'Ellerbrock', 'Ann', 'Production Technician', 7, 185, '20000206', 13500, 108)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (9, 'Gail', 'Erickson', 'A', 'Design Engineer', 1, 3, '20000206', 32700, 22)
+VALUES
+(9, 'Gail', 'Erickson', 'A', 'Design Engineer', 1, 3, '20000206', 32700, 22)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (10, 'Barry', 'Johnson', 'K', 'Production Technician', 7, 185, '20000207', 13500, 285)
+VALUES
+(10, 'Barry', 'Johnson', 'K', 'Production Technician', 7, 185, '20000207', 13500, 285)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (11, 'Jossef', 'Goldberg', 'H', 'Design Engineer', 1, 3, '20000224', 32700, 214)
+VALUES
+(11, 'Jossef', 'Goldberg', 'H', 'Design Engineer', 1, 3, '20000224', 32700, 214)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (12, 'Terri', 'Duffy', 'Lee', 'Vice President of Engineering', 1, 109, '20000303', 63500, 209)
+VALUES
+(12, 'Terri', 'Duffy', 'Lee', 'Vice President of Engineering', 1, 109, '20000303', 63500, 209)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (13, 'Sidney', 'Higa', 'M', 'Production Technician', 7, 185, '20000305', 13500, 73)
+VALUES
+(13, 'Sidney', 'Higa', 'M', 'Production Technician', 7, 185, '20000305', 13500, 73)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (14, 'Taylor', 'Maxwell', 'R', 'Production Supervisor', 7, 21, '20000311', 25000, 82)
+VALUES
+(14, 'Taylor', 'Maxwell', 'R', 'Production Supervisor', 7, 21, '20000311', 25000, 82)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (15, 'Jeffrey', 'Ford', 'L', 'Production Technician', 7, 185, '20000323', 13500, 156)
+VALUES
+(15, 'Jeffrey', 'Ford', 'L', 'Production Technician', 7, 185, '20000323', 13500, 156)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (16, 'Jo', 'Brown', 'A', 'Production Supervisor', 7, 21, '20000330', 25000, 70)
+VALUES
+(16, 'Jo', 'Brown', 'A', 'Production Supervisor', 7, 21, '20000330', 25000, 70)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (17, 'Doris', 'Hartwig', 'M', 'Production Technician', 7, 185, '20000411', 13500, 144)
+VALUES
+(17, 'Doris', 'Hartwig', 'M', 'Production Technician', 7, 185, '20000411', 13500, 144)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (18, 'John', 'Campbell', 'T', 'Production Supervisor', 7, 21, '20000418', 25000, 245)
+VALUES
+(18, 'John', 'Campbell', 'T', 'Production Supervisor', 7, 21, '20000418', 25000, 245)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (19, 'Diane', 'Glimp', 'R', 'Production Technician', 7, 185, '20000429', 13500, 184)
+VALUES
+(19, 'Diane', 'Glimp', 'R', 'Production Technician', 7, 185, '20000429', 13500, 184)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (20, 'Steven', 'Selikoff', 'T', 'Production Technician', 7, 173, '20010102', 9500, 104)
+VALUES
+(20, 'Steven', 'Selikoff', 'T', 'Production Technician', 7, 173, '20010102', 9500, 104)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (21, 'Peter', 'Krebs', 'J', 'Production Control Manager', 8, 148, '20010102', 24500, 11)
+VALUES
+(21, 'Peter', 'Krebs', 'J', 'Production Control Manager', 8, 148, '20010102', 24500, 11)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (22, 'Stuart', 'Munson', 'V', 'Production Technician', 7, 197, '20010103', 10000, 36)
+VALUES
+(22, 'Stuart', 'Munson', 'V', 'Production Technician', 7, 197, '20010103', 10000, 36)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (23, 'Greg', 'Alderson', 'F', 'Production Technician', 7, 197, '20010103', 10000, 18)
+VALUES
+(23, 'Greg', 'Alderson', 'F', 'Production Technician', 7, 197, '20010103', 10000, 18)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (24, 'David', 'Johnson', '', 'Production Technician', 7, 184, '20010103', 9500, 142)
+VALUES
+(24, 'David', 'Johnson', '', 'Production Technician', 7, 184, '20010103', 9500, 142)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (25, 'Zheng', 'Mu', 'W', 'Production Supervisor', 7, 21, '20010104', 25000, 278)
+VALUES
+(25, 'Zheng', 'Mu', 'W', 'Production Supervisor', 7, 21, '20010104', 25000, 278)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (26, 'Ivo', 'Salmre', 'William', 'Production Technician', 7, 108, '20010105', 14000, 165)
+VALUES
+(26, 'Ivo', 'Salmre', 'William', 'Production Technician', 7, 108, '20010105', 14000, 165)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (27, 'Paul', 'Komosinski', 'B', 'Production Technician', 7, 87, '20010105', 15000, 32)
+VALUES
+(27, 'Paul', 'Komosinski', 'B', 'Production Technician', 7, 87, '20010105', 15000, 32)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (28, 'Ashvini', 'Sharma', 'R', 'Network Administrator', 11, 150, '20010105', 32500, 133)
+VALUES
+(28, 'Ashvini', 'Sharma', 'R', 'Network Administrator', 11, 150, '20010105', 32500, 133)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (29, 'Kendall', 'Keil', 'C', 'Production Technician', 7, 14, '20010106', 11000, 257)
+VALUES
+(29, 'Kendall', 'Keil', 'C', 'Production Technician', 7, 14, '20010106', 11000, 257)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (30, 'Paula', 'Barreto de Mattos', 'M', 'Human Resources Manager', 9, 140, '20010107', 27100, 2)
+VALUES
+(30, 'Paula', 'Barreto de Mattos', 'M', 'Human Resources Manager', 9, 140, '20010107', 27100, 2)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (31, 'Alejandro', 'McGuel', 'E', 'Production Technician', 7, 210, '20010107', 15000, 274)
+VALUES
+(31, 'Alejandro', 'McGuel', 'E', 'Production Technician', 7, 210, '20010107', 15000, 274)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (32, 'Garrett', 'Young', 'R', 'Production Technician', 7, 184, '20010108', 9500, 283)
+VALUES
+(32, 'Garrett', 'Young', 'R', 'Production Technician', 7, 184, '20010108', 9500, 283)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (33, 'Jian Shuo', 'Wang', NULL, 'Production Technician', 7, 135, '20010108', 9500, 160)
+VALUES
+(33, 'Jian Shuo', 'Wang', NULL, 'Production Technician', 7, 135, '20010108', 9500, 160)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (34, 'Susan', 'Eaton', 'W', 'Stocker', 15, 85, '20010108', 9000, 204)
+VALUES
+(34, 'Susan', 'Eaton', 'W', 'Stocker', 15, 85, '20010108', 9000, 204)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (35, 'Vamsi', 'Kuppa', '', 'Shipping and Receiving Clerk', 15, 85, '20010108', 9500, 51)
+VALUES
+(35, 'Vamsi', 'Kuppa', '', 'Shipping and Receiving Clerk', 15, 85, '20010108', 9500, 51)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (36, 'Alice', 'Ciccu', 'O', 'Production Technician', 7, 38, '20010108', 11000, 284)
+VALUES
+(36, 'Alice', 'Ciccu', 'O', 'Production Technician', 7, 38, '20010108', 11000, 284)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (37, 'Simon', 'Rapier', 'D', 'Production Technician', 7, 7, '20010109', 12500, 64)
+VALUES
+(37, 'Simon', 'Rapier', 'D', 'Production Technician', 7, 7, '20010109', 12500, 64)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (38, 'Jinghao', 'Liu', 'K', 'Production Supervisor', 7, 21, '20010109', 25000, 55)
+VALUES
+(38, 'Jinghao', 'Liu', 'K', 'Production Supervisor', 7, 21, '20010109', 25000, 55)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (39, 'Michael', 'Hines', 'T', 'Production Technician', 7, 182, '20010110', 14000, 168)
+VALUES
+(39, 'Michael', 'Hines', 'T', 'Production Technician', 7, 182, '20010110', 14000, 168)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (40, 'Yvonne', 'McKay', 'S', 'Production Technician', 7, 159, '20010110', 10000, 107)
+VALUES
+(40, 'Yvonne', 'McKay', 'S', 'Production Technician', 7, 159, '20010110', 10000, 107)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (41, 'Peng', 'Wu', 'J', 'Quality Assurance Supervisor', 13, 200, '20010110', 21600, 39)
+VALUES
+(41, 'Peng', 'Wu', 'J', 'Quality Assurance Supervisor', 13, 200, '20010110', 21600, 39)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (42, 'Jean', 'Trenary', 'E', 'Information Services Manager', 11, 109, '20010112', 50500, 194)
+VALUES
+(42, 'Jean', 'Trenary', 'E', 'Information Services Manager', 11, 109, '20010112', 50500, 194)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
 VALUES (43, 'Russell', 'Hunter', NULL, 'Production Technician', 7, 74, '20010113', 11000, 258)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (44, 'A. Scott', 'Wright', NULL, 'Master Scheduler', 8, 148, '20010113', 23600, 172)
+VALUES
+(44, 'A. Scott', 'Wright', NULL, 'Master Scheduler', 8, 148, '20010113', 23600, 172)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (45, 'Fred', 'Northup', 'T', 'Production Technician', 7, 210, '20010113', 15000, 282)
+VALUES
+(45, 'Fred', 'Northup', 'T', 'Production Technician', 7, 210, '20010113', 15000, 282)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (46, 'Sariya', 'Harnpadoungsataya', 'E', 'Marketing Specialist', 4, 6, '20010113', 14400, 106)
+VALUES
+(46, 'Sariya', 'Harnpadoungsataya', 'E', 'Marketing Specialist', 4, 6, '20010113', 14400, 106)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (47, 'Willis', 'Johnson', 'T', 'Recruiter', 9, 30, '20010114', 18300, 99)
+VALUES
+(47, 'Willis', 'Johnson', 'T', 'Recruiter', 9, 30, '20010114', 18300, 99)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (48, 'Jun', 'Cao', 'T', 'Production Technician', 7, 38, '20010115', 11000, 197)
+VALUES
+(48, 'Jun', 'Cao', 'T', 'Production Technician', 7, 38, '20010115', 11000, 197)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (49, 'Christian', 'Kleinerman', 'E', 'Maintenance Supervisor', 14, 218, '20010115', 20400, 118)
+VALUES
+(49, 'Christian', 'Kleinerman', 'E', 'Maintenance Supervisor', 14, 218, '20010115', 20400, 118)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (50, 'Susan', 'Metters', 'A', 'Production Technician', 7, 184, '20010115', 9500, 224)
+VALUES
+(50, 'Susan', 'Metters', 'A', 'Production Technician', 7, 184, '20010115', 9500, 224)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (51, 'Reuben', 'D''sa', 'H', 'Production Supervisor', 7, 21, '20010116', 25000, 249)
+VALUES
+(51, 'Reuben', 'D''sa', 'H', 'Production Supervisor', 7, 21, '20010116', 25000, 249)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (52, 'Kirk', 'Koenigsbauer', 'J', 'Production Technician', 7, 123, '20010116', 10000, 250)
+VALUES
+(52, 'Kirk', 'Koenigsbauer', 'J', 'Production Technician', 7, 123, '20010116', 10000, 250)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (53, 'David', 'Ortiz', 'J', 'Production Technician', 7, 18, '20010116', 12500, 267)
+VALUES
+(53, 'David', 'Ortiz', 'J', 'Production Technician', 7, 18, '20010116', 12500, 267)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (54, 'Tengiz', 'Kharatishvili', '', 'Control Specialist', 12, 90, '20010117', 16800, 129)
+VALUES
+(54, 'Tengiz', 'Kharatishvili', '', 'Control Specialist', 12, 90, '20010117', 16800, 129)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (55, 'Hanying', 'Feng', 'P', 'Production Technician', 7, 143, '20010117', 14000, 182)
+VALUES
+(55, 'Hanying', 'Feng', 'P', 'Production Technician', 7, 143, '20010117', 14000, 182)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (56, 'Kevin', 'Liu', 'H', 'Production Technician', 7, 210, '20010118', 15000, 259)
+VALUES
+(56, 'Kevin', 'Liu', 'H', 'Production Technician', 7, 210, '20010118', 15000, 259)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (57, 'Annik', 'Stahl', 'O', 'Production Technician', 7, 16, '20010118', 12500, 262)
+VALUES
+(57, 'Annik', 'Stahl', 'O', 'Production Technician', 7, 16, '20010118', 12500, 262)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (58, 'Suroor', 'Fatima', 'R', 'Production Technician', 7, 38, '20010118', 11000, 86)
+VALUES
+(58, 'Suroor', 'Fatima', 'R', 'Production Technician', 7, 38, '20010118', 11000, 86)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (59, 'Deborah', 'Poe', 'E', 'Accounts Receivable Specialist', 10, 139, '20010119', 19000, 103)
+VALUES
+(59, 'Deborah', 'Poe', 'E', 'Accounts Receivable Specialist', 10, 139, '20010119', 19000, 103)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (60, 'Jim', 'Scardelis', 'H', 'Production Technician', 7, 74, '20010120', 11000, 88)
+VALUES
+(60, 'Jim', 'Scardelis', 'H', 'Production Technician', 7, 74, '20010120', 11000, 88)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (61, 'Carole', 'Poland', 'M', 'Production Technician', 7, 173, '20010120', 9500, 72)
+VALUES
+(61, 'Carole', 'Poland', 'M', 'Production Technician', 7, 173, '20010120', 9500, 72)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (62, 'George', 'Li', 'Z', 'Production Technician', 7, 184, '20010122', 9500, 58)
+VALUES
+(62, 'George', 'Li', 'Z', 'Production Technician', 7, 184, '20010122', 9500, 58)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (63, 'Gary', 'Yukish', 'W', 'Production Technician', 7, 87, '20010123', 15000, 80)
+VALUES
+(63, 'Gary', 'Yukish', 'W', 'Production Technician', 7, 87, '20010123', 15000, 80)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (64, 'Cristian', 'Petculescu', 'K', 'Production Supervisor', 7, 21, '20010123', 25000, 276)
+VALUES
+(64, 'Cristian', 'Petculescu', 'K', 'Production Supervisor', 7, 21, '20010123', 25000, 276)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (65, 'Raymond', 'Sam', 'K', 'Production Technician', 7, 143, '20010124', 14000, 75)
+VALUES
+(65, 'Raymond', 'Sam', 'K', 'Production Technician', 7, 143, '20010124', 14000, 75)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (66, 'Janaina', 'Bueno', 'Barreiro Gambaro', 'Application Specialist', 11, 42, '20010124', 27400, 131)
+VALUES
+(66, 'Janaina', 'Bueno', 'Barreiro Gambaro', 'Application Specialist', 11, 42, '20010124', 27400, 131)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (67, 'Bob', 'Hohman', '', 'Production Technician', 7, 14, '20010125', 11000, 44)
+VALUES
+(67, 'Bob', 'Hohman', '', 'Production Technician', 7, 14, '20010125', 11000, 44)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (68, 'Shammi', 'Mohamed', 'G', 'Production Technician', 7, 210, '20010125', 15000, 4)
+VALUES
+(68, 'Shammi', 'Mohamed', 'G', 'Production Technician', 7, 210, '20010125', 15000, 4)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (69, 'Linda', 'Moschell', 'K', 'Production Technician', 7, 38, '20010126', 11000, 5)
+VALUES
+(69, 'Linda', 'Moschell', 'K', 'Production Technician', 7, 38, '20010126', 11000, 5)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (70, 'Mindy', 'Martin', 'C', 'Benefits Specialist', 9, 30, '20010126', 16600, 171)
+VALUES
+(70, 'Mindy', 'Martin', 'C', 'Benefits Specialist', 9, 30, '20010126', 16600, 171)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (71, 'Wendy', 'Kahn', 'Beth', 'Finance Manager', 10, 140, '20010126', 43300, 232)
+VALUES
+(71, 'Wendy', 'Kahn', 'Beth', 'Finance Manager', 10, 140, '20010126', 43300, 232)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (72, 'Kim', 'Ralls', 'T', 'Stocker', 15, 85, '20010127', 9000, 42)
+VALUES
+(72, 'Kim', 'Ralls', 'T', 'Stocker', 15, 85, '20010127', 9000, 42)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (73, 'Sandra', 'Reategui Alayo', NULL, 'Production Technician', 7, 135, '20010127', 9500, 255)
+VALUES
+(73, 'Sandra', 'Reategui Alayo', NULL, 'Production Technician', 7, 135, '20010127', 9500, 255)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (74, 'Kok-Ho', 'Loh', 'T', 'Production Supervisor', 7, 21, '20010128', 25000, 10)
+VALUES
+(74, 'Kok-Ho', 'Loh', 'T', 'Production Supervisor', 7, 21, '20010128', 25000, 10)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (75, 'Douglas', 'Hite', 'B', 'Production Technician', 7, 159, '20010128', 10000, 57)
+VALUES
+(75, 'Douglas', 'Hite', 'B', 'Production Technician', 7, 159, '20010128', 10000, 57)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (76, 'James', 'Kramer', 'D', 'Production Technician', 7, 7, '20010128', 12500, 162)
+VALUES
+(76, 'James', 'Kramer', 'D', 'Production Technician', 7, 7, '20010128', 12500, 162)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (77, 'Sean', 'Alexander', 'P', 'Quality Assurance Technician', 13, 41, '20010129', 10600, 210)
+VALUES
+(77, 'Sean', 'Alexander', 'P', 'Quality Assurance Technician', 13, 41, '20010129', 10600, 210)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (78, 'Nitin', 'Mirchandani', 'S', 'Production Technician', 7, 182, '20010129', 14000, 231)
+VALUES
+(78, 'Nitin', 'Mirchandani', 'S', 'Production Technician', 7, 182, '20010129', 14000, 231)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (79, 'Diane', 'Margheim', 'L', 'Research and Development Engineer', 6, 158, '20010130', 40900, 111)
+VALUES
+(79, 'Diane', 'Margheim', 'L', 'Research and Development Engineer', 6, 158, '20010130', 40900, 111)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (80, 'Rebecca', 'Laszlo', 'A', 'Production Technician', 7, 16, '20010130', 12500, 6)
+VALUES
+(80, 'Rebecca', 'Laszlo', 'A', 'Production Technician', 7, 16, '20010130', 12500, 6)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (81, 'Rajesh', 'Patel', 'M', 'Production Technician', 7, 210, '20010201', 15000, 81)
+VALUES
+(81, 'Rajesh', 'Patel', 'M', 'Production Technician', 7, 210, '20010201', 15000, 81)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (82, 'Vidur', 'Luthra', 'X', 'Recruiter', 9, 30, '20010202', 18300, 176)
+VALUES
+(82, 'Vidur', 'Luthra', 'X', 'Recruiter', 9, 30, '20010202', 18300, 176)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (83, 'John', 'Evans', 'P', 'Production Technician', 7, 38, '20010202', 11000, 253)
+VALUES
+(83, 'John', 'Evans', 'P', 'Production Technician', 7, 38, '20010202', 11000, 253)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (84, 'Nancy', 'Anderson', 'A', 'Production Technician', 7, 7, '20010203', 12500, 227)
+VALUES
+(84, 'Nancy', 'Anderson', 'A', 'Production Technician', 7, 7, '20010203', 12500, 227)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (85, 'Pilar', 'Ackerman', 'G', 'Shipping and Receiving Supervisor', 15, 21, '20010203', 19200, 269)
+VALUES
+(85, 'Pilar', 'Ackerman', 'G', 'Shipping and Receiving Supervisor', 15, 21, '20010203', 19200, 269)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (86, 'David', 'Yalovsky', 'A', 'Production Technician', 7, 184, '20010203', 9500, 241)
+VALUES
+(86, 'David', 'Yalovsky', 'A', 'Production Technician', 7, 184, '20010203', 9500, 241)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (87, 'David', 'Hamilton', 'P', 'Production Supervisor', 7, 21, '20010204', 25000, 150)
+VALUES
+(87, 'David', 'Hamilton', 'P', 'Production Supervisor', 7, 21, '20010204', 25000, 150)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (88, 'Laura', 'Steele', 'C', 'Production Technician', 7, 123, '20010204', 10000, 62)
+VALUES
+(88, 'Laura', 'Steele', 'C', 'Production Technician', 7, 123, '20010204', 10000, 62)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (89, 'Margie', 'Shoop', 'W', 'Production Technician', 7, 16, '20010205', 12500, 92)
+VALUES
+(89, 'Margie', 'Shoop', 'W', 'Production Technician', 7, 16, '20010205', 12500, 92)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (90, 'Zainal', 'Arifin', 'T', 'Document Control Manager', 12, 200, '20010205', 17800, 128)
+VALUES
+(90, 'Zainal', 'Arifin', 'T', 'Document Control Manager', 12, 200, '20010205', 17800, 128)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (91, 'Lorraine', 'Nay', 'O', 'Production Technician', 7, 210, '20010205', 15000, 94)
+VALUES
+(91, 'Lorraine', 'Nay', 'O', 'Production Technician', 7, 210, '20010205', 15000, 94)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (92, 'Fadi', 'Fakhouri', 'K', 'Production Technician', 7, 143, '20010205', 14000, 281)
+VALUES
+(92, 'Fadi', 'Fakhouri', 'K', 'Production Technician', 7, 143, '20010205', 14000, 281)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (93, 'Ryan', 'Cornelsen', 'L', 'Production Technician', 7, 51, '20010206', 15000, 228)
+VALUES
+(93, 'Ryan', 'Cornelsen', 'L', 'Production Technician', 7, 51, '20010206', 15000, 228)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (94, 'Candy', 'Spoon', 'L', 'Accounts Receivable Specialist', 10, 139, '20010207', 19000, 122)
+VALUES
+(94, 'Candy', 'Spoon', 'L', 'Accounts Receivable Specialist', 10, 139, '20010207', 19000, 122)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (95, 'Nuan', 'Yu', NULL, 'Production Technician', 7, 74, '20010207', 11000, 12)
+VALUES
+(95, 'Nuan', 'Yu', NULL, 'Production Technician', 7, 74, '20010207', 11000, 12)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (96, 'William', 'Vong', 'S', 'Scheduling Assistant', 8, 44, '20010208', 16000, 35)
+VALUES
+(96, 'William', 'Vong', 'S', 'Scheduling Assistant', 8, 44, '20010208', 16000, 35)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (97, 'Bjorn', 'Rettig', 'M', 'Production Technician', 7, 173, '20010208', 9500, 268)
+VALUES
+(97, 'Bjorn', 'Rettig', 'M', 'Production Technician', 7, 173, '20010208', 9500, 268)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (98, 'Scott', 'Gode', 'R', 'Production Technician', 7, 197, '20010209', 10000, 256)
+VALUES
+(98, 'Scott', 'Gode', 'R', 'Production Technician', 7, 197, '20010209', 10000, 256)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (99, 'Michael', 'Rothkugel', 'L', 'Production Technician', 7, 87, '20010211', 15000, 93)
+VALUES
+(99, 'Michael', 'Rothkugel', 'L', 'Production Technician', 7, 87, '20010211', 15000, 93)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (100, 'Lane', 'Sacksteder', 'M', 'Production Technician', 7, 143, '20010212', 14000, 239)
+VALUES
+(100, 'Lane', 'Sacksteder', 'M', 'Production Technician', 7, 143, '20010212', 14000, 239)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (101, 'Pete', 'Male', 'C', 'Production Technician', 7, 14, '20010212', 11000, 273)
+VALUES
+(101, 'Pete', 'Male', 'C', 'Production Technician', 7, 14, '20010212', 11000, 273)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (102, 'Dan', 'Bacon', 'K', 'Application Specialist', 11, 42, '20010212', 27400, 126)
+VALUES
+(102, 'Dan', 'Bacon', 'K', 'Application Specialist', 11, 42, '20010212', 27400, 126)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (103, 'David', 'Barber', 'M', 'Assistant to the Chief Financial Officer', 10, 140, '20010213', 13500, 173)
+VALUES  
+(103, 'David', 'Barber', 'M', 'Assistant to the Chief Financial Officer', 10, 140, '20010213', 13500, 173)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (104, 'Lolan', 'Song', 'B', 'Production Technician', 7, 74, '20010213', 11000, 77)
+VALUES
+(104, 'Lolan', 'Song', 'B', 'Production Technician', 7, 74, '20010213', 11000, 77)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (105, 'Paula', 'Nartker', 'R', 'Production Technician', 7, 210, '20010213', 15000, 247)
+VALUES
+(105, 'Paula', 'Nartker', 'R', 'Production Technician', 7, 210, '20010213', 15000, 247)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (106, 'Mary', 'Gibson', 'E', 'Marketing Specialist', 4, 6, '20010213', 14400, 110)
+VALUES
+(106, 'Mary', 'Gibson', 'E', 'Marketing Specialist', 4, 6, '20010213', 14400, 110)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (107, 'Mindaugas', 'Krapauskas', 'J', 'Production Technician', 7, 38, '20010214', 11000, 74)
+VALUES
+(107, 'Mindaugas', 'Krapauskas', 'J', 'Production Technician', 7, 38, '20010214', 11000, 74)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (108, 'Eric', 'Gubbels', NULL, 'Production Supervisor', 7, 21, '20010215', 25000, 85)
+VALUES
+(108, 'Eric', 'Gubbels', NULL, 'Production Supervisor', 7, 21, '20010215', 25000, 85)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (109, 'Ken', 'Sanchez', 'J', 'Chief Executive Officer', 16, NULL, '20010215', 125500, 177)
+VALUES
+(109, 'Ken', 'Sanchez', 'J', 'Chief Executive Officer', 16, NULL, '20010215', 125500, 177)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (110, 'Jason', 'Watters', 'M', 'Production Technician', 7, 135, '20010215', 9500, 21)
+VALUES
+(110, 'Jason', 'Watters', 'M', 'Production Technician', 7, 135, '20010215', 9500, 21)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (111, 'Mark', 'Harrington', 'L', 'Quality Assurance Technician', 13, 41, '20010216', 10600, 139)
+VALUES
+(111, 'Mark', 'Harrington', 'L', 'Quality Assurance Technician', 13, 41, '20010216', 10600, 139)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (112, 'Janeth', 'Esteves', 'M', 'Production Technician', 7, 159, '20010216', 10000, 163)
+VALUES
+(112, 'Janeth', 'Esteves', 'M', 'Production Technician', 7, 159, '20010216', 10000, 163)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (113, 'Marc', 'Ingle', 'J', 'Production Technician', 7, 184, '20010217', 9500, 230)
+VALUES
+(113, 'Marc', 'Ingle', 'J', 'Production Technician', 7, 184, '20010217', 9500, 230)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (114, 'Gigi', 'Matthew', '', 'Research and Development Engineer', 6, 158, '20010217', 40900, 23)
+VALUES
+(114, 'Gigi', 'Matthew', '', 'Research and Development Engineer', 6, 158, '20010217', 40900, 23)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (115, 'Paul', 'Singh', 'R', 'Production Technician', 7, 108, '20010218', 14000, 16)
+VALUES
+(115, 'Paul', 'Singh', 'R', 'Production Technician', 7, 108, '20010218', 14000, 16)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (116, 'Frank', 'Lee', 'T', 'Production Technician', 7, 210, '20010218', 15000, 263)
+VALUES
+(116, 'Frank', 'Lee', 'T', 'Production Technician', 7, 210, '20010218', 15000, 263)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (117, 'Francois', 'Ajenstat', 'P', 'Database Administrator', 11, 42, '20010218', 38500, 127)
+VALUES
+(117, 'Francois', 'Ajenstat', 'P', 'Database Administrator', 11, 42, '20010218', 38500, 127)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (118, 'Diane', 'Tibbott', 'H', 'Production Technician', 7, 14, '20010219', 11000, 140)
+VALUES
+(118, 'Diane', 'Tibbott', 'H', 'Production Technician', 7, 14, '20010219', 11000, 140)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (119, 'Jill', 'Williams', 'A', 'Marketing Specialist', 4, 6, '20010219', 14400, 114)
+VALUES
+(119, 'Jill', 'Williams', 'A', 'Marketing Specialist', 4, 6, '20010219', 14400, 114)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (120, 'Angela', 'Barbariol', 'W', 'Production Technician', 7, 38, '20010221', 11000, 91)
+VALUES
+(120, 'Angela', 'Barbariol', 'W', 'Production Technician', 7, 38, '20010221', 11000, 91)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (121, 'Matthias', 'Berndt', 'T', 'Shipping and Receiving Clerk', 15, 85, '20010221', 9500, 201)
+VALUES
+(121, 'Matthias', 'Berndt', 'T', 'Shipping and Receiving Clerk', 15, 85, '20010221', 9500, 201)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (122, 'Bryan', 'Baker', NULL, 'Production Technician', 7, 7, '20010222', 12500, 166)
+VALUES
+(122, 'Bryan', 'Baker', NULL, 'Production Technician', 7, 7, '20010222', 12500, 166)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (123, 'Jeff', 'Hay', 'V', 'Production Supervisor', 7, 21, '20010222', 25000, 113)
+VALUES
+(123, 'Jeff', 'Hay', 'V', 'Production Supervisor', 7, 21, '20010222', 25000, 113)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (124, 'Eugene', 'Zabokritski', 'R', 'Production Technician', 7, 184, '20010222', 9500, 226)
+VALUES
+(124, 'Eugene', 'Zabokritski', 'R', 'Production Technician', 7, 184, '20010222', 9500, 226)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (125, 'Barbara', 'Decker', 'S', 'Production Technician', 7, 182, '20010223', 14000, 219)
+VALUES
+(125, 'Barbara', 'Decker', 'S', 'Production Technician', 7, 182, '20010223', 14000, 219)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (126, 'Chris', 'Preston', 'T', 'Production Technician', 7, 123, '20010223', 10000, 279)
+VALUES
+(126, 'Chris', 'Preston', 'T', 'Production Technician', 7, 123, '20010223', 10000, 279)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (127, 'Sean', 'Chai', '', 'Document Control Assistant', 12, 90, '20010223', 10300, 138)
+VALUES
+(127, 'Sean', 'Chai', '', 'Document Control Assistant', 12, 90, '20010223', 10300, 138)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (128, 'Dan', 'Wilson', 'B', 'Database Administrator', 11, 42, '20010223', 38500, 30)
+VALUES
+(128, 'Dan', 'Wilson', 'B', 'Database Administrator', 11, 42, '20010223', 38500, 30)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (129, 'Mark', 'McArthur', 'K', 'Production Technician', 7, 16, '20010224', 12500, 186)
+VALUES
+(129, 'Mark', 'McArthur', 'K', 'Production Technician', 7, 16, '20010224', 12500, 186)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (130, 'Bryan', 'Walton', 'A', 'Accounts Receivable Specialist', 10, 139, '20010225', 19000, 175)
+VALUES
+(130, 'Bryan', 'Walton', 'A', 'Accounts Receivable Specialist', 10, 139, '20010225', 19000, 175)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (131, 'Houman', 'Pournasseh', '', 'Production Technician', 7, 74, '20010226', 11000, 185)
+VALUES
+(131, 'Houman', 'Pournasseh', '', 'Production Technician', 7, 74, '20010226', 11000, 185)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (132, 'Sairaj', 'Uddin', 'L', 'Scheduling Assistant', 8, 44, '20010227', 16000, 190)
+VALUES
+(132, 'Sairaj', 'Uddin', 'L', 'Scheduling Assistant', 8, 44, '20010227', 16000, 190)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (133, 'Michiko', 'Osada', 'F', 'Production Technician', 7, 173, '20010227', 9500, 229)
+VALUES
+(133, 'Michiko', 'Osada', 'F', 'Production Technician', 7, 173, '20010227', 9500, 229)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (134, 'Benjamin', 'Martin', 'R', 'Production Technician', 7, 184, '20010228', 9500, 286)
+VALUES
+(134, 'Benjamin', 'Martin', 'R', 'Production Technician', 7, 184, '20010228', 9500, 286)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (135, 'Cynthia', 'Randall', 'S', 'Production Supervisor', 7, 21, '20010228', 25000, 147)
+VALUES
+(135, 'Cynthia', 'Randall', 'S', 'Production Supervisor', 7, 21, '20010228', 25000, 147)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (136, 'Kathie', 'Flood', 'E', 'Production Technician', 7, 197, '20010228', 10000, 100)
+VALUES
+(136, 'Kathie', 'Flood', 'E', 'Production Technician', 7, 197, '20010228', 10000, 100)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (137, 'Britta', 'Simon', 'L', 'Production Technician', 7, 16, '20010302', 12500, 95)
+VALUES
+(137, 'Britta', 'Simon', 'L', 'Production Technician', 7, 16, '20010302', 12500, 95)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (138, 'Brian', 'Lloyd', 'T', 'Production Technician', 7, 210, '20010302', 15000, 288)
+VALUES
+(138, 'Brian', 'Lloyd', 'T', 'Production Technician', 7, 210, '20010302', 15000, 288)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (139, 'David', 'Liu', 'J', 'Accounts Manager', 10, 140, '20010303', 34700, 119)
+VALUES
+(139, 'David', 'Liu', 'J', 'Accounts Manager', 10, 140, '20010303', 34700, 119)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (140, 'Laura', 'Norman', 'F', 'Chief Financial Officer', 16, 109, '20010304', 60100, 215)
+VALUES
+(140, 'Laura', 'Norman', 'F', 'Chief Financial Officer', 16, 109, '20010304', 60100, 215)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (141, 'Michael', 'Patten', 'W', 'Production Technician', 7, 38, '20010304', 11000, 96)
+VALUES
+(141, 'Michael', 'Patten', 'W', 'Production Technician', 7, 38, '20010304', 11000, 96)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (142, 'Andy', 'Ruth', 'M', 'Production Technician', 7, 135, '20010304', 9500, 1)
+VALUES
+(142, 'Andy', 'Ruth', 'M', 'Production Technician', 7, 135, '20010304', 9500, 1)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (143, 'Yuhong', 'Li', 'L', 'Production Supervisor', 7, 21, '20010305', 25000, 242)
+VALUES
+(143, 'Yuhong', 'Li', 'L', 'Production Supervisor', 7, 21, '20010305', 25000, 242)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (144, 'Robert', 'Rounthwaite', 'J', 'Production Technician', 7, 159, '20010306', 10000, 280)
+VALUES
+(144, 'Robert', 'Rounthwaite', 'J', 'Production Technician', 7, 159, '20010306', 10000, 280)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (145, 'Andreas', 'Berglund', 'T', 'Quality Assurance Technician', 13, 41, '20010306', 10600, 208)
+VALUES
+(145, 'Andreas', 'Berglund', 'T', 'Quality Assurance Technician', 13, 41, '20010306', 10600, 208)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (146, 'Reed', 'Koch', 'T', 'Production Technician', 7, 184, '20010306', 9500, 191)
+VALUES
+(146, 'Reed', 'Koch', 'T', 'Production Technician', 7, 184, '20010306', 9500, 191)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (147, 'Linda', 'Randall', 'A', 'Production Technician', 7, 143, '20010307', 14000, 260)
+VALUES
+(147, 'Linda', 'Randall', 'A', 'Production Technician', 7, 143, '20010307', 14000, 260)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (148, 'James', 'Hamilton', 'R', 'Vice President of Production', 7, 109, '20010307', 84100, 158)
+VALUES
+(148, 'James', 'Hamilton', 'R', 'Vice President of Production', 7, 109, '20010307', 84100, 158)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (149, 'Ramesh', 'Meyyappan', 'V', 'Application Specialist', 11, 42, '20010307', 27400, 130)
+VALUES
+(149, 'Ramesh', 'Meyyappan', 'V', 'Application Specialist', 11, 42, '20010307', 27400, 130)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (150, 'Stephanie', 'Conroy', 'A', 'Network Manager', 11, 42, '20010308', 39700, 136)
+VALUES
+(150, 'Stephanie', 'Conroy', 'A', 'Network Manager', 11, 42, '20010308', 39700, 136)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (151, 'Samantha', 'Smith', 'H', 'Production Technician', 7, 108, '20010308', 14000, 14)
+VALUES
+(151, 'Samantha', 'Smith', 'H', 'Production Technician', 7, 108, '20010308', 14000, 14)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (152, 'Tawana', 'Nusbaum', 'G', 'Production Technician', 7, 210, '20010309', 15000, 237)
+VALUES
+(152, 'Tawana', 'Nusbaum', 'G', 'Production Technician', 7, 210, '20010309', 15000, 237)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (153, 'Denise', 'Smith', 'H', 'Production Technician', 7, 14, '20010309', 11000, 143)
+VALUES
+(153, 'Denise', 'Smith', 'H', 'Production Technician', 7, 14, '20010309', 11000, 143)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (154, 'Hao', 'Chen', 'O', 'Human Resources Administrative Assistant', 9, 30, '20010310', 13900, 135)
+VALUES
+(154, 'Hao', 'Chen', 'O', 'Human Resources Administrative Assistant', 9, 30, '20010310', 13900, 135)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (155, 'Alex', 'Nayberg', 'M', 'Production Technician', 7, 123, '20010312', 10000, 174)
+VALUES
+(155, 'Alex', 'Nayberg', 'M', 'Production Technician', 7, 123, '20010312', 10000, 174)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (156, 'Eugene', 'Kogan', 'O', 'Production Technician', 7, 7, '20010312', 12500, 71)
+VALUES
+(156, 'Eugene', 'Kogan', 'O', 'Production Technician', 7, 7, '20010312', 12500, 71)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (157, 'Brandon', 'Heidepriem', 'G', 'Production Technician', 7, 16, '20010312', 12500, 189)
+VALUES
+(157, 'Brandon', 'Heidepriem', 'G', 'Production Technician', 7, 16, '20010312', 12500, 189)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (158, 'Dylan', 'Miller', 'A', 'Research and Development Manager', 6, 3, '20010312', 50500, 141)
+VALUES
+(158, 'Dylan', 'Miller', 'A', 'Research and Development Manager', 6, 3, '20010312', 50500, 141)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (159, 'Shane', 'Kim', 'S', 'Production Supervisor', 7, 21, '20010312', 25000, 20)
+VALUES
+(159, 'Shane', 'Kim', 'S', 'Production Supervisor', 7, 21, '20010312', 25000, 20)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (160, 'John', 'Chen', 'Y', 'Production Technician', 7, 182, '20010313', 14000, 65)
+VALUES
+(160, 'John', 'Chen', 'Y', 'Production Technician', 7, 182, '20010313', 14000, 65)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (161, 'Karen', 'Berge', 'R', 'Document Control Assistant', 12, 90, '20010313', 10300, 123)
+VALUES
+(161, 'Karen', 'Berge', 'R', 'Document Control Assistant', 12, 90, '20010313', 10300, 123)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (162, 'Jose', 'Lugo', 'R', 'Production Technician', 7, 16, '20010314', 12500, 271)
+VALUES
+(162, 'Jose', 'Lugo', 'R', 'Production Technician', 7, 16, '20010314', 12500, 271)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (163, 'Mandar', 'Samant', 'H', 'Production Technician', 7, 74, '20010314', 11000, 63)
+VALUES
+(163, 'Mandar', 'Samant', 'H', 'Production Technician', 7, 74, '20010314', 11000, 63)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (164, 'Mikael', 'Sandberg', 'Q', 'Buyer', 5, 274, '20010314', 18300, 50)
+VALUES
+(164, 'Mikael', 'Sandberg', 'Q', 'Buyer', 5, 274, '20010314', 18300, 50)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (165, 'Sameer', 'Tejani', 'A', 'Production Technician', 7, 74, '20010315', 11000, 66)
+VALUES
+(165, 'Sameer', 'Tejani', 'A', 'Production Technician', 7, 74, '20010315', 11000, 66)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (166, 'Dragan', 'Tomic', 'K', 'Accounts Payable Specialist', 10, 139, '20010315', 19000, 115)
+VALUES
+(166, 'Dragan', 'Tomic', 'K', 'Accounts Payable Specialist', 10, 139, '20010315', 19000, 115)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (167, 'Carol', 'Philips', 'M', 'Production Technician', 7, 173, '20010316', 9500, 45)
+VALUES
+(167, 'Carol', 'Philips', 'M', 'Production Technician', 7, 173, '20010316', 9500, 45)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (168, 'Rob', 'Caron', 'T', 'Production Technician', 7, 87, '20010317', 15000, 161)
+VALUES
+(168, 'Rob', 'Caron', 'T', 'Production Technician', 7, 87, '20010317', 15000, 161)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (169, 'Don', 'Hall', 'L', 'Production Technician', 7, 38, '20010317', 11000, 59)
+VALUES
+(169, 'Don', 'Hall', 'L', 'Production Technician', 7, 38, '20010317', 11000, 59)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (170, 'Alan', 'Brewer', 'J', 'Scheduling Assistant', 8, 44, '20010317', 16000, 151)
+VALUES
+(170, 'Alan', 'Brewer', 'J', 'Scheduling Assistant', 8, 44, '20010317', 16000, 151)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (171, 'David', 'Lawrence', 'Oliver', 'Production Technician', 7, 184, '20010318', 9500, 167)
+VALUES
+(171, 'David', 'Lawrence', 'Oliver', 'Production Technician', 7, 184, '20010318', 9500, 167)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (172, 'Baris', 'Cetinok', 'F', 'Production Technician', 7, 87, '20010319', 15000, 244)
+VALUES
+(172, 'Baris', 'Cetinok', 'F', 'Production Technician', 7, 87, '20010319', 15000, 244)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (173, 'Michael', 'Ray', 'Sean', 'Production Supervisor', 7, 21, '20010319', 25000, 277)
+VALUES
+(173, 'Michael', 'Ray', 'Sean', 'Production Supervisor', 7, 21, '20010319', 25000, 277)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (174, 'Steve', 'Masters', 'F', 'Production Technician', 7, 18, '20010319', 12500, 252)
+VALUES
+(174, 'Steve', 'Masters', 'F', 'Production Technician', 7, 18, '20010319', 12500, 252)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (175, 'Suchitra', 'Mohan', 'O', 'Production Technician', 7, 16, '20010320', 12500, 31)
+VALUES
+(175, 'Suchitra', 'Mohan', 'O', 'Production Technician', 7, 16, '20010320', 12500, 31)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (176, 'Karen', 'Berg', 'A', 'Application Specialist', 11, 42, '20010320', 27400, 132)
+VALUES
+(176, 'Karen', 'Berg', 'A', 'Application Specialist', 11, 42, '20010320', 27400, 132)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (177, 'Terrence', 'Earls', 'W', 'Production Technician', 7, 143, '20010320', 14000, 34)
+VALUES
+(177, 'Terrence', 'Earls', 'W', 'Production Technician', 7, 143, '20010320', 14000, 34)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (178, 'Barbara', 'Moreland', 'C', 'Accountant', 10, 139, '20010322', 26400, 254)
+VALUES
+(178, 'Barbara', 'Moreland', 'C', 'Accountant', 10, 139, '20010322', 26400, 254)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (179, 'Chad', 'Niswonger', 'W', 'Production Technician', 7, 38, '20010322', 11000, 46)
+VALUES
+(179, 'Chad', 'Niswonger', 'W', 'Production Technician', 7, 38, '20010322', 11000, 46)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (180, 'Rostislav', 'Shabalin', 'E', 'Production Technician', 7, 135, '20010323', 9500, 9)
+VALUES
+(180, 'Rostislav', 'Shabalin', 'E', 'Production Technician', 7, 135, '20010323', 9500, 9)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (181, 'Belinda', 'Newman', 'M', 'Production Technician', 7, 197, '20010324', 10000, 43)
+VALUES
+(181, 'Belinda', 'Newman', 'M', 'Production Technician', 7, 197, '20010324', 10000, 43)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (182, 'Katie', 'McAskill-White', 'L', 'Production Supervisor', 7, 21, '20010324', 25000, 240)
+VALUES
+(182, 'Katie', 'McAskill-White', 'L', 'Production Supervisor', 7, 21, '20010324', 25000, 240)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (183, 'Russell', 'King', 'M', 'Production Technician', 7, 184, '20010325', 9500, 3)
+VALUES
+(183, 'Russell', 'King', 'M', 'Production Technician', 7, 184, '20010325', 9500, 3)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (184, 'Jack', 'Richins', 'S', 'Production Supervisor', 7, 21, '20010325', 25000, 169)
+VALUES
+(184, 'Jack', 'Richins', 'S', 'Production Supervisor', 7, 21, '20010325', 25000, 169)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (185, 'Andrew', 'Hill', 'R', 'Production Supervisor', 7, 21, '20010326', 25000, 97)
+VALUES
+(185, 'Andrew', 'Hill', 'R', 'Production Supervisor', 7, 21, '20010326', 25000, 97)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (186, 'Nicole', 'Holliday', 'B', 'Production Technician', 7, 87, '20010326', 15000, 238)
+VALUES
+(186, 'Nicole', 'Holliday', 'B', 'Production Technician', 7, 87, '20010326', 15000, 238)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (187, 'Frank', 'Miller', 'T', 'Production Technician', 7, 14, '20010327', 11000, 289)
+VALUES
+(187, 'Frank', 'Miller', 'T', 'Production Technician', 7, 14, '20010327', 11000, 289)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (188, 'Peter', 'Connelly', 'I', 'Network Administrator', 11, 150, '20010327', 32500, 137)
+VALUES
+(188, 'Peter', 'Connelly', 'I', 'Network Administrator', 11, 150, '20010327', 32500, 137)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (189, 'Anibal', 'Sousa', 'T', 'Production Technician', 7, 108, '20010327', 14000, 183)
+VALUES
+(189, 'Anibal', 'Sousa', 'T', 'Production Technician', 7, 108, '20010327', 14000, 183)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (190, 'Ken', 'Myer', 'L', 'Production Technician', 7, 210, '20010328', 15000, 105)
+VALUES
+(190, 'Ken', 'Myer', 'L', 'Production Technician', 7, 210, '20010328', 15000, 105)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (191, 'Grant', 'Culbertson', '', 'Human Resources Administrative Assistant', 9, 30, '20010329', 13900, 117)
+VALUES
+(191, 'Grant', 'Culbertson', '', 'Human Resources Administrative Assistant', 9, 30, '20010329', 13900, 117)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (192, 'Michael', 'Entin', 'T', 'Production Technician', 7, 38, '20010329', 11000, 195)
+VALUES
+(192, 'Michael', 'Entin', 'T', 'Production Technician', 7, 38, '20010329', 11000, 195)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (193, 'Lionel', 'Penuchot', 'C', 'Production Technician', 7, 159, '20010330', 10000, 261)
+VALUES
+(193, 'Lionel', 'Penuchot', 'C', 'Production Technician', 7, 159, '20010330', 10000, 261)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (194, 'Thomas', 'Michaels', 'R', 'Production Technician', 7, 7, '20010330', 12500, 78)
+VALUES
+(194, 'Thomas', 'Michaels', 'R', 'Production Technician', 7, 7, '20010330', 12500, 78)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (195, 'Jimmy', 'Bischoff', 'T', 'Stocker', 15, 85, '20010330', 9000, 206)
+VALUES
+(195, 'Jimmy', 'Bischoff', 'T', 'Stocker', 15, 85, '20010330', 9000, 206)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (196, 'Michael', 'Vanderhyde', 'T', 'Production Technician', 7, 135, '20010330', 9500, 90)
+VALUES
+(196, 'Michael', 'Vanderhyde', 'T', 'Production Technician', 7, 135, '20010330', 9500, 90)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (197, 'Lori', 'Kane', 'A', 'Production Supervisor', 7, 21, '20010330', 25000, 198)
+VALUES
+(197, 'Lori', 'Kane', 'A', 'Production Supervisor', 7, 21, '20010330', 25000, 198)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (198, 'Arvind', 'Rao', 'B', 'Buyer', 5, 274, '20010401', 18300, 212)
+VALUES
+(198, 'Arvind', 'Rao', 'B', 'Buyer', 5, 274, '20010401', 18300, 212)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (199, 'Stefen', 'Hesse', 'A', 'Production Technician', 7, 182, '20010401', 14000, 68)
+VALUES
+(199, 'Stefen', 'Hesse', 'A', 'Production Technician', 7, 182, '20010401', 14000, 68)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (200, 'Hazem', 'Abolrous', 'E', 'Quality Assurance Manager', 13, 148, '20010401', 28800, 148)
+VALUES
+(200, 'Hazem', 'Abolrous', 'E', 'Quality Assurance Manager', 13, 148, '20010401', 28800, 148)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (201, 'Janet', 'Sheperdigian', 'L', 'Accounts Payable Specialist', 10, 139, '20010402', 19000, 218)
+VALUES
+(201, 'Janet', 'Sheperdigian', 'L', 'Accounts Payable Specialist', 10, 139, '20010402', 19000, 218)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (202, 'Elizabeth', 'Keyser', 'I', 'Production Technician', 7, 74, '20010403', 11000, 152)
+VALUES
+(202, 'Elizabeth', 'Keyser', 'I', 'Production Technician', 7, 74, '20010403', 11000, 152)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (203, 'Terry', 'Eminhizer', 'J', 'Marketing Specialist', 4, 6, '20010403', 14400, 19)
+VALUES
+(203, 'Terry', 'Eminhizer', 'J', 'Marketing Specialist', 4, 6, '20010403', 14400, 19)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (204, 'John', 'Frum', '', 'Production Technician', 7, 184, '20010404', 9500, 112)
+VALUES
+(204, 'John', 'Frum', '', 'Production Technician', 7, 184, '20010404', 9500, 112)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (205, 'Merav', 'Netz', 'A', 'Production Technician', 7, 173, '20010404', 9500, 270)
+VALUES
+(205, 'Merav', 'Netz', 'A', 'Production Technician', 7, 173, '20010404', 9500, 270)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (206, 'Brian', 'LaMee', 'P', 'Scheduling Assistant', 8, 44, '20010404', 16000, 109)
+VALUES
+(206, 'Brian', 'LaMee', 'P', 'Scheduling Assistant', 8, 44, '20010404', 16000, 109)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (207, 'Kitti', 'Lertpiriyasuwat', 'H', 'Production Technician', 7, 38, '20010405', 11000, 272)
+VALUES
+(207, 'Kitti', 'Lertpiriyasuwat', 'H', 'Production Technician', 7, 38, '20010405', 11000, 272)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (208, 'Jay', 'Adams', 'G', 'Production Technician', 7, 18, '20010406', 12500, 157)
+VALUES
+(208, 'Jay', 'Adams', 'G', 'Production Technician', 7, 18, '20010406', 12500, 157)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (209, 'Jan', 'Miksovsky', 'S', 'Production Technician', 7, 184, '20010406', 9500, 101)
+VALUES
+(209, 'Jan', 'Miksovsky', 'S', 'Production Technician', 7, 184, '20010406', 9500, 101)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (210, 'Brenda', 'Diaz', 'M', 'Production Supervisor', 7, 21, '20010406', 25000, 251)
+VALUES
+(210, 'Brenda', 'Diaz', 'M', 'Production Supervisor', 7, 21, '20010406', 25000, 251)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (211, 'Andrew', 'Cencini', 'M', 'Production Technician', 7, 123, '20010407', 10000, 233)
+VALUES
+(211, 'Andrew', 'Cencini', 'M', 'Production Technician', 7, 123, '20010407', 10000, 233)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (212, 'Chris', 'Norred', 'K', 'Control Specialist', 12, 90, '20010407', 16800, 125)
+VALUES
+(212, 'Chris', 'Norred', 'K', 'Control Specialist', 12, 90, '20010407', 16800, 125)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (213, 'Chris', 'Okelberry', 'O', 'Production Technician', 7, 16, '20010408', 12500, 188)
+VALUES
+(213, 'Chris', 'Okelberry', 'O', 'Production Technician', 7, 16, '20010408', 12500, 188)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (214, 'Shelley', 'Dyck', '', 'Production Technician', 7, 143, '20010408', 14000, 164)
+VALUES
+(214, 'Shelley', 'Dyck', '', 'Production Technician', 7, 143, '20010408', 14000, 164)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (215, 'Gabe', 'Mares', 'B', 'Production Technician', 7, 210, '20010409', 15000, 87)
+VALUES
+(215, 'Gabe', 'Mares', 'B', 'Production Technician', 7, 210, '20010409', 15000, 87)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (216, 'Mike', 'Seamans', 'K', 'Accountant', 10, 139, '20010409', 26400, 120)
+VALUES
+(216, 'Mike', 'Seamans', 'K', 'Accountant', 10, 139, '20010409', 26400, 120)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (217, 'Michael', 'Raheem', NULL, 'Research and Development Manager', 6, 158, '20010604', 42500, 236)
+VALUES
+(217, 'Michael', 'Raheem', NULL, 'Research and Development Manager', 6, 158, '20010604', 42500, 236)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (218, 'Gary', 'Altman', 'E.', 'Facilities Manager', 14, 148, '20020103', 24000, 203)
+VALUES
+(218, 'Gary', 'Altman', 'E.', 'Facilities Manager', 14, 148, '20020103', 24000, 203)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (219, 'Charles', 'Fitzgerald', 'B', 'Production Technician', 7, 18, '20020104', 12500, 223)
+VALUES
+(219, 'Charles', 'Fitzgerald', 'B', 'Production Technician', 7, 18, '20020104', 12500, 223)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (220, 'Ebru', 'Ersan', '', 'Production Technician', 7, 25, '20020107', 13500, 225)
+VALUES
+(220, 'Ebru', 'Ersan', '', 'Production Technician', 7, 25, '20020107', 13500, 225)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (221, 'Sylvester', 'Valdez', 'A', 'Production Technician', 7, 108, '20020112', 14000, 25)
+VALUES
+(221, 'Sylvester', 'Valdez', 'A', 'Production Technician', 7, 108, '20020112', 14000, 25)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (222, 'Brian', 'Goldstein', 'Richard', 'Production Technician', 7, 51, '20020112', 15000, 48)
+VALUES
+(222, 'Brian', 'Goldstein', 'Richard', 'Production Technician', 7, 51, '20020112', 15000, 48)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (223, 'Linda', 'Meisner', 'P', 'Buyer', 5, 274, '20020118', 18300, 28)
+VALUES
+(223, 'Linda', 'Meisner', 'P', 'Buyer', 5, 274, '20020118', 18300, 28)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (224, 'Betsy', 'Stadick', 'A', 'Production Technician', 7, 64, '20020119', 13500, 47)
+VALUES
+(224, 'Betsy', 'Stadick', 'A', 'Production Technician', 7, 64, '20020119', 13500, 47)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (225, 'Magnus', 'Hedlund', 'E', 'Facilities Administrative Assistant', 14, 218, '20020122', 9800, 211)
+VALUES
+(225, 'Magnus', 'Hedlund', 'E', 'Facilities Administrative Assistant', 14, 218, '20020122', 9800, 211)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (226, 'Karan', 'Khanna', 'R', 'Production Technician', 7, 18, '20020123', 12500, 248)
+VALUES
+(226, 'Karan', 'Khanna', 'R', 'Production Technician', 7, 18, '20020123', 12500, 248)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (227, 'Mary', 'Baker', 'R', 'Production Technician', 7, 25, '20020126', 13500, 246)
+VALUES
+(227, 'Mary', 'Baker', 'R', 'Production Technician', 7, 25, '20020126', 13500, 246)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (228, 'Kevin', 'Homer', 'M', 'Production Technician', 7, 25, '20020126', 13500, 29)
+VALUES
+(228, 'Kevin', 'Homer', 'M', 'Production Technician', 7, 25, '20020126', 13500, 29)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (229, 'Mihail', 'Frintu', 'U', 'Production Technician', 7, 51, '20020130', 15000, 89)
+VALUES
+(229, 'Mihail', 'Frintu', 'U', 'Production Technician', 7, 51, '20020130', 15000, 89)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (230, 'Bonnie', 'Kearney', '', 'Production Technician', 7, 185, '20020202', 13500, 287)
+VALUES
+(230, 'Bonnie', 'Kearney', '', 'Production Technician', 7, 185, '20020202', 13500, 287)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (231, 'Fukiko', 'Ogisu', 'J', 'Buyer', 5, 274, '20020205', 18300, 17)
+VALUES
+(231, 'Fukiko', 'Ogisu', 'J', 'Buyer', 5, 274, '20020205', 18300, 17)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (232, 'Hung-Fu', 'Ting', 'T', 'Production Technician', 7, 108, '20020207', 14000, 220)
+VALUES
+(232, 'Hung-Fu', 'Ting', 'T', 'Production Technician', 7, 108, '20020207', 14000, 220)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (233, 'Gordon', 'Hee', 'L', 'Buyer', 5, 274, '20020212', 18300, 15)
+VALUES
+(233, 'Gordon', 'Hee', 'L', 'Buyer', 5, 274, '20020212', 18300, 15)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (234, 'Kimberly', 'Zimmerman', 'B', 'Production Technician', 7, 64, '20020213', 13500, 266)
+VALUES
+(234, 'Kimberly', 'Zimmerman', 'B', 'Production Technician', 7, 64, '20020213', 13500, 266)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (235, 'Kim', 'Abercrombie', 'B', 'Production Technician', 7, 16, '20020217', 12500, 56)
+VALUES
+(235, 'Kim', 'Abercrombie', 'B', 'Production Technician', 7, 16, '20020217', 12500, 56)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (236, 'Sandeep', 'Kaliyath', 'P', 'Production Technician', 7, 51, '20020218', 15000, 234)
+VALUES
+(236, 'Sandeep', 'Kaliyath', 'P', 'Production Technician', 7, 51, '20020218', 15000, 234)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (237, 'Prasanna', 'Samarawickrama', 'E', 'Production Technician', 7, 108, '20020223', 14000, 187)
+VALUES
+(237, 'Prasanna', 'Samarawickrama', 'E', 'Production Technician', 7, 108, '20020223', 14000, 187)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (238, 'Frank', 'Pellow', 'S', 'Buyer', 5, 274, '20020224', 18300, 213)
+VALUES
+(238, 'Frank', 'Pellow', 'S', 'Buyer', 5, 274, '20020224', 18300, 213)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (239, 'Min', 'Su', 'G', 'Production Technician', 7, 108, '20020225', 14000, 24)
+VALUES
+(239, 'Min', 'Su', 'G', 'Production Technician', 7, 108, '20020225', 14000, 24)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (240, 'Eric', 'Brown', 'L', 'Production Technician', 7, 51, '20020225', 15000, 67)
+VALUES
+(240, 'Eric', 'Brown', 'L', 'Production Technician', 7, 51, '20020225', 15000, 67)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (241, 'Eric', 'Kurjan', 'S', 'Buyer', 5, 274, '20020228', 18300, 207)
+VALUES
+(241, 'Eric', 'Kurjan', 'S', 'Buyer', 5, 274, '20020228', 18300, 207)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (242, 'Pat', 'Coleman', 'H', 'Janitor', 14, 49, '20020228', 9300, 116)
+VALUES
+(242, 'Pat', 'Coleman', 'H', 'Janitor', 14, 49, '20020228', 9300, 116)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (243, 'Maciej', 'Dusza', 'W', 'Production Technician', 7, 18, '20020301', 12500, 83)
+VALUES
+(243, 'Maciej', 'Dusza', 'W', 'Production Technician', 7, 18, '20020301', 12500, 83)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (244, 'Erin', 'Hagens', 'M', 'Buyer', 5, 274, '20020303', 18300, 8)
+VALUES
+(244, 'Erin', 'Hagens', 'M', 'Buyer', 5, 274, '20020303', 18300, 8)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (245, 'Patrick', 'Wedge', 'C', 'Production Technician', 7, 64, '20020304', 13500, 7)
+VALUES
+(245, 'Patrick', 'Wedge', 'C', 'Production Technician', 7, 64, '20020304', 13500, 7)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (246, 'Frank', 'Martinez', 'R', 'Production Technician', 7, 51, '20020308', 15000, 290)
+VALUES
+(246, 'Frank', 'Martinez', 'R', 'Production Technician', 7, 51, '20020308', 15000, 290)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (247, 'Ed', 'Dudenhoefer', 'R', 'Production Technician', 7, 16, '20020308', 12500, 243)
+VALUES
+(247, 'Ed', 'Dudenhoefer', 'R', 'Production Technician', 7, 16, '20020308', 12500, 243)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (248, 'Christopher', 'Hill', 'E', 'Production Technician', 7, 25, '20020311', 13500, 41)
+VALUES
+(248, 'Christopher', 'Hill', 'E', 'Production Technician', 7, 25, '20020311', 13500, 41)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (249, 'Patrick', 'Cook', 'M', 'Production Technician', 7, 51, '20020315', 15000, 264)
+VALUES
+(249, 'Patrick', 'Cook', 'M', 'Production Technician', 7, 51, '20020315', 15000, 264)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (250, 'Krishna', 'Sunkammurali', NULL, 'Production Technician', 7, 108, '20020316', 14000, 79)
+VALUES
+(250, 'Krishna', 'Sunkammurali', NULL, 'Production Technician', 7, 108, '20020316', 14000, 79)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (251, 'Lori', 'Penor', 'K', 'Janitor', 14, 49, '20020319', 9300, 124)
+VALUES
+(251, 'Lori', 'Penor', 'K', 'Janitor', 14, 49, '20020319', 9300, 124)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (252, 'Danielle', 'Tiedt', 'C', 'Production Technician', 7, 64, '20020323', 13500, 146)
+VALUES
+(252, 'Danielle', 'Tiedt', 'C', 'Production Technician', 7, 64, '20020323', 13500, 146)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (253, 'Sootha', 'Charncherngkha', 'T', 'Quality Assurance Technician', 13, 41, '20020326', 10600, 149)
+VALUES
+(253, 'Sootha', 'Charncherngkha', 'T', 'Quality Assurance Technician', 13, 41, '20020326', 10600, 149)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (254, 'Michael', 'Zwilling', 'J', 'Production Technician', 7, 18, '20020326', 12500, 76)
+VALUES
+(254, 'Michael', 'Zwilling', 'J', 'Production Technician', 7, 18, '20020326', 12500, 76)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (255, 'Randy', 'Reeves', 'T', 'Production Technician', 7, 18, '20020326', 12500, 84)
+VALUES
+(255, 'Randy', 'Reeves', 'T', 'Production Technician', 7, 18, '20020326', 12500, 84)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (256, 'John', 'Kane', 'T', 'Production Technician', 7, 25, '20020330', 13500, 69)
+VALUES
+(256, 'John', 'Kane', 'T', 'Production Technician', 7, 25, '20020330', 13500, 69)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (257, 'Jack', 'Creasey', 'T', 'Production Technician', 7, 51, '20020403', 15000, 265)
+VALUES
+(257, 'Jack', 'Creasey', 'T', 'Production Technician', 7, 51, '20020403', 15000, 265)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (258, 'Olinda', 'Turner', 'C', 'Production Technician', 7, 108, '20020404', 14000, 33)
+VALUES
+(258, 'Olinda', 'Turner', 'C', 'Production Technician', 7, 108, '20020404', 14000, 33)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (259, 'Stuart', 'Macrae', 'J', 'Janitor', 14, 49, '20020405', 9300, 205)
+VALUES
+(259, 'Stuart', 'Macrae', 'J', 'Janitor', 14, 49, '20020405', 9300, 205)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (260, 'Jo', 'Berry', 'L', 'Janitor', 14, 49, '20020407', 9300, 121)
+VALUES
+(260, 'Jo', 'Berry', 'L', 'Janitor', 14, 49, '20020407', 9300, 121)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (261, 'Ben', 'Miller', 'T', 'Buyer', 5, 274, '20020409', 18300, 192)
+VALUES
+(261, 'Ben', 'Miller', 'T', 'Buyer', 5, 274, '20020409', 18300, 192)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (262, 'Tom', 'Vande Velde', 'M', 'Production Technician', 7, 64, '20020410', 13500, 98)
+VALUES
+(262, 'Tom', 'Vande Velde', 'M', 'Production Technician', 7, 64, '20020410', 13500, 98)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (263, 'Ovidiu', 'Cracium', 'V', 'Senior Tool Designer', 2, 3, '20030105', 28800, 145)
+VALUES
+(263, 'Ovidiu', 'Cracium', 'V', 'Senior Tool Designer', 2, 3, '20030105', 28800, 145)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (264, 'Annette', 'Hill', 'L', 'Purchasing Assistant', 5, 274, '20030106', 12800, 181)
+VALUES
+(264, 'Annette', 'Hill', 'L', 'Purchasing Assistant', 5, 274, '20030106', 12800, 181)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (265, 'Janice', 'Galvin', 'M', 'Tool Designer', 2, 263, '20030123', 25000, 200)
+VALUES
+(265, 'Janice', 'Galvin', 'M', 'Tool Designer', 2, 263, '20030123', 25000, 200)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (266, 'Reinout', 'Hillmann', '', 'Purchasing Assistant', 5, 274, '20030125', 12800, 27)
+VALUES
+(266, 'Reinout', 'Hillmann', '', 'Purchasing Assistant', 5, 274, '20030125', 12800, 27)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (267, 'Michael', 'Sullivan', 'I', 'Senior Design Engineer', 1, 3, '20030130', 36100, 217)
+VALUES
+(267, 'Michael', 'Sullivan', 'I', 'Senior Design Engineer', 1, 3, '20030130', 36100, 217)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (268, 'Stephen', 'Jiang', 'Y', 'North American Sales Manager', 3, 273, '20030204', 48100, 196)
+VALUES
+(268, 'Stephen', 'Jiang', 'Y', 'North American Sales Manager', 3, 273, '20030204', 48100, 196)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (269, 'Wanida', 'Benshoof', 'M', 'Marketing Assistant', 4, 6, '20030207', 13500, 221)
+VALUES
+(269, 'Wanida', 'Benshoof', 'M', 'Marketing Assistant', 4, 6, '20030207', 13500, 221)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (270, 'Sharon', 'Salavaria', 'B', 'Design Engineer', 1, 3, '20030218', 32700, 216)
+VALUES
+(270, 'Sharon', 'Salavaria', 'B', 'Design Engineer', 1, 3, '20030218', 32700, 216)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (271, 'John', 'Wood', 'L', 'Marketing Specialist', 4, 6, '20030310', 14400, 180)
+VALUES
+(271, 'John', 'Wood', 'L', 'Marketing Specialist', 4, 6, '20030310', 14400, 180)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (272, 'Mary', 'Dempsey', 'A', 'Marketing Assistant', 4, 6, '20030317', 13500, 26)
+VALUES
+(272, 'Mary', 'Dempsey', 'A', 'Marketing Assistant', 4, 6, '20030317', 13500, 26)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (273, 'Brian', 'Welcker', 'S', 'Vice President of Sales', 3, 109, '20030318', 72100, 134)
+VALUES
+(273, 'Brian', 'Welcker', 'S', 'Vice President of Sales', 3, 109, '20030318', 72100, 134)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (274, 'Sheela', 'Word', 'H', 'Purchasing Manager', 13, 71, '20030328', 30000, 222)
+VALUES
+(274, 'Sheela', 'Word', 'H', 'Purchasing Manager', 13, 71, '20030328', 30000, 222)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (275, 'Michael', 'Blythe', 'G', 'Sales Representative', 3, 268, '20030701', 23100, 60)
+VALUES
+(275, 'Michael', 'Blythe', 'G', 'Sales Representative', 3, 268, '20030701', 23100, 60)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (276, 'Linda', 'Mitchell', 'C', 'Sales Representative', 3, 268, '20030701', 23100, 170)
+VALUES
+(276, 'Linda', 'Mitchell', 'C', 'Sales Representative', 3, 268, '20030701', 23100, 170)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (277, 'Jillian', 'Carson', NULL, 'Sales Representative', 3, 268, '20030701', 23100, 61)
+VALUES
+(277, 'Jillian', 'Carson', NULL, 'Sales Representative', 3, 268, '20030701', 23100, 61)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (278, 'Garrett', 'Vargas', 'R', 'Sales Representative', 3, 268, '20030701', 23100, 52)
+VALUES
+(278, 'Garrett', 'Vargas', 'R', 'Sales Representative', 3, 268, '20030701', 23100, 52)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (279, 'Tsvi', 'Reiter', 'Michael', 'Sales Representative', 3, 268, '20030701', 23100, 154)
+VALUES
+(279, 'Tsvi', 'Reiter', 'Michael', 'Sales Representative', 3, 268, '20030701', 23100, 154)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (280, 'Pamela', 'Ansman-Wolfe', 'O', 'Sales Representative', 3, 268, '20030701', 23100, 179)
+VALUES
+(280, 'Pamela', 'Ansman-Wolfe', 'O', 'Sales Representative', 3, 268, '20030701', 23100, 179)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (281, 'Shu', 'Ito', 'K', 'Sales Representative', 3, 268, '20030701', 23100, 235)
+VALUES
+(281, 'Shu', 'Ito', 'K', 'Sales Representative', 3, 268, '20030701', 23100, 235)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (282, 'Jose', 'Saraiva', 'Edvaldo', 'Sales Representative', 3, 268, '20030701', 23100, 178)
+VALUES
+(282, 'Jose', 'Saraiva', 'Edvaldo', 'Sales Representative', 3, 268, '20030701', 23100, 178)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (283, 'David', 'Campbell', 'R', 'Sales Representative', 3, 268, '20030701', 23100, 13)
+VALUES
+(283, 'David', 'Campbell', 'R', 'Sales Representative', 3, 268, '20030701', 23100, 13)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (284, 'Amy', 'Alberts', 'E', 'European Sales Manager', 3, 273, '20040518', 48100, 202)
+VALUES
+(284, 'Amy', 'Alberts', 'E', 'European Sales Manager', 3, 273, '20040518', 48100, 202)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (285, 'Jae', 'Pak', 'B', 'Sales Representative', 3, 284, '20040701', 23100, 54)
+VALUES
+(285, 'Jae', 'Pak', 'B', 'Sales Representative', 3, 284, '20040701', 23100, 54)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (286, 'Ranjit', 'Varkey Chudukatil', 'R', 'Sales Representative', 3, 284, '20040701', 23100, 38)
+VALUES
+(286, 'Ranjit', 'Varkey Chudukatil', 'R', 'Sales Representative', 3, 284, '20040701', 23100, 38)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (287, 'Tete', 'Mensa-Annan', 'A', 'Sales Representative', 3, 268, '20041101', 23100, 53)
+VALUES
+(287, 'Tete', 'Mensa-Annan', 'A', 'Sales Representative', 3, 268, '20041101', 23100, 53)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (288, 'Syed', 'Abbas', 'E', 'Pacific Sales Manager', 3, 273, '20050415', 48100, 49)
+VALUES
+(288, 'Syed', 'Abbas', 'E', 'Pacific Sales Manager', 3, 273, '20050415', 48100, 49)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (289, 'Rachel', 'Valdez', 'B', 'Sales Representative', 3, 284, '20050701', 23100, 37)
+VALUES
+(289, 'Rachel', 'Valdez', 'B', 'Sales Representative', 3, 284, '20050701', 23100, 37)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (290, 'Lynn', 'Tsoflias', '', 'Sales Representative', 3, 288, '20050701', 23100, 153)
+VALUES
+(290, 'Lynn', 'Tsoflias', '', 'Sales Representative', 3, 288, '20050701', 23100, 153)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (291, 'Svetlin', 'Nakov', 'Ivanov', 'Independent Software Development  Consultant', 6, NULL, '20050301', 48000, 291)
+VALUES
+(291, 'Svetlin', 'Nakov', 'Ivanov', 'Independent Software Development  Consultant', 6, NULL, '20050301', 48000, 291)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (292, 'Martin', 'Kulov', NULL, 'Independent .NET Consultant', 6, NULL, '20050301', 48000, 291)
+VALUES
+(292, 'Martin', 'Kulov', NULL, 'Independent .NET Consultant', 6, NULL, '20050301', 48000, 291)
 
 INSERT INTO Employees (EmployeeID, FirstName, LastName, MiddleName, JobTitle, DepartmentID, ManagerID, HireDate, Salary, AddressID)
-VALUES (293, 'George', 'Denchev', NULL, 'Independent Java Consultant', 6, NULL, '20050301', 48000, 291)
+VALUES
+(293, 'George', 'Denchev', NULL, 'Independent Java Consultant', 6, NULL, '20050301', 48000, 291)
 
 SET IDENTITY_INSERT Employees OFF
 
@@ -5382,34 +6334,41 @@ GO
 ALTER TABLE Employees
 ADD CONSTRAINT FK_Employees_Addresses FOREIGN KEY(AddressID)
 REFERENCES Addresses(AddressID)
+
 GO
 
 ALTER TABLE Employees
 ADD CONSTRAINT FK_Employees_Departments FOREIGN KEY(DepartmentID)
 REFERENCES Departments(DepartmentID)
+
 GO
 
 ALTER TABLE Employees
 ADD CONSTRAINT FK_Employees_Employees FOREIGN KEY(ManagerID)
 REFERENCES Employees(EmployeeID)
+
 GO
 
 ALTER TABLE EmployeesProjects
 ADD CONSTRAINT FK_EmployeesProjects_Employees FOREIGN KEY(EmployeeID)
 REFERENCES Employees(EmployeeID)
+
 GO
 
 ALTER TABLE EmployeesProjects
 ADD CONSTRAINT FK_EmployeesProjects_Projects FOREIGN KEY(ProjectID)
 REFERENCES Projects(ProjectID)
+
 GO
 
 ALTER TABLE Departments
 ADD CONSTRAINT FK_Departments_Employees FOREIGN KEY(ManagerID)
 REFERENCES Employees(EmployeeID)
+
 GO
 
 ALTER TABLE Addresses
 ADD CONSTRAINT FK_Addresses_Towns FOREIGN KEY(TownID)
 REFERENCES Towns(TownID)
+
 GO
