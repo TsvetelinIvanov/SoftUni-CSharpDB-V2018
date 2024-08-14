@@ -6,7 +6,7 @@ namespace P01_BillsPaymentSystem.Data.Models.Attributes
     [AttributeUsage(AttributeTargets.Property)]
     public class XorAttribute : ValidationAttribute
     {
-        private const string PaimentMethodErrorMessage = "It is required to use one payment method!";
+        private const string PaymentMethodErrorMessage = "It is required to use one payment method!";
 
         private string xorTargetAttribute;
 
@@ -26,7 +26,7 @@ namespace P01_BillsPaymentSystem.Data.Models.Attributes
             }
             else
             {
-                return new ValidationResult(PaimentMethodErrorMessage);
+                return new ValidationResult(PaymentMethodErrorMessage);
             }
         }
     }
