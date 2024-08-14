@@ -11,6 +11,7 @@ namespace P01_HospitalDatabase
             {
                 //context.Database.EnsureDeleted();
                 //context.Database.EnsureCreated();
+                //contex.Database.Migrate();
 
                 DatabaseInitializer.InitialSeed(context);            
             }
