@@ -6,12 +6,12 @@ namespace BookShop.Data
 {
     public class BookShopContext : DbContext
     {
-		public BookShopContext()
+	public BookShopContext()
         {
 
         }
 
-		public BookShopContext(DbContextOptions options) : base(options)
+	public BookShopContext(DbContextOptions options) : base(options)
         {
 
         }
@@ -33,11 +33,8 @@ namespace BookShop.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new BookConfiguration());
-
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
-
             modelBuilder.ApplyConfiguration(new AuthorConfiguration());
-
             modelBuilder.ApplyConfiguration(new BookCategoryConfiguration());
         }
     }
