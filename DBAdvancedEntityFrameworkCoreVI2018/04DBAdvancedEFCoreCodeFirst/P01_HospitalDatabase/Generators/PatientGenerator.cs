@@ -53,6 +53,7 @@ namespace P01_HospitalDatabase.Generators
         {
             DateTime start = new DateTime(startYear, 1, 1);
             int range = (DateTime.Today - start).Days;
+            
             return start.AddDays(random.Next(range));
         }
 
@@ -84,12 +85,12 @@ namespace P01_HospitalDatabase.Generators
             };           
 
             int diagnoseCount = random.Next(1, 4);
-            var diagnoses = new Diagnose[diagnoseCount];
+            Diagnose[] diagnoses = new Diagnose[diagnoseCount];
             for (int i = 0; i < diagnoseCount; i++)
             {
                 string diagnoseName = diagnoseNames[random.Next(diagnoseNames.Length)];
 
-                var diagnose = new Diagnose()
+                Diagnose diagnose = new Diagnose()
                 {
                     Name = diagnoseName,
                     Patient = patient
