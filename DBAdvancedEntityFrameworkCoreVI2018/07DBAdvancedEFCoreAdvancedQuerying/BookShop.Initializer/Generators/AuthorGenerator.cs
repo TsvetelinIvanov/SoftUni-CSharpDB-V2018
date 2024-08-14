@@ -30,7 +30,7 @@ namespace BookShop.Initializer.Generators
                 "Blagorodna Dineva",
                 "Desislav Bachev",
                 "Mihael Borisov",
-                "Ventsislav Petrova",
+                "Ventsislav Petrov",
                 "Hristo Kirilov",
                 "Penko Dachev",
                 "Nikolai Zhelyaskov",
@@ -45,8 +45,7 @@ namespace BookShop.Initializer.Generators
                 "George Powell",
                 "Jane Ortiz",
                 "Randy Morales",
-                "Lisa Davis",
-
+                "Lisa Davis"
             };
 
             int authorCount = authorNames.Length;
