@@ -8,8 +8,9 @@ namespace P01_StudentSystem
         {
             using (StudentSystemContext context = new StudentSystemContext())
             {
-                context.Database.EnsureDeleted();
-                context.Database.EnsureCreated();
+                //context.Database.EnsureDeleted();
+                //context.Database.EnsureCreated();
+                //contex.Database.Migrate();
             }
         }
     }
