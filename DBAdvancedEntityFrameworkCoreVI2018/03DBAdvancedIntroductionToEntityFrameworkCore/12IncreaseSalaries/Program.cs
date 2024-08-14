@@ -11,7 +11,8 @@ namespace _12IncreaseSalaries
             SoftUniContext softUniContext = new SoftUniContext();
             using (softUniContext)
             {
-                IQueryable<Employee> employeesForIncreasingSalaries = softUniContext.Employees.Where(e => e.Department.Name == "Engineering" || e.Department.Name == "Tool Design" || e.Department.Name == "Marketing" || e.Department.Name == "Information Services");
+                IQueryable<Employee> employeesForIncreasingSalaries = softUniContext.Employees
+                    .Where(e => e.Department.Name == "Engineering" || e.Department.Name == "Tool Design" || e.Department.Name == "Marketing" || e.Department.Name == "Information Services");
                 foreach (Employee employee in employeesForIncreasingSalaries)
                 {
                     employee.Salary *= 1.12m;
