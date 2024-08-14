@@ -18,6 +18,7 @@ namespace _06AddingANewAddressAndUpdatingEmployee
                 }
 
                 softUniContext.SaveChanges();
+                
                 IQueryable<string> tenAddressTextsOrderedByAddressId = softUniContext.Employees
                     .OrderByDescending(e => e.AddressId).Take(10).Select(e => e.Address.AddressText);
                 foreach (string adressText in tenAddressTextsOrderedByAddressId)
