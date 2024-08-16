@@ -27,13 +27,15 @@ namespace PhotoShare.Client.Core.Commands
 
             UserFriendsDto user = this.userService.ByUsername<UserFriendsDto>(username);
             UserFriendsDto friend = this.userService.ByUsername<UserFriendsDto>(friendUsername);
+            
             if(user == null)
             {
                 throw new ArgumentException($"User {username} not found!");
             }
+            
             if(friend == null)
             { 
-            throw new ArgumentException($"User {friendUsername} not found!");
+                throw new ArgumentException($"User {friendUsername} not found!");
             }
 
            if(this.userService.IfHaveFriendship(user.Id,friend.Id) || this.userService.IfHaveFriendship(friend.Id, user.Id))
