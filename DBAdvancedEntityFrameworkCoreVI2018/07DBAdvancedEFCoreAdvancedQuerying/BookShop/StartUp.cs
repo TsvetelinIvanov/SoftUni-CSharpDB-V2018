@@ -14,7 +14,7 @@ namespace BookShop
     {
         public static void Main()
         {
-            using (var db = new BookShopContext())
+            using (BookShopContext db = new BookShopContext())
             {
                 //00BookShopDatabase
                 DbInitializer.ResetDatabase(db);
@@ -94,8 +94,8 @@ namespace BookShop
             //List<string> titlesFromAgeRestrictedBooks = context.Books
             //    .Where(b => b.AgeRestriction.ToString().Equals(command, StringComparison.OrdinalIgnoreCase))
             //    .Select(b => b.Title)
-            //.OrderBy(t => t)
-            //.ToList();
+            //    .OrderBy(t => t)
+            //    .ToList();
 
             AgeRestriction ageRestriction = (AgeRestriction)Enum.Parse(typeof(AgeRestriction), command, true);
             List<string> titlesFromAgeRestrictedBooks = context.Books
@@ -159,10 +159,10 @@ namespace BookShop
         {
             //string[] categories = input.ToLower().Split(new char[] { ' ' } , StringSplitOptions.RemoveEmptyEntries);
             //string[] titlesByCategories = context.Books.Where(b => b.BookCategories
-            //.Select(bc => bc.Category.Name.ToLower()).Intersect(categories).Any())
-            //.Select(b => b.Title)
-            //.OrderBy(t => t)
-            //.ToArray();
+            //    .Select(bc => bc.Category.Name.ToLower()).Intersect(categories).Any())
+            //    .Select(b => b.Title)
+            //    .OrderBy(t => t)
+            //    .ToArray();
 
             string[] categories = input.ToLower().Split(" ", StringSplitOptions.RemoveEmptyEntries);
             string[] titlesByCategories = context.Books
@@ -202,13 +202,13 @@ namespace BookShop
             //    .OrderBy(n => n)
             //    .ToArray();
 
-            string[] authorNames = context.Authors
-                .Where(a => EF.Functions.Like(a.FirstName, "%" + input))
+            string[] authorNames = context.Authors.Where(a => EF.Functions.Like(a.FirstName, "%" + input))
                     .Select(a => $"{a.FirstName} {a.LastName}")
                     .OrderBy(n => n)
                     .ToArray();
 
             string authorNamesString = string.Join(Environment.NewLine, authorNames);
+            
             return authorNamesString;
         }
 
@@ -332,6 +332,9 @@ namespace BookShop
             context.RemoveRange(booksForRemoving);
 
             //return context.SaveChanges(); <-this returns correct answer, but Judge don't accept it
+
+            context.SaveChanges();
+            
             return removedBooksCount;
         }
     }
