@@ -9,8 +9,8 @@ namespace Employees.App.Core.Controllers
 {
     public class ManagerController : IManagerController
     {
-        private const string InvalidEmployeeIdExceptionMessage = "Employee with this id: \"{0}\", don't exist in the database!";
-        private const string InvalidManagerIdExceptionMessage = "Manager with this id: \"{0}\", don't exist in the database!";
+        private const string InvalidEmployeeIdExceptionMessage = "Employee with this id: \"{0}\", doesn't exist in the database!";
+        private const string InvalidManagerIdExceptionMessage = "Manager with this id: \"{0}\", doesn't exist in the database!";
 
         private readonly EmployeesContext context;
         private readonly IMapper mapper;
