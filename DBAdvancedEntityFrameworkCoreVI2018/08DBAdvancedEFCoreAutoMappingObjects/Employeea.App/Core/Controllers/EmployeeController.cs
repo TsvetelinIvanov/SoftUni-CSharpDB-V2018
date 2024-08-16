@@ -10,7 +10,7 @@ namespace Employees.App.Core.Controllers
 {
     public class EmployeeController : IEmployeeController
     {
-        private const string InvalidEmployeeIdExceptionMessage = "Employee with this id: \"{0}\", don't exist in database!";
+        private const string InvalidEmployeeIdExceptionMessage = "Employee with this id: \"{0}\", doesn't exist in database!";
 
         private readonly EmployeesContext context;
         private readonly IMapper mapper;
