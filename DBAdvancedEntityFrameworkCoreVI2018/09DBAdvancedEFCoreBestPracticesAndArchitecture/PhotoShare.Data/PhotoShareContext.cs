@@ -11,10 +11,10 @@ namespace PhotoShare.Data
 
         }
 
-	    public PhotoShareContext(DbContextOptions options) : base(options)
-	    {
+	public PhotoShareContext(DbContextOptions options) : base(options)
+	{
 
-	    }
+	}
         
         public DbSet<User> Users { get; set; }
 
@@ -28,7 +28,7 @@ namespace PhotoShare.Data
 
         public DbSet<AlbumRole> AlbumRoles { get; set; }        
 
-	    public DbSet<AlbumTag> AlbumTags { get; set; }
+	public DbSet<AlbumTag> AlbumTags { get; set; }
 
         public DbSet<Friendship> Friendships { get; set; }
 
