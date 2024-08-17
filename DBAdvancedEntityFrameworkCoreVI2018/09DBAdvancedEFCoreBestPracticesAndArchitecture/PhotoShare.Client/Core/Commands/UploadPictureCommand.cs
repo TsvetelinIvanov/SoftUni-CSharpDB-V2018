@@ -12,7 +12,7 @@ namespace PhotoShare.Client.Core.Commands
         private readonly IAlbumService albumService;
         private readonly IUserSessionService userSessionService;
 
-        public UploadPictureCommand(IPictureService pictureService, IAlbumService albumService,IUserSessionService userSessionService)
+        public UploadPictureCommand(IPictureService pictureService, IAlbumService albumService, IUserSessionService userSessionService)
         {
             this.pictureService = pictureService;
             this.albumService = albumService;
