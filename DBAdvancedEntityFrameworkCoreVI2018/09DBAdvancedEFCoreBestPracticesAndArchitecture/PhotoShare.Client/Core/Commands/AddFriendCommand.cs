@@ -10,7 +10,7 @@ namespace PhotoShare.Client.Core.Commands
         private readonly IUserService userService;
         private readonly IUserSessionService userSessionService;
 
-        public AddFriendCommand(IUserService userService,IUserSessionService userSessionService)
+        public AddFriendCommand(IUserService userService, IUserSessionService userSessionService)
         {
             this.userService = userService;
             this.userSessionService = userSessionService;
