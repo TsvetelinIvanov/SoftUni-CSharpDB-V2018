@@ -100,7 +100,7 @@ namespace ProductShop.App
             List<CategoryProduct> categoryProducts = new List<CategoryProduct>();
             //for (int productId = 201; productId <= 400; productId++)
             for (int productId = products.Min(p => p.Id); productId <= products.Max(p => p.Id); productId++)
-                {
+            {
                 //int categoryId = new Random().Next(1, 12);
                 int categoryId = new Random().Next(categories.Min(c => c.Id), categories.Max(p => p.Id) + 1);
                 CategoryProduct categoryProduct = new CategoryProduct()
@@ -157,8 +157,7 @@ namespace ProductShop.App
 
             StringBuilder soldProductsBuilder = new StringBuilder();
             XmlSerializerNamespaces soldProductsXmlNamespaces = new XmlSerializerNamespaces(new[] { XmlQualifiedName.Empty });
-            XmlSerializer soldProductsProductsSerializer = new XmlSerializer(typeof(ExportUserDto[]),
-                new XmlRootAttribute("users"));
+            XmlSerializer soldProductsProductsSerializer = new XmlSerializer(typeof(ExportUserDto[]), new XmlRootAttribute("users"));
             soldProductsProductsSerializer.Serialize(new StringWriter(soldProductsBuilder), soldProductsUsers, soldProductsXmlNamespaces);
             File.WriteAllText("XMLs/users-sold-products.xml", soldProductsBuilder.ToString());
 
@@ -166,13 +165,13 @@ namespace ProductShop.App
             //ProductShopContext context = new ProductShopContext();
             ExportCategoryDto[] expotrCategoryDtos = context.Categories
                 .OrderByDescending(c => c.CategoryProducts.Count)
-                .Select(x => new ExportCategoryDto
+                .Select(c => new ExportCategoryDto
                 {
-                    Name = x.Name,
-                    Count = x.CategoryProducts.Count,
-                    TotalRevenue = x.CategoryProducts.Sum(cp => cp.Product.Price),
-                    //AveragePrice = x.CategoryProducts.Average(cp => cp.Product.Price)
-                    AveragePrice = x.CategoryProducts.Select(cp => cp.Product.Price).DefaultIfEmpty(0).Average()
+                    Name = c.Name,
+                    Count = c.CategoryProducts.Count,
+                    TotalRevenue = c.CategoryProducts.Sum(cp => cp.Product.Price),
+                    //AveragePrice = c.CategoryProducts.Average(cp => cp.Product.Price)
+                    AveragePrice = c.CategoryProducts.Select(cp => cp.Product.Price).DefaultIfEmpty(0).Average()
                 })
                 .ToArray();
 
@@ -188,8 +187,8 @@ namespace ProductShop.App
             {
                 Count = context.Users.Count(),
                 UsersAndProductsUserDtos = context.Users
-                .Where(u => u.ProductsSold.Count >= 1)
-                .Select(u => new UsersAndProductsUserDto
+                    .Where(u => u.ProductsSold.Count >= 1)
+                    .Select(u => new UsersAndProductsUserDto
                 {
                     FirstName = u.FirstName,
                     LastName = u.LastName,
