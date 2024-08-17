@@ -50,6 +50,6 @@ namespace PhotoShare.Client
             IServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
 
 	    return serviceProvider;
-	    }
-      }
+	}
+    }
 }
