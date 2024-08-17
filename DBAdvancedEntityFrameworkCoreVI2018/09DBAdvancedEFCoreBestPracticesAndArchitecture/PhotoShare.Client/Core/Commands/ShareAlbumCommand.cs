@@ -13,7 +13,7 @@ namespace PhotoShare.Client.Core.Commands
         private readonly IAlbumRoleService albumRoleService;
         private readonly IUserSessionService userSessionService;
 
-        public ShareAlbumCommand(IAlbumService albumService,IUserService userService,IAlbumRoleService albumRoleService,IUserSessionService userSessionService)
+        public ShareAlbumCommand(IAlbumService albumService, IUserService userService, IAlbumRoleService albumRoleService, IUserSessionService userSessionService)
         {
             this.albumService = albumService;
             this.userService = userService;
