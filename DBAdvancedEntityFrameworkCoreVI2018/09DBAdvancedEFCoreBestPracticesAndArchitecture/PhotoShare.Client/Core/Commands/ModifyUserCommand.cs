@@ -12,7 +12,7 @@ namespace PhotoShare.Client.Core.Commands
         private readonly ITownService townService;
         private readonly IUserSessionService userSessionService;
 
-        public ModifyUserCommand(IUserService userService,ITownService townService,IUserSessionService userSessionService)
+        public ModifyUserCommand(IUserService userService, ITownService townService, IUserSessionService userSessionService)
         {
             this.userService = userService;
             this.townService = townService;
