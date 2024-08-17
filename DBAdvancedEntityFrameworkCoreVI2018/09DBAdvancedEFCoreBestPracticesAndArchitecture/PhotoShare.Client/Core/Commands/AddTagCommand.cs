@@ -11,7 +11,7 @@ namespace PhotoShare.Client.Core.Commands
         private readonly ITagService tagService;
         private readonly IUserSessionService userSessionService;
 
-        public AddTagCommand(ITagService tagService,IUserSessionService userSessionService)
+        public AddTagCommand(ITagService tagService, IUserSessionService userSessionService)
         {
             this.tagService = tagService;
             this.userSessionService = userSessionService;
