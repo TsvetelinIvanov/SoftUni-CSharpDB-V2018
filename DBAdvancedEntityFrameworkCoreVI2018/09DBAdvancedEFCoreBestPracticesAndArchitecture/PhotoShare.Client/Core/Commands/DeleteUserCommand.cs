@@ -18,7 +18,6 @@ namespace PhotoShare.Client.Core.Commands
         public string Execute(string[] data)
         {
             string username = data[0];
-
             if (!userSessionService.IsLoggedIn() || this.userSessionService.User.Username != username)
             {
                 throw new InvalidOperationException("Invalid credentials!");
