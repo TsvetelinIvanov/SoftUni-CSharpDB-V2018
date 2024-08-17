@@ -12,34 +12,33 @@ using PhotoShare.Services.Contracts;
 
 namespace PhotoShare.Client
 {
-	public class StartUp
+    public class StartUp
+    {
+	public static void Main()
 	{
-		public static void Main()
-		{
-			IServiceProvider service = ConfigureServices();
-			Engine engine = new Engine(service);
-			engine.Run();
-		}
+	    IServiceProvider service = ConfigureServices();
+	    Engine engine = new Engine(service);
+	    engine.Run();
+	}
 
-		private static IServiceProvider ConfigureServices()
-		{
-			IServiceCollection serviceCollection = new ServiceCollection();
+	private static IServiceProvider ConfigureServices()
+	{
+	    IServiceCollection serviceCollection = new ServiceCollection();
 
-			IConfigurationRoot configuration = new ConfigurationBuilder()
-				.SetBasePath(Directory.GetCurrentDirectory())
-				.AddJsonFile("appsettings.json")
-				.Build();
+	    IConfigurationRoot configuration = new ConfigurationBuilder()
+		.SetBasePath(Directory.GetCurrentDirectory())
+		.AddJsonFile("appsettings.json")
+		.Build();
 
-			serviceCollection.AddDbContext<PhotoShareContext>(options =>
-				options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+	    serviceCollection.AddDbContext<PhotoShareContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
-			serviceCollection.AddAutoMapper(cfg => cfg.AddProfile<PhotoShareProfile>());
+	    serviceCollection.AddAutoMapper(cfg => cfg.AddProfile<PhotoShareProfile>());
 
-			serviceCollection.AddTransient<ICommandInterpreter, CommandInterpreter>();
-			serviceCollection.AddTransient<IDatabaseInitializerService, DatabaseInitializerService>();
+	    serviceCollection.AddTransient<ICommandInterpreter, CommandInterpreter>();
+	    serviceCollection.AddTransient<IDatabaseInitializerService, DatabaseInitializerService>();
 
-			serviceCollection.AddTransient<IAlbumRoleService, AlbumRoleService>();
-			serviceCollection.AddTransient<IPictureService, PictureService>();
+	    serviceCollection.AddTransient<IAlbumRoleService, AlbumRoleService>();
+	    serviceCollection.AddTransient<IPictureService, PictureService>();
             serviceCollection.AddTransient<IUserService, UserService>();
             serviceCollection.AddTransient<ITagService, TagService>();
             serviceCollection.AddTransient<IAlbumService, AlbumService>();
@@ -50,7 +49,7 @@ namespace PhotoShare.Client
 
             IServiceProvider serviceProvider = serviceCollection.BuildServiceProvider();
 
-			return serviceProvider;
-		}
-	}
+	    return serviceProvider;
+	    }
+      }
 }
