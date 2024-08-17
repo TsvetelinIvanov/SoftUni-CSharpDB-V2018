@@ -21,9 +21,9 @@ namespace PhotoShare.Client.Core
                     .ForMember(dest => dest.Username, from => from.MapFrom(p => p.User.Username))
                     .ReverseMap();
 
-	        CreateMap<User, UserFriendsDto>().ForMember(dto => dto.Friends, opt => opt.MapFrom(u => u.FriendsAdded));
+	    CreateMap<User, UserFriendsDto>().ForMember(dto => dto.Friends, opt => opt.MapFrom(u => u.FriendsAdded));
 
-	        CreateMap<Friendship, FriendDto>().ForMember(dto => dto.Username, opt => opt.MapFrom(f => f.Friend.Username));
+	    CreateMap<Friendship, FriendDto>().ForMember(dto => dto.Username, opt => opt.MapFrom(f => f.Friend.Username));
 
             CreateMap<Town, Town>();
 
