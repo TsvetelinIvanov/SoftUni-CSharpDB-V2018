@@ -15,7 +15,7 @@ namespace PhotoShare.Client.Core.Commands
         private readonly ITagService tagService;
         private readonly IUserSessionService userSessionService;
 
-        public CreateAlbumCommand(IAlbumService albumService, IUserService userService, ITagService tagService,IUserSessionService userSessionService)
+        public CreateAlbumCommand(IAlbumService albumService, IUserService userService, ITagService tagService, IUserSessionService userSessionService)
         {
             this.albumService = albumService;
             this.userService = userService;
