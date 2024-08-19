@@ -66,7 +66,7 @@ namespace CarDealer
         {
             Car[] cars = this.context.Cars
                 .Include(c => c.PartCars)
-                .ThenInclude(pc => pc.Part)
+                    .ThenInclude(pc => pc.Part)
                 .ToArray();
             ExportCarDto[] exportCarDtos = cars.AsQueryable().ProjectTo<ExportCarDto>().ToArray();
             StringBuilder exportCarBuilder = new StringBuilder();
