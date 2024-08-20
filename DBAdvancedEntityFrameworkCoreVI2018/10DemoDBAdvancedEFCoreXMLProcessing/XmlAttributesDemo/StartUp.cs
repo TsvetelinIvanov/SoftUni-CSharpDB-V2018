@@ -26,12 +26,11 @@ namespace XmlAttributesDemo
             //serializer.Deserialize(new StringReader(xmlString));
 
             //deserialization 
-            //users.xml does not exist hier - it is only for example
+            //users.xml does not exist here - it is only for example
             //string xmlString = File.ReadAllText("users.xml");
             //StringBuilder sb = new StringBuilder();
             //XmlSerializer serializer = new XmlSerializer(typeof(UserDto[]), new XmlRootAttribute("users"));
             //UserDto[] deserializedUsers = (UserDto[])serializer.Deserialize(new StringReader(xmlString));
-
             //foreach (UserDto user in deserializedUsers)
             //{
             //    Console.WriteLine(user.LastName);
@@ -40,9 +39,7 @@ namespace XmlAttributesDemo
             //serialization
             XmlSerializer serializer = new XmlSerializer(typeof(LibraryDto[]), new XmlRootAttribute("Libraries"));
             XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces(new[] { new XmlQualifiedName("", "") });
-
             LibraryDto[] libraries = GetLibraries();
-
             using (TextWriter writer = new StreamWriter("../Library.xml"))
             {
                 serializer.Serialize(writer, libraries, namespaces);
