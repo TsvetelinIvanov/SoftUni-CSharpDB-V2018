@@ -22,7 +22,6 @@ namespace CarDealer
         public void ImportSuppliers()
         {
             XmlSerializer serialiser = new XmlSerializer(typeof(SupplierDto[]), new XmlRootAttribute("suppliers"));
-
             SupplierDto[] deserializedSupliers = (SupplierDto[])serialiser.Deserialize(new MemoryStream(File.ReadAllBytes(@"Datasets/suppliers.xml")));
 
             Supplier[] suppliers = deserializedSupliers.AsQueryable().ProjectTo<Supplier>().ToArray();
@@ -35,7 +34,6 @@ namespace CarDealer
         public void ImportParts()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(PartDto[]), new XmlRootAttribute("parts"));
-
             PartDto[] deserializedParts = (PartDto[])serializer.Deserialize(new MemoryStream(File.ReadAllBytes(@"Datasets/parts.xml")));
 
             Part[] parts = deserializedParts.AsQueryable().ProjectTo<Part>().ToArray();
@@ -56,11 +54,9 @@ namespace CarDealer
         public void ImportCars()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(CarDto[]), new XmlRootAttribute("cars"));
-
             CarDto[] deserializedCars = (CarDto[])serializer.Deserialize(new MemoryStream(File.ReadAllBytes(@"Datasets/cars.xml")));
 
-            Car[] cars = deserializedCars.AsQueryable().ProjectTo<Car>().ToArray();           
-
+            Car[] cars = deserializedCars.AsQueryable().ProjectTo<Car>().ToArray();
             this.context.Cars.AddRange(cars);
             this.context.SaveChanges();            
 
@@ -110,7 +106,6 @@ namespace CarDealer
             //        {
             //            part = parts[random.Next(parts.Length)];
             //        }
-
             //        while (addedParts.Contains(part));
 
             //        addedParts.Add(part);
@@ -130,7 +125,6 @@ namespace CarDealer
         public void ImportCustomers()
         {
             XmlSerializer serializer = new XmlSerializer(typeof(CustomerDto[]), new XmlRootAttribute("customers"));
-
             CustomerDto[] deserializedCustomers = (CustomerDto[])serializer.Deserialize(new MemoryStream(File.ReadAllBytes(@"Datasets/customers.xml")));
 
             Customer[] customers = deserializedCustomers.AsQueryable().ProjectTo<Customer>().ToArray();
@@ -148,7 +142,6 @@ namespace CarDealer
 
             //int amount = new Random().Next(150, 250);
             //Sale[] sales = new Sale[amount];
-
             //for (int i = 0; i < amount; i++)
             //{
             //    sales[i] = new Sale
@@ -161,9 +154,7 @@ namespace CarDealer
 
             List<Sale> sales = new List<Sale>();
             List<int> carIds = new List<int>();
-
             int salesTryingsCount = new Random().Next(10, cars.Length / 2);
-
             for (int i = 1; i < salesTryingsCount; i++)
             {
                 int customerId = new Random().Next(1, customers.Length);
