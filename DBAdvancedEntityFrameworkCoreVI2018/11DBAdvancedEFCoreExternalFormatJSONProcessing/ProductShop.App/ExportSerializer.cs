@@ -133,7 +133,6 @@ namespace ProductShop.App
 
         //public void ExportUsersAndProducts()
         //{
-
         //    var users = this.context.Users
         //    .Where(u => u.ProductsSold.Count >= 1 && u.ProductsSold.Any(ps => ps.Buyer != null))
         //    .OrderByDescending(u => u.ProductsSold.Count)
