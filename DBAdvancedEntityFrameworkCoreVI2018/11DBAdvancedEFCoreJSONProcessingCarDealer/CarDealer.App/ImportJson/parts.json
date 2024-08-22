@@ -1,6 +1,6 @@
 [
-{ "name":"Bonnet/hood", "price":1001.34, "quantity":10},
-{ "name":"Unexposed bumper", "price":1003.34, "quantity":10},
+{ "name": "Bonnet/hood", "price": 1001.34, "quantity": 10},
+{ "name": "Unexposed bumper", "price":1003.34, "quantity":10},
 { "name":"Exposed bumper", "price":1400.34, "quantity":10},
 { "name":"Cowl screen", "price":1500.34, "quantity":10},
 { "name":"Decklid", "price":1060.34, "quantity":11},
