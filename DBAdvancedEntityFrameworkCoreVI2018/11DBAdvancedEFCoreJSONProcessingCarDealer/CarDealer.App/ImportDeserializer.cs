@@ -66,7 +66,6 @@ namespace CarDealer.App
         {
             string jsonString = File.ReadAllText("ImportJson/cars.json");
             Car[] deserializedCars = JsonConvert.DeserializeObject<Car[]>(jsonString);
-
             List<Car> cars = new List<Car>();
             foreach (Car car in deserializedCars)
             {
