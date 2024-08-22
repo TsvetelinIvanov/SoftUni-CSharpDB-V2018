@@ -39,7 +39,7 @@
             // User error messages.
             public const string UsernameNotValid = "Username {0} not valid!";
             public const string PasswordNotValid = "Password {0} not valid!";
-            public const string PasswordDoesNotMatch = "Passwords do not match!";
+            public const string PasswordDoesNotMatch = "Password does not match!";
             public const string AgeNotValid = "Age not valid!";
             public const string GenderNotValid = "Gender should be either “Male” or “Female”!";
             public const string UsernameIsTaken = "Username {0} is already taken!";
