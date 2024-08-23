@@ -19,7 +19,7 @@ namespace PetClinic.App
 
                 ExportEntities(context);
 				
-				BonusTask(context);
+		BonusTask(context);
             }
         }
 
@@ -35,13 +35,13 @@ namespace PetClinic.App
         {
             //baseDirectory = @"Datasets\";
             //baseDirectory = @"PetClinic\App\Datasets\";
-            //baseDirectory = @"ExamAdcanvedDB5I2018\PetClinic\App\Datasets\";
+            //baseDirectory = @"ExamAdvancedDB5I2018\PetClinic\App\Datasets\";
             //baseDirectory = @"[Absolute Local Path]";
 
             const string exportDirectory = "./ExportResults/";
             //const string exportDirectory = @"ExportResults\";
             //const string exportDirectory = @"PetClinic\App\ExportResults\";
-            //const string exportDirectory = @"ExamAdcanvedDB5I2018\PetClinic\App\ExportResults\";
+            //const string exportDirectory = @"ExamAdvancedDB5I2018\PetClinic\App\ExportResults\";
             //const string exportDirectory = @"[Absolute Local Path]";
 
             string animalAids = DataProcessor.Deserializer.ImportAnimalAids(context, File.ReadAllText(baseDirectory + "animalAids.json"));
@@ -62,7 +62,7 @@ namespace PetClinic.App
             const string exportDirectory = "./ExportResults/";
             //const string exportDirectory = @"ExportResults\";
             //const string exportDirectory = @"PetClinic\App\ExportResults\";
-            //const string exportDirectory = @"ExamAdcanvedDB5I2018\PetClinic\App\ExportResults\";
+            //const string exportDirectory = @"ExamAdvancedDB5I2018\PetClinic\App\ExportResults\";
             //const string exportDirectory = @"[Absolute Local Path]";
 
             string animalsExport = DataProcessor.Serializer.ExportAnimalsByOwnerPhoneNumber(context, "0887446123");
