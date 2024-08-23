@@ -42,12 +42,12 @@ namespace PetClinic.Data
             //builder.Entity<ProcedureAnimalAid>().HasOne(paa => paa.AnimalAid)
             //    .WithMany(aa => aa.AnimalAidProcedures)
             //    .HasForeignKey(paa => paa.AnimalAidId);
-            ////.OnDelete(DeleteBehavior.Restrict);
+            //  //.OnDelete(DeleteBehavior.Restrict);
 
             //builder.Entity<ProcedureAnimalAid>().HasOne(paa => paa.Procedure)
             //    .WithMany(p => p.ProcedureAnimalAids)
             //    .HasForeignKey(paa => paa.ProcedureId);
-            //    //.OnDelete(DeleteBehavior.Restrict);
+            //  //.OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<AnimalAid>().HasIndex(aa => aa.Name).IsUnique();
 
