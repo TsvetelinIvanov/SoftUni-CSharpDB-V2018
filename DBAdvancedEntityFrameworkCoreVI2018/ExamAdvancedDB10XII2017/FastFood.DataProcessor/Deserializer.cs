@@ -14,13 +14,13 @@ using Newtonsoft.Json;
 
 namespace FastFood.DataProcessor
 {
-	public static class Deserializer
-	{
-		private const string FailureMessage = "Invalid data format.";
-		private const string SuccessMessage = "Record {0} successfully imported.";
+    public static class Deserializer
+    {
+	private const string FailureMessage = "Invalid data format.";
+	private const string SuccessMessage = "Record {0} successfully imported.";
 
-		public static string ImportEmployees(FastFoodDbContext context, string jsonString)
-		{            
+	public static string ImportEmployees(FastFoodDbContext context, string jsonString)
+	{            
             EmployeeDto[] deserializedEmployees = JsonConvert.DeserializeObject<EmployeeDto[]>(jsonString);
 
             StringBuilder importEmployeesMessageBuilder = new StringBuilder();
@@ -49,7 +49,7 @@ namespace FastFood.DataProcessor
             context.SaveChanges();
 
             return importEmployeesMessageBuilder.ToString().TrimEnd();
-		}
+	}
 
         public static string ImportItems(FastFoodDbContext context, string jsonString)
         {
@@ -66,9 +66,9 @@ namespace FastFood.DataProcessor
                     continue;
                 }
 
-                bool itemExist = context.Items.Any(i => i.Name == itemDto.Name);
-                bool itemNameExist = itemNames.Contains(itemDto.Name);
-                if (itemExist || itemNameExist)
+                bool itemExists = context.Items.Any(i => i.Name == itemDto.Name);
+                bool itemNameExists = itemNames.Contains(itemDto.Name);
+                if (itemExists || itemNameExists)
                 {
                     importItemsMessageBuilder.AppendLine(FailureMessage);
                     continue;
@@ -95,14 +95,13 @@ namespace FastFood.DataProcessor
         }
 
         public static string ImportOrders(FastFoodDbContext context, string xmlString)
-		{
+	{
             XmlSerializer serializer = new XmlSerializer(typeof(OrderDto[]), new XmlRootAttribute("Orders"));
             OrderDto[] deserializedOrders = (OrderDto[])serializer.Deserialize(new StringReader(xmlString));
 
             StringBuilder importOrdersMessageBuilder = new StringBuilder();
             List<OrderItem> orderItems = new List<OrderItem>();
             List<Order> orders = new List<Order>();
-
             foreach (OrderDto orderDto in deserializedOrders)
             {
                 if (!IsValid(orderDto))
@@ -191,7 +190,7 @@ namespace FastFood.DataProcessor
             context.SaveChanges();
 
             return importOrdersMessageBuilder.ToString().TrimEnd();
-		}        
+	}        
 
         private static Position GetPosition(FastFoodDbContext context, string positionName)
         {
@@ -249,5 +248,5 @@ namespace FastFood.DataProcessor
 
             return isValid;
         }
-	}
+    }
 }
