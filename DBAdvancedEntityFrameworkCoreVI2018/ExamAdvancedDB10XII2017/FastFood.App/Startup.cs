@@ -6,8 +6,8 @@ using FastFood.DataProcessor;
 
 namespace FastFood.App
 {
-	public class Startup
-	{
+    public class Startup
+    {
 	public static void Main(string[] args)
 	{
 	   FastFoodDbContext context = new FastFoodDbContext();
@@ -66,18 +66,18 @@ namespace FastFood.App
             //const string exportDirectory = @"[Absolute Local Path]";
 
             string jsonOutput = Serializer.ExportOrdersByEmployee(context, "Avery Rush", "ToGo");
-			Console.WriteLine(jsonOutput);
-			File.WriteAllText(exportDirectory + "OrdersByEmployee.json", jsonOutput);
+	    Console.WriteLine(jsonOutput);
+	    File.WriteAllText(exportDirectory + "OrdersByEmployee.json", jsonOutput);
 
-			string xmlOutput = Serializer.ExportCategoryStatistics(context, "Chicken,Drinks,Toys");
-			Console.WriteLine(xmlOutput);
-			File.WriteAllText(exportDirectory + "CategoryStatistics.xml", xmlOutput);
-		}
-
-		private static void BonusTask(FastFoodDbContext context)
-		{
-			string bonusOutput = Bonus.UpdatePrice(context, "Cheeseburger", 6.50m);
-			Console.WriteLine(bonusOutput);
-		}				
+	    string xmlOutput = Serializer.ExportCategoryStatistics(context, "Chicken,Drinks,Toys");
+	    Console.WriteLine(xmlOutput);
+	    File.WriteAllText(exportDirectory + "CategoryStatistics.xml", xmlOutput);
 	}
+
+	private static void BonusTask(FastFoodDbContext context)
+	{
+	    string bonusOutput = Bonus.UpdatePrice(context, "Cheeseburger", 6.50m);
+	    Console.WriteLine(bonusOutput);
+	}				
+    }
 }
