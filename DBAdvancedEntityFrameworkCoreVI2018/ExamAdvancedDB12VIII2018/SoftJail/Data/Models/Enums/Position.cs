@@ -2,6 +2,9 @@
 {
     public enum Position
     {
-        Overseer, Guard, Watcher, Labour
+        Overseer,
+        Guard,
+        Watcher,
+        Labour
     }
 }
