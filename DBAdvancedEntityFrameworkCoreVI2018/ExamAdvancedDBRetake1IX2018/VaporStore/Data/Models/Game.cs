@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace VaporStore.Data.Models
 {
-	public class Game
+    public class Game
     {
         [Key]
         public int Id { get; set; }
