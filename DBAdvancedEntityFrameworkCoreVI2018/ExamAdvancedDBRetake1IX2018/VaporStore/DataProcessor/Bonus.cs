@@ -5,10 +5,10 @@ using VaporStore.Data.Models;
 namespace VaporStore.DataProcessor
 {
     public static class Bonus
+    {
+	public static string UpdateEmail(VaporStoreDbContext context, string username, string newEmail)
 	{
-		public static string UpdateEmail(VaporStoreDbContext context, string username, string newEmail)
-		{
-			if (!context.Users.Any(u => u.Username == username))
+	    if (!context.Users.Any(u => u.Username == username))
             {
                 return $"User {username} not found";
             }
@@ -23,6 +23,6 @@ namespace VaporStore.DataProcessor
             context.SaveChanges();
 
             return $"Changed {username}'s email successfully";
-		}
 	}
+    }
 }
