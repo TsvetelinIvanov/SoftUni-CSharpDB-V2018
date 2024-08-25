@@ -5,17 +5,17 @@ using System.Linq;
 using System.Text;
 using System.Xml;
 using System.Xml.Serialization;
-using VaporStore.Data;
 using Newtonsoft.Json;
+using VaporStore.Data;
 using VaporStore.Data.Models.Enums;
 using VaporStore.DataProcessor.Dto.Export;
 
 namespace VaporStore.DataProcessor
 {
     public static class Serializer
+    {
+	public static string ExportGamesByGenres(VaporStoreDbContext context, string[] genreNames)
 	{
-		public static string ExportGamesByGenres(VaporStoreDbContext context, string[] genreNames)
-		{
             var genres = context.Genres.Where(g => genreNames.Any(gn => gn == g.Name))
                 .Select(g => new
                 {
@@ -34,15 +34,16 @@ namespace VaporStore.DataProcessor
                     .ThenBy(gm => gm.Id)
                     .ToArray(),
                     TotalPlayers = g.Games.Where(gm => gm.Purchases.Count >= 1).Sum(s => s.Purchases.Count)
-                }).ToArray();
+                })
+		.ToArray();
 
             string jsonString = JsonConvert.SerializeObject(genres, Newtonsoft.Json.Formatting.Indented);
 
             return jsonString;
         }
 
-		public static string ExportUserPurchasesByType(VaporStoreDbContext context, string storeType)
-		{
+	public static string ExportUserPurchasesByType(VaporStoreDbContext context, string storeType)
+	{
             PurchaseType storeTypeEnum = Enum.Parse<PurchaseType>(storeType);
             ExportUserDto[] exportUserDtos = context.Users.Select(u => new ExportUserDto
             {
@@ -62,8 +63,9 @@ namespace VaporStore.DataProcessor
                             })
                             .OrderBy(p => p.Date)
                             .ToArray(),
-                TotalSpent = u.Cards.SelectMany(p => p.Purchases).Where(p => p.Type == storeTypeEnum)
-                           .Sum(p => p.Game.Price)
+                TotalSpent = u.Cards.SelectMany(p => p.Purchases)
+			.Where(p => p.Type == storeTypeEnum)
+			.Sum(p => p.Game.Price)
             })
             .Where(u => u.Purchases.Any())
             .OrderByDescending(u => u.TotalSpent)
@@ -77,5 +79,5 @@ namespace VaporStore.DataProcessor
 
             return exportUserPurchasesBuilder.ToString();
         }
-	}
+    }
 }
