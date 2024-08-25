@@ -4,16 +4,16 @@ using SoftJail.Data.Models;
 namespace SoftJail.Data
 {
     public class SoftJailDbContext : DbContext
+    {
+	public SoftJailDbContext()
 	{
-		public SoftJailDbContext()
-		{
 
-		}
+	}
 
-		public SoftJailDbContext(DbContextOptions options) : base(options)
-		{
+	public SoftJailDbContext(DbContextOptions options) : base(options)
+	{
 
-		}
+	}
 
         public DbSet<Prisoner> Prisoners { get; set; }
 
@@ -28,26 +28,26 @@ namespace SoftJail.Data
         public DbSet<OfficerPrisoner> OfficersPrisoners { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-		{
-			if (!optionsBuilder.IsConfigured)
-			{
-				optionsBuilder.UseSqlServer(Configuration.ConnectionString);
-			}
-		}
+	{
+	    if (!optionsBuilder.IsConfigured)
+	    {
+		optionsBuilder.UseSqlServer(Configuration.ConnectionString);
+	    }
+	}
 
-		protected override void OnModelCreating(ModelBuilder builder)
-		{
-            builder.Entity<OfficerPrisoner>().HasKey(po => new { po.OfficerId, po.PrisonerId });
+	protected override void OnModelCreating(ModelBuilder builder)
+	{
+            builder.Entity<OfficerPrisoner>().HasKey(op => new { op.OfficerId, op.PrisonerId });
 
-            builder.Entity<OfficerPrisoner>().HasOne(po => po.Officer)
+            builder.Entity<OfficerPrisoner>().HasOne(op => op.Officer)
                .WithMany(o => o.OfficerPrisoners)
-               .HasForeignKey(po => po.OfficerId);
-            //.OnDelete(DeleteBehavior.Restrict);
+               .HasForeignKey(op => op.OfficerId);
+             //.OnDelete(DeleteBehavior.Restrict);
 
-            builder.Entity<OfficerPrisoner>().HasOne(po => po.Prisoner)
+            builder.Entity<OfficerPrisoner>().HasOne(op => op.Prisoner)
                 .WithMany(p => p.PrisonerOfficers)
-                .HasForeignKey(po => po.PrisonerId);
-            //.OnDelete(DeleteBehavior.Restrict);
+                .HasForeignKey(op => op.PrisonerId);
+              //.OnDelete(DeleteBehavior.Restrict);
 
             builder.Entity<OfficerPrisoner>().ToTable("OfficersPrisoners");
         }
