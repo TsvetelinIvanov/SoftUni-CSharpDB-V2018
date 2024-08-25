@@ -6,20 +6,20 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Xml.Serialization;
-using VaporStore.Data;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
+using VaporStore.Data;
 using VaporStore.Data.Models;
 using VaporStore.DataProcessor.Dto.Import;
 
 namespace VaporStore.DataProcessor
 {
     public static class Deserializer
-	{
+    {
         private const string ErrorMessage = "Invalid Data";
 
         public static string ImportGames(VaporStoreDbContext context, string jsonString)
-		{
+	{
             GameDto[] deserializedGames = JsonConvert.DeserializeObject<GameDto[]>(jsonString);
 
             StringBuilder messageBuilder = new StringBuilder();
@@ -33,7 +33,7 @@ namespace VaporStore.DataProcessor
                 {
                     messageBuilder.AppendLine(ErrorMessage);
                     continue;
-                }                
+                }
 
                 //bool isReleaseDateValid = DateTime.TryParseExact(gameDto.ReleaseDate, "yyyy-MM-dd", CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime releaseDate);
                 //if (!isReleaseDateValid)
@@ -88,7 +88,8 @@ namespace VaporStore.DataProcessor
                     GameTags = tags.Select(t => new GameTag
                     {
                         Tag = t
-                    }).ToArray()
+                    })
+		    .ToArray()
                 };
 
                 //List<GameTag> gameTags = new List<GameTag>();
@@ -121,7 +122,7 @@ namespace VaporStore.DataProcessor
         }        
 
         public static string ImportUsers(VaporStoreDbContext context, string jsonString)
-		{
+	{
             UserDto[] deserializedUsers = JsonConvert.DeserializeObject<UserDto[]>(jsonString);
 
             StringBuilder messageBuilder = new StringBuilder();
@@ -139,7 +140,8 @@ namespace VaporStore.DataProcessor
                     Number = c.Number,
                     Cvc = c.Cvc,
                     Type = c.Type
-                }).ToArray();
+                })
+		.ToArray();
 
                 User user = new User
                 {
@@ -158,10 +160,10 @@ namespace VaporStore.DataProcessor
             context.SaveChanges();
 
             return messageBuilder.ToString().TrimEnd();
-		}
+	}
 
-		public static string ImportPurchases(VaporStoreDbContext context, string xmlString)
-		{
+	public static string ImportPurchases(VaporStoreDbContext context, string xmlString)
+	{
             XmlSerializer serialiser = new XmlSerializer(typeof(PurchaseDto[]), new XmlRootAttribute("Purchases"));
             PurchaseDto[] deserialisedPurchases = (PurchaseDto[])serialiser.Deserialize(new StringReader(xmlString));
 
