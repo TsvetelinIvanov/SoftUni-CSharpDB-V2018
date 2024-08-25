@@ -186,7 +186,7 @@
     "CellId": 4,
     "Mails": [
       {
-        "Description": "I don not know man, it just looks too wide.",
+        "Description": "I do not know man, it just looks too wide.",
         "Sender": "Leona Cutford",
         "Address": "43901 Dwight Trail str."
       },
@@ -488,7 +488,7 @@
         "Address": "5 Darwin Alley str."
       },
       {
-        "Description": " I mean, sure, but it will be pretty busy. I really recommend you keep it simple for the screen.",
+        "Description": "I mean, sure, but it will be pretty busy. I really recommend you keep it simple for the screen.",
         "Sender": "Mikey Bothbie",
         "Address": "4736 Anderson Parkway str."
       }
@@ -698,7 +698,7 @@
     "CellId": 21,
     "Mails": [
       {
-        "Description": "What if I find his head from another photo pointing in the right direction? ",
+        "Description": "What if I find his head from another photo pointing in the right direction?",
         "Sender": "Randie Pomfrey",
         "Address": "3 Old Shore Point str."
       }
