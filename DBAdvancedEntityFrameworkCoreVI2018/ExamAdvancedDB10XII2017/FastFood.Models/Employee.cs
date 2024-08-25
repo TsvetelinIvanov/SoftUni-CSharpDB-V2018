@@ -4,8 +4,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FastFood.Models
 {
-	public class Employee
-	{
+    public class Employee
+    {
         [Key]
         public int Id { get; set; }
 
