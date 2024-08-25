@@ -1,24 +1,24 @@
 ﻿using System;
 using System.IO;
 using AutoMapper;
-using VaporStore.Data;
-using VaporStore.DataProcessor;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
+using VaporStore.Data;
+using VaporStore.DataProcessor;
 
 namespace VaporStore
 {
-	public class StartUp
+    public class StartUp
+    {
+	public static void Main(string[] args)
 	{
-		public static void Main(string[] args)
-		{
-			VaporStoreDbContext context = new VaporStoreDbContext();
+	    VaporStoreDbContext context = new VaporStoreDbContext();
 
-			Mapper.Initialize(config => config.AddProfile<VaporStoreProfile>());
+	    Mapper.Initialize(config => config.AddProfile<VaporStoreProfile>());
 
-			ResetDatabase(context, shouldDropDatabase: true);
+	    ResetDatabase(context, shouldDropDatabase: true);
 
-			string projectDir = GetProjectDirectory();
+	    string projectDir = GetProjectDirectory();
 
             ImportEntities(context, projectDir + @"Datasets/", projectDir + @"ImportResults/");
             ExportEntities(context, projectDir + @"ImportResults/");
@@ -64,17 +64,17 @@ namespace VaporStore
             return relativePath;
         }        		
 
-		private static void ImportEntities(VaporStoreDbContext context, string baseDir, string exportDir)
-		{
-			string gamesString = Deserializer.ImportGames(context, File.ReadAllText(baseDir + "games.json"));
-			PrintAndExportEntityToFile(gamesString, exportDir + "ImportGames.txt");
+	private static void ImportEntities(VaporStoreDbContext context, string baseDir, string exportDir)
+	{
+	    string gamesString = Deserializer.ImportGames(context, File.ReadAllText(baseDir + "games.json"));
+	    PrintAndExportEntityToFile(gamesString, exportDir + "ImportGames.txt");
 
-			string usersString = Deserializer.ImportUsers(context, File.ReadAllText(baseDir + "users.json"));
-			PrintAndExportEntityToFile(usersString, exportDir + "ImportUsers.txt");
+	    string usersString = Deserializer.ImportUsers(context, File.ReadAllText(baseDir + "users.json"));
+	    PrintAndExportEntityToFile(usersString, exportDir + "ImportUsers.txt");
 
-			string purchasesString = Deserializer.ImportPurchases(context, File.ReadAllText(baseDir + "purchases.xml"));
-			PrintAndExportEntityToFile(purchasesString, exportDir + "ImportPurchases.txt");
-		}
+	    string purchasesString = Deserializer.ImportPurchases(context, File.ReadAllText(baseDir + "purchases.xml"));
+	    PrintAndExportEntityToFile(purchasesString, exportDir + "ImportPurchases.txt");
+	}
 
         private static void ExportEntities(VaporStoreDbContext context, string exportDir)
         {
@@ -92,9 +92,9 @@ namespace VaporStore
         }
 
         private static void PrintAndExportEntityToFile(string entityOutput, string outputPath)
-		{
-			Console.WriteLine(entityOutput);
-			File.WriteAllText(outputPath, entityOutput.TrimEnd());
-		}		
-	}
+	{
+	    Console.WriteLine(entityOutput);
+	    File.WriteAllText(outputPath, entityOutput.TrimEnd());
+	}		
+    }
 }
