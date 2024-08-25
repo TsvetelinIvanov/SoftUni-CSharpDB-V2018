@@ -1,8 +1,8 @@
 ﻿using SoftJail.Data;
-using Newtonsoft.Json;
 using SoftJail.Data.Models;
 using SoftJail.Data.Models.Enums;
 using SoftJail.DataProcessor.ImportDto;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -39,6 +39,7 @@ namespace SoftJail.DataProcessor
                     {
                         messageBuilder.AppendLine(ErrorMessage);
                         isCellValid = false;
+                        break;
                     }
                 }
 
@@ -165,7 +166,7 @@ namespace SoftJail.DataProcessor
             return messageBuilder.ToString().TrimEnd();
         }
 
-        //This code pass in Judge, but it is possible to throw an exception like this below: 
+        //This code passes in Judge, but it is possible to throw an exception like this below: 
         //Unhandled Exception: System.InvalidOperationException: The property 'PrisonerId' on entity type 'OfficerPrisoner' has a temporary value. Either set a permanent value explicitly or ensure that the database is configured to generate values for this property.
         public static string ImportOfficersPrisoners(SoftJailDbContext context, string xmlString)
         {
@@ -240,15 +241,15 @@ namespace SoftJail.DataProcessor
 
                 //    OfficerPrisoner officerPrisoner = new OfficerPrisoner
                 //    {
-                //        //PrisonerId = prisonerIdDto.Id,
-                //        //OfficerId = officer.Id
+                //      //PrisonerId = prisonerIdDto.Id,
+                //      //OfficerId = officer.Id
 
                 //        Officer = officer,
                 //        Prisoner = prisoner
                 //    };
 
                 //    officer.OfficerPrisoners.Add(officerPrisoner);
-                //    //officerPrisoners.Add(officerPrisoner);
+                //  //officerPrisoners.Add(officerPrisoner);
                 //}
 
                 officers.Add(officer);
