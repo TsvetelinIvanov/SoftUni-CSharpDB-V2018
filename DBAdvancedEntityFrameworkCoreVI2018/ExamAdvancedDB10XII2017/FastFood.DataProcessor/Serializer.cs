@@ -11,10 +11,10 @@ using Newtonsoft.Json;
 
 namespace FastFood.DataProcessor
 {
-	public class Serializer
+    public class Serializer
+    {
+	public static string ExportOrdersByEmployee(FastFoodDbContext context, string employeeName, string orderType)
 	{
-		public static string ExportOrdersByEmployee(FastFoodDbContext context, string employeeName, string orderType)
-		{
             OrderType orderTypeEnum = Enum.Parse<OrderType>(orderType);            
 
             var employee = context.Employees.ToArray().Where(e => e.Name == employeeName)
@@ -46,10 +46,10 @@ namespace FastFood.DataProcessor
             string jsonString = JsonConvert.SerializeObject(employee, Newtonsoft.Json.Formatting.Indented);
 
             return jsonString;
-		}
+	}
 
-		public static string ExportCategoryStatistics(FastFoodDbContext context, string categoriesString)
-		{
+	public static string ExportCategoryStatistics(FastFoodDbContext context, string categoriesString)
+	{
             string[] categoriesNames = categoriesString.Split(',');
             CategoryDto[] categoryDtos = context.Categories.Where(c => categoriesNames.Any(cn => cn == c.Name))
                 .Select(c => new CategoryDto
@@ -75,6 +75,6 @@ namespace FastFood.DataProcessor
             xmlSerializer.Serialize(new StringWriter(exportCategoryStatisticsBuilder), categoryDtos, xmlNamespaces);
 
             return exportCategoryStatisticsBuilder.ToString();
-		}
 	}
+    }
 }
